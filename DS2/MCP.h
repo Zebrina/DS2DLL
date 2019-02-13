@@ -32,50 +32,50 @@ public:
 		DefineSingleton(Manager, 0x41425f);
 
 		/*Manager*/ private: /*static*/ Manager* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x0041425f
-		/*Manager*/ public: bool /*__thiscall*/ BeginTeleport(const Goid_* unk1); //0x00882005
-		/*Manager*/ public: bool /*__thiscall*/ Flush(const Goid_* unk1, float unk2); //0x00881f10
-		/*Manager*/ public: bool /*__thiscall*/ Flush(const Goid_* unk1); //0x004126a7
-		/*Manager*/ public: bool /*__thiscall*/ GetLastChoreRequestedIsStillValid(const Goid_* unk1, eAnimChore unk2, eAnimStance unk3); //0x0096a35c
-		/*Manager*/ public: bool /*__thiscall*/ GetTargetUnusedGatherPoint(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3); //0x0096abeb
-		/*Manager*/ public: bool /*__thiscall*/ MessagesAreInSync(const Goid_* unk1, eRID unk2, eWorldEvent unk3); //0x009680e1
-		/*Manager*/ public: bool /*__thiscall*/ ReconstructDependancy(const Goid_* unk1, const Goid_* unk2, float unk3); //0x0096942c
-		/*Manager*/ public: float /*__thiscall*/ GetLastRequestTimeRemaining(const Goid_* unk1); //0x0096811c
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeContinuousMoveRequest(const Goid_* unk1, const SiegePos& unk2, float unk3); //0x00968ed1
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeJumpRailRequest(const Goid_* unk1, eAnimChore unk2, const SiegePos& unk3, float unk4, float unk5, unsigned long unk6, bool unk7); //0x00969db2
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeLineRailRequest(const Goid_* unk1, eAnimChore unk2, unsigned long unk3, float unk4, const vector_3& unk5, bool unk6); //0x0096a9d9
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeLineRailRequest(const Goid_* unk1, eAnimChore unk2, unsigned long unk3, float unk4, const vector_3& unk5, float unk6, bool unk7); //0x0096a5ed
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, const Goid_* unk3, float unk4, float unk5, float unk6, eReqFlag unk7); //0x0096cb1d
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, const Goid_* unk3, float unk4, float unk5, float unk6); //0x0096cba0
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, const Goid_* unk3, eReqFlag unk4, float unk5); //0x00968cd1
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, const Goid_* unk3, eReqFlag unk4); //0x009693dc
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, const Goid_* unk3); //0x009693bf
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, const SiegePos& unk3, float unk4, eReqFlag unk5); //0x0096a54b
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, const SiegePos& unk3, float unk4); //0x0096a521
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, const SiegePos& unk3, eReqFlag unk4); //0x00968b28
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, const SiegePos& unk3); //0x00969391
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, const SiegeRot& unk3, eReqFlag unk4); //0x00968be9
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, const SiegeRot& unk3); //0x009693a8
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, eAnimChore unk3, const Skrit::SiegeRailWrapper& unk4, float unk5, unsigned long unk6, bool unk7); //0x009693fa
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, eAnimChore unk3, const Skrit::SiegeRailWrapper& unk4, float unk5, unsigned long unk6, unsigned long unk7, bool unk8); //0x00968de8
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, eAnimChore unk3, unsigned long unk4, unsigned long unk5); //0x00968a27
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, float unk3, const Goid_* unk4, float unk5, float unk6, float unk7, eReqFlag unk8); //0x0096cc5e
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, float unk3, const Goid_* unk4, float unk5, float unk6, float unk7); //0x0096cc21
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, float unk3, const SiegePos& unk4, float unk5, eReqFlag unk6); //0x0096a59d
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, float unk3, const SiegePos& unk4, float unk5); //0x0096a576
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const Goid_* unk5, float unk6, float unk7, float unk8, eReqFlag unk9, float unk10); //0x0096c4ed
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const Goid_* unk5, float unk6, float unk7, float unk8, eReqFlag unk9); //0x0096ccda
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const Goid_* unk5, float unk6, float unk7, float unk8); //0x0096cc9c
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const SiegePos& unk5, float unk6, eReqFlag unk7); //0x00969b3a
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const SiegePos& unk5, float unk6); //0x0096a5c5
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, eReqFlag unk3); //0x00969363
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, unsigned long unk3, const Goid_* unk4, float unk5, float unk6, float unk7, eReqFlag unk8); //0x0096cb5e
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, unsigned long unk3, const Goid_* unk4, float unk5, float unk6, float unk7); //0x0096cbe0
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, unsigned long unk3, const SiegePos& unk4, float unk5, eReqFlag unk6); //0x0096a4f5
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, unsigned long unk3, const SiegePos& unk4, float unk5); //0x0096a4ca
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, unsigned long unk3, eReqFlag unk4); //0x00968804
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2, unsigned long unk3); //0x0096937a
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeRequest(const Goid_* unk1, eRequest unk2); //0x0096934d
-		/*Manager*/ public: eReqRetCode /*__thiscall*/ MakeSpeedRequest(const Goid_* unk1, eRequest unk2, unsigned long unk3, float unk4); //0x00968f5a
+		DefineMethod(BeginTeleport, 0x882005, bool, Params(const Goid_* unk1), Args(const Goid_* unk1));
+		DefineMethod(Flush, 0x881f10, bool, Params(const Goid_* unk1, float unk2), Args(const Goid_* unk1, float unk2));
+		DefineMethod(Flush, 0x4126a7, bool, Params(const Goid_* unk1), Args(const Goid_* unk1));
+		DefineMethod(GetLastChoreRequestedIsStillValid, 0x96a35c, bool, Params(const Goid_* unk1, eAnimChore unk2, eAnimStance unk3), Args(const Goid_* unk1, eAnimChore unk2, eAnimStance unk3));
+		DefineMethod(GetTargetUnusedGatherPoint, 0x96abeb, bool, Params(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3), Args(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3));
+		DefineMethod(MessagesAreInSync, 0x9680e1, bool, Params(const Goid_* unk1, eRID unk2, eWorldEvent unk3), Args(const Goid_* unk1, eRID unk2, eWorldEvent unk3));
+		DefineMethod(ReconstructDependancy, 0x96942c, bool, Params(const Goid_* unk1, const Goid_* unk2, float unk3), Args(const Goid_* unk1, const Goid_* unk2, float unk3));
+		DefineMethod(GetLastRequestTimeRemaining, 0x96811c, float, Params(const Goid_* unk1), Args(const Goid_* unk1));
+		DefineMethod(MakeContinuousMoveRequest, 0x968ed1, eReqRetCode, Params(const Goid_* unk1, const SiegePos& unk2, float unk3), Args(const Goid_* unk1, const SiegePos& unk2, float unk3));
+		DefineMethod(MakeJumpRailRequest, 0x969db2, eReqRetCode, Params(const Goid_* unk1, eAnimChore unk2, const SiegePos& unk3, float unk4, float unk5, unsigned long unk6, bool unk7), Args(const Goid_* unk1, eAnimChore unk2, const SiegePos& unk3, float unk4, float unk5, unsigned long unk6, bool unk7));
+		DefineMethod(MakeLineRailRequest, 0x96a9d9, eReqRetCode, Params(const Goid_* unk1, eAnimChore unk2, unsigned long unk3, float unk4, const vector_3& unk5, bool unk6), Args(const Goid_* unk1, eAnimChore unk2, unsigned long unk3, float unk4, const vector_3& unk5, bool unk6));
+		DefineMethod(MakeLineRailRequest, 0x96a5ed, eReqRetCode, Params(const Goid_* unk1, eAnimChore unk2, unsigned long unk3, float unk4, const vector_3& unk5, float unk6, bool unk7), Args(const Goid_* unk1, eAnimChore unk2, unsigned long unk3, float unk4, const vector_3& unk5, float unk6, bool unk7));
+		DefineMethod(MakeRequest, 0x96cb1d, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, const Goid_* unk3, float unk4, float unk5, float unk6, eReqFlag unk7), Args(const Goid_* unk1, eRequest unk2, const Goid_* unk3, float unk4, float unk5, float unk6, eReqFlag unk7));
+		DefineMethod(MakeRequest, 0x96cba0, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, const Goid_* unk3, float unk4, float unk5, float unk6), Args(const Goid_* unk1, eRequest unk2, const Goid_* unk3, float unk4, float unk5, float unk6));
+		DefineMethod(MakeRequest, 0x968cd1, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, const Goid_* unk3, eReqFlag unk4, float unk5), Args(const Goid_* unk1, eRequest unk2, const Goid_* unk3, eReqFlag unk4, float unk5));
+		DefineMethod(MakeRequest, 0x9693dc, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, const Goid_* unk3, eReqFlag unk4), Args(const Goid_* unk1, eRequest unk2, const Goid_* unk3, eReqFlag unk4));
+		DefineMethod(MakeRequest, 0x9693bf, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, const Goid_* unk3), Args(const Goid_* unk1, eRequest unk2, const Goid_* unk3));
+		DefineMethod(MakeRequest, 0x96a54b, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, const SiegePos& unk3, float unk4, eReqFlag unk5), Args(const Goid_* unk1, eRequest unk2, const SiegePos& unk3, float unk4, eReqFlag unk5));
+		DefineMethod(MakeRequest, 0x96a521, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, const SiegePos& unk3, float unk4), Args(const Goid_* unk1, eRequest unk2, const SiegePos& unk3, float unk4));
+		DefineMethod(MakeRequest, 0x968b28, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, const SiegePos& unk3, eReqFlag unk4), Args(const Goid_* unk1, eRequest unk2, const SiegePos& unk3, eReqFlag unk4));
+		DefineMethod(MakeRequest, 0x969391, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, const SiegePos& unk3), Args(const Goid_* unk1, eRequest unk2, const SiegePos& unk3));
+		DefineMethod(MakeRequest, 0x968be9, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, const SiegeRot& unk3, eReqFlag unk4), Args(const Goid_* unk1, eRequest unk2, const SiegeRot& unk3, eReqFlag unk4));
+		DefineMethod(MakeRequest, 0x9693a8, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, const SiegeRot& unk3), Args(const Goid_* unk1, eRequest unk2, const SiegeRot& unk3));
+		DefineMethod(MakeRequest, 0x9693fa, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, eAnimChore unk3, const Skrit::SiegeRailWrapper& unk4, float unk5, unsigned long unk6, bool unk7), Args(const Goid_* unk1, eRequest unk2, eAnimChore unk3, const Skrit::SiegeRailWrapper& unk4, float unk5, unsigned long unk6, bool unk7));
+		DefineMethod(MakeRequest, 0x968de8, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, eAnimChore unk3, const Skrit::SiegeRailWrapper& unk4, float unk5, unsigned long unk6, unsigned long unk7, bool unk8), Args(const Goid_* unk1, eRequest unk2, eAnimChore unk3, const Skrit::SiegeRailWrapper& unk4, float unk5, unsigned long unk6, unsigned long unk7, bool unk8));
+		DefineMethod(MakeRequest, 0x968a27, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, eAnimChore unk3, unsigned long unk4, unsigned long unk5), Args(const Goid_* unk1, eRequest unk2, eAnimChore unk3, unsigned long unk4, unsigned long unk5));
+		DefineMethod(MakeRequest, 0x96cc5e, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, float unk3, const Goid_* unk4, float unk5, float unk6, float unk7, eReqFlag unk8), Args(const Goid_* unk1, eRequest unk2, float unk3, const Goid_* unk4, float unk5, float unk6, float unk7, eReqFlag unk8));
+		DefineMethod(MakeRequest, 0x96cc21, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, float unk3, const Goid_* unk4, float unk5, float unk6, float unk7), Args(const Goid_* unk1, eRequest unk2, float unk3, const Goid_* unk4, float unk5, float unk6, float unk7));
+		DefineMethod(MakeRequest, 0x96a59d, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, float unk3, const SiegePos& unk4, float unk5, eReqFlag unk6), Args(const Goid_* unk1, eRequest unk2, float unk3, const SiegePos& unk4, float unk5, eReqFlag unk6));
+		DefineMethod(MakeRequest, 0x96a576, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, float unk3, const SiegePos& unk4, float unk5), Args(const Goid_* unk1, eRequest unk2, float unk3, const SiegePos& unk4, float unk5));
+		DefineMethod(MakeRequest, 0x96c4ed, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const Goid_* unk5, float unk6, float unk7, float unk8, eReqFlag unk9, float unk10), Args(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const Goid_* unk5, float unk6, float unk7, float unk8, eReqFlag unk9, float unk10));
+		DefineMethod(MakeRequest, 0x96ccda, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const Goid_* unk5, float unk6, float unk7, float unk8, eReqFlag unk9), Args(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const Goid_* unk5, float unk6, float unk7, float unk8, eReqFlag unk9));
+		DefineMethod(MakeRequest, 0x96cc9c, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const Goid_* unk5, float unk6, float unk7, float unk8), Args(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const Goid_* unk5, float unk6, float unk7, float unk8));
+		DefineMethod(MakeRequest, 0x969b3a, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const SiegePos& unk5, float unk6, eReqFlag unk7), Args(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const SiegePos& unk5, float unk6, eReqFlag unk7));
+		DefineMethod(MakeRequest, 0x96a5c5, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const SiegePos& unk5, float unk6), Args(const Goid_* unk1, eRequest unk2, float unk3, unsigned long unk4, const SiegePos& unk5, float unk6));
+		DefineMethod(MakeRequest, 0x969363, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, eReqFlag unk3), Args(const Goid_* unk1, eRequest unk2, eReqFlag unk3));
+		DefineMethod(MakeRequest, 0x96cb5e, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, unsigned long unk3, const Goid_* unk4, float unk5, float unk6, float unk7, eReqFlag unk8), Args(const Goid_* unk1, eRequest unk2, unsigned long unk3, const Goid_* unk4, float unk5, float unk6, float unk7, eReqFlag unk8));
+		DefineMethod(MakeRequest, 0x96cbe0, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, unsigned long unk3, const Goid_* unk4, float unk5, float unk6, float unk7), Args(const Goid_* unk1, eRequest unk2, unsigned long unk3, const Goid_* unk4, float unk5, float unk6, float unk7));
+		DefineMethod(MakeRequest, 0x96a4f5, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, unsigned long unk3, const SiegePos& unk4, float unk5, eReqFlag unk6), Args(const Goid_* unk1, eRequest unk2, unsigned long unk3, const SiegePos& unk4, float unk5, eReqFlag unk6));
+		DefineMethod(MakeRequest, 0x96a4ca, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, unsigned long unk3, const SiegePos& unk4, float unk5), Args(const Goid_* unk1, eRequest unk2, unsigned long unk3, const SiegePos& unk4, float unk5));
+		DefineMethod(MakeRequest, 0x968804, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, unsigned long unk3, eReqFlag unk4), Args(const Goid_* unk1, eRequest unk2, unsigned long unk3, eReqFlag unk4));
+		DefineMethod(MakeRequest, 0x96937a, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, unsigned long unk3), Args(const Goid_* unk1, eRequest unk2, unsigned long unk3));
+		DefineMethod(MakeRequest, 0x96934d, eReqRetCode, Params(const Goid_* unk1, eRequest unk2), Args(const Goid_* unk1, eRequest unk2));
+		DefineMethod(MakeSpeedRequest, 0x968f5a, eReqRetCode, Params(const Goid_* unk1, eRequest unk2, unsigned long unk3, float unk4), Args(const Goid_* unk1, eRequest unk2, unsigned long unk3, float unk4));
 	};
 };
 

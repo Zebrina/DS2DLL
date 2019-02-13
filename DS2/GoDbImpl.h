@@ -15,8 +15,8 @@ public:
 	/*GoDbImpl*/ const FuBi::FunctionSpec* const `public: void /*__thiscall*/ RCMarkForDeletionPacker(const_mem_ptr unk1)'::`5'::s_FunctionSpec; //0x00d1a4bc
 	/*GoDbImpl*/ const FuBi::FunctionSpec* const `public: void /*__thiscall*/ RCMarkForMondoDeletionPacker(const_mem_ptr unk1)'::`5'::s_FunctionSpec; //0x00d1a4c4
 	/*GoDbImpl*/ public: /*static*/ GoDbImpl* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x0080d8ea
-	/*GoDbImpl*/ public: FuBi::Cookie__* /*__thiscall*/ RCCloneGoPacker(const_mem_ptr unk1); //0x00822f42
-	/*GoDbImpl*/ public: FuBi::Cookie__* /*__thiscall*/ RCCreateGoPacker(const_mem_ptr unk1); //0x00820c90
-	/*GoDbImpl*/ public: void /*__thiscall*/ RCMarkForDeletionPacker(const_mem_ptr unk1); //0x0081debc
-	/*GoDbImpl*/ public: void /*__thiscall*/ RCMarkForMondoDeletionPacker(const_mem_ptr unk1); //0x0081dfd7
+	DefineMethod(RCCloneGoPacker, 0x822f42, FuBi::Cookie__*, Params(const_mem_ptr unk1), Args(const_mem_ptr unk1));
+	DefineMethod(RCCreateGoPacker, 0x820c90, FuBi::Cookie__*, Params(const_mem_ptr unk1), Args(const_mem_ptr unk1));
+	DefineMethod(RCMarkForDeletionPacker, 0x81debc, void, Params(const_mem_ptr unk1), Args(const_mem_ptr unk1));
+	DefineMethod(RCMarkForMondoDeletionPacker, 0x81dfd7, void, Params(const_mem_ptr unk1), Args(const_mem_ptr unk1));
 };

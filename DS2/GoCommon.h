@@ -2,23 +2,23 @@
 
 class GoCommon {
 public:
-	/*GoCommon*/ private: /*static*/ GoCommon* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x00408818
+	DefineStaticMethod(FUBI_NetToInstance, 0x408818, GoCommon*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unsigned long unk1, FuBi::Cookie__** unk2));
 	/*GoCommon*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoCommon* unk1); //0x0040880f
-	/*GoCommon*/ private: void /*__thiscall*/ SetScreenName(const gpbstring<char>& unk1); //0x0040b36a
-	/*GoCommon*/ private: void /*__thiscall*/ SSetScreenName(const gpbstring<char>& unk1); //0x0040b341
-	/*GoCommon*/ public: bool /*__thiscall*/ GetHasOneShotTriggered(); //0x0080412b
+	DefineMethod(SetScreenName, 0x40b36a, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SSetScreenName, 0x40b341, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(GetHasOneShotTriggered, 0x80412b, bool, Params(), Args());
 	/*GoCommon*/ public: const gpbstring<char>& /*__thiscall*/ GetAutoExpirationClass() const; //0x00804c52
 	/*GoCommon*/ public: const gpbstring<char>& /*__thiscall*/ GetForcedExpirationClass() const; //0x00804c1b
 	/*GoCommon*/ public: const Membership& /*__thiscall*/ GetMembership() const; //0x004087fa
-	/*GoCommon*/ public: ePClass /*__thiscall*/ GetRarity() const; //0x004087fe
-	/*GoCommon*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetScreenName(const gpbstring<unsigned short>& unk1); //0x008039a6
-	/*GoCommon*/ public: void /*__thiscall*/ GetScreenName(gpbstring<char>& unk1) const; //0x0040c8af
-	/*GoCommon*/ public: void /*__thiscall*/ RCCopyMembership(const Goid_* unk1); //0x00806507
-	/*GoCommon*/ public: void /*__thiscall*/ RCRestoreLastMembership(); //0x008065ec
-	/*GoCommon*/ public: void /*__thiscall*/ RCSetRolloverHelpKey(const gpbstring<char>& unk1); //0x008072da
-	/*GoCommon*/ public: void /*__thiscall*/ RestoreLastMembership(); //0x0040bb81
-	/*GoCommon*/ public: void /*__thiscall*/ RSSetRolloverHelpKey(const gpbstring<char>& unk1); //0x008076e1
-	/*GoCommon*/ public: void /*__thiscall*/ SCopyMembership(const Goid_* unk1); //0x008068b0
-	/*GoCommon*/ public: void /*__thiscall*/ SetRarity(ePClass unk1); //0x00408802
-	/*GoCommon*/ public: void /*__thiscall*/ SRestoreLastMembership(); //0x008068b9
+	DefineConstMethod(GetRarity, 0x4087fe, ePClass, Params(), Args());
+	DefineMethod(RCSetScreenName, 0x8039a6, FuBi::Cookie__*, Params(const gpbstring<unsigned short>& unk1), Args(const gpbstring<unsigned short>& unk1));
+	DefineConstMethod(GetScreenName, 0x40c8af, void, Params(gpbstring<char>& unk1), Args(gpbstring<char>& unk1));
+	DefineMethod(RCCopyMembership, 0x806507, void, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(RCRestoreLastMembership, 0x8065ec, void, Params(), Args());
+	DefineMethod(RCSetRolloverHelpKey, 0x8072da, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(RestoreLastMembership, 0x40bb81, void, Params(), Args());
+	DefineMethod(RSSetRolloverHelpKey, 0x8076e1, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SCopyMembership, 0x8068b0, void, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(SetRarity, 0x408802, void, Params(ePClass unk1), Args(ePClass unk1));
+	DefineMethod(SRestoreLastMembership, 0x8068b9, void, Params(), Args());
 };

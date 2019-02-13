@@ -10,19 +10,19 @@ public:
 	DefineSingleton(ZoneManager, 0x429e42);
 
 	/*ZoneManager*/ private: /*static*/ ZoneManager* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x00429e42
-	/*ZoneManager*/ public: bool /*__thiscall*/ SClearSpotRequest(const Goid_* unk1); //0x0090ad34
-	/*ZoneManager*/ public: bool /*__thiscall*/ SGetSpotRequest(const Goid_* unk1, SiegePos& unk2); //0x0090b2e3
-	/*ZoneManager*/ public: bool /*__thiscall*/ SHasSpotRequest(const Goid_* unk1); //0x00909fbb
-	/*ZoneManager*/ public: bool /*__thiscall*/ SRequestBackLeftSpot(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3); //0x00428473
-	/*ZoneManager*/ public: bool /*__thiscall*/ SRequestBackRightSpot(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3); //0x0042848a
-	/*ZoneManager*/ public: bool /*__thiscall*/ SRequestBackSpot(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3); //0x00428400
-	/*ZoneManager*/ public: bool /*__thiscall*/ SRequestClosestSpot(const Goid_* unk1, const Goid_* unk2, const SiegePos& unk3, SiegePos& unk4); //0x0090d8b8
-	/*ZoneManager*/ public: bool /*__thiscall*/ SRequestFlankSpot(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3); //0x004284a1
-	/*ZoneManager*/ public: bool /*__thiscall*/ SRequestFrontLeftSpot(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3); //0x00428445
-	/*ZoneManager*/ public: bool /*__thiscall*/ SRequestFrontRightSpot(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3); //0x0042845c
-	/*ZoneManager*/ public: bool /*__thiscall*/ SRequestFrontSpot(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3); //0x004283e9
-	/*ZoneManager*/ public: bool /*__thiscall*/ SRequestLeftSpot(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3); //0x00428417
-	/*ZoneManager*/ public: bool /*__thiscall*/ SRequestRandomSpot(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3); //0x004284bb
-	/*ZoneManager*/ public: bool /*__thiscall*/ SRequestRightSpot(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3); //0x0042842e
-	/*ZoneManager*/ public: bool /*__thiscall*/ SRequestSpot(const Goid_* unk1, const Goid_* unk2, unsigned long unk3, SiegePos& unk4); //0x0090d820
+	DefineMethod(SClearSpotRequest, 0x90ad34, bool, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(SGetSpotRequest, 0x90b2e3, bool, Params(const Goid_* unk1, SiegePos& unk2), Args(const Goid_* unk1, SiegePos& unk2));
+	DefineMethod(SHasSpotRequest, 0x909fbb, bool, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(SRequestBackLeftSpot, 0x428473, bool, Params(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3), Args(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3));
+	DefineMethod(SRequestBackRightSpot, 0x42848a, bool, Params(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3), Args(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3));
+	DefineMethod(SRequestBackSpot, 0x428400, bool, Params(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3), Args(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3));
+	DefineMethod(SRequestClosestSpot, 0x90d8b8, bool, Params(const Goid_* unk1, const Goid_* unk2, const SiegePos& unk3, SiegePos& unk4), Args(const Goid_* unk1, const Goid_* unk2, const SiegePos& unk3, SiegePos& unk4));
+	DefineMethod(SRequestFlankSpot, 0x4284a1, bool, Params(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3), Args(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3));
+	DefineMethod(SRequestFrontLeftSpot, 0x428445, bool, Params(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3), Args(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3));
+	DefineMethod(SRequestFrontRightSpot, 0x42845c, bool, Params(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3), Args(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3));
+	DefineMethod(SRequestFrontSpot, 0x4283e9, bool, Params(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3), Args(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3));
+	DefineMethod(SRequestLeftSpot, 0x428417, bool, Params(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3), Args(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3));
+	DefineMethod(SRequestRandomSpot, 0x4284bb, bool, Params(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3), Args(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3));
+	DefineMethod(SRequestRightSpot, 0x42842e, bool, Params(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3), Args(const Goid_* unk1, const Goid_* unk2, SiegePos& unk3));
+	DefineMethod(SRequestSpot, 0x90d820, bool, Params(const Goid_* unk1, const Goid_* unk2, unsigned long unk3, SiegePos& unk4), Args(const Goid_* unk1, const Goid_* unk2, unsigned long unk3, SiegePos& unk4));
 };

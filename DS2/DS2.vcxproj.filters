@@ -473,6 +473,9 @@
     <ClInclude Include="Guid.h" />
     <ClInclude Include="SystemTime.h" />
     <ClInclude Include="Matrix3x3.h" />
+    <ClInclude Include="DebugMacros.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="UI">

@@ -4,5 +4,5 @@ struct _GUID {
 
 };
 
-/*FuBi::Traits<_GUID>*/ /*static*/ bool /*__cdecl*/ FromString(const char* unk1, _GUID& unk2); //0x009d5396
-/*FuBi::Traits<_GUID>*/ /*static*/ void /*__cdecl*/ ToString(gpbstring<char>& unk1, const _GUID& unk2, FuBi::eXfer unk3); //0x009d5384
+DefineTemplateStaticMethod(FuBi::Traits<_GUID>, FromString, 0x9d5396, bool, Params(const char* unk1, _GUID& unk2), Args(const char* unk1, _GUID& unk2));
+DefineTemplateStaticMethod(FuBi::Traits<_GUID>, ToString, 0x9d5384, void, Params(gpbstring<char>& unk1, const _GUID& unk2, FuBi::eXfer unk3), Args(gpbstring<char>& unk1, const _GUID& unk2, FuBi::eXfer unk3));

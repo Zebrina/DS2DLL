@@ -2,7 +2,7 @@
 
 class UIMessage {
 public:
-	/*UIMessage*/ public: eUIMessage /*__thiscall*/ GetCode() const; //0x005029d6
-	/*UIMessage*/ public: int /*__thiscall*/ GetKey() const; //0x005029d9
-	/*UIMessage*/ public: void /*__thiscall*/ SetKey(int unk1); //0x005029de
+	DefineConstMethod(GetCode, 0x5029d6, eUIMessage, Params(), Args());
+	DefineConstMethod(GetKey, 0x5029d9, int, Params(), Args());
+	DefineMethod(SetKey, 0x5029de, void, Params(int unk1), Args(int unk1));
 };

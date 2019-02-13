@@ -1,5 +1,9 @@
 #pragma once
 
+#include "FuBi.h"
+
+#include "DebugMacros.h"
+
 struct tagRECT {
 	float left;
 	float top;
@@ -7,14 +11,21 @@ struct tagRECT {
 	float bottom;
 } typedef TagRect;
 
-/*FuBi::Traits<tagRECT>*/ /*static*/ bool /*__cdecl*/ FromString(const char* unk1, tagRECT& unk2); //0x009d534f
-/*FuBi::Traits<tagRECT>*/ /*static*/ void /*__cdecl*/ FUBI_GetHeaderSpec(FuBi::ClassHeaderSpec& unk1); //0x00503daf
-/*FuBi::Traits<tagRECT>*/ /*static*/ void /*__cdecl*/ ToString(gpbstring<char>& unk1, const tagRECT& unk2, FuBi::eXfer unk3); //0x009d530e
-/*FuBi::Traits<tagRECT>*/ long /*__thiscall*/ Getbottom() const; //0x00502c21
-/*FuBi::Traits<tagRECT>*/ long /*__thiscall*/ Getleft() const; //0x00502bf0
-/*FuBi::Traits<tagRECT>*/ long /*__thiscall*/ Getright() const; //0x00502c10
-/*FuBi::Traits<tagRECT>*/ long /*__thiscall*/ Gettop() const; //0x00502bff
-/*FuBi::Traits<tagRECT>*/ void /*__thiscall*/ Setbottom(long unk1); //0x00502c25
-/*FuBi::Traits<tagRECT>*/ void /*__thiscall*/ Setleft(long unk1); //0x00502bf3
-/*FuBi::Traits<tagRECT>*/ void /*__thiscall*/ Setright(long unk1); //0x00502c14
-/*FuBi::Traits<tagRECT>*/ void /*__thiscall*/ Settop(long unk1); //0x00502c03
+ASSERT_SIZEOF(tagRECT, 0x10);
+
+template <>
+bool FuBi::Traits<tagRECT>::FromString(const char* unk1, tagRECT& unk2) {
+	return ((FubI::Traits<tagRECT>::FromStringTemplate))(this, unk1, unk2);
+	DefineTemplateStaticMethod(FuBi::Traits<tagRECT>, FromString, 0x9d534f, bool, Params(const char* unk1, tagRECT& unk2), Args(const char* unk1, tagRECT& unk2));
+}
+
+DefineTemplateStaticMethod(FuBi::Traits<tagRECT>, FUBI_GetHeaderSpec, 0x503daf, void, Params(FuBi::ClassHeaderSpec& unk1), Args(FuBi::ClassHeaderSpec& unk1));
+DefineTemplateStaticMethod(FuBi::Traits<tagRECT>, ToString, 0x9d530e, void, Params(gpbstring<char>& unk1, const tagRECT& unk2, FuBi::eXfer unk3), Args(gpbstring<char>& unk1, const tagRECT& unk2, FuBi::eXfer unk3));
+DefineTemplateConstMethod(FuBi::Traits<tagRECT>, Getbottom, 0x502c21, long, Params(), Args());
+DefineTemplateConstMethod(FuBi::Traits<tagRECT>, Getleft, 0x502bf0, long, Params(), Args());
+DefineTemplateConstMethod(FuBi::Traits<tagRECT>, Getright, 0x502c10, long, Params(), Args());
+DefineTemplateConstMethod(FuBi::Traits<tagRECT>, Gettop, 0x502bff, long, Params(), Args());
+DefineTemplateMethod(FuBi::Traits<tagRECT>, Setbottom, 0x502c25, void, Params(long unk1), Args(long unk1));
+DefineTemplateMethod(FuBi::Traits<tagRECT>, Setleft, 0x502bf3, void, Params(long unk1), Args(long unk1));
+DefineTemplateMethod(FuBi::Traits<tagRECT>, Setright, 0x502c14, void, Params(long unk1), Args(long unk1));
+DefineTemplateMethod(FuBi::Traits<tagRECT>, Settop, 0x502c03, void, Params(long unk1), Args(long unk1));

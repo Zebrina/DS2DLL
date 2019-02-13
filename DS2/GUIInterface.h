@@ -1,7 +1,7 @@
 #pragma once
 
 struct GUInterface {
-	/*GUInterface*/ public: bool /*__thiscall*/ CallSkritFunction(const char* unk1); //0x007ace50
-	/*GUInterface*/ public: bool /*__thiscall*/ LoadSkritProperties(const char* unk1); //0x007ace20
-	/*GUInterface*/ public: void /*__thiscall*/ SetupFade(float unk1, bool unk2, bool unk3); //0x007acf60
+	DefineMethod(CallSkritFunction, 0x7ace50, bool, Params(const char* unk1), Args(const char* unk1));
+	DefineMethod(LoadSkritProperties, 0x7ace20, bool, Params(const char* unk1), Args(const char* unk1));
+	DefineMethod(SetupFade, 0x7acf60, void, Params(float unk1, bool unk2, bool unk3), Args(float unk1, bool unk2, bool unk3));
 };

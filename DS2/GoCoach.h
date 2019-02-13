@@ -2,14 +2,14 @@
 
 class GoCoach {
 public:
-	/*GoCoach*/ private: /*static*/ GoCoach* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x0080a844
+	DefineStaticMethod(FUBI_NetToInstance, 0x80a844, GoCoach*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unsigned long unk1, FuBi::Cookie__** unk2));
 	/*GoCoach*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoCoach* unk1); //0x0080a83b
-	/*GoCoach*/ public: bool /*__thiscall*/ AddMember(Go* unk1); //0x00967139
-	/*GoCoach*/ public: Go* /*__thiscall*/ GetMember(eJobAttribute unk1); //0x00966e40
+	DefineMethod(AddMember, 0x967139, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(GetMember, 0x966e40, Go*, Params(eJobAttribute unk1), Args(eJobAttribute unk1));
 	/*GoCoach*/ public: const GoidColl& /*__thiscall*/ GetMembers() const; //0x0080a830
-	/*GoCoach*/ public: int /*__thiscall*/ GetMaxMemberCount() const; //0x0096707b
-	/*GoCoach*/ public: void /*__thiscall*/ RemoveAllMembers(); //0x00966fbb
-	/*GoCoach*/ public: void /*__thiscall*/ RemoveMember(Go* unk1); //0x009670b4
-	/*GoCoach*/ public: void /*__thiscall*/ RemoveMember(const Goid_* unk1); //0x00966eea
-	/*GoCoach*/ public: void /*__thiscall*/ SetAllowNewMemebers(bool unk1); //0x0080a823
+	DefineConstMethod(GetMaxMemberCount, 0x96707b, int, Params(), Args());
+	DefineMethod(RemoveAllMembers, 0x966fbb, void, Params(), Args());
+	DefineMethod(RemoveMember, 0x9670b4, void, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(RemoveMember, 0x966eea, void, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(SetAllowNewMemebers, 0x80a823, void, Params(bool unk1), Args(bool unk1));
 };

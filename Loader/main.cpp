@@ -6,14 +6,14 @@
 #include "Common/Debug.h"
 #include "Common/SafeWrite.h"
 
-#define HOOK_TARGET "d3d9.dll"
+//#define HOOK_D3D9
 
-HMODULE libHandle;
+HMODULE targetHandle;
 
 HMODULE LoadTargetLibrary() {
 	HMODULE lib = NULL;
 
-#ifdef HOOK_TARGET == "d3d9.dll"
+#ifdef HOOK_D3D9
 	lib = LoadLibrary("d3d9_reshade.dll");
 	if (lib != NULL) {
 		return lib;
@@ -23,7 +23,13 @@ HMODULE LoadTargetLibrary() {
 	CHAR path[MAX_PATH];
 	UINT len = GetWindowsDirectoryA(path, MAX_PATH);
 	if (len > 0) {
-		strcpy_s(path + len, MAX_PATH - len, "\\System32\\" HOOK_TARGET);
+		strcpy_s(path + len, MAX_PATH - len, "\\System32\\"
+#ifdef HOOK_D3D9
+			"d3d9.dll"
+#else
+			"WINTRUST.dll"
+#endif
+		);
 
 		lib = LoadLibrary(path);
 	}
@@ -58,23 +64,21 @@ int LoadPluginExports(void* ex, const char* dir, const char* pattern) {
 		return 0;
 	}
 
-	int count = 0;
-
+	int result = 0;
 	do {
 		if (!(findFileData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)) {
 			strcpy_s(fullFileName + fileNameOffset, MAX_PATH - fileNameOffset, findFileData.cFileName);
 
 			HMODULE hModule = LoadLibrary(fullFileName);
 			if (hModule != NULL) {
-				LoadExports(ex, hModule, 0x0, 0x0);
-				++count;
+				result = LoadExports(ex, hModule, 0x0, 0x0);
 			}
 		}
-	} while (FindNextFile(hFind, &findFileData) != 0);
+	} while (result == NO_ERROR && FindNextFile(hFind, &findFileData) != 0);
 
 	FindClose(hFind);
 	
-	return count;
+	return NO_ERROR;
 }
 
 int __fastcall LoadBaseExports(void* ex, void*, HMODULE hModule, uint32_t arg2, uint32_t arg3) {
@@ -88,7 +92,7 @@ int __fastcall LoadBaseExports(void* ex, void*, HMODULE hModule, uint32_t arg2, 
 	return result;
 }
 
-void Hooks() {
+void WriteHooks() {
 	/*
 	intptr_t address = (intptr_t)GetIATAddr((uint8_t*)GetModuleHandle(NULL), "dinput8.dll", "DirectInput8Create");
 
@@ -110,22 +114,22 @@ void Hooks() {
 }
 
 extern "C" {
-#ifdef HOOK_TARGET == "d3d9.dll"
+#ifdef HOOK_D3D9
 	class IDirect3D9* __stdcall Direct3DCreate9(UINT SDKVersion) {
 		//DEBUG_ONLY(Report::_MessageBox("Hooking Direct3DCreate9!"));
 
 		class IDirect3D9* result = NULL;
 
-		if (libHandle != NULL) {
+		if (targetHandle != NULL) {
 			typedef class IDirect3D9* (__stdcall *_Direct3DCreate9)(UINT);
 
-			_Direct3DCreate9 ptr = (_Direct3DCreate9)GetProcAddress(libHandle, "Direct3DCreate9");
+			_Direct3DCreate9 ptr = (_Direct3DCreate9)GetProcAddress(targetHandle, "Direct3DCreate9");
 			if (ptr != NULL) {
 				result = ptr(SDKVersion);
 			}
 		}
 
-		Hooks();
+		WriteHooks();
 
 		return result;
 	}
@@ -135,36 +139,36 @@ extern "C" {
 
 		HRESULT result = E_FAIL;
 
-		if (libHandle != NULL) {
+		if (targetHandle != NULL) {
 			typedef HRESULT(__stdcall *_Direct3DCreate9Ex)(UINT, IDirect3D9Ex**);
 
-			_Direct3DCreate9Ex ptr = (_Direct3DCreate9Ex)GetProcAddress(libHandle, "Direct3DCreate9Ex");
+			_Direct3DCreate9Ex ptr = (_Direct3DCreate9Ex)GetProcAddress(targetHandle, "Direct3DCreate9Ex");
 			if (ptr != NULL) {
 				result = ptr(SDKVersion, d3d9Device);
 			}
 		}
 
-		Hooks();
+		WriteHooks();
 
 		return result;
 	}
 	*/
-#elif HOOK_TARGET == "WINTRUST.dll"
+#else
 	LONG __stdcall WinVerifyTrust(HWND hwnd, GUID* pgActionID, LPVOID pWVTdata) {
 		//DEBUG_ONLY(Report::_MessageBox("WinVerifyTrust!"));
 
 		HRESULT result = E_FAIL;
 
-		if (libHandle != NULL) {
+		if (targetHandle != NULL) {
 			typedef HRESULT(__stdcall *WinVerifyTrust_)(HWND, GUID*, LPVOID);
 
-			WinVerifyTrust_ ptr = (WinVerifyTrust_)GetProcAddress(libHandle, "WinVerifyTrust");
+			WinVerifyTrust_ ptr = (WinVerifyTrust_)GetProcAddress(targetHandle, "WinVerifyTrust");
 			if (ptr != NULL) {
 				result = ptr(hwnd, pgActionID, pWVTdata);
 			}
 		}
 
-		Hooks();
+		WriteHooks();
 
 		return result;
 	}
@@ -178,12 +182,12 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
-		libHandle = LoadTargetLibrary();
+		targetHandle = LoadTargetLibrary();
 		break;
 	//case DLL_THREAD_ATTACH:
 	//case DLL_THREAD_DETACH:
 	case DLL_PROCESS_DETACH:
-		FreeLibrary(libHandle);
+		FreeLibrary(targetHandle);
 		break;
 	}
 	return TRUE;
@@ -192,9 +196,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 #else
 
 #include <cstdlib>
-#include <iostream>
-
-#include "../DS2/SiegeEngine.h"
 
 using namespace std;
 

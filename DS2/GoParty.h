@@ -2,51 +2,51 @@
 
 class GoParty {
 public:
-	/*GoParty*/ private: /*static*/ GoParty* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x00412604
+	DefineStaticMethod(FUBI_NetToInstance, 0x412604, GoParty*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unsigned long unk1, FuBi::Cookie__** unk2));
 	/*GoParty*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoParty* unk1); //0x004125fb
-	/*GoParty*/ public: bool /*__thiscall*/ GetFreeMode(); //0x00412581
-	/*GoParty*/ public: bool /*__thiscall*/ GetHoldingGround() const; //0x004125c3
-	/*GoParty*/ public: bool /*__thiscall*/ GetMembersAccordingToHealNeed(GoidColl& unk1, bool unk2, const Goid_* unk3); //0x0087e63c
-	/*GoParty*/ public: bool /*__thiscall*/ GetMembersAccordingToHealNeed(GopColl& unk1, bool unk2); //0x0087e562
-	/*GoParty*/ public: bool /*__thiscall*/ GetSpotPosition(const Goid_* unk1, SiegePos& unk2); //0x008807f1
-	/*GoParty*/ public: bool /*__thiscall*/ IsInGuardStandingOrders() const; //0x004125af
-	/*GoParty*/ public: bool /*__thiscall*/ Move(const SiegePos& unk1, const vector_3& unk2, eQPlace unk3, eActionOrigin unk4, bool unk5, bool unk6, bool unk7, bool unk8, bool unk9); //0x00880925
-	/*GoParty*/ public: bool /*__thiscall*/ Move(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, bool unk4, bool unk5, bool unk6, bool unk7, bool unk8); //0x0088089a
-	/*GoParty*/ public: bool /*__thiscall*/ Move(eQPlace unk1, eActionOrigin unk2, bool unk3, bool unk4, bool unk5, bool unk6, bool unk7); //0x008807fd
-	/*GoParty*/ public: bool /*__thiscall*/ Regroup(eQPlace unk1); //0x008809eb
-	/*GoParty*/ public: Formation* /*__thiscall*/ GetFormation(); //0x0041256d
+	DefineMethod(GetFreeMode, 0x412581, bool, Params(), Args());
+	DefineConstMethod(GetHoldingGround, 0x4125c3, bool, Params(), Args());
+	DefineMethod(GetMembersAccordingToHealNeed, 0x87e63c, bool, Params(GoidColl& unk1, bool unk2, const Goid_* unk3), Args(GoidColl& unk1, bool unk2, const Goid_* unk3));
+	DefineMethod(GetMembersAccordingToHealNeed, 0x87e562, bool, Params(GopColl& unk1, bool unk2), Args(GopColl& unk1, bool unk2));
+	DefineMethod(GetSpotPosition, 0x8807f1, bool, Params(const Goid_* unk1, SiegePos& unk2), Args(const Goid_* unk1, SiegePos& unk2));
+	DefineConstMethod(IsInGuardStandingOrders, 0x4125af, bool, Params(), Args());
+	DefineMethod(Move, 0x880925, bool, Params(const SiegePos& unk1, const vector_3& unk2, eQPlace unk3, eActionOrigin unk4, bool unk5, bool unk6, bool unk7, bool unk8, bool unk9), Args(const SiegePos& unk1, const vector_3& unk2, eQPlace unk3, eActionOrigin unk4, bool unk5, bool unk6, bool unk7, bool unk8, bool unk9));
+	DefineMethod(Move, 0x88089a, bool, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, bool unk4, bool unk5, bool unk6, bool unk7, bool unk8), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, bool unk4, bool unk5, bool unk6, bool unk7, bool unk8));
+	DefineMethod(Move, 0x8807fd, bool, Params(eQPlace unk1, eActionOrigin unk2, bool unk3, bool unk4, bool unk5, bool unk6, bool unk7), Args(eQPlace unk1, eActionOrigin unk2, bool unk3, bool unk4, bool unk5, bool unk6, bool unk7));
+	DefineMethod(Regroup, 0x8809eb, bool, Params(eQPlace unk1), Args(eQPlace unk1));
+	DefineMethod(GetFormation, 0x41256d, Formation*, Params(), Args());
 	/*GoParty*/ public: const Goid_* /*__thiscall*/ GetPreferredMemberSacrifice(); //0x008794eb
 	/*GoParty*/ public: const Goid_* /*__thiscall*/ GetTalkingDisband(); //0x00412588
-	/*GoParty*/ public: eStandingOrders /*__thiscall*/ GetStandingOrders() const; //0x0087871e
-	/*GoParty*/ public: float /*__thiscall*/ GetDefaultPartyLightInnerRadius() const; //0x0041259f
-	/*GoParty*/ public: float /*__thiscall*/ GetDefaultPartyLightOuterRadius() const; //0x004125a3
-	/*GoParty*/ public: float /*__thiscall*/ GetDefaultPartyLightVertOffset() const; //0x004125a7
-	/*GoParty*/ public: float /*__thiscall*/ GetPartyLightInnerRadius() const; //0x0041258f
-	/*GoParty*/ public: float /*__thiscall*/ GetPartyLightOuterRadius() const; //0x00412593
-	/*GoParty*/ public: float /*__thiscall*/ GetPartyLightVertOffset() const; //0x00412597
-	/*GoParty*/ public: int /*__thiscall*/ GetMaxMeleeSlotsPerChar(); //0x004125d8
-	/*GoParty*/ public: int /*__thiscall*/ GetWaitingToJoinCount(); //0x004141e6
+	DefineConstMethod(GetStandingOrders, 0x87871e, eStandingOrders, Params(), Args());
+	DefineConstMethod(GetDefaultPartyLightInnerRadius, 0x41259f, float, Params(), Args());
+	DefineConstMethod(GetDefaultPartyLightOuterRadius, 0x4125a3, float, Params(), Args());
+	DefineConstMethod(GetDefaultPartyLightVertOffset, 0x4125a7, float, Params(), Args());
+	DefineConstMethod(GetPartyLightInnerRadius, 0x41258f, float, Params(), Args());
+	DefineConstMethod(GetPartyLightOuterRadius, 0x412593, float, Params(), Args());
+	DefineConstMethod(GetPartyLightVertOffset, 0x412597, float, Params(), Args());
+	DefineMethod(GetMaxMeleeSlotsPerChar, 0x4125d8, int, Params(), Args());
+	DefineMethod(GetWaitingToJoinCount, 0x4141e6, int, Params(), Args());
 	/*GoParty*/ public: GopColl& /*__thiscall*/ GetTempGopCollA(); //0x004125df
 	/*GoParty*/ public: GopColl& /*__thiscall*/ GetTempGopCollB(); //0x004125e6
 	/*GoParty*/ public: GopColl& /*__thiscall*/ GetTempGopCollC(); //0x004125ed
 	/*GoParty*/ public: QtColl& /*__thiscall*/ GetTempQtColl1(); //0x004125f4
 	/*GoParty*/ public: unsigned long /*__thiscall*/ GetDefaultPartyLightColor() const; //0x004125ab
 	/*GoParty*/ public: unsigned long /*__thiscall*/ GetPartyLightColor() const; //0x0041259b
-	/*GoParty*/ public: void /*__thiscall*/ AddMemberNow(Go* unk1); //0x0087b047
-	/*GoParty*/ public: void /*__thiscall*/ GetFocusThenMembersAccordingToRank(GoidColl& unk1, const Goid_* unk2); //0x0087e0bb
-	/*GoParty*/ public: void /*__thiscall*/ GetMembersAccordingToRank(GoidColl& unk1, const Goid_* unk2); //0x0087dffb
-	/*GoParty*/ public: void /*__thiscall*/ GetMembersAccordingToRank(GopColl& unk1); //0x0087e715
-	/*GoParty*/ public: void /*__thiscall*/ RCAddMemberNow(Go* unk1); //0x0087b78e
-	/*GoParty*/ public: void /*__thiscall*/ RCRemoveMemberNow(Go* unk1); //0x0087a406
-	/*GoParty*/ public: void /*__thiscall*/ RCSetTalkingDisband(const Goid_* unk1); //0x008785e8
-	/*GoParty*/ public: void /*__thiscall*/ RemoveMemberNow(Go* unk1); //0x00879488
-	/*GoParty*/ public: void /*__thiscall*/ RSAddMemberNow(Go* unk1); //0x0087b904
-	/*GoParty*/ public: void /*__thiscall*/ RSRemoveMemberNow(Go* unk1); //0x0087b0b0
-	/*GoParty*/ public: void /*__thiscall*/ RSSetFormationDirection(const vector_3& unk1); //0x0087b203
-	/*GoParty*/ public: void /*__thiscall*/ RSSetFormationPosition(const SiegePos& unk1); //0x0087a61e
-	/*GoParty*/ public: void /*__thiscall*/ RSSetHoldingGround(bool unk1); //0x0087a516
-	/*GoParty*/ public: void /*__thiscall*/ RSSetStandingOrders(eStandingOrders unk1); //0x00880aaf
-	/*GoParty*/ public: void /*__thiscall*/ RSSetTalkingDisband(const Goid_* unk1); //0x00879558
-	/*GoParty*/ public: void /*__thiscall*/ SetFreeMode(bool unk1); //0x00412571
-	/*GoParty*/ public: void /*__thiscall*/ SetPartyLightValues(float unk1, float unk2, float unk3, unsigned long unk4); //0x008786cd
+	DefineMethod(AddMemberNow, 0x87b047, void, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(GetFocusThenMembersAccordingToRank, 0x87e0bb, void, Params(GoidColl& unk1, const Goid_* unk2), Args(GoidColl& unk1, const Goid_* unk2));
+	DefineMethod(GetMembersAccordingToRank, 0x87dffb, void, Params(GoidColl& unk1, const Goid_* unk2), Args(GoidColl& unk1, const Goid_* unk2));
+	DefineMethod(GetMembersAccordingToRank, 0x87e715, void, Params(GopColl& unk1), Args(GopColl& unk1));
+	DefineMethod(RCAddMemberNow, 0x87b78e, void, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(RCRemoveMemberNow, 0x87a406, void, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(RCSetTalkingDisband, 0x8785e8, void, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(RemoveMemberNow, 0x879488, void, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(RSAddMemberNow, 0x87b904, void, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(RSRemoveMemberNow, 0x87b0b0, void, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(RSSetFormationDirection, 0x87b203, void, Params(const vector_3& unk1), Args(const vector_3& unk1));
+	DefineMethod(RSSetFormationPosition, 0x87a61e, void, Params(const SiegePos& unk1), Args(const SiegePos& unk1));
+	DefineMethod(RSSetHoldingGround, 0x87a516, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(RSSetStandingOrders, 0x880aaf, void, Params(eStandingOrders unk1), Args(eStandingOrders unk1));
+	DefineMethod(RSSetTalkingDisband, 0x879558, void, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(SetFreeMode, 0x412571, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetPartyLightValues, 0x8786cd, void, Params(float unk1, float unk2, float unk3, unsigned long unk4), Args(float unk1, float unk2, float unk3, unsigned long unk4));
 };

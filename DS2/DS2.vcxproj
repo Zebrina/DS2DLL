@@ -92,6 +92,7 @@
     <ClInclude Include="CrossOverUtil.h" />
     <ClInclude Include="CustomEffect.h" />
     <ClInclude Include="Debug.h" />
+    <ClInclude Include="DebugMacros.h" />
     <ClInclude Include="DecalId.h" />
     <ClInclude Include="DS2.h" />
     <ClInclude Include="Enums.h" />

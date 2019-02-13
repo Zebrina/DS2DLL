@@ -2,12 +2,12 @@
 
 struct LightId_ {
 	/*LightId_*/ private: /*static*/ const LightId_* /*__cdecl*/ GetInvalidLightId(); //0x00408376
-	/*LightId_*/ private: bool /*__thiscall*/ GetActive() const; //0x007d6b40
-	/*LightId_*/ private: bool /*__thiscall*/ IsValid() const; //0x0040836b
-	/*LightId_*/ private: float /*__thiscall*/ GetIntensity() const; //0x007d6b65
+	DefineConstMethod(GetActive, 0x7d6b40, bool, Params(), Args());
+	DefineConstMethod(IsValid, 0x40836b, bool, Params(), Args());
+	DefineConstMethod(GetIntensity, 0x7d6b65, float, Params(), Args());
 	/*LightId_*/ private: unsigned long /*__thiscall*/ GetColor() const; //0x007d6b1b
-	/*LightId_*/ private: void /*__thiscall*/ GetPosition(SiegePos& unk1) const; //0x007d6b8a
-	/*LightId_*/ private: void /*__thiscall*/ SetActive(bool unk1); //0x007d6bfc
-	/*LightId_*/ private: void /*__thiscall*/ SetColor(unsigned long unk1); //0x007d6bc3
-	/*LightId_*/ private: void /*__thiscall*/ SetIntensity(float unk1); //0x007d6c35
+	DefineConstMethod(GetPosition, 0x7d6b8a, void, Params(SiegePos& unk1), Args(SiegePos& unk1));
+	DefineMethod(SetActive, 0x7d6bfc, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetColor, 0x7d6bc3, void, Params(unsigned long unk1), Args(unsigned long unk1));
+	DefineMethod(SetIntensity, 0x7d6c35, void, Params(float unk1), Args(float unk1));
 } typedef LightId;

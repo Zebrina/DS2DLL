@@ -7,7 +7,7 @@ public:
 	DefineSingleton(UIStagingArea, 0x4da4f1);
 
 	/*UIStagingArea*/ private: /*static*/ UIStagingArea* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x004da4f1
-	/*UIStagingArea*/ private: void /*__thiscall*/ ShowGameSettingsTab(); //0x004f9713
-	/*UIStagingArea*/ private: void /*__thiscall*/ ShowMapSettingsTab(); //0x004f973f
-	/*UIStagingArea*/ private: void /*__thiscall*/ ShowPlayersTab(); //0x004f8c05
+	DefineMethod(ShowGameSettingsTab, 0x4f9713, void, Params(), Args());
+	DefineMethod(ShowMapSettingsTab, 0x4f973f, void, Params(), Args());
+	DefineMethod(ShowPlayersTab, 0x4f8c05, void, Params(), Args());
 };

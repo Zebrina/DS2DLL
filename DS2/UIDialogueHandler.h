@@ -7,17 +7,17 @@ public:
 	DefineSingleton(UIDialogueHandler, 0x4243b3);
 
 	/*UIDialogueHandler*/ private: /*static*/ UIDialogueHandler* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x004243b3
-	/*UIDialogueHandler*/ private: void /*__thiscall*/ OnConversationBoxClick(); //0x0046d986
-	/*UIDialogueHandler*/ private: void /*__thiscall*/ Reply(const gpbstring<char>& unk1); //0x0047037c
-	/*UIDialogueHandler*/ private: void /*__thiscall*/ ReplyMore(); //0x00470702
-	/*UIDialogueHandler*/ private: void /*__thiscall*/ RSRunFlickChoice(const gpbstring<char>& unk1, const Goid_* unk2, const Goid_* unk3); //0x0046e965
-	/*UIDialogueHandler*/ private: void /*__thiscall*/ RSSendReqTalkEnd(const Goid_* unk1, const Goid_* unk2); //0x0046e4a7
-	/*UIDialogueHandler*/ private: void /*__thiscall*/ RSSendReqTalkEnd(unsigned long unk1, unsigned long unk2); //0x0046df4c
-	/*UIDialogueHandler*/ private: void /*__thiscall*/ RSSetButtonValue(const gpbstring<char>& unk1); //0x0046e3b0
-	/*UIDialogueHandler*/ public: bool /*__thiscall*/ CanUseHireConversations(const Goid_* unk1, const Goid_* unk2); //0x0046ead7
-	/*UIDialogueHandler*/ public: bool /*__thiscall*/ ExplicitExitDialogue(); //0x0046f4b3
-	/*UIDialogueHandler*/ public: bool /*__thiscall*/ IsConversationActive(); //0x0046ec48
-	/*UIDialogueHandler*/ public: void /*__thiscall*/ RCExplicitExitDialogue(unsigned long unk1); //0x00470193
-	/*UIDialogueHandler*/ public: void /*__thiscall*/ RCSetNISReqTalkEnd(unsigned long unk1, bool unk2); //0x0046d9b7
-	/*UIDialogueHandler*/ public: void /*__thiscall*/ SExplicitExitDialogue(unsigned long unk1); //0x00470797
+	DefineMethod(OnConversationBoxClick, 0x46d986, void, Params(), Args());
+	DefineMethod(Reply, 0x47037c, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(ReplyMore, 0x470702, void, Params(), Args());
+	DefineMethod(RSRunFlickChoice, 0x46e965, void, Params(const gpbstring<char>& unk1, const Goid_* unk2, const Goid_* unk3), Args(const gpbstring<char>& unk1, const Goid_* unk2, const Goid_* unk3));
+	DefineMethod(RSSendReqTalkEnd, 0x46e4a7, void, Params(const Goid_* unk1, const Goid_* unk2), Args(const Goid_* unk1, const Goid_* unk2));
+	DefineMethod(RSSendReqTalkEnd, 0x46df4c, void, Params(unsigned long unk1, unsigned long unk2), Args(unsigned long unk1, unsigned long unk2));
+	DefineMethod(RSSetButtonValue, 0x46e3b0, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(CanUseHireConversations, 0x46ead7, bool, Params(const Goid_* unk1, const Goid_* unk2), Args(const Goid_* unk1, const Goid_* unk2));
+	DefineMethod(ExplicitExitDialogue, 0x46f4b3, bool, Params(), Args());
+	DefineMethod(IsConversationActive, 0x46ec48, bool, Params(), Args());
+	DefineMethod(RCExplicitExitDialogue, 0x470193, void, Params(unsigned long unk1), Args(unsigned long unk1));
+	DefineMethod(RCSetNISReqTalkEnd, 0x46d9b7, void, Params(unsigned long unk1, bool unk2), Args(unsigned long unk1, bool unk2));
+	DefineMethod(SExplicitExitDialogue, 0x470797, void, Params(unsigned long unk1), Args(unsigned long unk1));
 };

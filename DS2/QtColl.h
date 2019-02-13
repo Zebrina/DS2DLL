@@ -3,6 +3,6 @@
 enum eQueryTrait;
 
 struct QtColl {
-	/*QtColl*/ private: void /*__thiscall*/ Add(eQueryTrait unk1); //0x00503c8b
-	/*QtColl*/ private: void /*__thiscall*/ Clear(); //0x00503905
+	DefineMethod(Add, 0x503c8b, void, Params(eQueryTrait unk1), Args(eQueryTrait unk1));
+	DefineMethod(Clear, 0x503905, void, Params(), Args());
 };

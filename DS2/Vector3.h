@@ -2,18 +2,18 @@
 
 struct vector_3 {
 	/*vector_3*/ public: /*static*/ unsigned int /*__cdecl*/ FUBI_PodGetSize(); //0x0050241e
-	/*vector_3*/ public: bool /*__thiscall*/ FUBI_RENAME_IsZero() const; //0x005033c9
-	/*vector_3*/ public: float /*__thiscall*/ FUBI_RENAME_GetX() const; //0x00502422
-	/*vector_3*/ public: float /*__thiscall*/ FUBI_RENAME_GetY() const; //0x00502425
-	/*vector_3*/ public: float /*__thiscall*/ FUBI_RENAME_GetZ() const; //0x00502429
-	/*vector_3*/ public: void /*__thiscall*/ FUBI_RENAME_RotateX(float unk1); //0x005033d9
-	/*vector_3*/ public: void /*__thiscall*/ FUBI_RENAME_RotateY(float unk1); //0x005033ec
-	/*vector_3*/ public: void /*__thiscall*/ FUBI_RENAME_RotateZ(float unk1); //0x005033ff
-	/*vector_3*/ public: void /*__thiscall*/ FUBI_RENAME_SetX(float unk1); //0x0050242d
-	/*vector_3*/ public: void /*__thiscall*/ FUBI_RENAME_SetY(float unk1); //0x00502439
-	/*vector_3*/ public: void /*__thiscall*/ FUBI_RENAME_SetZ(float unk1); //0x00502446
+	DefineConstMethod(FUBI_RENAME_IsZero, 0x5033c9, bool, Params(), Args());
+	DefineConstMethod(FUBI_RENAME_GetX, 0x502422, float, Params(), Args());
+	DefineConstMethod(FUBI_RENAME_GetY, 0x502425, float, Params(), Args());
+	DefineConstMethod(FUBI_RENAME_GetZ, 0x502429, float, Params(), Args());
+	DefineMethod(FUBI_RENAME_RotateX, 0x5033d9, void, Params(float unk1), Args(float unk1));
+	DefineMethod(FUBI_RENAME_RotateY, 0x5033ec, void, Params(float unk1), Args(float unk1));
+	DefineMethod(FUBI_RENAME_RotateZ, 0x5033ff, void, Params(float unk1), Args(float unk1));
+	DefineMethod(FUBI_RENAME_SetX, 0x50242d, void, Params(float unk1), Args(float unk1));
+	DefineMethod(FUBI_RENAME_SetY, 0x502439, void, Params(float unk1), Args(float unk1));
+	DefineMethod(FUBI_RENAME_SetZ, 0x502446, void, Params(float unk1), Args(float unk1));
 } typedef Vector3;
 
-/*FuBi::Traits<vector_3>*/ /*static*/ bool /*__cdecl*/ FromString(const char* unk1, vector_3& unk2); //0x009d5481
-/*FuBi::Traits<vector_3>*/ /*static*/ void /*__cdecl*/ FUBI_GetHeaderSpec(FuBi::ClassHeaderSpec& unk1); //0x00503e00
-/*FuBi::Traits<vector_3>*/ /*static*/ void /*__cdecl*/ ToString(gpbstring<char>& unk1, const vector_3& unk2, FuBi::eXfer unk3); //0x009d544c
+DefineTemplateStaticMethod(FuBi::Traits<vector_3>, FromString, 0x9d5481, bool, Params(const char* unk1, vector_3& unk2), Args(const char* unk1, vector_3& unk2));
+DefineTemplateStaticMethod(FuBi::Traits<vector_3>, FUBI_GetHeaderSpec, 0x503e00, void, Params(FuBi::ClassHeaderSpec& unk1), Args(FuBi::ClassHeaderSpec& unk1));
+DefineTemplateStaticMethod(FuBi::Traits<vector_3>, ToString, 0x9d544c, void, Params(gpbstring<char>& unk1, const vector_3& unk2, FuBi::eXfer unk3), Args(gpbstring<char>& unk1, const vector_3& unk2, FuBi::eXfer unk3));

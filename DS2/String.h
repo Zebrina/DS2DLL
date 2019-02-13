@@ -1,15 +1,15 @@
 #pragma once
 
 namespace String {
-	/*String*/ private: /*static*/ bool /*__cdecl*/ GetDelimitedBool(const char* unk1, int unk2, char unk3, bool unk4); //0x0099789b
-	/*String*/ private: /*static*/ bool /*__cdecl*/ GetDelimitedBool(const char* unk1, int unk2, char unk3); //0x004279f4
-	/*String*/ private: /*static*/ bool /*__cdecl*/ GetDelimitedBool(const char* unk1, int unk2); //0x00427a0c
-	/*String*/ private: /*static*/ bool /*__cdecl*/ IsEmpty(const char* unk1); //0x0099732f
-	/*String*/ private: /*static*/ bool /*__cdecl*/ SameNoCase(const char* unk1, const char* unk2, int unk3); //0x00997635
-	/*String*/ private: /*static*/ bool /*__cdecl*/ SameNoCase(const char* unk1, const char* unk2); //0x009975eb
-	/*String*/ private: /*static*/ bool /*__cdecl*/ SameWithCase(const char* unk1, const char* unk2, int unk3); //0x00997756
-	/*String*/ private: /*static*/ bool /*__cdecl*/ SameWithCase(const char* unk1, const char* unk2); //0x0099767e
-	/*String*/ private: /*static*/ bool /*__cdecl*/ StringInString(const char* unk1, const char* unk2); //0x00997712
+	DefineStaticMethod(GetDelimitedBool, 0x99789b, bool, Params(const char* unk1, int unk2, char unk3, bool unk4), Args(const char* unk1, int unk2, char unk3, bool unk4));
+	DefineStaticMethod(GetDelimitedBool, 0x4279f4, bool, Params(const char* unk1, int unk2, char unk3), Args(const char* unk1, int unk2, char unk3));
+	DefineStaticMethod(GetDelimitedBool, 0x427a0c, bool, Params(const char* unk1, int unk2), Args(const char* unk1, int unk2));
+	DefineStaticMethod(IsEmpty, 0x99732f, bool, Params(const char* unk1), Args(const char* unk1));
+	DefineStaticMethod(SameNoCase, 0x997635, bool, Params(const char* unk1, const char* unk2, int unk3), Args(const char* unk1, const char* unk2, int unk3));
+	DefineStaticMethod(SameNoCase, 0x9975eb, bool, Params(const char* unk1, const char* unk2), Args(const char* unk1, const char* unk2));
+	DefineStaticMethod(SameWithCase, 0x997756, bool, Params(const char* unk1, const char* unk2, int unk3), Args(const char* unk1, const char* unk2, int unk3));
+	DefineStaticMethod(SameWithCase, 0x99767e, bool, Params(const char* unk1, const char* unk2), Args(const char* unk1, const char* unk2));
+	DefineStaticMethod(StringInString, 0x997712, bool, Params(const char* unk1, const char* unk2), Args(const char* unk1, const char* unk2));
 	/*String*/ private: /*static*/ gpbstring<char> /*__cdecl*/ GetDelimitedString(const char* unk1, int unk2, char unk3, const char* unk4, bool unk5); //0x009977fb
 	/*String*/ private: /*static*/ gpbstring<char> /*__cdecl*/ GetDelimitedString(const char* unk1, int unk2, char unk3, const char* unk4); //0x00427ace
 	/*String*/ private: /*static*/ gpbstring<char> /*__cdecl*/ GetDelimitedString(const char* unk1, int unk2, char unk3); //0x00427aef
@@ -23,15 +23,15 @@ namespace String {
 	/*String*/ private: /*static*/ gpbstring<char>& /*__cdecl*/ AppendF(gpbstring<char>& unk1, const char* unk2, ... unk3); //0x009973ae
 	/*String*/ private: /*static*/ gpbstring<char>& /*__cdecl*/ Assign(gpbstring<char>& unk1, const char* unk2); //0x0099745f
 	/*String*/ private: /*static*/ gpbstring<char>& /*__cdecl*/ AssignF(gpbstring<char>& unk1, const char* unk2, ... unk3); //0x0099749c
-	/*String*/ private: /*static*/ float /*__cdecl*/ GetDelimitedFloat(const char* unk1, int unk2, char unk3, float unk4); //0x009978e3
-	/*String*/ private: /*static*/ float /*__cdecl*/ GetDelimitedFloat(const char* unk1, int unk2, char unk3); //0x00427a52
-	/*String*/ private: /*static*/ float /*__cdecl*/ GetDelimitedFloat(const char* unk1, int unk2); //0x00427a6e
-	/*String*/ private: /*static*/ int /*__cdecl*/ GetDelimitedInt(const char* unk1, int unk2, char unk3, int unk4); //0x009978bf
-	/*String*/ private: /*static*/ int /*__cdecl*/ GetDelimitedInt(const char* unk1, int unk2, char unk3); //0x00427a23
-	/*String*/ private: /*static*/ int /*__cdecl*/ GetDelimitedInt(const char* unk1, int unk2); //0x00427a3b
-	/*String*/ private: /*static*/ int /*__cdecl*/ GetLength(const gpbstring<char>& unk1); //0x0099735d
-	/*String*/ private: /*static*/ int /*__cdecl*/ GetNumDelimitedValues(const char* unk1, char unk2); //0x009977e9
-	/*String*/ private: /*static*/ int /*__cdecl*/ GetNumDelimitedValues(const char* unk1); //0x004279e3
-	/*String*/ private: /*static*/ void /*__cdecl*/ PadBackToLength(gpbstring<char>& unk1, char unk2, unsigned int unk3); //0x00997740
-	/*String*/ private: /*static*/ void /*__cdecl*/ PadFrontToLength(gpbstring<char>& unk1, char unk2, unsigned int unk3); //0x0099772a
+	DefineStaticMethod(GetDelimitedFloat, 0x9978e3, float, Params(const char* unk1, int unk2, char unk3, float unk4), Args(const char* unk1, int unk2, char unk3, float unk4));
+	DefineStaticMethod(GetDelimitedFloat, 0x427a52, float, Params(const char* unk1, int unk2, char unk3), Args(const char* unk1, int unk2, char unk3));
+	DefineStaticMethod(GetDelimitedFloat, 0x427a6e, float, Params(const char* unk1, int unk2), Args(const char* unk1, int unk2));
+	DefineStaticMethod(GetDelimitedInt, 0x9978bf, int, Params(const char* unk1, int unk2, char unk3, int unk4), Args(const char* unk1, int unk2, char unk3, int unk4));
+	DefineStaticMethod(GetDelimitedInt, 0x427a23, int, Params(const char* unk1, int unk2, char unk3), Args(const char* unk1, int unk2, char unk3));
+	DefineStaticMethod(GetDelimitedInt, 0x427a3b, int, Params(const char* unk1, int unk2), Args(const char* unk1, int unk2));
+	DefineStaticMethod(GetLength, 0x99735d, int, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineStaticMethod(GetNumDelimitedValues, 0x9977e9, int, Params(const char* unk1, char unk2), Args(const char* unk1, char unk2));
+	DefineStaticMethod(GetNumDelimitedValues, 0x4279e3, int, Params(const char* unk1), Args(const char* unk1));
+	DefineStaticMethod(PadBackToLength, 0x997740, void, Params(gpbstring<char>& unk1, char unk2, unsigned int unk3), Args(gpbstring<char>& unk1, char unk2, unsigned int unk3));
+	DefineStaticMethod(PadFrontToLength, 0x99772a, void, Params(gpbstring<char>& unk1, char unk2, unsigned int unk3), Args(gpbstring<char>& unk1, char unk2, unsigned int unk3));
 }

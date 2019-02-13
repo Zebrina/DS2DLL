@@ -6,17 +6,17 @@
 
 class GoFollower {
 public:
-	/*GoFollower*/ private: /*static*/ GoFollower* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x004283c1
+	DefineStaticMethod(FUBI_NetToInstance, 0x4283c1, GoFollower*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unsigned long unk1, FuBi::Cookie__** unk2));
 	/*GoFollower*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoFollower* unk1); //0x004283b8
-	/*GoFollower*/ public: BoneTranslator::eBone /*__thiscall*/ GetCurrentOrientTargetBone() const; //0x0042837e
-	/*GoFollower*/ public: bool /*__thiscall*/ IsOrientModeDefined() const; //0x0042835f
+	DefineConstMethod(GetCurrentOrientTargetBone, 0x42837e, BoneTranslator::eBone, Params(), Args());
+	DefineConstMethod(IsOrientModeDefined, 0x42835f, bool, Params(), Args());
 	/*GoFollower*/ public: const Goid_* /*__thiscall*/ GetCurrentOrientTarget() const; //0x00428368
 	/*GoFollower*/ public: const SiegePos& /*__thiscall*/ GetCurrentOrientTargPos() const; //0x00428393
 	/*GoFollower*/ public: const SiegeRot& /*__thiscall*/ GetCurrentOrientationGoal() const; //0x004283a9
-	/*GoFollower*/ public: float /*__thiscall*/ GetCurrentTurnAngle(double unk1); //0x00903915
-	/*GoFollower*/ public: float /*__thiscall*/ GetCurrentVelocity() const; //0x00902174
-	/*GoFollower*/ public: MCP::eOrientMode /*__thiscall*/ GetCurrentOrientMode() const; //0x0042835b
-	/*GoFollower*/ public: void /*__thiscall*/ RCSendPackedClipToFollowers(const_mem_ptr unk1); //0x00907196
-	/*GoFollower*/ public: void /*__thiscall*/ RCSendPackedPositionUpdateToFollowers(const_mem_ptr unk1); //0x00903bca
-	/*GoFollower*/ public: void /*__thiscall*/ RCSendPackedUpdateToFollowers(const_mem_ptr unk1); //0x00907534
+	DefineMethod(GetCurrentTurnAngle, 0x903915, float, Params(double unk1), Args(double unk1));
+	DefineConstMethod(GetCurrentVelocity, 0x902174, float, Params(), Args());
+	DefineConstMethod(GetCurrentOrientMode, 0x42835b, MCP::eOrientMode, Params(), Args());
+	DefineMethod(RCSendPackedClipToFollowers, 0x907196, void, Params(const_mem_ptr unk1), Args(const_mem_ptr unk1));
+	DefineMethod(RCSendPackedPositionUpdateToFollowers, 0x903bca, void, Params(const_mem_ptr unk1), Args(const_mem_ptr unk1));
+	DefineMethod(RCSendPackedUpdateToFollowers, 0x907534, void, Params(const_mem_ptr unk1), Args(const_mem_ptr unk1));
 };

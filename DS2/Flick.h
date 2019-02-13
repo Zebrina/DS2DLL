@@ -8,28 +8,28 @@ public:
 
 	class CSeqFunctionContext {
 	public:
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ BindSequenceCatalyst(Go* unk1); //0x008dd5a7
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ CanRoleMoveTo(const char* unk1, const char* unk2, bool unk3, bool unk4); //0x008d7404
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ CanThisRoleJumpTo(const char* unk1); //0x008d73e1
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ CanThisRoleMoveTo(const char* unk1, bool unk2, bool unk3); //0x008d7430
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ GetBool(const char* unk1) const; //0x008d7593
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ GetEventState(const char* unk1) const; //0x008d253b
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ GetJobLatchStatus(int unk1) const; //0x008d46f9
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ GetMessageLatchStatus(int unk1) const; //0x008d475e
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ GetSequencePlayingNIS(); //0x008d246b
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ GotoLabel(const char* unk1); //0x008d73b0
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ HasThisRole() const; //0x008d24ec
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ IsDefaultArg(const char* unk1); //0x008d7573
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ IsLatentModeWait() const; //0x008d24d6
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ IsRoleBusy(const char* unk1); //0x008d7555
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ IsRoleCaptured(const char* unk1); //0x008d74dd
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ IsRoleDead(const char* unk1); //0x008d7537
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ IsRoleDynamic(const char* unk1); //0x008d74bf
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ IsRoleExternal(const char* unk1); //0x008d74fb
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ IsRoleRetired(const char* unk1); //0x008d7519
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ IsRoleType(const char* unk1, const char* unk2); //0x008d7492
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ IsSequenceServerOnly() const; //0x008d24e5
-		/*Flick::CSeqFunctionContext*/ public: bool /*__thiscall*/ LaunchThread(const char* unk1); //0x008e0d26
+		DefineMethod(BindSequenceCatalyst, 0x8dd5a7, bool, Params(Go* unk1), Args(Go* unk1));
+		DefineMethod(CanRoleMoveTo, 0x8d7404, bool, Params(const char* unk1, const char* unk2, bool unk3, bool unk4), Args(const char* unk1, const char* unk2, bool unk3, bool unk4));
+		DefineMethod(CanThisRoleJumpTo, 0x8d73e1, bool, Params(const char* unk1), Args(const char* unk1));
+		DefineMethod(CanThisRoleMoveTo, 0x8d7430, bool, Params(const char* unk1, bool unk2, bool unk3), Args(const char* unk1, bool unk2, bool unk3));
+		DefineConstMethod(GetBool, 0x8d7593, bool, Params(const char* unk1), Args(const char* unk1));
+		DefineConstMethod(GetEventState, 0x8d253b, bool, Params(const char* unk1), Args(const char* unk1));
+		DefineConstMethod(GetJobLatchStatus, 0x8d46f9, bool, Params(int unk1), Args(int unk1));
+		DefineConstMethod(GetMessageLatchStatus, 0x8d475e, bool, Params(int unk1), Args(int unk1));
+		DefineMethod(GetSequencePlayingNIS, 0x8d246b, bool, Params(), Args());
+		DefineMethod(GotoLabel, 0x8d73b0, bool, Params(const char* unk1), Args(const char* unk1));
+		DefineConstMethod(HasThisRole, 0x8d24ec, bool, Params(), Args());
+		DefineMethod(IsDefaultArg, 0x8d7573, bool, Params(const char* unk1), Args(const char* unk1));
+		DefineConstMethod(IsLatentModeWait, 0x8d24d6, bool, Params(), Args());
+		DefineMethod(IsRoleBusy, 0x8d7555, bool, Params(const char* unk1), Args(const char* unk1));
+		DefineMethod(IsRoleCaptured, 0x8d74dd, bool, Params(const char* unk1), Args(const char* unk1));
+		DefineMethod(IsRoleDead, 0x8d7537, bool, Params(const char* unk1), Args(const char* unk1));
+		DefineMethod(IsRoleDynamic, 0x8d74bf, bool, Params(const char* unk1), Args(const char* unk1));
+		DefineMethod(IsRoleExternal, 0x8d74fb, bool, Params(const char* unk1), Args(const char* unk1));
+		DefineMethod(IsRoleRetired, 0x8d7519, bool, Params(const char* unk1), Args(const char* unk1));
+		DefineMethod(IsRoleType, 0x8d7492, bool, Params(const char* unk1, const char* unk2), Args(const char* unk1, const char* unk2));
+		DefineConstMethod(IsSequenceServerOnly, 0x8d24e5, bool, Params(), Args());
+		DefineMethod(LaunchThread, 0x8e0d26, bool, Params(const char* unk1), Args(const char* unk1));
 		/*Flick::CSeqFunctionContext*/ public: gpbstring<char> /*__thiscall*/ GetArgUserString(const char* unk1) const; //0x008de3b7
 		/*Flick::CSeqFunctionContext*/ public: gpbstring<char> /*__thiscall*/ GetRoleName(const char* unk1); //0x008da351
 		/*Flick::CSeqFunctionContext*/ public: gpbstring<char> /*__thiscall*/ GetRoleState(const char* unk1); //0x008da386
@@ -51,21 +51,21 @@ public:
 		/*Flick::CSeqFunctionContext*/ public: const RegionId_* /*__thiscall*/ GetSourceRegion() const; //0x008d24f7
 		/*Flick::CSeqFunctionContext*/ public: const Scid_* /*__thiscall*/ GetRoleScid(const char* unk1); //0x008d782b
 		/*Flick::CSeqFunctionContext*/ public: const Scid_* /*__thiscall*/ GetThisRoleScid(); //0x008d46e1
-		/*Flick::CSeqFunctionContext*/ public: double /*__thiscall*/ GetFloat(const char* unk1) const; //0x008d7609
-		/*Flick::CSeqFunctionContext*/ public: eJobResult /*__thiscall*/ GetJobLatchResult(int unk1) const; //0x008d472e
-		/*Flick::CSeqFunctionContext*/ public: float /*__thiscall*/ GetFloat1() const; //0x00423b5a
-		/*Flick::CSeqFunctionContext*/ public: int /*__thiscall*/ AddData(unsigned long unk1); //0x008d81af
-		/*Flick::CSeqFunctionContext*/ public: int /*__thiscall*/ AddJobLatch(const Goid_* unk1, eJobAbstractType unk2); //0x008d8141
-		/*Flick::CSeqFunctionContext*/ public: int /*__thiscall*/ AddJobLatch(const Goid_* unk1); //0x008d891c
-		/*Flick::CSeqFunctionContext*/ public: int /*__thiscall*/ AddMessageLatch(const Goid_* unk1, eWorldEvent unk2, unsigned long unk3); //0x008de321
-		/*Flick::CSeqFunctionContext*/ public: int /*__thiscall*/ AddMessageLatch(const Goid_* unk1, eWorldEvent unk2); //0x008de9f8
-		/*Flick::CSeqFunctionContext*/ public: int /*__thiscall*/ AddMessageLatch(const Scid_* unk1, eWorldEvent unk2, unsigned long unk3); //0x008de36a
-		/*Flick::CSeqFunctionContext*/ public: int /*__thiscall*/ AddMessageLatch(const Scid_* unk1, eWorldEvent unk2); //0x008dea0c
-		/*Flick::CSeqFunctionContext*/ public: int /*__thiscall*/ GetArgCount() const; //0x008d47c3
-		/*Flick::CSeqFunctionContext*/ public: int /*__thiscall*/ GetFourCC(const char* unk1) const; //0x008d767f
-		/*Flick::CSeqFunctionContext*/ public: int /*__thiscall*/ GetInt(const char* unk1) const; //0x008d75ce
-		/*Flick::CSeqFunctionContext*/ public: int /*__thiscall*/ GetJobLatchCount() const; //0x004243dd
-		/*Flick::CSeqFunctionContext*/ public: int /*__thiscall*/ GetMessageLatchCount() const; //0x004243ea
+		DefineConstMethod(GetFloat, 0x8d7609, double, Params(const char* unk1), Args(const char* unk1));
+		DefineConstMethod(GetJobLatchResult, 0x8d472e, eJobResult, Params(int unk1), Args(int unk1));
+		DefineConstMethod(GetFloat1, 0x423b5a, float, Params(), Args());
+		DefineMethod(AddData, 0x8d81af, int, Params(unsigned long unk1), Args(unsigned long unk1));
+		DefineMethod(AddJobLatch, 0x8d8141, int, Params(const Goid_* unk1, eJobAbstractType unk2), Args(const Goid_* unk1, eJobAbstractType unk2));
+		DefineMethod(AddJobLatch, 0x8d891c, int, Params(const Goid_* unk1), Args(const Goid_* unk1));
+		DefineMethod(AddMessageLatch, 0x8de321, int, Params(const Goid_* unk1, eWorldEvent unk2, unsigned long unk3), Args(const Goid_* unk1, eWorldEvent unk2, unsigned long unk3));
+		DefineMethod(AddMessageLatch, 0x8de9f8, int, Params(const Goid_* unk1, eWorldEvent unk2), Args(const Goid_* unk1, eWorldEvent unk2));
+		DefineMethod(AddMessageLatch, 0x8de36a, int, Params(const Scid_* unk1, eWorldEvent unk2, unsigned long unk3), Args(const Scid_* unk1, eWorldEvent unk2, unsigned long unk3));
+		DefineMethod(AddMessageLatch, 0x8dea0c, int, Params(const Scid_* unk1, eWorldEvent unk2), Args(const Scid_* unk1, eWorldEvent unk2));
+		DefineConstMethod(GetArgCount, 0x8d47c3, int, Params(), Args());
+		DefineConstMethod(GetFourCC, 0x8d767f, int, Params(const char* unk1), Args(const char* unk1));
+		DefineConstMethod(GetInt, 0x8d75ce, int, Params(const char* unk1), Args(const char* unk1));
+		DefineConstMethod(GetJobLatchCount, 0x4243dd, int, Params(), Args());
+		DefineConstMethod(GetMessageLatchCount, 0x4243ea, int, Params(), Args());
 		/*Flick::CSeqFunctionContext*/ public: unsigned long /*__thiscall*/ AttachEffectToLineSegment(const char* unk1) const; //0x008da467
 		/*Flick::CSeqFunctionContext*/ public: unsigned long /*__thiscall*/ AttachEffectToPoint(const char* unk1) const; //0x008da3b5
 		/*Flick::CSeqFunctionContext*/ public: unsigned long /*__thiscall*/ AttachEffectToTriangle(const char* unk1) const; //0x008da536
@@ -73,22 +73,22 @@ public:
 		/*Flick::CSeqFunctionContext*/ public: unsigned long /*__thiscall*/ GetMessageLatchData1(int unk1) const; //0x008d478e
 		/*Flick::CSeqFunctionContext*/ public: unsigned long /*__thiscall*/ GetPointId(const char* unk1) const; //0x008d7786
 		/*Flick::CSeqFunctionContext*/ public: unsigned long /*__thiscall*/ GetThreadId() const; //0x008d2564
-		/*Flick::CSeqFunctionContext*/ public: void /*__thiscall*/ CaptureThisRole(); //0x008da33d
-		/*Flick::CSeqFunctionContext*/ public: void /*__thiscall*/ ClearJobLatches(); //0x00424758
-		/*Flick::CSeqFunctionContext*/ public: void /*__thiscall*/ ClearMessageLatches(); //0x00424935
-		/*Flick::CSeqFunctionContext*/ public: void /*__thiscall*/ ReleaseThisRole(); //0x008d453d
-		/*Flick::CSeqFunctionContext*/ public: void /*__thiscall*/ SetAllEventStates(bool unk1); //0x008d249b
-		/*Flick::CSeqFunctionContext*/ public: void /*__thiscall*/ SetData(unsigned int unk1, unsigned long unk2); //0x008d4551
-		/*Flick::CSeqFunctionContext*/ public: void /*__thiscall*/ SetEventState(const char* unk1, bool unk2); //0x008d247d
-		/*Flick::CSeqFunctionContext*/ public: void /*__thiscall*/ SetFloat1(float unk1); //0x00423b4d
-		/*Flick::CSeqFunctionContext*/ public: void /*__thiscall*/ SetProperty(const gpbstring<char>& unk1, const gpbstring<char>& unk2); //0x008dfb76
-		/*Flick::CSeqFunctionContext*/ public: void /*__thiscall*/ SetSequencePlayingNIS(bool unk1); //0x008d244f
-		/*Flick::CSeqFunctionContext*/ public: void /*__thiscall*/ ValidateRoleCaptured(const char* unk1); //0x008d7459
+		DefineMethod(CaptureThisRole, 0x8da33d, void, Params(), Args());
+		DefineMethod(ClearJobLatches, 0x424758, void, Params(), Args());
+		DefineMethod(ClearMessageLatches, 0x424935, void, Params(), Args());
+		DefineMethod(ReleaseThisRole, 0x8d453d, void, Params(), Args());
+		DefineMethod(SetAllEventStates, 0x8d249b, void, Params(bool unk1), Args(bool unk1));
+		DefineMethod(SetData, 0x8d4551, void, Params(unsigned int unk1, unsigned long unk2), Args(unsigned int unk1, unsigned long unk2));
+		DefineMethod(SetEventState, 0x8d247d, void, Params(const char* unk1, bool unk2), Args(const char* unk1, bool unk2));
+		DefineMethod(SetFloat1, 0x423b4d, void, Params(float unk1), Args(float unk1));
+		DefineMethod(SetProperty, 0x8dfb76, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2), Args(const gpbstring<char>& unk1, const gpbstring<char>& unk2));
+		DefineMethod(SetSequencePlayingNIS, 0x8d244f, void, Params(bool unk1), Args(bool unk1));
+		DefineMethod(ValidateRoleCaptured, 0x8d7459, void, Params(const char* unk1), Args(const char* unk1));
 	};
 
 	class FlickManager {
 	public:
-		/*Flick::FlickManager*/ public: void /*__thiscall*/ RSCreateAndLaunchServerSequence(const char* unk1, const Goid_* unk2, const Goid_* unk3); //0x008e0d68
+		DefineMethod(RSCreateAndLaunchServerSequence, 0x8e0d68, void, Params(const char* unk1, const Goid_* unk2, const Goid_* unk3), Args(const char* unk1, const Goid_* unk2, const Goid_* unk3));
 	};
 
 	class FuBiEvent {

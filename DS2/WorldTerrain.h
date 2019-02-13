@@ -7,35 +7,35 @@ public:
 	DefineSingleton(WorldTerrain, 0x40a60b);
 
 	/*WorldTerrain*/ private: /*static*/ WorldTerrain* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x0040a60b
-	/*WorldTerrain*/ private: FuBi::Cookie__* /*__thiscall*/ RCSyncNodalFlagStatesOnMachine(unsigned long unk1, const_mem_ptr unk2, const_mem_ptr unk3); //0x0083eb60
-	/*WorldTerrain*/ private: FuBi::Cookie__* /*__thiscall*/ RCSyncNodalTexStatesOnMachine(unsigned long unk1, const_mem_ptr unk2, const_mem_ptr unk3); //0x0083ea26
-	/*WorldTerrain*/ private: FuBi::Cookie__* /*__thiscall*/ RCSyncTransitionOnMachine(unsigned long unk1, const_mem_ptr unk2); //0x0083fb0d
-	/*WorldTerrain*/ public: bool /*__thiscall*/ GetNodalTextureAnimationState(const SiegeId_* unk1, int unk2); //0x0083e061
-	/*WorldTerrain*/ public: bool /*__thiscall*/ IsNodalPathingConnected(const SiegeId_* unk1, const SiegeId_* unk2); //0x0083deb7
-	/*WorldTerrain*/ public: float /*__thiscall*/ GetNodalTextureAnimationSpeed(const SiegeId_* unk1, int unk2); //0x0083e1c6
-	/*WorldTerrain*/ public: int /*__thiscall*/ FindNodalTextureIndex(const SiegeId_* unk1, const gpbstring<char>& unk2); //0x0083defa
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCGlobalNodeFade(int unk1, int unk2, int unk3, int unk4, int unk5, unsigned char unk6); //0x0083e351
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCRegisterWorldFrustumOnMachine(unsigned int unk1, const PlayerId_* unk2, const FrustumId_* unk3); //0x0083f912
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCReplaceNodalTexture(const SiegeId_* unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3); //0x0083e20b
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCRequestNodeConnection(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, bool unk5, bool unk6); //0x0083dd88
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCRequestNodeTransition(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, double unk5, double unk6, eAxisHint unk7, ePosHint unk8, const Scid_* unk9, bool unk10, bool unk11, bool unk12, TTMessages* unk13); //0x0083db28
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCRequestNodeTransition(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, double unk5, double unk6, eAxisHint unk7, ePosHint unk8, const Scid_* unk9, bool unk10, bool unk11, bool unk12); //0x004095f1
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetNodalTextureAnimationSpeed(const SiegeId_* unk1, int unk2, float unk3); //0x0083e0a2
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetNodalTextureAnimationState(const SiegeId_* unk1, int unk2, bool unk3); //0x0083df41
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetNodeBoundsCamera(unsigned int unk1, bool unk2); //0x0083e684
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetNodeCameraFade(unsigned int unk1, unsigned char unk2); //0x0083e7a3
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetNodeDisabled(unsigned int unk1, bool unk2); //0x0083e8c2
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetNodeOccludesCamera(unsigned int unk1, bool unk2); //0x0083e565
-	/*WorldTerrain*/ public: FuBi::Cookie__* /*__thiscall*/ RCSyncGlobalNodeFade(unsigned long unk1, int unk2, int unk3, int unk4, int unk5, unsigned char unk6); //0x0083e45a
-	/*WorldTerrain*/ public: void /*__thiscall*/ ClearNodalDeformation(const siege::database_guid& unk1); //0x0083e331
-	/*WorldTerrain*/ public: void /*__thiscall*/ NodalWaveDeformation(const SiegePos& unk1, float unk2, float unk3, float unk4); //0x0083fa8f
-	/*WorldTerrain*/ public: void /*__thiscall*/ SGlobalNodeFade(int unk1, int unk2, int unk3, int unk4, int unk5, eFadeType unk6); //0x0083f4ef
-	/*WorldTerrain*/ public: void /*__thiscall*/ SReplaceNodalTexture(const SiegeId_* unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3); //0x0083f330
-	/*WorldTerrain*/ public: void /*__thiscall*/ SRequestNodeConnection(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, bool unk5, bool unk6); //0x0083f305
-	/*WorldTerrain*/ public: void /*__thiscall*/ SRequestNodeTransition(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, float unk5, eAxisHint unk6, ePosHint unk7, const Goid_* unk8, bool unk9, bool unk10, bool unk11, TTMessages* unk12); //0x0083f23d
-	/*WorldTerrain*/ public: void /*__thiscall*/ SRequestNodeTransition(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, float unk5, eAxisHint unk6, ePosHint unk7, const Goid_* unk8, bool unk9, bool unk10, bool unk11); //0x004095be
-	/*WorldTerrain*/ public: void /*__thiscall*/ SSetNodalTextureAnimationSpeed(const SiegeId_* unk1, int unk2, float unk3); //0x0083f317
-	/*WorldTerrain*/ public: void /*__thiscall*/ SSetNodalTextureAnimationState(const SiegeId_* unk1, int unk2, bool unk3); //0x0083f30e
-	/*WorldTerrain*/ public: void /*__thiscall*/ StartWatchingLightRegistration(const Goid_* unk1); //0x00841422
-	/*WorldTerrain*/ public: void /*__thiscall*/ StopWatchingLightRegistration(const Goid_* unk1); //0x008414b5
+	DefineMethod(RCSyncNodalFlagStatesOnMachine, 0x83eb60, FuBi::Cookie__*, Params(unsigned long unk1, const_mem_ptr unk2, const_mem_ptr unk3), Args(unsigned long unk1, const_mem_ptr unk2, const_mem_ptr unk3));
+	DefineMethod(RCSyncNodalTexStatesOnMachine, 0x83ea26, FuBi::Cookie__*, Params(unsigned long unk1, const_mem_ptr unk2, const_mem_ptr unk3), Args(unsigned long unk1, const_mem_ptr unk2, const_mem_ptr unk3));
+	DefineMethod(RCSyncTransitionOnMachine, 0x83fb0d, FuBi::Cookie__*, Params(unsigned long unk1, const_mem_ptr unk2), Args(unsigned long unk1, const_mem_ptr unk2));
+	DefineMethod(GetNodalTextureAnimationState, 0x83e061, bool, Params(const SiegeId_* unk1, int unk2), Args(const SiegeId_* unk1, int unk2));
+	DefineMethod(IsNodalPathingConnected, 0x83deb7, bool, Params(const SiegeId_* unk1, const SiegeId_* unk2), Args(const SiegeId_* unk1, const SiegeId_* unk2));
+	DefineMethod(GetNodalTextureAnimationSpeed, 0x83e1c6, float, Params(const SiegeId_* unk1, int unk2), Args(const SiegeId_* unk1, int unk2));
+	DefineMethod(FindNodalTextureIndex, 0x83defa, int, Params(const SiegeId_* unk1, const gpbstring<char>& unk2), Args(const SiegeId_* unk1, const gpbstring<char>& unk2));
+	DefineMethod(RCGlobalNodeFade, 0x83e351, FuBi::Cookie__*, Params(int unk1, int unk2, int unk3, int unk4, int unk5, unsigned char unk6), Args(int unk1, int unk2, int unk3, int unk4, int unk5, unsigned char unk6));
+	DefineMethod(RCRegisterWorldFrustumOnMachine, 0x83f912, FuBi::Cookie__*, Params(unsigned int unk1, const PlayerId_* unk2, const FrustumId_* unk3), Args(unsigned int unk1, const PlayerId_* unk2, const FrustumId_* unk3));
+	DefineMethod(RCReplaceNodalTexture, 0x83e20b, FuBi::Cookie__*, Params(const SiegeId_* unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3), Args(const SiegeId_* unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3));
+	DefineMethod(RCRequestNodeConnection, 0x83dd88, FuBi::Cookie__*, Params(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, bool unk5, bool unk6), Args(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, bool unk5, bool unk6));
+	DefineMethod(RCRequestNodeTransition, 0x83db28, FuBi::Cookie__*, Params(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, double unk5, double unk6, eAxisHint unk7, ePosHint unk8, const Scid_* unk9, bool unk10, bool unk11, bool unk12, TTMessages* unk13), Args(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, double unk5, double unk6, eAxisHint unk7, ePosHint unk8, const Scid_* unk9, bool unk10, bool unk11, bool unk12, TTMessages* unk13));
+	DefineMethod(RCRequestNodeTransition, 0x4095f1, FuBi::Cookie__*, Params(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, double unk5, double unk6, eAxisHint unk7, ePosHint unk8, const Scid_* unk9, bool unk10, bool unk11, bool unk12), Args(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, double unk5, double unk6, eAxisHint unk7, ePosHint unk8, const Scid_* unk9, bool unk10, bool unk11, bool unk12));
+	DefineMethod(RCSetNodalTextureAnimationSpeed, 0x83e0a2, FuBi::Cookie__*, Params(const SiegeId_* unk1, int unk2, float unk3), Args(const SiegeId_* unk1, int unk2, float unk3));
+	DefineMethod(RCSetNodalTextureAnimationState, 0x83df41, FuBi::Cookie__*, Params(const SiegeId_* unk1, int unk2, bool unk3), Args(const SiegeId_* unk1, int unk2, bool unk3));
+	DefineMethod(RCSetNodeBoundsCamera, 0x83e684, FuBi::Cookie__*, Params(unsigned int unk1, bool unk2), Args(unsigned int unk1, bool unk2));
+	DefineMethod(RCSetNodeCameraFade, 0x83e7a3, FuBi::Cookie__*, Params(unsigned int unk1, unsigned char unk2), Args(unsigned int unk1, unsigned char unk2));
+	DefineMethod(RCSetNodeDisabled, 0x83e8c2, FuBi::Cookie__*, Params(unsigned int unk1, bool unk2), Args(unsigned int unk1, bool unk2));
+	DefineMethod(RCSetNodeOccludesCamera, 0x83e565, FuBi::Cookie__*, Params(unsigned int unk1, bool unk2), Args(unsigned int unk1, bool unk2));
+	DefineMethod(RCSyncGlobalNodeFade, 0x83e45a, FuBi::Cookie__*, Params(unsigned long unk1, int unk2, int unk3, int unk4, int unk5, unsigned char unk6), Args(unsigned long unk1, int unk2, int unk3, int unk4, int unk5, unsigned char unk6));
+	DefineMethod(ClearNodalDeformation, 0x83e331, void, Params(const siege::database_guid& unk1), Args(const siege::database_guid& unk1));
+	DefineMethod(NodalWaveDeformation, 0x83fa8f, void, Params(const SiegePos& unk1, float unk2, float unk3, float unk4), Args(const SiegePos& unk1, float unk2, float unk3, float unk4));
+	DefineMethod(SGlobalNodeFade, 0x83f4ef, void, Params(int unk1, int unk2, int unk3, int unk4, int unk5, eFadeType unk6), Args(int unk1, int unk2, int unk3, int unk4, int unk5, eFadeType unk6));
+	DefineMethod(SReplaceNodalTexture, 0x83f330, void, Params(const SiegeId_* unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3), Args(const SiegeId_* unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3));
+	DefineMethod(SRequestNodeConnection, 0x83f305, void, Params(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, bool unk5, bool unk6), Args(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, bool unk5, bool unk6));
+	DefineMethod(SRequestNodeTransition, 0x83f23d, void, Params(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, float unk5, eAxisHint unk6, ePosHint unk7, const Goid_* unk8, bool unk9, bool unk10, bool unk11, TTMessages* unk12), Args(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, float unk5, eAxisHint unk6, ePosHint unk7, const Goid_* unk8, bool unk9, bool unk10, bool unk11, TTMessages* unk12));
+	DefineMethod(SRequestNodeTransition, 0x4095be, void, Params(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, float unk5, eAxisHint unk6, ePosHint unk7, const Goid_* unk8, bool unk9, bool unk10, bool unk11), Args(const SiegeId_* unk1, unsigned long unk2, const SiegeId_* unk3, unsigned long unk4, float unk5, eAxisHint unk6, ePosHint unk7, const Goid_* unk8, bool unk9, bool unk10, bool unk11));
+	DefineMethod(SSetNodalTextureAnimationSpeed, 0x83f317, void, Params(const SiegeId_* unk1, int unk2, float unk3), Args(const SiegeId_* unk1, int unk2, float unk3));
+	DefineMethod(SSetNodalTextureAnimationState, 0x83f30e, void, Params(const SiegeId_* unk1, int unk2, bool unk3), Args(const SiegeId_* unk1, int unk2, bool unk3));
+	DefineMethod(StartWatchingLightRegistration, 0x841422, void, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(StopWatchingLightRegistration, 0x8414b5, void, Params(const Goid_* unk1), Args(const Goid_* unk1));
 };

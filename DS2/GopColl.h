@@ -1,16 +1,16 @@
 #pragma once
 
 struct GopColl {
-	/*GopColl*/ private: bool /*__thiscall*/ Empty() const; //0x005035a1
-	/*GopColl*/ private: bool /*__thiscall*/ Has(Go* unk1); //0x007ed5f4
-	/*GopColl*/ private: bool /*__thiscall*/ Remove(Go* unk1); //0x007ed5ca
-	/*GopColl*/ private: Go* /*__thiscall*/ Back(); //0x005035d2
-	/*GopColl*/ private: Go* /*__thiscall*/ Front(); //0x005035cd
-	/*GopColl*/ private: Go* /*__thiscall*/ Get(int unk1) const; //0x005035ac
-	/*GopColl*/ private: int /*__thiscall*/ Size() const; //0x00503598
-	/*GopColl*/ private: void /*__thiscall*/ Add(Go* unk1); //0x00503c5b
-	/*GopColl*/ private: void /*__thiscall*/ Clean(); //0x007ed616
-	/*GopColl*/ private: void /*__thiscall*/ Clear(); //0x005038f3
-	/*GopColl*/ private: void /*__thiscall*/ PopBack(); //0x005035d9
-	/*GopColl*/ private: void /*__thiscall*/ Set(int unk1, Go* unk2); //0x005035bb
+	DefineConstMethod(Empty, 0x5035a1, bool, Params(), Args());
+	DefineMethod(Has, 0x7ed5f4, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(Remove, 0x7ed5ca, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(Back, 0x5035d2, Go*, Params(), Args());
+	DefineMethod(Front, 0x5035cd, Go*, Params(), Args());
+	DefineConstMethod(Get, 0x5035ac, Go*, Params(int unk1), Args(int unk1));
+	DefineConstMethod(Size, 0x503598, int, Params(), Args());
+	DefineMethod(Add, 0x503c5b, void, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(Clean, 0x7ed616, void, Params(), Args());
+	DefineMethod(Clear, 0x5038f3, void, Params(), Args());
+	DefineMethod(PopBack, 0x5035d9, void, Params(), Args());
+	DefineMethod(Set, 0x5035bb, void, Params(int unk1, Go* unk2), Args(int unk1, Go* unk2));
 };

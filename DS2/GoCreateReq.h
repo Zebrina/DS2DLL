@@ -2,11 +2,11 @@
 
 struct GoCreateReq {
 	/*GoCreateReq*/ public: /*static*/ unsigned int /*__cdecl*/ FUBI_PodGetSize(); //0x00502dbe
-	/*GoCreateReq*/ public: void /*__thiscall*/ SetFadeIn(bool unk1); //0x00502df1
-	/*GoCreateReq*/ public: void /*__thiscall*/ SetForcePosition(bool unk1); //0x00502e06
-	/*GoCreateReq*/ public: void /*__thiscall*/ SetNoStartupFx(bool unk1); //0x00502e32
-	/*GoCreateReq*/ public: void /*__thiscall*/ SetPrepareToDrawNow(bool unk1); //0x00502e1b
-	/*GoCreateReq*/ public: void /*__thiscall*/ SetSnapToTerrain(bool unk1); //0x00502ddc
-	/*GoCreateReq*/ public: void /*__thiscall*/ SetStartingOrient(const Quat& unk1); //0x00502dc2
-	/*GoCreateReq*/ public: void /*__thiscall*/ SetStartingPos(const SiegePos& unk1); //0x00847185
+	DefineMethod(SetFadeIn, 0x502df1, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetForcePosition, 0x502e06, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetNoStartupFx, 0x502e32, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetPrepareToDrawNow, 0x502e1b, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetSnapToTerrain, 0x502ddc, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetStartingOrient, 0x502dc2, void, Params(const Quat& unk1), Args(const Quat& unk1));
+	DefineMethod(SetStartingPos, 0x847185, void, Params(const SiegePos& unk1), Args(const SiegePos& unk1));
 };

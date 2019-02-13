@@ -4,4 +4,4 @@ struct GPoint {
 
 };
 
-/*FuBi::Traits<GPoint>*/ /*static*/ int /*__cdecl*/ FUBI_Inheritance(tagPOINT* unk1); //0x00502c32
+DefineTemplateStaticMethod(FuBi::Traits<GPoint>, FUBI_Inheritance, 0x502c32, int, Params(tagPOINT* unk1), Args(tagPOINT* unk1));

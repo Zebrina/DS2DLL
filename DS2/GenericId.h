@@ -2,5 +2,5 @@
 
 struct GenericId_ {
 	/*GenericId_*/ private: /*static*/ const GenericId_* /*__cdecl*/ GetInvalidGenericId(); //0x00502d6e
-	/*GenericId_*/ private: bool /*__thiscall*/ IsValid() const; //0x00502d66
+	DefineConstMethod(IsValid, 0x502d66, bool, Params(), Args());
 } typedef GenericId;

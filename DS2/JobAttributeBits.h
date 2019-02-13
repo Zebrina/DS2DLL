@@ -4,17 +4,17 @@ class JobAttributeBits {
 public:
 	/*JobAttributeBits*/ private: /*static*/ JobAttributeBits& /*__cdecl*/ GetTemp1(); //0x0094115c
 	/*JobAttributeBits*/ private: /*static*/ JobAttributeBits& /*__cdecl*/ GetTemp2(); //0x00941162
-	/*JobAttributeBits*/ public: bool /*__thiscall*/ Get(eJobAttribute unk1) const; //0x00942014
-	/*JobAttributeBits*/ public: bool /*__thiscall*/ HasAnyBitsSet() const; //0x00941c89
-	/*JobAttributeBits*/ public: bool /*__thiscall*/ IsEqualTo(const JobAttributeBits& unk1) const; //0x009424c4
-	/*JobAttributeBits*/ public: bool /*__thiscall*/ IsLargerSuperSetOf(const JobAttributeBits& unk1) const; //0x00942e59
-	/*JobAttributeBits*/ public: bool /*__thiscall*/ IsSmallerSubSetOf(const JobAttributeBits& unk1) const; //0x00942e85
-	/*JobAttributeBits*/ public: bool /*__thiscall*/ IsSubSetOf(const JobAttributeBits& unk1) const; //0x00942e22
-	/*JobAttributeBits*/ public: bool /*__thiscall*/ IsSuperSetOf(const JobAttributeBits& unk1) const; //0x00942ded
-	/*JobAttributeBits*/ public: void /*__thiscall*/ Clear(eJobAttribute unk1); //0x0094204d
-	/*JobAttributeBits*/ public: void /*__thiscall*/ ClearAll(); //0x009420d0
-	/*JobAttributeBits*/ public: void /*__thiscall*/ CopyFrom(const JobAttributeBits& unk1); //0x00942c88
-	/*JobAttributeBits*/ public: void /*__thiscall*/ Set(eJobAttribute unk1, bool unk2); //0x0094201d
-	/*JobAttributeBits*/ public: void /*__thiscall*/ Set(eJobAttribute unk1); //0x0094203c
-	/*JobAttributeBits*/ public: void /*__thiscall*/ SetAll(bool unk1); //0x0094205e
+	DefineConstMethod(Get, 0x942014, bool, Params(eJobAttribute unk1), Args(eJobAttribute unk1));
+	DefineConstMethod(HasAnyBitsSet, 0x941c89, bool, Params(), Args());
+	DefineConstMethod(IsEqualTo, 0x9424c4, bool, Params(const JobAttributeBits& unk1), Args(const JobAttributeBits& unk1));
+	DefineConstMethod(IsLargerSuperSetOf, 0x942e59, bool, Params(const JobAttributeBits& unk1), Args(const JobAttributeBits& unk1));
+	DefineConstMethod(IsSmallerSubSetOf, 0x942e85, bool, Params(const JobAttributeBits& unk1), Args(const JobAttributeBits& unk1));
+	DefineConstMethod(IsSubSetOf, 0x942e22, bool, Params(const JobAttributeBits& unk1), Args(const JobAttributeBits& unk1));
+	DefineConstMethod(IsSuperSetOf, 0x942ded, bool, Params(const JobAttributeBits& unk1), Args(const JobAttributeBits& unk1));
+	DefineMethod(Clear, 0x94204d, void, Params(eJobAttribute unk1), Args(eJobAttribute unk1));
+	DefineMethod(ClearAll, 0x9420d0, void, Params(), Args());
+	DefineMethod(CopyFrom, 0x942c88, void, Params(const JobAttributeBits& unk1), Args(const JobAttributeBits& unk1));
+	DefineMethod(Set, 0x94201d, void, Params(eJobAttribute unk1, bool unk2), Args(eJobAttribute unk1, bool unk2));
+	DefineMethod(Set, 0x94203c, void, Params(eJobAttribute unk1), Args(eJobAttribute unk1));
+	DefineMethod(SetAll, 0x94205e, void, Params(bool unk1), Args(bool unk1));
 };

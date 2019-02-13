@@ -6,186 +6,186 @@ public:
 
 	};
 
-	/*GoAspect*/ private: /*static*/ GoAspect* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x00411a35
+	DefineStaticMethod(FUBI_NetToInstance, 0x411a35, GoAspect*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unsigned long unk1, FuBi::Cookie__** unk2));
 	/*GoAspect*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoAspect* unk1); //0x00411a2c
-	/*GoAspect*/ private: FuBi::Cookie__* /*__thiscall*/ RCSetGoldValue(int unk1); //0x0086105a
-	/*GoAspect*/ private: void /*__thiscall*/ HideChildSubMeshByName(const char* unk1, int unk2); //0x00865207
-	/*GoAspect*/ private: void /*__thiscall*/ RCHideChildSubMeshByName(const char* unk1, int unk2); //0x0086552b
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetAspectTextureSpeed(int unk1, float unk2); //0x008624d6
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetChildTextureFromTextureName(const char* unk1, unsigned long unk2, const char* unk3); //0x00865613
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetCurrentAspectTexture(int unk1, const char* unk2); //0x00866588
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetCurrentLife(float unk1); //0x004119d2
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetCurrentMana(float unk1); //0x0086172e
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetDoesBlockCamera(bool unk1); //0x0086334e
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetDrawExclamation(bool unk1); //0x00863269
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetFreezeMeshFlag(bool unk1); //0x00861f03
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetInCombatStance(bool unk1); //0x00860d57
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetIsInvincible(bool unk1, const Goid_* unk2); //0x0086646a
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetIsMarkedForPickup(bool unk1); //0x00863184
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetIsSelectable(bool unk1); //0x00862fa8
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetIsUsable(bool unk1); //0x0086308d
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetIsVisible(bool unk1); //0x00864bfc
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetLifeState(eLifeState unk1); //0x0041198b
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetLifeTimedRestore(float unk1); //0x008612f2
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetLifeTimedRestorePeriod(float unk1); //0x008613db
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetLockMeshFlag(bool unk1); //0x00861fe8
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetManaTimedRestore(float unk1); //0x0086092a
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetManaTimedRestorePeriod(float unk1); //0x00861890
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetMaxLife(float unk1); //0x008625d5
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetMaxMana(float unk1); //0x00862814
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetNaturalMaxLife(float unk1); //0x008626be
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetNaturalMaxMana(float unk1); //0x008628fd
-	/*GoAspect*/ private: void /*__thiscall*/ RCSetTracerTexture(const char* unk1); //0x00865a22
-	/*GoAspect*/ private: void /*__thiscall*/ RCShowChildSubMeshByName(const char* unk1, int unk2); //0x00865443
-	/*GoAspect*/ private: void /*__thiscall*/ RCSyncLife(float unk1, double unk2); //0x008607e0
-	/*GoAspect*/ private: void /*__thiscall*/ RCSyncMana(float unk1, double unk2); //0x008615ee
-	/*GoAspect*/ private: void /*__thiscall*/ RCSyncState(float unk1, float unk2, double unk3, double unk4); //0x008614c4
-	/*GoAspect*/ private: void /*__thiscall*/ SetChildTextureFromTextureName(const char* unk1, unsigned long unk2, const char* unk3); //0x0086527f
-	/*GoAspect*/ private: void /*__thiscall*/ ShowChildSubMeshByName(const char* unk1, int unk2); //0x0086518f
-	/*GoAspect*/ public: bool /*__thiscall*/ GetDoesBlockCamera() const; //0x00411877
-	/*GoAspect*/ public: bool /*__thiscall*/ GetDoesBlockPath() const; //0x00411859
-	/*GoAspect*/ public: bool /*__thiscall*/ GetDrawExclamation() const; //0x00411845
-	/*GoAspect*/ public: bool /*__thiscall*/ GetDrawSelectionIndicator() const; //0x00411831
-	/*GoAspect*/ public: bool /*__thiscall*/ GetDynamicallyLit() const; //0x0041189e
-	/*GoAspect*/ public: bool /*__thiscall*/ GetEnchantInvincibility() const; //0x00414168
-	/*GoAspect*/ public: bool /*__thiscall*/ GetForceNoRender() const; //0x0041183b
-	/*GoAspect*/ public: bool /*__thiscall*/ GetHasBlockedPath() const; //0x00411863
-	/*GoAspect*/ public: bool /*__thiscall*/ GetHideMeshFlag(); //0x008606d9
-	/*GoAspect*/ public: bool /*__thiscall*/ GetInCombatStance() const; //0x00860e4d
-	/*GoAspect*/ public: bool /*__thiscall*/ GetInterestOnly() const; //0x00411827
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsCollidable() const; //0x0041184f
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsContextUsable() const; //0x0086239e
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsDoor() const; //0x0041188b
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsGagged() const; //0x00411895
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsInvincible() const; //0x00414153
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsInvincibleAgainst(const Goid_* unk1) const; //0x008640cf
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsMarkedForPickup() const; //0x004118c6
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsSelectable() const; //0x0041186d
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsTransmutable() const; //0x00862283
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsUsable() const; //0x00411881
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsVirginPickup() const; //0x004118d0
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsVisible() const; //0x008604d4
-	/*GoAspect*/ public: bool /*__thiscall*/ GetIsVisibleThisFrame() const; //0x00411817
-	/*GoAspect*/ public: bool /*__thiscall*/ GetLockMeshFlag() const; //0x00860704
-	/*GoAspect*/ public: bool /*__thiscall*/ GetManagesOwnDamage() const; //0x004119bd
-	/*GoAspect*/ public: bool /*__thiscall*/ GetOccludesLight() const; //0x004118a8
-	/*GoAspect*/ public: bool /*__thiscall*/ GetShouldDrawShadow() const; //0x0041181e
-	/*GoAspect*/ public: bool /*__thiscall*/ GetTerrainOrient() const; //0x004118bc
-	/*GoAspect*/ public: bool /*__thiscall*/ GetTerrainShaded() const; //0x004118b2
-	/*GoAspect*/ public: nema::Aspect* /*__thiscall*/ GetAspectPtr() const; //0x008605e4
+	DefineMethod(RCSetGoldValue, 0x86105a, FuBi::Cookie__*, Params(int unk1), Args(int unk1));
+	DefineMethod(HideChildSubMeshByName, 0x865207, void, Params(const char* unk1, int unk2), Args(const char* unk1, int unk2));
+	DefineMethod(RCHideChildSubMeshByName, 0x86552b, void, Params(const char* unk1, int unk2), Args(const char* unk1, int unk2));
+	DefineMethod(RCSetAspectTextureSpeed, 0x8624d6, void, Params(int unk1, float unk2), Args(int unk1, float unk2));
+	DefineMethod(RCSetChildTextureFromTextureName, 0x865613, void, Params(const char* unk1, unsigned long unk2, const char* unk3), Args(const char* unk1, unsigned long unk2, const char* unk3));
+	DefineMethod(RCSetCurrentAspectTexture, 0x866588, void, Params(int unk1, const char* unk2), Args(int unk1, const char* unk2));
+	DefineMethod(RCSetCurrentLife, 0x4119d2, void, Params(float unk1), Args(float unk1));
+	DefineMethod(RCSetCurrentMana, 0x86172e, void, Params(float unk1), Args(float unk1));
+	DefineMethod(RCSetDoesBlockCamera, 0x86334e, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(RCSetDrawExclamation, 0x863269, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(RCSetFreezeMeshFlag, 0x861f03, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(RCSetInCombatStance, 0x860d57, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(RCSetIsInvincible, 0x86646a, void, Params(bool unk1, const Goid_* unk2), Args(bool unk1, const Goid_* unk2));
+	DefineMethod(RCSetIsMarkedForPickup, 0x863184, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(RCSetIsSelectable, 0x862fa8, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(RCSetIsUsable, 0x86308d, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(RCSetIsVisible, 0x864bfc, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(RCSetLifeState, 0x41198b, void, Params(eLifeState unk1), Args(eLifeState unk1));
+	DefineMethod(RCSetLifeTimedRestore, 0x8612f2, void, Params(float unk1), Args(float unk1));
+	DefineMethod(RCSetLifeTimedRestorePeriod, 0x8613db, void, Params(float unk1), Args(float unk1));
+	DefineMethod(RCSetLockMeshFlag, 0x861fe8, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(RCSetManaTimedRestore, 0x86092a, void, Params(float unk1), Args(float unk1));
+	DefineMethod(RCSetManaTimedRestorePeriod, 0x861890, void, Params(float unk1), Args(float unk1));
+	DefineMethod(RCSetMaxLife, 0x8625d5, void, Params(float unk1), Args(float unk1));
+	DefineMethod(RCSetMaxMana, 0x862814, void, Params(float unk1), Args(float unk1));
+	DefineMethod(RCSetNaturalMaxLife, 0x8626be, void, Params(float unk1), Args(float unk1));
+	DefineMethod(RCSetNaturalMaxMana, 0x8628fd, void, Params(float unk1), Args(float unk1));
+	DefineMethod(RCSetTracerTexture, 0x865a22, void, Params(const char* unk1), Args(const char* unk1));
+	DefineMethod(RCShowChildSubMeshByName, 0x865443, void, Params(const char* unk1, int unk2), Args(const char* unk1, int unk2));
+	DefineMethod(RCSyncLife, 0x8607e0, void, Params(float unk1, double unk2), Args(float unk1, double unk2));
+	DefineMethod(RCSyncMana, 0x8615ee, void, Params(float unk1, double unk2), Args(float unk1, double unk2));
+	DefineMethod(RCSyncState, 0x8614c4, void, Params(float unk1, float unk2, double unk3, double unk4), Args(float unk1, float unk2, double unk3, double unk4));
+	DefineMethod(SetChildTextureFromTextureName, 0x86527f, void, Params(const char* unk1, unsigned long unk2, const char* unk3), Args(const char* unk1, unsigned long unk2, const char* unk3));
+	DefineMethod(ShowChildSubMeshByName, 0x86518f, void, Params(const char* unk1, int unk2), Args(const char* unk1, int unk2));
+	DefineConstMethod(GetDoesBlockCamera, 0x411877, bool, Params(), Args());
+	DefineConstMethod(GetDoesBlockPath, 0x411859, bool, Params(), Args());
+	DefineConstMethod(GetDrawExclamation, 0x411845, bool, Params(), Args());
+	DefineConstMethod(GetDrawSelectionIndicator, 0x411831, bool, Params(), Args());
+	DefineConstMethod(GetDynamicallyLit, 0x41189e, bool, Params(), Args());
+	DefineConstMethod(GetEnchantInvincibility, 0x414168, bool, Params(), Args());
+	DefineConstMethod(GetForceNoRender, 0x41183b, bool, Params(), Args());
+	DefineConstMethod(GetHasBlockedPath, 0x411863, bool, Params(), Args());
+	DefineMethod(GetHideMeshFlag, 0x8606d9, bool, Params(), Args());
+	DefineConstMethod(GetInCombatStance, 0x860e4d, bool, Params(), Args());
+	DefineConstMethod(GetInterestOnly, 0x411827, bool, Params(), Args());
+	DefineConstMethod(GetIsCollidable, 0x41184f, bool, Params(), Args());
+	DefineConstMethod(GetIsContextUsable, 0x86239e, bool, Params(), Args());
+	DefineConstMethod(GetIsDoor, 0x41188b, bool, Params(), Args());
+	DefineConstMethod(GetIsGagged, 0x411895, bool, Params(), Args());
+	DefineConstMethod(GetIsInvincible, 0x414153, bool, Params(), Args());
+	DefineConstMethod(GetIsInvincibleAgainst, 0x8640cf, bool, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineConstMethod(GetIsMarkedForPickup, 0x4118c6, bool, Params(), Args());
+	DefineConstMethod(GetIsSelectable, 0x41186d, bool, Params(), Args());
+	DefineConstMethod(GetIsTransmutable, 0x862283, bool, Params(), Args());
+	DefineConstMethod(GetIsUsable, 0x411881, bool, Params(), Args());
+	DefineConstMethod(GetIsVirginPickup, 0x4118d0, bool, Params(), Args());
+	DefineConstMethod(GetIsVisible, 0x8604d4, bool, Params(), Args());
+	DefineConstMethod(GetIsVisibleThisFrame, 0x411817, bool, Params(), Args());
+	DefineConstMethod(GetLockMeshFlag, 0x860704, bool, Params(), Args());
+	DefineConstMethod(GetManagesOwnDamage, 0x4119bd, bool, Params(), Args());
+	DefineConstMethod(GetOccludesLight, 0x4118a8, bool, Params(), Args());
+	DefineConstMethod(GetShouldDrawShadow, 0x41181e, bool, Params(), Args());
+	DefineConstMethod(GetTerrainOrient, 0x4118bc, bool, Params(), Args());
+	DefineConstMethod(GetTerrainShaded, 0x4118b2, bool, Params(), Args());
+	DefineConstMethod(GetAspectPtr, 0x8605e4, nema::Aspect*, Params(), Args());
 	/*GoAspect*/ public: ResHandle<nema::Aspect, ResHandleFields<24> > /*__thiscall*/ GetAspectHandle() const; //0x008605d5
 	/*GoAspect*/ public: const char* /*__thiscall*/ GetCurrentAspectTexture(int unk1); //0x0086532b
 	/*GoAspect*/ public: const char* /*__thiscall*/ GetTracerTexture() const; //0x00865368
 	/*GoAspect*/ public: const gpbstring<char>& /*__thiscall*/ GetExperienceBenefactorSkill() const; //0x00411963
 	/*GoAspect*/ public: const gpbstring<char>& /*__thiscall*/ GetMaterial() const; //0x004119a0
 	/*GoAspect*/ public: const Goid_* /*__thiscall*/ GetExperienceBenefactor() const; //0x00411952
-	/*GoAspect*/ public: eDamageType /*__thiscall*/ GetLastDamageType() const; //0x004119cb
-	/*GoAspect*/ public: eLifeState /*__thiscall*/ GetLifeState() const; //0x00411976
-	/*GoAspect*/ public: float /*__thiscall*/ GetAspectTextureSpeed(int unk1); //0x0086114f
-	/*GoAspect*/ public: float /*__thiscall*/ GetBoundingSphereRadius() const; //0x00860aaa
-	/*GoAspect*/ public: float /*__thiscall*/ GetCurrentLife() const; //0x004119a4
-	/*GoAspect*/ public: float /*__thiscall*/ GetCurrentMana() const; //0x00411a17
-	/*GoAspect*/ public: float /*__thiscall*/ GetDamageToApply() const; //0x004119c4
-	/*GoAspect*/ public: float /*__thiscall*/ GetExperienceRemaining() const; //0x00411941
-	/*GoAspect*/ public: float /*__thiscall*/ GetExperienceValue() const; //0x0041193d
-	/*GoAspect*/ public: float /*__thiscall*/ GetLastLifeDelta() const; //0x004119b6
-	/*GoAspect*/ public: float /*__thiscall*/ GetLifeRatio() const; //0x00414174
-	/*GoAspect*/ public: float /*__thiscall*/ GetLifeRecoveryPeriod() const; //0x00414198
-	/*GoAspect*/ public: float /*__thiscall*/ GetLifeRecoveryUnit() const; //0x00414194
-	/*GoAspect*/ public: float /*__thiscall*/ GetLifeTimedRestore() const; //0x004119a8
-	/*GoAspect*/ public: float /*__thiscall*/ GetLifeTimedRestorePeriod() const; //0x004119af
-	/*GoAspect*/ public: float /*__thiscall*/ GetLRUBonusPercent() const; //0x0086232c
-	/*GoAspect*/ public: float /*__thiscall*/ GetManaCostBonusPercent() const; //0x004141bb
-	/*GoAspect*/ public: float /*__thiscall*/ GetManaRatio() const; //0x004157db
-	/*GoAspect*/ public: float /*__thiscall*/ GetManaRecoveryPeriod() const; //0x004141b4
-	/*GoAspect*/ public: float /*__thiscall*/ GetManaRecoveryUnit() const; //0x004141ad
-	/*GoAspect*/ public: float /*__thiscall*/ GetManaTimedRestore() const; //0x00411a1e
-	/*GoAspect*/ public: float /*__thiscall*/ GetManaTimedRestorePeriod() const; //0x00411a25
-	/*GoAspect*/ public: float /*__thiscall*/ GetMaxLife() const; //0x0041416c
-	/*GoAspect*/ public: float /*__thiscall*/ GetMaxMana() const; //0x0041419f
-	/*GoAspect*/ public: float /*__thiscall*/ GetMRUBonusPercent() const; //0x00862365
-	/*GoAspect*/ public: float /*__thiscall*/ GetNaturalMaxLife() const; //0x00414170
-	/*GoAspect*/ public: float /*__thiscall*/ GetNaturalMaxMana() const; //0x004141a6
-	/*GoAspect*/ public: float /*__thiscall*/ GetRenderScale() const; //0x00411967
-	/*GoAspect*/ public: float /*__thiscall*/ GetRenderScaleBase() const; //0x0041196e
-	/*GoAspect*/ public: float /*__thiscall*/ GetRenderScaleMultiplier() const; //0x00411972
-	/*GoAspect*/ public: float /*__thiscall*/ GetUseRange() const; //0x00411924
-	/*GoAspect*/ public: int /*__thiscall*/ GetGoldValue() const; //0x0041199c
-	/*GoAspect*/ public: void /*__thiscall*/ ClearExperienceBenefactor(); //0x0086592c
-	/*GoAspect*/ public: void /*__thiscall*/ HideSubMesh(int unk1); //0x008606dc
-	/*GoAspect*/ public: void /*__thiscall*/ PrepareToDrawNow(bool unk1); //0x00861a4c
-	/*GoAspect*/ public: void /*__thiscall*/ RCFadeOut(); //0x008604ee
-	/*GoAspect*/ public: void /*__thiscall*/ RCHideSubMesh(int unk1); //0x00860e90
-	/*GoAspect*/ public: void /*__thiscall*/ RCSetCurrentLife(float unk1, unsigned long unk2); //0x008611ad
-	/*GoAspect*/ public: void /*__thiscall*/ RCSetCurrentLifeDelta(float unk1, GoAspect::eDeltaDisplay unk2, const Goid_* unk3, unsigned long unk4); //0x0086361f
-	/*GoAspect*/ public: void /*__thiscall*/ RCSetDynamicTexture(ePlayerSkin unk1, const char* unk2); //0x00867982
-	/*GoAspect*/ public: void /*__thiscall*/ RCSetHideMeshFlag(bool unk1); //0x008605e8
-	/*GoAspect*/ public: void /*__thiscall*/ RCSetLifeState(eLifeState unk1, unsigned long unk2); //0x00863433
-	/*GoAspect*/ public: void /*__thiscall*/ RCSetMaterial(const gpbstring<char>& unk1); //0x00865b07
-	/*GoAspect*/ public: void /*__thiscall*/ RCShowSubMesh(int unk1); //0x00860f75
-	/*GoAspect*/ public: void /*__thiscall*/ RSSetCurrentAspectTexture(int unk1, const char* unk2); //0x0086697a
-	/*GoAspect*/ public: void /*__thiscall*/ RSSetCurrentLife(float unk1); //0x00863530
-	/*GoAspect*/ public: void /*__thiscall*/ RSSetCurrentMana(float unk1); //0x00863ae1
-	/*GoAspect*/ public: void /*__thiscall*/ RSSetTracerTexture(const char* unk1); //0x008666df
-	/*GoAspect*/ public: void /*__thiscall*/ SetCurrentAspectTexture(int unk1, const char* unk2); //0x00865946
-	/*GoAspect*/ public: void /*__thiscall*/ SetCurrentLife(float unk1); //0x00860754
-	/*GoAspect*/ public: void /*__thiscall*/ SetCurrentMana(float unk1); //0x008608ef
-	/*GoAspect*/ public: void /*__thiscall*/ SetDoesBlockPath(bool unk1); //0x00861e1f
-	/*GoAspect*/ public: void /*__thiscall*/ SetDrawSelectionIndicator(bool unk1); //0x004118da
-	/*GoAspect*/ public: void /*__thiscall*/ SetExperienceBenefactor(const Goid_* unk1); //0x00411956
-	/*GoAspect*/ public: void /*__thiscall*/ SetExperienceBenefactorSkill(const gpbstring<char>& unk1); //0x00419b35
-	/*GoAspect*/ public: void /*__thiscall*/ SetExperienceRemaining(float unk1); //0x00411945
-	/*GoAspect*/ public: void /*__thiscall*/ SetGoldValue(int unk1); //0x0086071c
-	/*GoAspect*/ public: void /*__thiscall*/ SetIsCollidable(bool unk1); //0x004118eb
-	/*GoAspect*/ public: void /*__thiscall*/ SetIsInvincible(bool unk1); //0x004118fc
-	/*GoAspect*/ public: void /*__thiscall*/ SetIsVisible(bool unk1); //0x00864103
-	/*GoAspect*/ public: void /*__thiscall*/ SetLifeState(eLifeState unk1); //0x008623e9
-	/*GoAspect*/ public: void /*__thiscall*/ SetLifeTimedRestore(float unk1); //0x00860795
-	/*GoAspect*/ public: void /*__thiscall*/ SetLifeTimedRestorePeriod(float unk1); //0x008607c6
-	/*GoAspect*/ public: void /*__thiscall*/ SetManaCostBonusPercent(float unk1); //0x00415815
-	/*GoAspect*/ public: void /*__thiscall*/ SetManaTimedRestore(float unk1); //0x00860a13
-	/*GoAspect*/ public: void /*__thiscall*/ SetManaTimedRestorePeriod(float unk1); //0x00860a44
-	/*GoAspect*/ public: void /*__thiscall*/ SetRenderScaleMultiplier(float unk1); //0x004157c4
-	/*GoAspect*/ public: void /*__thiscall*/ SetTerrainOrient(bool unk1); //0x00411910
-	/*GoAspect*/ public: void /*__thiscall*/ SetTracerTexture(const char* unk1); //0x00865771
-	/*GoAspect*/ public: void /*__thiscall*/ SFadeOut(); //0x00860d52
-	/*GoAspect*/ public: void /*__thiscall*/ SHideChildSubMeshByName(const char* unk1, int unk2); //0x0086582f
-	/*GoAspect*/ public: void /*__thiscall*/ SHideSubMesh(int unk1); //0x008623d7
-	/*GoAspect*/ public: void /*__thiscall*/ ShowSubMesh(int unk1); //0x008606f0
-	/*GoAspect*/ public: void /*__thiscall*/ SSetAspectTextureSpeed(int unk1, float unk2); //0x0086351a
-	/*GoAspect*/ public: void /*__thiscall*/ SSetChildTextureFromTextureName(const char* unk1, unsigned long unk2, const char* unk3); //0x00865838
-	/*GoAspect*/ public: void /*__thiscall*/ SSetCurrentAspectTexture(int unk1, const char* unk2); //0x008666d6
-	/*GoAspect*/ public: void /*__thiscall*/ SSetCurrentLife(float unk1); //0x008625c2
-	/*GoAspect*/ public: void /*__thiscall*/ SSetCurrentMana(float unk1); //0x00862801
-	/*GoAspect*/ public: void /*__thiscall*/ SSetDamageToApply(float unk1); //0x004119f7
-	/*GoAspect*/ public: void /*__thiscall*/ SSetDoesBlockCamera(bool unk1); //0x0086432d
-	/*GoAspect*/ public: void /*__thiscall*/ SSetDrawExclamation(bool unk1); //0x00864324
-	/*GoAspect*/ public: void /*__thiscall*/ SSetDynamicTexture(ePlayerSkin unk1, const char* unk2); //0x00867a6c
-	/*GoAspect*/ public: void /*__thiscall*/ SSetFreezeMeshFlag(bool unk1); //0x00863172
-	/*GoAspect*/ public: void /*__thiscall*/ SSetGoldValue(int unk1, bool unk2); //0x00862475
-	/*GoAspect*/ public: void /*__thiscall*/ SSetHideMeshFlag(bool unk1); //0x00860e87
-	/*GoAspect*/ public: void /*__thiscall*/ SSetInCombatStance(bool unk1); //0x0086215d
-	/*GoAspect*/ public: void /*__thiscall*/ SSetIsInvincible(bool unk1, const Goid_* unk2); //0x008666cd
-	/*GoAspect*/ public: void /*__thiscall*/ SSetIsInvincible(bool unk1); //0x00411928
-	/*GoAspect*/ public: void /*__thiscall*/ SSetIsMarkedForPickup(bool unk1); //0x0086431b
-	/*GoAspect*/ public: void /*__thiscall*/ SSetIsSelectable(bool unk1); //0x00864309
-	/*GoAspect*/ public: void /*__thiscall*/ SSetIsUsable(bool unk1); //0x00864312
-	/*GoAspect*/ public: void /*__thiscall*/ SSetIsVisible(bool unk1); //0x00865322
-	/*GoAspect*/ public: void /*__thiscall*/ SSetLastDamageType(eDamageType unk1); //0x00411a07
-	/*GoAspect*/ public: void /*__thiscall*/ SSetLifeState(eLifeState unk1, bool unk2); //0x0086436b
-	/*GoAspect*/ public: void /*__thiscall*/ SSetLifeState(eLifeState unk1); //0x0041197a
-	/*GoAspect*/ public: void /*__thiscall*/ SSetLifeTimedRestore(float unk1); //0x008627a7
-	/*GoAspect*/ public: void /*__thiscall*/ SSetLifeTimedRestorePeriod(float unk1); //0x008627ba
-	/*GoAspect*/ public: void /*__thiscall*/ SSetLockMeshFlag(bool unk1); //0x0086317b
-	/*GoAspect*/ public: void /*__thiscall*/ SSetManagesOwnDamage(bool unk1); //0x004119e7
-	/*GoAspect*/ public: void /*__thiscall*/ SSetManaTimedRestore(float unk1); //0x0086187d
-	/*GoAspect*/ public: void /*__thiscall*/ SSetManaTimedRestorePeriod(float unk1); //0x008629e6
-	/*GoAspect*/ public: void /*__thiscall*/ SSetMaterial(const gpbstring<char>& unk1); //0x00866679
-	/*GoAspect*/ public: void /*__thiscall*/ SSetMaxLife(float unk1); //0x00863abb
-	/*GoAspect*/ public: void /*__thiscall*/ SSetMaxMana(float unk1); //0x00863bd0
-	/*GoAspect*/ public: void /*__thiscall*/ SSetNaturalMaxLife(float unk1); //0x00863ace
-	/*GoAspect*/ public: void /*__thiscall*/ SSetNaturalMaxMana(float unk1); //0x00863be3
-	/*GoAspect*/ public: void /*__thiscall*/ SSetTracerTexture(const char* unk1); //0x00866670
-	/*GoAspect*/ public: void /*__thiscall*/ SShowChildSubMeshByName(const char* unk1, int unk2); //0x00865826
-	/*GoAspect*/ public: void /*__thiscall*/ SShowSubMesh(int unk1); //0x008623e0
+	DefineConstMethod(GetLastDamageType, 0x4119cb, eDamageType, Params(), Args());
+	DefineConstMethod(GetLifeState, 0x411976, eLifeState, Params(), Args());
+	DefineMethod(GetAspectTextureSpeed, 0x86114f, float, Params(int unk1), Args(int unk1));
+	DefineConstMethod(GetBoundingSphereRadius, 0x860aaa, float, Params(), Args());
+	DefineConstMethod(GetCurrentLife, 0x4119a4, float, Params(), Args());
+	DefineConstMethod(GetCurrentMana, 0x411a17, float, Params(), Args());
+	DefineConstMethod(GetDamageToApply, 0x4119c4, float, Params(), Args());
+	DefineConstMethod(GetExperienceRemaining, 0x411941, float, Params(), Args());
+	DefineConstMethod(GetExperienceValue, 0x41193d, float, Params(), Args());
+	DefineConstMethod(GetLastLifeDelta, 0x4119b6, float, Params(), Args());
+	DefineConstMethod(GetLifeRatio, 0x414174, float, Params(), Args());
+	DefineConstMethod(GetLifeRecoveryPeriod, 0x414198, float, Params(), Args());
+	DefineConstMethod(GetLifeRecoveryUnit, 0x414194, float, Params(), Args());
+	DefineConstMethod(GetLifeTimedRestore, 0x4119a8, float, Params(), Args());
+	DefineConstMethod(GetLifeTimedRestorePeriod, 0x4119af, float, Params(), Args());
+	DefineConstMethod(GetLRUBonusPercent, 0x86232c, float, Params(), Args());
+	DefineConstMethod(GetManaCostBonusPercent, 0x4141bb, float, Params(), Args());
+	DefineConstMethod(GetManaRatio, 0x4157db, float, Params(), Args());
+	DefineConstMethod(GetManaRecoveryPeriod, 0x4141b4, float, Params(), Args());
+	DefineConstMethod(GetManaRecoveryUnit, 0x4141ad, float, Params(), Args());
+	DefineConstMethod(GetManaTimedRestore, 0x411a1e, float, Params(), Args());
+	DefineConstMethod(GetManaTimedRestorePeriod, 0x411a25, float, Params(), Args());
+	DefineConstMethod(GetMaxLife, 0x41416c, float, Params(), Args());
+	DefineConstMethod(GetMaxMana, 0x41419f, float, Params(), Args());
+	DefineConstMethod(GetMRUBonusPercent, 0x862365, float, Params(), Args());
+	DefineConstMethod(GetNaturalMaxLife, 0x414170, float, Params(), Args());
+	DefineConstMethod(GetNaturalMaxMana, 0x4141a6, float, Params(), Args());
+	DefineConstMethod(GetRenderScale, 0x411967, float, Params(), Args());
+	DefineConstMethod(GetRenderScaleBase, 0x41196e, float, Params(), Args());
+	DefineConstMethod(GetRenderScaleMultiplier, 0x411972, float, Params(), Args());
+	DefineConstMethod(GetUseRange, 0x411924, float, Params(), Args());
+	DefineConstMethod(GetGoldValue, 0x41199c, int, Params(), Args());
+	DefineMethod(ClearExperienceBenefactor, 0x86592c, void, Params(), Args());
+	DefineMethod(HideSubMesh, 0x8606dc, void, Params(int unk1), Args(int unk1));
+	DefineMethod(PrepareToDrawNow, 0x861a4c, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(RCFadeOut, 0x8604ee, void, Params(), Args());
+	DefineMethod(RCHideSubMesh, 0x860e90, void, Params(int unk1), Args(int unk1));
+	DefineMethod(RCSetCurrentLife, 0x8611ad, void, Params(float unk1, unsigned long unk2), Args(float unk1, unsigned long unk2));
+	DefineMethod(RCSetCurrentLifeDelta, 0x86361f, void, Params(float unk1, GoAspect::eDeltaDisplay unk2, const Goid_* unk3, unsigned long unk4), Args(float unk1, GoAspect::eDeltaDisplay unk2, const Goid_* unk3, unsigned long unk4));
+	DefineMethod(RCSetDynamicTexture, 0x867982, void, Params(ePlayerSkin unk1, const char* unk2), Args(ePlayerSkin unk1, const char* unk2));
+	DefineMethod(RCSetHideMeshFlag, 0x8605e8, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(RCSetLifeState, 0x863433, void, Params(eLifeState unk1, unsigned long unk2), Args(eLifeState unk1, unsigned long unk2));
+	DefineMethod(RCSetMaterial, 0x865b07, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(RCShowSubMesh, 0x860f75, void, Params(int unk1), Args(int unk1));
+	DefineMethod(RSSetCurrentAspectTexture, 0x86697a, void, Params(int unk1, const char* unk2), Args(int unk1, const char* unk2));
+	DefineMethod(RSSetCurrentLife, 0x863530, void, Params(float unk1), Args(float unk1));
+	DefineMethod(RSSetCurrentMana, 0x863ae1, void, Params(float unk1), Args(float unk1));
+	DefineMethod(RSSetTracerTexture, 0x8666df, void, Params(const char* unk1), Args(const char* unk1));
+	DefineMethod(SetCurrentAspectTexture, 0x865946, void, Params(int unk1, const char* unk2), Args(int unk1, const char* unk2));
+	DefineMethod(SetCurrentLife, 0x860754, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetCurrentMana, 0x8608ef, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetDoesBlockPath, 0x861e1f, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetDrawSelectionIndicator, 0x4118da, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetExperienceBenefactor, 0x411956, void, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(SetExperienceBenefactorSkill, 0x419b35, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetExperienceRemaining, 0x411945, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetGoldValue, 0x86071c, void, Params(int unk1), Args(int unk1));
+	DefineMethod(SetIsCollidable, 0x4118eb, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetIsInvincible, 0x4118fc, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetIsVisible, 0x864103, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetLifeState, 0x8623e9, void, Params(eLifeState unk1), Args(eLifeState unk1));
+	DefineMethod(SetLifeTimedRestore, 0x860795, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetLifeTimedRestorePeriod, 0x8607c6, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetManaCostBonusPercent, 0x415815, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetManaTimedRestore, 0x860a13, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetManaTimedRestorePeriod, 0x860a44, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetRenderScaleMultiplier, 0x4157c4, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetTerrainOrient, 0x411910, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetTracerTexture, 0x865771, void, Params(const char* unk1), Args(const char* unk1));
+	DefineMethod(SFadeOut, 0x860d52, void, Params(), Args());
+	DefineMethod(SHideChildSubMeshByName, 0x86582f, void, Params(const char* unk1, int unk2), Args(const char* unk1, int unk2));
+	DefineMethod(SHideSubMesh, 0x8623d7, void, Params(int unk1), Args(int unk1));
+	DefineMethod(ShowSubMesh, 0x8606f0, void, Params(int unk1), Args(int unk1));
+	DefineMethod(SSetAspectTextureSpeed, 0x86351a, void, Params(int unk1, float unk2), Args(int unk1, float unk2));
+	DefineMethod(SSetChildTextureFromTextureName, 0x865838, void, Params(const char* unk1, unsigned long unk2, const char* unk3), Args(const char* unk1, unsigned long unk2, const char* unk3));
+	DefineMethod(SSetCurrentAspectTexture, 0x8666d6, void, Params(int unk1, const char* unk2), Args(int unk1, const char* unk2));
+	DefineMethod(SSetCurrentLife, 0x8625c2, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SSetCurrentMana, 0x862801, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SSetDamageToApply, 0x4119f7, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SSetDoesBlockCamera, 0x86432d, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetDrawExclamation, 0x864324, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetDynamicTexture, 0x867a6c, void, Params(ePlayerSkin unk1, const char* unk2), Args(ePlayerSkin unk1, const char* unk2));
+	DefineMethod(SSetFreezeMeshFlag, 0x863172, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetGoldValue, 0x862475, void, Params(int unk1, bool unk2), Args(int unk1, bool unk2));
+	DefineMethod(SSetHideMeshFlag, 0x860e87, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetInCombatStance, 0x86215d, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetIsInvincible, 0x8666cd, void, Params(bool unk1, const Goid_* unk2), Args(bool unk1, const Goid_* unk2));
+	DefineMethod(SSetIsInvincible, 0x411928, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetIsMarkedForPickup, 0x86431b, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetIsSelectable, 0x864309, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetIsUsable, 0x864312, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetIsVisible, 0x865322, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetLastDamageType, 0x411a07, void, Params(eDamageType unk1), Args(eDamageType unk1));
+	DefineMethod(SSetLifeState, 0x86436b, void, Params(eLifeState unk1, bool unk2), Args(eLifeState unk1, bool unk2));
+	DefineMethod(SSetLifeState, 0x41197a, void, Params(eLifeState unk1), Args(eLifeState unk1));
+	DefineMethod(SSetLifeTimedRestore, 0x8627a7, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SSetLifeTimedRestorePeriod, 0x8627ba, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SSetLockMeshFlag, 0x86317b, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetManagesOwnDamage, 0x4119e7, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetManaTimedRestore, 0x86187d, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SSetManaTimedRestorePeriod, 0x8629e6, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SSetMaterial, 0x866679, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SSetMaxLife, 0x863abb, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SSetMaxMana, 0x863bd0, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SSetNaturalMaxLife, 0x863ace, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SSetNaturalMaxMana, 0x863be3, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SSetTracerTexture, 0x866670, void, Params(const char* unk1), Args(const char* unk1));
+	DefineMethod(SShowChildSubMeshByName, 0x865826, void, Params(const char* unk1, int unk2), Args(const char* unk1, int unk2));
+	DefineMethod(SShowSubMesh, 0x8623e0, void, Params(int unk1), Args(int unk1));
 };

@@ -2,10 +2,10 @@
 
 class UIWindowVec {
 public:
-	/*UIWindowVec*/ private: bool /*__thiscall*/ Empty() const; //0x0050356d
-	/*UIWindowVec*/ private: UIWindow* /*__thiscall*/ Get(int unk1) const; //0x00503a2e
-	/*UIWindowVec*/ private: int /*__thiscall*/ Size() const; //0x00503568
-	/*UIWindowVec*/ private: void /*__thiscall*/ Add(UIWindow* unk1); //0x00504023
-	/*UIWindowVec*/ private: void /*__thiscall*/ Clear(); //0x00503c56
-	/*UIWindowVec*/ private: void /*__thiscall*/ Set(int unk1, UIWindow* unk2); //0x00503a40
+	DefineConstMethod(Empty, 0x50356d, bool, Params(), Args());
+	DefineConstMethod(Get, 0x503a2e, UIWindow*, Params(int unk1), Args(int unk1));
+	DefineConstMethod(Size, 0x503568, int, Params(), Args());
+	DefineMethod(Add, 0x504023, void, Params(UIWindow* unk1), Args(UIWindow* unk1));
+	DefineMethod(Clear, 0x503c56, void, Params(), Args());
+	DefineMethod(Set, 0x503a40, void, Params(int unk1, UIWindow* unk2), Args(int unk1, UIWindow* unk2));
 };

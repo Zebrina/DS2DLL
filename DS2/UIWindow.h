@@ -2,34 +2,34 @@
 
 class UIWindow {
 public:
-	/*UIWindow*/ public: bool /*__thiscall*/ AddEventToAction(eUIMessage unk1, const gpbstring<char>& unk2); //0x0077ef10
-	/*UIWindow*/ public: bool /*__thiscall*/ FUBI_RENAME_GetRollover(); //0x00503578
-	/*UIWindow*/ public: bool /*__thiscall*/ FUBI_RENAME_LoadTexture(const char* unk1, bool unk2); //0x00503cc0
-	/*UIWindow*/ public: bool /*__thiscall*/ GetVisible() const; //0x004280d4
-	/*UIWindow*/ public: bool /*__thiscall*/ HasGridBackground() const; //0x005026f0
-	/*UIWindow*/ public: bool /*__thiscall*/ IsEnabled() const; //0x004d6620
-	/*UIWindow*/ public: bool /*__thiscall*/ ReceiveMessage(const gpbstring<char>& unk1); //0x0077d910
-	/*UIWindow*/ public: UIWindow* /*__thiscall*/ GetParentWindow() const; //0x00456ceb
+	DefineMethod(AddEventToAction, 0x77ef10, bool, Params(eUIMessage unk1, const gpbstring<char>& unk2), Args(eUIMessage unk1, const gpbstring<char>& unk2));
+	DefineMethod(FUBI_RENAME_GetRollover, 0x503578, bool, Params(), Args());
+	DefineMethod(FUBI_RENAME_LoadTexture, 0x503cc0, bool, Params(const char* unk1, bool unk2), Args(const char* unk1, bool unk2));
+	DefineConstMethod(GetVisible, 0x4280d4, bool, Params(), Args());
+	DefineConstMethod(HasGridBackground, 0x5026f0, bool, Params(), Args());
+	DefineConstMethod(IsEnabled, 0x4d6620, bool, Params(), Args());
+	DefineMethod(ReceiveMessage, 0x77d910, bool, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineConstMethod(GetParentWindow, 0x456ceb, UIWindow*, Params(), Args());
 	/*UIWindow*/ public: const gpbstring<char>& /*__thiscall*/ GetGroup() const; //0x00485bb5
 	/*UIWindow*/ public: const gpbstring<char>& /*__thiscall*/ GetName() const; //0x00456cf6
 	/*UIWindow*/ public: const gpbstring<char>& /*__thiscall*/ GetRolloverKey() const; //0x0077a450
-	/*UIWindow*/ public: int /*__thiscall*/ GetDrawOrder() const; //0x005026e9
-	/*UIWindow*/ public: int /*__thiscall*/ GetHeight() const; //0x0077a400
-	/*UIWindow*/ public: int /*__thiscall*/ GetPositionX() const; //0x00472b3e
-	/*UIWindow*/ public: int /*__thiscall*/ GetPositionY() const; //0x00472b42
-	/*UIWindow*/ public: int /*__thiscall*/ GetTag() const; //0x00472b60
-	/*UIWindow*/ public: int /*__thiscall*/ GetWidth() const; //0x0077a3f0
-	/*UIWindow*/ public: void /*__thiscall*/ FUBI_RENAME_ResizeToCurrentResolution(int unk1, int unk2); //0x005026d0
-	/*UIWindow*/ public: void /*__thiscall*/ FUBI_RENAME_SetRect(int unk1, int unk2, int unk3, int unk4, bool unk5); //0x005026c7
-	/*UIWindow*/ public: void /*__thiscall*/ FUBI_RENAME_SetVisible(bool unk1); //0x005026d9
-	/*UIWindow*/ public: void /*__thiscall*/ Resize(int unk1, int unk2); //0x0077a160
-	/*UIWindow*/ public: void /*__thiscall*/ SetAlpha(float unk1); //0x00472b67
-	/*UIWindow*/ public: void /*__thiscall*/ SetAlphaEx(float unk1); //0x0077b260
-	/*UIWindow*/ public: void /*__thiscall*/ SetEnabled(bool unk1); //0x0077bda0
-	/*UIWindow*/ public: void /*__thiscall*/ SetGroup(const gpbstring<char>& unk1); //0x00503eeb
-	/*UIWindow*/ public: void /*__thiscall*/ SetHasTexture(bool unk1); //0x0046dc47
-	/*UIWindow*/ public: void /*__thiscall*/ SetName(const gpbstring<char>& unk1); //0x0047eb2f
-	/*UIWindow*/ public: void /*__thiscall*/ SetPosition(int unk1, int unk2); //0x0050269f
-	/*UIWindow*/ public: void /*__thiscall*/ SetRolloverKey(const gpbstring<char>& unk1); //0x0077ce40
-	/*UIWindow*/ public: void /*__thiscall*/ SetTag(int unk1); //0x00498435
+	DefineConstMethod(GetDrawOrder, 0x5026e9, int, Params(), Args());
+	DefineConstMethod(GetHeight, 0x77a400, int, Params(), Args());
+	DefineConstMethod(GetPositionX, 0x472b3e, int, Params(), Args());
+	DefineConstMethod(GetPositionY, 0x472b42, int, Params(), Args());
+	DefineConstMethod(GetTag, 0x472b60, int, Params(), Args());
+	DefineConstMethod(GetWidth, 0x77a3f0, int, Params(), Args());
+	DefineMethod(FUBI_RENAME_ResizeToCurrentResolution, 0x5026d0, void, Params(int unk1, int unk2), Args(int unk1, int unk2));
+	DefineMethod(FUBI_RENAME_SetRect, 0x5026c7, void, Params(int unk1, int unk2, int unk3, int unk4, bool unk5), Args(int unk1, int unk2, int unk3, int unk4, bool unk5));
+	DefineMethod(FUBI_RENAME_SetVisible, 0x5026d9, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(Resize, 0x77a160, void, Params(int unk1, int unk2), Args(int unk1, int unk2));
+	DefineMethod(SetAlpha, 0x472b67, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetAlphaEx, 0x77b260, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetEnabled, 0x77bda0, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetGroup, 0x503eeb, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetHasTexture, 0x46dc47, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetName, 0x47eb2f, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetPosition, 0x50269f, void, Params(int unk1, int unk2), Args(int unk1, int unk2));
+	DefineMethod(SetRolloverKey, 0x77ce40, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetTag, 0x498435, void, Params(int unk1), Args(int unk1));
 };

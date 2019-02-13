@@ -2,5 +2,5 @@
 
 class GoFlick {
 public:
-	/*GoFlick*/ protected: /*static*/ int /*__cdecl*/ FUBI_Inheritance(GoComponent* unk1); //0x007d7bc1
+	DefineStaticMethod(FUBI_Inheritance, 0x7d7bc1, int, Params(GoComponent* unk1), Args(GoComponent* unk1));
 };

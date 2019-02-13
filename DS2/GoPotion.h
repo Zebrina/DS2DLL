@@ -4,6 +4,6 @@
 
 class GoPotion {
 public:
-	/*GoPotion*/ private: /*static*/ GoPotion* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x007c84d3
+	DefineStaticMethod(FUBI_NetToInstance, 0x7c84d3, GoPotion*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unsigned long unk1, FuBi::Cookie__** unk2));
 	/*GoPotion*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoPotion* unk1); //0x007c84ca
 };

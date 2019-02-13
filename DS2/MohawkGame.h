@@ -8,33 +8,33 @@ public:
 	DefineSingleton(MohawkGame, 0x40a5a5);
 
 	/*MohawkGame*/ private: /*static*/ MohawkGame* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x0040a5a5
-	/*MohawkGame*/ private: /*static*/ int /*__cdecl*/ FUBI_Inheritance(RapiAppModule* unk1); //0x004091e7
-	/*MohawkGame*/ private: void /*__thiscall*/ RCUserPause(bool unk1, double unk2, const PlayerId_* unk3); //0x0042a78f
-	/*MohawkGame*/ private: void /*__thiscall*/ RSPauseAllClients(bool unk1, const PlayerId_* unk2); //0x0042b73f
-	/*MohawkGame*/ public: bool /*__thiscall*/ AutoSaveGameNow(); //0x0042c2aa
-	/*MohawkGame*/ public: bool /*__thiscall*/ AutoSaveParty(); //0x0042a1b0
-	/*MohawkGame*/ public: bool /*__thiscall*/ CheckAutoSaveParty(); //0x004091c8
-	/*MohawkGame*/ public: bool /*__thiscall*/ CheckAutoSaveParty(bool unk1); //0x0042a201
+	DefineStaticMethod(FUBI_Inheritance, 0x4091e7, int, Params(RapiAppModule* unk1), Args(RapiAppModule* unk1));
+	DefineMethod(RCUserPause, 0x42a78f, void, Params(bool unk1, double unk2, const PlayerId_* unk3), Args(bool unk1, double unk2, const PlayerId_* unk3));
+	DefineMethod(RSPauseAllClients, 0x42b73f, void, Params(bool unk1, const PlayerId_* unk2), Args(bool unk1, const PlayerId_* unk2));
+	DefineMethod(AutoSaveGameNow, 0x42c2aa, bool, Params(), Args());
+	DefineMethod(AutoSaveParty, 0x42a1b0, bool, Params(), Args());
+	DefineMethod(CheckAutoSaveParty, 0x4091c8, bool, Params(), Args());
+	DefineMethod(CheckAutoSaveParty, 0x42a201, bool, Params(bool unk1), Args(bool unk1));
 	/*MohawkGame*/ public: const gpbstring<char>& /*__thiscall*/ GetActiveMovie(); //0x004091e0
-	/*MohawkGame*/ public: FuBi::Cookie__* /*__thiscall*/ RCDisableTimeoutsUntil(double unk1); //0x0042a321
-	/*MohawkGame*/ public: FuBi::Cookie__* /*__thiscall*/ RCRequestInGameMovie(const gpbstring<char>& unk1, float unk2, unsigned long unk3); //0x00432f80
-	/*MohawkGame*/ public: FuBi::Cookie__* /*__thiscall*/ RCRequestInGameMovie(const SiegePos& unk1, const gpbstring<char>& unk2, float unk3); //0x00432e45
-	/*MohawkGame*/ public: FuBi::Cookie__* /*__thiscall*/ RCTeleportPlayerParty(const Goid_* unk1, float unk2, const char* unk3, unsigned long unk4); //0x0042eb63
-	/*MohawkGame*/ public: FuBi::Cookie__* /*__thiscall*/ RCTeleportPlayerParty(const Goid_* unk1, float unk2, const SiegePos& unk3, const CameraPosition& unk4, unsigned long unk5); //0x0042d05f
-	/*MohawkGame*/ public: FuBi::Cookie__* /*__thiscall*/ RSDisableTimeoutsUntil(double unk1); //0x0042b2e2
-	/*MohawkGame*/ public: FuBi::Cookie__* /*__thiscall*/ RSRequestInGameMovie(const Goid_* unk1, const gpbstring<char>& unk2, float unk3); //0x004335b3
-	/*MohawkGame*/ public: FuBi::Cookie__* /*__thiscall*/ RSTeleportPlayerParty(const_mem_ptr unk1, const char* unk2, const char* unk3); //0x0042d24c
-	/*MohawkGame*/ public: FuBi::Cookie__* /*__thiscall*/ RSTeleportPlayerParty(const_mem_ptr unk1, const SiegePos& unk2, const CameraPosition& unk3); //0x0042c585
-	/*MohawkGame*/ public: void /*__thiscall*/ ExitGame(); //0x0042a18e
-	/*MohawkGame*/ public: void /*__thiscall*/ RSUserPause(bool unk1, const PlayerId_* unk2); //0x0042c762
-	/*MohawkGame*/ public: void /*__thiscall*/ SetMPSendFrequency(int unk1); //0x0042c888
-	/*MohawkGame*/ public: void /*__thiscall*/ SetMPSleep(int unk1); //0x004091d0
-	/*MohawkGame*/ public: void /*__thiscall*/ STeleportPlayer(const GoidColl& unk1, const char* unk2, bool unk3); //0x0042ce32
-	/*MohawkGame*/ public: void /*__thiscall*/ STeleportPlayer(const GopColl& unk1, const char* unk2, const char* unk3); //0x0042cf62
-	/*MohawkGame*/ public: void /*__thiscall*/ STeleportPlayer(const GopColl& unk1, const SiegePos& unk2, const CameraPosition& unk3, const gpbstring<char>& unk4); //0x0042c39c
-	/*MohawkGame*/ public: void /*__thiscall*/ STeleportPlayer(const PlayerId_* unk1, const SiegePos& unk2, const CameraPosition& unk3); //0x0042c4ec
-	/*MohawkGame*/ public: void /*__thiscall*/ STeleportPlayer(const PlayerId_* unk1, const SiegePos& unk2); //0x0042c41a
-	/*MohawkGame*/ public: void /*__thiscall*/ STeleportPlayerParty(const Goid_* unk1, float unk2, const char* unk3); //0x0043123d
-	/*MohawkGame*/ public: void /*__thiscall*/ STeleportPlayerParty(const Goid_* unk1, float unk2, const SiegePos& unk3, const CameraPosition& unk4); //0x0042eaad
-	/*MohawkGame*/ public: void /*__thiscall*/ TeleportLocalParty(const char* unk1, const char* unk2); //0x0042d3fb
+	DefineMethod(RCDisableTimeoutsUntil, 0x42a321, FuBi::Cookie__*, Params(double unk1), Args(double unk1));
+	DefineMethod(RCRequestInGameMovie, 0x432f80, FuBi::Cookie__*, Params(const gpbstring<char>& unk1, float unk2, unsigned long unk3), Args(const gpbstring<char>& unk1, float unk2, unsigned long unk3));
+	DefineMethod(RCRequestInGameMovie, 0x432e45, FuBi::Cookie__*, Params(const SiegePos& unk1, const gpbstring<char>& unk2, float unk3), Args(const SiegePos& unk1, const gpbstring<char>& unk2, float unk3));
+	DefineMethod(RCTeleportPlayerParty, 0x42eb63, FuBi::Cookie__*, Params(const Goid_* unk1, float unk2, const char* unk3, unsigned long unk4), Args(const Goid_* unk1, float unk2, const char* unk3, unsigned long unk4));
+	DefineMethod(RCTeleportPlayerParty, 0x42d05f, FuBi::Cookie__*, Params(const Goid_* unk1, float unk2, const SiegePos& unk3, const CameraPosition& unk4, unsigned long unk5), Args(const Goid_* unk1, float unk2, const SiegePos& unk3, const CameraPosition& unk4, unsigned long unk5));
+	DefineMethod(RSDisableTimeoutsUntil, 0x42b2e2, FuBi::Cookie__*, Params(double unk1), Args(double unk1));
+	DefineMethod(RSRequestInGameMovie, 0x4335b3, FuBi::Cookie__*, Params(const Goid_* unk1, const gpbstring<char>& unk2, float unk3), Args(const Goid_* unk1, const gpbstring<char>& unk2, float unk3));
+	DefineMethod(RSTeleportPlayerParty, 0x42d24c, FuBi::Cookie__*, Params(const_mem_ptr unk1, const char* unk2, const char* unk3), Args(const_mem_ptr unk1, const char* unk2, const char* unk3));
+	DefineMethod(RSTeleportPlayerParty, 0x42c585, FuBi::Cookie__*, Params(const_mem_ptr unk1, const SiegePos& unk2, const CameraPosition& unk3), Args(const_mem_ptr unk1, const SiegePos& unk2, const CameraPosition& unk3));
+	DefineMethod(ExitGame, 0x42a18e, void, Params(), Args());
+	DefineMethod(RSUserPause, 0x42c762, void, Params(bool unk1, const PlayerId_* unk2), Args(bool unk1, const PlayerId_* unk2));
+	DefineMethod(SetMPSendFrequency, 0x42c888, void, Params(int unk1), Args(int unk1));
+	DefineMethod(SetMPSleep, 0x4091d0, void, Params(int unk1), Args(int unk1));
+	DefineMethod(STeleportPlayer, 0x42ce32, void, Params(const GoidColl& unk1, const char* unk2, bool unk3), Args(const GoidColl& unk1, const char* unk2, bool unk3));
+	DefineMethod(STeleportPlayer, 0x42cf62, void, Params(const GopColl& unk1, const char* unk2, const char* unk3), Args(const GopColl& unk1, const char* unk2, const char* unk3));
+	DefineMethod(STeleportPlayer, 0x42c39c, void, Params(const GopColl& unk1, const SiegePos& unk2, const CameraPosition& unk3, const gpbstring<char>& unk4), Args(const GopColl& unk1, const SiegePos& unk2, const CameraPosition& unk3, const gpbstring<char>& unk4));
+	DefineMethod(STeleportPlayer, 0x42c4ec, void, Params(const PlayerId_* unk1, const SiegePos& unk2, const CameraPosition& unk3), Args(const PlayerId_* unk1, const SiegePos& unk2, const CameraPosition& unk3));
+	DefineMethod(STeleportPlayer, 0x42c41a, void, Params(const PlayerId_* unk1, const SiegePos& unk2), Args(const PlayerId_* unk1, const SiegePos& unk2));
+	DefineMethod(STeleportPlayerParty, 0x43123d, void, Params(const Goid_* unk1, float unk2, const char* unk3), Args(const Goid_* unk1, float unk2, const char* unk3));
+	DefineMethod(STeleportPlayerParty, 0x42eaad, void, Params(const Goid_* unk1, float unk2, const SiegePos& unk3, const CameraPosition& unk4), Args(const Goid_* unk1, float unk2, const SiegePos& unk3, const CameraPosition& unk4));
+	DefineMethod(TeleportLocalParty, 0x42d3fb, void, Params(const char* unk1, const char* unk2), Args(const char* unk1, const char* unk2));
 };

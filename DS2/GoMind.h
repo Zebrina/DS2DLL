@@ -4,195 +4,195 @@
 
 class GoMind {
 public:
-	/*GoMind*/ private: /*static*/ GoMind* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x00412564
+	DefineStaticMethod(FUBI_NetToInstance, 0x412564, GoMind*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unsigned long unk1, FuBi::Cookie__** unk2));
 	/*GoMind*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoMind* unk1); //0x0041255b
-	/*GoMind*/ private: bool /*__thiscall*/ GetBrainActive(); //0x0041252e
-	/*GoMind*/ private: bool /*__thiscall*/ IsInUpdateScope() const; //0x00412536
-	/*GoMind*/ private: bool /*__thiscall*/ IsVisible(const Goid_* unk1) const; //0x0086da52
-	/*GoMind*/ private: bool /*__thiscall*/ JobRecentlyFailedToPathTo(Go* unk1); //0x0086a3ba
-	/*GoMind*/ private: WorldMessage* /*__thiscall*/ GetHandlingMessage(); //0x0041250d
+	DefineMethod(GetBrainActive, 0x41252e, bool, Params(), Args());
+	DefineConstMethod(IsInUpdateScope, 0x412536, bool, Params(), Args());
+	DefineConstMethod(IsVisible, 0x86da52, bool, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(JobRecentlyFailedToPathTo, 0x86a3ba, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(GetHandlingMessage, 0x41250d, WorldMessage*, Params(), Args());
 	/*GoMind*/ private: const Scid_* /*__thiscall*/ GetInitialCommand(); //0x0041252a
 	/*GoMind*/ private: GopColl& /*__thiscall*/ GetTempGopColl1(); //0x0041253f
 	/*GoMind*/ private: GopColl& /*__thiscall*/ GetTempGopColl2(); //0x00412546
 	/*GoMind*/ private: GopColl& /*__thiscall*/ GetTempGopColl3(); //0x0041254d
 	/*GoMind*/ private: QtColl& /*__thiscall*/ GetTempQtColl1(); //0x00412554
-	/*GoMind*/ private: void /*__thiscall*/ ReqResetSensorsSelfAndVisible(); //0x0086f9b6
-	/*GoMind*/ private: void /*__thiscall*/ RequestProcessHitEngaged(); //0x00412511
-	/*GoMind*/ private: void /*__thiscall*/ ResetSensors(); //0x0086c67e
-	/*GoMind*/ private: void /*__thiscall*/ SetInitialCommand(const Scid_* unk1); //0x00412519
-	/*GoMind*/ public: bool /*__thiscall*/ ActorAutoDefendsOthers() const; //0x0041240e
-	/*GoMind*/ public: bool /*__thiscall*/ ActorAutoHealsOthersLife() const; //0x00412418
-	/*GoMind*/ public: bool /*__thiscall*/ ActorAutoHealsSelfLife() const; //0x00412421
-	/*GoMind*/ public: bool /*__thiscall*/ ActorAutoHealsSelfMana() const; //0x0041242c
-	/*GoMind*/ public: bool /*__thiscall*/ ActorAutoSwitchesToMagic() const; //0x00412483
-	/*GoMind*/ public: bool /*__thiscall*/ ActorAutoSwitchesToMelee() const; //0x0041246f
-	/*GoMind*/ public: bool /*__thiscall*/ ActorAutoSwitchesToRanged() const; //0x00412478
-	/*GoMind*/ public: bool /*__thiscall*/ ActorPrefersMagic() const; //0x00412452
-	/*GoMind*/ public: bool /*__thiscall*/ ActorPrefersMelee() const; //0x00412438
-	/*GoMind*/ public: bool /*__thiscall*/ ActorPrefersRanged() const; //0x00412445
-	/*GoMind*/ public: bool /*__thiscall*/ AmAttacking() const; //0x0086ba44
-	/*GoMind*/ public: bool /*__thiscall*/ AmBusy() const; //0x00411b27
-	/*GoMind*/ public: bool /*__thiscall*/ AmFacing(Go* unk1) const; //0x0086c20f
-	/*GoMind*/ public: bool /*__thiscall*/ AmFacing(const SiegePos& unk1) const; //0x0086acc9
-	/*GoMind*/ public: bool /*__thiscall*/ AmGuarding() const; //0x008687d8
-	/*GoMind*/ public: bool /*__thiscall*/ AmPatrolling() const; //0x00869d55
-	/*GoMind*/ public: bool /*__thiscall*/ AreAliveEnemiesVisible(); //0x0086aabd
-	/*GoMind*/ public: bool /*__thiscall*/ AreAliveFriendsVisible(); //0x0086ab28
-	/*GoMind*/ public: bool /*__thiscall*/ AreItemsVisible() const; //0x0086acb6
-	/*GoMind*/ public: bool /*__thiscall*/ CanOperateOn(Go* unk1, bool unk2) const; //0x008687ea
-	/*GoMind*/ public: bool /*__thiscall*/ CanOperateOn(Go* unk1); //0x00411b2f
-	/*GoMind*/ public: bool /*__thiscall*/ DoingJobOriginatingFrom(eJobQ unk1, Go* unk2); //0x0086bc37
-	/*GoMind*/ public: bool /*__thiscall*/ GetActorAutoFidgets(); //0x00412369
-	/*GoMind*/ public: bool /*__thiscall*/ GetAutoItems(eQueryTrait unk1, GopColl& unk2) const; //0x0086f225
-	/*GoMind*/ public: bool /*__thiscall*/ GetAutoItems(GopColl& unk1) const; //0x00870502
-	/*GoMind*/ public: bool /*__thiscall*/ GetAutoItems(QtColl& unk1, GopColl& unk2) const; //0x0086b25b
-	/*GoMind*/ public: bool /*__thiscall*/ GetCanJump() const; //0x004122d3
-	/*GoMind*/ public: bool /*__thiscall*/ GetClosestVisible(eQueryTrait unk1, GopColl& unk2) const; //0x00870476
-	/*GoMind*/ public: bool /*__thiscall*/ GetClosestVisible(float unk1, QtColl& unk2, GopColl& unk3) const; //0x0086e38a
-	/*GoMind*/ public: bool /*__thiscall*/ GetClosestVisible(QtColl& unk1, GopColl& unk2) const; //0x00411dd2
-	/*GoMind*/ public: bool /*__thiscall*/ GetClosestVisibleEnemies(float unk1, GopColl& unk2); //0x0086e58e
-	/*GoMind*/ public: bool /*__thiscall*/ GetClosestVisibleEnemies(GopColl& unk1); //0x00411e52
-	/*GoMind*/ public: bool /*__thiscall*/ GetClosestVisibleFriends(float unk1, GopColl& unk2); //0x0086e609
-	/*GoMind*/ public: bool /*__thiscall*/ GetClosestVisibleFriends(GopColl& unk1); //0x00411e6b
-	/*GoMind*/ public: bool /*__thiscall*/ GetEnemiesAndSummonsInSphere(float unk1, GopColl& unk2) const; //0x0086ff5a
-	/*GoMind*/ public: bool /*__thiscall*/ GetEnemiesInSphere(float unk1, GopColl& unk2) const; //0x0086fed4
-	/*GoMind*/ public: bool /*__thiscall*/ GetEngagedMe(GopColl& unk1) const; //0x0086f124
-	/*GoMind*/ public: bool /*__thiscall*/ GetEngagedMeEnemies(GopColl& unk1) const; //0x0086f199
-	/*GoMind*/ public: bool /*__thiscall*/ GetFarthestVisible(eQueryTrait unk1, GopColl& unk2) const; //0x008704bc
-	/*GoMind*/ public: bool /*__thiscall*/ GetFarthestVisible(QtColl& unk1, GopColl& unk2) const; //0x0086e65e
-	/*GoMind*/ public: bool /*__thiscall*/ GetFriendsAndSummonsInSphere(float unk1, GopColl& unk2) const; //0x0087000e
-	/*GoMind*/ public: bool /*__thiscall*/ GetFriendsInSphere(float unk1, GopColl& unk2) const; //0x0086ff88
-	/*GoMind*/ public: bool /*__thiscall*/ GetItemsInSphere(float unk1, GopColl& unk2) const; //0x0086fd67
-	/*GoMind*/ public: bool /*__thiscall*/ GetLeashTeleportToHome() const; //0x0086c645
-	/*GoMind*/ public: bool /*__thiscall*/ GetMayAttack() const; //0x004123de
-	/*GoMind*/ public: bool /*__thiscall*/ GetMayAttackHeroes() const; //0x004123ea
-	/*GoMind*/ public: bool /*__thiscall*/ GetMayBeAttacked() const; //0x004123f6
-	/*GoMind*/ public: bool /*__thiscall*/ GetMayBeAttackedByHeroes() const; //0x00412402
-	/*GoMind*/ public: bool /*__thiscall*/ GetMayProcessAI() const; //0x00412394
-	/*GoMind*/ public: bool /*__thiscall*/ GetMayProcessSensors() const; //0x004123b8
-	/*GoMind*/ public: bool /*__thiscall*/ GetOccupantsInSphere(float unk1, GopColl& unk2) const; //0x0086fded
-	/*GoMind*/ public: bool /*__thiscall*/ GetPartyMembersAndSummonsInSphere(float unk1, GopColl* unk2) const; //0x0086aa8f
-	/*GoMind*/ public: bool /*__thiscall*/ GetPartyMembersInSphere(float unk1, GopColl* unk2) const; //0x0086aa2e
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisible(eQueryTrait unk1, GopColl& unk2, float unk3) const; //0x00870058
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisible(eQueryTrait unk1, GopColl& unk2) const; //0x00411c7b
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisible(QtColl& unk1, GoidColl& unk2, float unk3) const; //0x0086dd66
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisible(QtColl& unk1, GoidColl& unk2) const; //0x0087003c
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisible(QtColl& unk1, GopColl& unk2, float unk3) const; //0x0086de0e
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisible(QtColl& unk1, GopColl& unk2) const; //0x00411c97
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleAtPosition(const SiegePos& unk1, QtColl& unk2, GopColl& unk3, float unk4) const; //0x0086def7
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleCastTargets(GopColl& unk1, Go* unk2, bool unk3, float unk4, unsigned long unk5) const; //0x00870122
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleCastTargets(GopColl& unk1, Go* unk2, bool unk3, float unk4) const; //0x00411d99
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleCastTargets(GopColl& unk1, Go* unk2, bool unk3) const; //0x00411d7c
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleEnemies(GopColl& unk1, float unk2) const; //0x0086e025
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleEnemies(GopColl& unk1) const; //0x00411d18
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleFriends(GopColl& unk1, float unk2) const; //0x0086e0a0
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleFriends(GopColl& unk1) const; //0x00411d31
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleFriendsForPlay(GopColl& unk1, const char* unk2) const; //0x008700a5
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleItems(GopColl& unk1, float unk2) const; //0x0086e0f5
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleItems(GopColl& unk1) const; //0x00411d4a
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleItemsToLoot(GopColl& unk1, float unk2) const; //0x0086e14a
-	/*GoMind*/ public: bool /*__thiscall*/ GetVisibleItemsToLoot(GopColl& unk1) const; //0x00411d63
-	/*GoMind*/ public: bool /*__thiscall*/ HasActionJatInQueue(eJobAbstractType unk1) const; //0x00411b06
-	/*GoMind*/ public: bool /*__thiscall*/ HasBrainJatInQueue(eJobAbstractType unk1) const; //0x00411af5
-	/*GoMind*/ public: bool /*__thiscall*/ InitBrain(); //0x008718c8
-	/*GoMind*/ public: bool /*__thiscall*/ IsActorMovingAway(Go* unk1) const; //0x0086a42d
-	/*GoMind*/ public: bool /*__thiscall*/ IsAngry() const; //0x00411c5b
-	/*GoMind*/ public: bool /*__thiscall*/ IsEnemy(const Go* unk1) const; //0x00868a7c
-	/*GoMind*/ public: bool /*__thiscall*/ IsFleeingFromMe(const Goid_* unk1) const; //0x0086f028
-	/*GoMind*/ public: bool /*__thiscall*/ IsFlickCaptured() const; //0x00411b40
-	/*GoMind*/ public: bool /*__thiscall*/ IsFriend(const Go* unk1) const; //0x00868ad9
-	/*GoMind*/ public: bool /*__thiscall*/ IsFrontActionHumanInterruptable(); //0x0086a03e
-	/*GoMind*/ public: bool /*__thiscall*/ IsGuardingTarget() const; //0x00411b7a
-	/*GoMind*/ public: bool /*__thiscall*/ IsInEngageRange(Go* unk1, Go* unk2) const; //0x0086bfed
-	/*GoMind*/ public: bool /*__thiscall*/ IsInEngageRange(Go* unk1) const; //0x0086bfcf
-	/*GoMind*/ public: bool /*__thiscall*/ IsInJumpRange(Go* unk1) const; //0x0086bf69
-	/*GoMind*/ public: bool /*__thiscall*/ IsInMeleeEngageRange(Go* unk1) const; //0x0086c02c
-	/*GoMind*/ public: bool /*__thiscall*/ IsInRange(Go* unk1, float unk2) const; //0x0086bf2b
-	/*GoMind*/ public: bool /*__thiscall*/ IsInRangedEngageRange(Go* unk1) const; //0x0086c045
-	/*GoMind*/ public: bool /*__thiscall*/ IsInSpellRange(Go* unk1, Go* unk2) const; //0x0086bf9b
-	/*GoMind*/ public: bool /*__thiscall*/ IsInTeleportRange(Go* unk1) const; //0x0086bf82
-	/*GoMind*/ public: bool /*__thiscall*/ IsInWeaponRange(Go* unk1) const; //0x0086bf4b
-	/*GoMind*/ public: bool /*__thiscall*/ IsLifeHigh() const; //0x0086ada3
-	/*GoMind*/ public: bool /*__thiscall*/ IsLifeLow() const; //0x0086ad80
-	/*GoMind*/ public: bool /*__thiscall*/ IsLosClear(Go* unk1) const; //0x0086a50d
-	/*GoMind*/ public: bool /*__thiscall*/ IsLosClear(const SiegePos& unk1) const; //0x0086a6c4
-	/*GoMind*/ public: bool /*__thiscall*/ IsManaHigh() const; //0x0086c365
-	/*GoMind*/ public: bool /*__thiscall*/ IsManaLow() const; //0x0086c342
-	/*GoMind*/ public: bool /*__thiscall*/ IsMeleeSlotFree(Go* unk1); //0x0086c5bd
-	/*GoMind*/ public: bool /*__thiscall*/ IsRidingElevator() const; //0x0086a0f3
-	/*GoMind*/ public: bool /*__thiscall*/ MayAIInterrupt() const; //0x0086ba59
-	/*GoMind*/ public: bool /*__thiscall*/ MayAttackTarget(const Go* unk1, bool unk2) const; //0x00868caf
-	/*GoMind*/ public: bool /*__thiscall*/ MayAutoCastLifeDamagingSpell(); //0x0086f26b
-	/*GoMind*/ public: bool /*__thiscall*/ MayAutoCastLifeHealingSpell(); //0x0086f2fb
-	/*GoMind*/ public: bool /*__thiscall*/ MaySDoJob(eJobAbstractType unk1); //0x00869e11
-	/*GoMind*/ public: bool /*__thiscall*/ OnAlertProjectileNearMissedAttack() const; //0x0041248f
-	/*GoMind*/ public: bool /*__thiscall*/ OnAlertProjectileNearMissedFlee() const; //0x0041249b
-	/*GoMind*/ public: bool /*__thiscall*/ OnEnemyEnteredICZAttack() const; //0x004124a7
-	/*GoMind*/ public: bool /*__thiscall*/ OnEnemyEnteredICZFlee() const; //0x004124b3
-	/*GoMind*/ public: bool /*__thiscall*/ OnEnemyEnteredICZSwitchToMelee() const; //0x004124bd
-	/*GoMind*/ public: bool /*__thiscall*/ OnEnemyEnteredOCZAttack() const; //0x004124c6
-	/*GoMind*/ public: bool /*__thiscall*/ OnEnemyEnteredOCZFlee() const; //0x004124d1
-	/*GoMind*/ public: bool /*__thiscall*/ OnEnemyEnteredWeaponEngageRangeAttack() const; //0x004124dd
-	/*GoMind*/ public: bool /*__thiscall*/ OnEngagedFleedAbortAttack() const; //0x004124f5
-	/*GoMind*/ public: bool /*__thiscall*/ OnEngagedLostConsciousnessAbortAttack() const; //0x00412501
-	/*GoMind*/ public: bool /*__thiscall*/ OnFriendEnteredOCZFlee() const; //0x004124e9
-	/*GoMind*/ public: bool /*__thiscall*/ RSAttack(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, bool unk4, const Goid_* unk5, int unk6); //0x00874012
-	/*GoMind*/ public: bool /*__thiscall*/ RSAttack(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, bool unk4, const Goid_* unk5); //0x00411ef0
-	/*GoMind*/ public: bool /*__thiscall*/ RSAttack(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, bool unk4); //0x00411ed0
-	/*GoMind*/ public: bool /*__thiscall*/ RSAttack(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3); //0x00411eb1
-	/*GoMind*/ public: bool /*__thiscall*/ RSCast(const Goid_* unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5); //0x008741d0
-	/*GoMind*/ public: bool /*__thiscall*/ RSCast(const Goid_* unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4); //0x00411f0d
-	/*GoMind*/ public: bool /*__thiscall*/ RSCastAtPosition(const SiegePos& unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5); //0x00874251
-	/*GoMind*/ public: bool /*__thiscall*/ RSCastAtPosition(const SiegePos& unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4); //0x00411f2b
-	/*GoMind*/ public: bool /*__thiscall*/ RSCollectLoot(eQPlace unk1, eActionOrigin unk2, const Goid_* unk3); //0x00874318
-	/*GoMind*/ public: bool /*__thiscall*/ RSCollectLoot(eQPlace unk1, eActionOrigin unk2); //0x00411f6b
-	/*GoMind*/ public: bool /*__thiscall*/ RSMove(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4); //0x004121d8
-	/*GoMind*/ public: bool /*__thiscall*/ RSMove(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5); //0x00874869
-	/*GoMind*/ public: bool /*__thiscall*/ RSMove(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, float unk4); //0x004121b6
-	/*GoMind*/ public: bool /*__thiscall*/ RSMove(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3); //0x00412195
-	/*GoMind*/ public: bool /*__thiscall*/ Send(const WorldMessage& unk1); //0x00869ec7
-	/*GoMind*/ public: bool /*__thiscall*/ SendDelayed(const WorldMessage& unk1, float unk2); //0x00869ef3
-	/*GoMind*/ public: bool /*__thiscall*/ SetJatCloneSource(eJobAbstractType unk1, const gpbstring<char>& unk2); //0x0086d593
-	/*GoMind*/ public: bool /*__thiscall*/ UnderstandsJob(eJobAbstractType unk1) const; //0x00869de8
-	/*GoMind*/ public: Go* /*__thiscall*/ GetAttackTargetWeapon(Go* unk1, bool unk2, bool unk3); //0x0086c22d
-	/*GoMind*/ public: Go* /*__thiscall*/ GetAttackTargetWeapon(Go* unk1); //0x00411b5a
-	/*GoMind*/ public: Go* /*__thiscall*/ GetBestFocusEnemy() const; //0x0086e7ec
-	/*GoMind*/ public: Go* /*__thiscall*/ GetClosestVisible(eQueryTrait unk1) const; //0x00411e07
-	/*GoMind*/ public: Go* /*__thiscall*/ GetClosestVisible(float unk1, eQueryTrait unk2) const; //0x0086e44e
-	/*GoMind*/ public: Go* /*__thiscall*/ GetClosestVisible(float unk1, QtColl& unk2) const; //0x0086c16e
-	/*GoMind*/ public: Go* /*__thiscall*/ GetClosestVisible(QtColl& unk1) const; //0x00411dee
-	/*GoMind*/ public: Go* /*__thiscall*/ GetClosestVisibleEnemy() const; //0x004141d6
-	/*GoMind*/ public: Go* /*__thiscall*/ GetClosestVisibleEnemy(bool unk1) const; //0x00411e20
-	/*GoMind*/ public: Go* /*__thiscall*/ GetClosestVisibleEnemy(float unk1, bool unk2) const; //0x0086e496
-	/*GoMind*/ public: Go* /*__thiscall*/ GetClosestVisibleFriend() const; //0x004141de
-	/*GoMind*/ public: Go* /*__thiscall*/ GetClosestVisibleFriend(bool unk1) const; //0x00411e39
-	/*GoMind*/ public: Go* /*__thiscall*/ GetClosestVisibleFriend(float unk1, bool unk2) const; //0x0086e525
-	/*GoMind*/ public: Go* /*__thiscall*/ GetClosestVisibleItemToLoot(bool unk1) const; //0x0086ab95
-	/*GoMind*/ public: Go* /*__thiscall*/ GetFarthestVisible(eQueryTrait unk1) const; //0x0086e6ef
-	/*GoMind*/ public: Go* /*__thiscall*/ GetFarthestVisible(QtColl& unk1) const; //0x0086d0ce
-	/*GoMind*/ public: Go* /*__thiscall*/ GetFarthestVisibleEnemy() const; //0x0086e730
-	/*GoMind*/ public: Go* /*__thiscall*/ GetFarthestVisibleFriend() const; //0x0086e79d
-	/*GoMind*/ public: Go* /*__thiscall*/ GetFarthestVisibleItem() const; //0x0086e7e4
-	/*GoMind*/ public: Go* /*__thiscall*/ GetHighestVisibleAggro() const; //0x00411bb2
-	/*GoMind*/ public: Go* /*__thiscall*/ GetHighestVisibleAggro(const Goid_* unk1) const; //0x00411bef
-	/*GoMind*/ public: Go* /*__thiscall*/ GetHighestVisibleAggro(float unk1, float unk2, bool unk3, const Goid_* unk4) const; //0x0086eca8
-	/*GoMind*/ public: Go* /*__thiscall*/ GetHighestVisibleAggro(float unk1) const; //0x00411bcd
-	/*GoMind*/ public: Go* /*__thiscall*/ GetOwningCoach(); //0x004141c2
-	/*GoMind*/ public: Go* /*__thiscall*/ GetVisible(eQueryTrait unk1, float unk2) const; //0x0086deaf
-	/*GoMind*/ public: Go* /*__thiscall*/ GetVisible(eQueryTrait unk1) const; //0x00411ccc
-	/*GoMind*/ public: Go* /*__thiscall*/ GetVisible(QtColl& unk1, float unk2) const; //0x0086c05e
-	/*GoMind*/ public: Go* /*__thiscall*/ GetVisible(QtColl& unk1) const; //0x00411cb3
-	/*GoMind*/ public: Go* /*__thiscall*/ GetVisibleAtPosition(const SiegePos& unk1, eQueryTrait unk2, float unk3) const; //0x0086dfda
-	/*GoMind*/ public: Go* /*__thiscall*/ GetVisibleAtPosition(const SiegePos& unk1, float unk2) const; //0x00411ce5
-	/*GoMind*/ public: Go* /*__thiscall*/ GetVisibleAtPosition(const SiegePos& unk1, QtColl& unk2, float unk3) const; //0x0086c0d5
-	/*GoMind*/ public: Go* /*__thiscall*/ GetVisibleAtPosition(const SiegePos& unk1) const; //0x00411cfd
-	/*GoMind*/ public: Go* /*__thiscall*/ GetVisibleCastTarget(Go* unk1, bool unk2, bool unk3, float unk4) const; //0x008703fd
-	/*GoMind*/ public: Go* /*__thiscall*/ GetVisibleCastTarget(Go* unk1, bool unk2, bool unk3) const; //0x00411db7
+	DefineMethod(ReqResetSensorsSelfAndVisible, 0x86f9b6, void, Params(), Args());
+	DefineMethod(RequestProcessHitEngaged, 0x412511, void, Params(), Args());
+	DefineMethod(ResetSensors, 0x86c67e, void, Params(), Args());
+	DefineMethod(SetInitialCommand, 0x412519, void, Params(const Scid_* unk1), Args(const Scid_* unk1));
+	DefineConstMethod(ActorAutoDefendsOthers, 0x41240e, bool, Params(), Args());
+	DefineConstMethod(ActorAutoHealsOthersLife, 0x412418, bool, Params(), Args());
+	DefineConstMethod(ActorAutoHealsSelfLife, 0x412421, bool, Params(), Args());
+	DefineConstMethod(ActorAutoHealsSelfMana, 0x41242c, bool, Params(), Args());
+	DefineConstMethod(ActorAutoSwitchesToMagic, 0x412483, bool, Params(), Args());
+	DefineConstMethod(ActorAutoSwitchesToMelee, 0x41246f, bool, Params(), Args());
+	DefineConstMethod(ActorAutoSwitchesToRanged, 0x412478, bool, Params(), Args());
+	DefineConstMethod(ActorPrefersMagic, 0x412452, bool, Params(), Args());
+	DefineConstMethod(ActorPrefersMelee, 0x412438, bool, Params(), Args());
+	DefineConstMethod(ActorPrefersRanged, 0x412445, bool, Params(), Args());
+	DefineConstMethod(AmAttacking, 0x86ba44, bool, Params(), Args());
+	DefineConstMethod(AmBusy, 0x411b27, bool, Params(), Args());
+	DefineConstMethod(AmFacing, 0x86c20f, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(AmFacing, 0x86acc9, bool, Params(const SiegePos& unk1), Args(const SiegePos& unk1));
+	DefineConstMethod(AmGuarding, 0x8687d8, bool, Params(), Args());
+	DefineConstMethod(AmPatrolling, 0x869d55, bool, Params(), Args());
+	DefineMethod(AreAliveEnemiesVisible, 0x86aabd, bool, Params(), Args());
+	DefineMethod(AreAliveFriendsVisible, 0x86ab28, bool, Params(), Args());
+	DefineConstMethod(AreItemsVisible, 0x86acb6, bool, Params(), Args());
+	DefineConstMethod(CanOperateOn, 0x8687ea, bool, Params(Go* unk1, bool unk2), Args(Go* unk1, bool unk2));
+	DefineMethod(CanOperateOn, 0x411b2f, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(DoingJobOriginatingFrom, 0x86bc37, bool, Params(eJobQ unk1, Go* unk2), Args(eJobQ unk1, Go* unk2));
+	DefineMethod(GetActorAutoFidgets, 0x412369, bool, Params(), Args());
+	DefineConstMethod(GetAutoItems, 0x86f225, bool, Params(eQueryTrait unk1, GopColl& unk2), Args(eQueryTrait unk1, GopColl& unk2));
+	DefineConstMethod(GetAutoItems, 0x870502, bool, Params(GopColl& unk1), Args(GopColl& unk1));
+	DefineConstMethod(GetAutoItems, 0x86b25b, bool, Params(QtColl& unk1, GopColl& unk2), Args(QtColl& unk1, GopColl& unk2));
+	DefineConstMethod(GetCanJump, 0x4122d3, bool, Params(), Args());
+	DefineConstMethod(GetClosestVisible, 0x870476, bool, Params(eQueryTrait unk1, GopColl& unk2), Args(eQueryTrait unk1, GopColl& unk2));
+	DefineConstMethod(GetClosestVisible, 0x86e38a, bool, Params(float unk1, QtColl& unk2, GopColl& unk3), Args(float unk1, QtColl& unk2, GopColl& unk3));
+	DefineConstMethod(GetClosestVisible, 0x411dd2, bool, Params(QtColl& unk1, GopColl& unk2), Args(QtColl& unk1, GopColl& unk2));
+	DefineMethod(GetClosestVisibleEnemies, 0x86e58e, bool, Params(float unk1, GopColl& unk2), Args(float unk1, GopColl& unk2));
+	DefineMethod(GetClosestVisibleEnemies, 0x411e52, bool, Params(GopColl& unk1), Args(GopColl& unk1));
+	DefineMethod(GetClosestVisibleFriends, 0x86e609, bool, Params(float unk1, GopColl& unk2), Args(float unk1, GopColl& unk2));
+	DefineMethod(GetClosestVisibleFriends, 0x411e6b, bool, Params(GopColl& unk1), Args(GopColl& unk1));
+	DefineConstMethod(GetEnemiesAndSummonsInSphere, 0x86ff5a, bool, Params(float unk1, GopColl& unk2), Args(float unk1, GopColl& unk2));
+	DefineConstMethod(GetEnemiesInSphere, 0x86fed4, bool, Params(float unk1, GopColl& unk2), Args(float unk1, GopColl& unk2));
+	DefineConstMethod(GetEngagedMe, 0x86f124, bool, Params(GopColl& unk1), Args(GopColl& unk1));
+	DefineConstMethod(GetEngagedMeEnemies, 0x86f199, bool, Params(GopColl& unk1), Args(GopColl& unk1));
+	DefineConstMethod(GetFarthestVisible, 0x8704bc, bool, Params(eQueryTrait unk1, GopColl& unk2), Args(eQueryTrait unk1, GopColl& unk2));
+	DefineConstMethod(GetFarthestVisible, 0x86e65e, bool, Params(QtColl& unk1, GopColl& unk2), Args(QtColl& unk1, GopColl& unk2));
+	DefineConstMethod(GetFriendsAndSummonsInSphere, 0x87000e, bool, Params(float unk1, GopColl& unk2), Args(float unk1, GopColl& unk2));
+	DefineConstMethod(GetFriendsInSphere, 0x86ff88, bool, Params(float unk1, GopColl& unk2), Args(float unk1, GopColl& unk2));
+	DefineConstMethod(GetItemsInSphere, 0x86fd67, bool, Params(float unk1, GopColl& unk2), Args(float unk1, GopColl& unk2));
+	DefineConstMethod(GetLeashTeleportToHome, 0x86c645, bool, Params(), Args());
+	DefineConstMethod(GetMayAttack, 0x4123de, bool, Params(), Args());
+	DefineConstMethod(GetMayAttackHeroes, 0x4123ea, bool, Params(), Args());
+	DefineConstMethod(GetMayBeAttacked, 0x4123f6, bool, Params(), Args());
+	DefineConstMethod(GetMayBeAttackedByHeroes, 0x412402, bool, Params(), Args());
+	DefineConstMethod(GetMayProcessAI, 0x412394, bool, Params(), Args());
+	DefineConstMethod(GetMayProcessSensors, 0x4123b8, bool, Params(), Args());
+	DefineConstMethod(GetOccupantsInSphere, 0x86fded, bool, Params(float unk1, GopColl& unk2), Args(float unk1, GopColl& unk2));
+	DefineConstMethod(GetPartyMembersAndSummonsInSphere, 0x86aa8f, bool, Params(float unk1, GopColl* unk2), Args(float unk1, GopColl* unk2));
+	DefineConstMethod(GetPartyMembersInSphere, 0x86aa2e, bool, Params(float unk1, GopColl* unk2), Args(float unk1, GopColl* unk2));
+	DefineConstMethod(GetVisible, 0x870058, bool, Params(eQueryTrait unk1, GopColl& unk2, float unk3), Args(eQueryTrait unk1, GopColl& unk2, float unk3));
+	DefineConstMethod(GetVisible, 0x411c7b, bool, Params(eQueryTrait unk1, GopColl& unk2), Args(eQueryTrait unk1, GopColl& unk2));
+	DefineConstMethod(GetVisible, 0x86dd66, bool, Params(QtColl& unk1, GoidColl& unk2, float unk3), Args(QtColl& unk1, GoidColl& unk2, float unk3));
+	DefineConstMethod(GetVisible, 0x87003c, bool, Params(QtColl& unk1, GoidColl& unk2), Args(QtColl& unk1, GoidColl& unk2));
+	DefineConstMethod(GetVisible, 0x86de0e, bool, Params(QtColl& unk1, GopColl& unk2, float unk3), Args(QtColl& unk1, GopColl& unk2, float unk3));
+	DefineConstMethod(GetVisible, 0x411c97, bool, Params(QtColl& unk1, GopColl& unk2), Args(QtColl& unk1, GopColl& unk2));
+	DefineConstMethod(GetVisibleAtPosition, 0x86def7, bool, Params(const SiegePos& unk1, QtColl& unk2, GopColl& unk3, float unk4), Args(const SiegePos& unk1, QtColl& unk2, GopColl& unk3, float unk4));
+	DefineConstMethod(GetVisibleCastTargets, 0x870122, bool, Params(GopColl& unk1, Go* unk2, bool unk3, float unk4, unsigned long unk5), Args(GopColl& unk1, Go* unk2, bool unk3, float unk4, unsigned long unk5));
+	DefineConstMethod(GetVisibleCastTargets, 0x411d99, bool, Params(GopColl& unk1, Go* unk2, bool unk3, float unk4), Args(GopColl& unk1, Go* unk2, bool unk3, float unk4));
+	DefineConstMethod(GetVisibleCastTargets, 0x411d7c, bool, Params(GopColl& unk1, Go* unk2, bool unk3), Args(GopColl& unk1, Go* unk2, bool unk3));
+	DefineConstMethod(GetVisibleEnemies, 0x86e025, bool, Params(GopColl& unk1, float unk2), Args(GopColl& unk1, float unk2));
+	DefineConstMethod(GetVisibleEnemies, 0x411d18, bool, Params(GopColl& unk1), Args(GopColl& unk1));
+	DefineConstMethod(GetVisibleFriends, 0x86e0a0, bool, Params(GopColl& unk1, float unk2), Args(GopColl& unk1, float unk2));
+	DefineConstMethod(GetVisibleFriends, 0x411d31, bool, Params(GopColl& unk1), Args(GopColl& unk1));
+	DefineConstMethod(GetVisibleFriendsForPlay, 0x8700a5, bool, Params(GopColl& unk1, const char* unk2), Args(GopColl& unk1, const char* unk2));
+	DefineConstMethod(GetVisibleItems, 0x86e0f5, bool, Params(GopColl& unk1, float unk2), Args(GopColl& unk1, float unk2));
+	DefineConstMethod(GetVisibleItems, 0x411d4a, bool, Params(GopColl& unk1), Args(GopColl& unk1));
+	DefineConstMethod(GetVisibleItemsToLoot, 0x86e14a, bool, Params(GopColl& unk1, float unk2), Args(GopColl& unk1, float unk2));
+	DefineConstMethod(GetVisibleItemsToLoot, 0x411d63, bool, Params(GopColl& unk1), Args(GopColl& unk1));
+	DefineConstMethod(HasActionJatInQueue, 0x411b06, bool, Params(eJobAbstractType unk1), Args(eJobAbstractType unk1));
+	DefineConstMethod(HasBrainJatInQueue, 0x411af5, bool, Params(eJobAbstractType unk1), Args(eJobAbstractType unk1));
+	DefineMethod(InitBrain, 0x8718c8, bool, Params(), Args());
+	DefineConstMethod(IsActorMovingAway, 0x86a42d, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(IsAngry, 0x411c5b, bool, Params(), Args());
+	DefineConstMethod(IsEnemy, 0x868a7c, bool, Params(const Go* unk1), Args(const Go* unk1));
+	DefineConstMethod(IsFleeingFromMe, 0x86f028, bool, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineConstMethod(IsFlickCaptured, 0x411b40, bool, Params(), Args());
+	DefineConstMethod(IsFriend, 0x868ad9, bool, Params(const Go* unk1), Args(const Go* unk1));
+	DefineMethod(IsFrontActionHumanInterruptable, 0x86a03e, bool, Params(), Args());
+	DefineConstMethod(IsGuardingTarget, 0x411b7a, bool, Params(), Args());
+	DefineConstMethod(IsInEngageRange, 0x86bfed, bool, Params(Go* unk1, Go* unk2), Args(Go* unk1, Go* unk2));
+	DefineConstMethod(IsInEngageRange, 0x86bfcf, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(IsInJumpRange, 0x86bf69, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(IsInMeleeEngageRange, 0x86c02c, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(IsInRange, 0x86bf2b, bool, Params(Go* unk1, float unk2), Args(Go* unk1, float unk2));
+	DefineConstMethod(IsInRangedEngageRange, 0x86c045, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(IsInSpellRange, 0x86bf9b, bool, Params(Go* unk1, Go* unk2), Args(Go* unk1, Go* unk2));
+	DefineConstMethod(IsInTeleportRange, 0x86bf82, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(IsInWeaponRange, 0x86bf4b, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(IsLifeHigh, 0x86ada3, bool, Params(), Args());
+	DefineConstMethod(IsLifeLow, 0x86ad80, bool, Params(), Args());
+	DefineConstMethod(IsLosClear, 0x86a50d, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(IsLosClear, 0x86a6c4, bool, Params(const SiegePos& unk1), Args(const SiegePos& unk1));
+	DefineConstMethod(IsManaHigh, 0x86c365, bool, Params(), Args());
+	DefineConstMethod(IsManaLow, 0x86c342, bool, Params(), Args());
+	DefineMethod(IsMeleeSlotFree, 0x86c5bd, bool, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(IsRidingElevator, 0x86a0f3, bool, Params(), Args());
+	DefineConstMethod(MayAIInterrupt, 0x86ba59, bool, Params(), Args());
+	DefineConstMethod(MayAttackTarget, 0x868caf, bool, Params(const Go* unk1, bool unk2), Args(const Go* unk1, bool unk2));
+	DefineMethod(MayAutoCastLifeDamagingSpell, 0x86f26b, bool, Params(), Args());
+	DefineMethod(MayAutoCastLifeHealingSpell, 0x86f2fb, bool, Params(), Args());
+	DefineMethod(MaySDoJob, 0x869e11, bool, Params(eJobAbstractType unk1), Args(eJobAbstractType unk1));
+	DefineConstMethod(OnAlertProjectileNearMissedAttack, 0x41248f, bool, Params(), Args());
+	DefineConstMethod(OnAlertProjectileNearMissedFlee, 0x41249b, bool, Params(), Args());
+	DefineConstMethod(OnEnemyEnteredICZAttack, 0x4124a7, bool, Params(), Args());
+	DefineConstMethod(OnEnemyEnteredICZFlee, 0x4124b3, bool, Params(), Args());
+	DefineConstMethod(OnEnemyEnteredICZSwitchToMelee, 0x4124bd, bool, Params(), Args());
+	DefineConstMethod(OnEnemyEnteredOCZAttack, 0x4124c6, bool, Params(), Args());
+	DefineConstMethod(OnEnemyEnteredOCZFlee, 0x4124d1, bool, Params(), Args());
+	DefineConstMethod(OnEnemyEnteredWeaponEngageRangeAttack, 0x4124dd, bool, Params(), Args());
+	DefineConstMethod(OnEngagedFleedAbortAttack, 0x4124f5, bool, Params(), Args());
+	DefineConstMethod(OnEngagedLostConsciousnessAbortAttack, 0x412501, bool, Params(), Args());
+	DefineConstMethod(OnFriendEnteredOCZFlee, 0x4124e9, bool, Params(), Args());
+	DefineMethod(RSAttack, 0x874012, bool, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, bool unk4, const Goid_* unk5, int unk6), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, bool unk4, const Goid_* unk5, int unk6));
+	DefineMethod(RSAttack, 0x411ef0, bool, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, bool unk4, const Goid_* unk5), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, bool unk4, const Goid_* unk5));
+	DefineMethod(RSAttack, 0x411ed0, bool, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, bool unk4), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, bool unk4));
+	DefineMethod(RSAttack, 0x411eb1, bool, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3));
+	DefineMethod(RSCast, 0x8741d0, bool, Params(const Goid_* unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5), Args(const Goid_* unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5));
+	DefineMethod(RSCast, 0x411f0d, bool, Params(const Goid_* unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4), Args(const Goid_* unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4));
+	DefineMethod(RSCastAtPosition, 0x874251, bool, Params(const SiegePos& unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5), Args(const SiegePos& unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5));
+	DefineMethod(RSCastAtPosition, 0x411f2b, bool, Params(const SiegePos& unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4), Args(const SiegePos& unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4));
+	DefineMethod(RSCollectLoot, 0x874318, bool, Params(eQPlace unk1, eActionOrigin unk2, const Goid_* unk3), Args(eQPlace unk1, eActionOrigin unk2, const Goid_* unk3));
+	DefineMethod(RSCollectLoot, 0x411f6b, bool, Params(eQPlace unk1, eActionOrigin unk2), Args(eQPlace unk1, eActionOrigin unk2));
+	DefineMethod(RSMove, 0x4121d8, bool, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4));
+	DefineMethod(RSMove, 0x874869, bool, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5));
+	DefineMethod(RSMove, 0x4121b6, bool, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, float unk4), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, float unk4));
+	DefineMethod(RSMove, 0x412195, bool, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3));
+	DefineMethod(Send, 0x869ec7, bool, Params(const WorldMessage& unk1), Args(const WorldMessage& unk1));
+	DefineMethod(SendDelayed, 0x869ef3, bool, Params(const WorldMessage& unk1, float unk2), Args(const WorldMessage& unk1, float unk2));
+	DefineMethod(SetJatCloneSource, 0x86d593, bool, Params(eJobAbstractType unk1, const gpbstring<char>& unk2), Args(eJobAbstractType unk1, const gpbstring<char>& unk2));
+	DefineConstMethod(UnderstandsJob, 0x869de8, bool, Params(eJobAbstractType unk1), Args(eJobAbstractType unk1));
+	DefineMethod(GetAttackTargetWeapon, 0x86c22d, Go*, Params(Go* unk1, bool unk2, bool unk3), Args(Go* unk1, bool unk2, bool unk3));
+	DefineMethod(GetAttackTargetWeapon, 0x411b5a, Go*, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(GetBestFocusEnemy, 0x86e7ec, Go*, Params(), Args());
+	DefineConstMethod(GetClosestVisible, 0x411e07, Go*, Params(eQueryTrait unk1), Args(eQueryTrait unk1));
+	DefineConstMethod(GetClosestVisible, 0x86e44e, Go*, Params(float unk1, eQueryTrait unk2), Args(float unk1, eQueryTrait unk2));
+	DefineConstMethod(GetClosestVisible, 0x86c16e, Go*, Params(float unk1, QtColl& unk2), Args(float unk1, QtColl& unk2));
+	DefineConstMethod(GetClosestVisible, 0x411dee, Go*, Params(QtColl& unk1), Args(QtColl& unk1));
+	DefineConstMethod(GetClosestVisibleEnemy, 0x4141d6, Go*, Params(), Args());
+	DefineConstMethod(GetClosestVisibleEnemy, 0x411e20, Go*, Params(bool unk1), Args(bool unk1));
+	DefineConstMethod(GetClosestVisibleEnemy, 0x86e496, Go*, Params(float unk1, bool unk2), Args(float unk1, bool unk2));
+	DefineConstMethod(GetClosestVisibleFriend, 0x4141de, Go*, Params(), Args());
+	DefineConstMethod(GetClosestVisibleFriend, 0x411e39, Go*, Params(bool unk1), Args(bool unk1));
+	DefineConstMethod(GetClosestVisibleFriend, 0x86e525, Go*, Params(float unk1, bool unk2), Args(float unk1, bool unk2));
+	DefineConstMethod(GetClosestVisibleItemToLoot, 0x86ab95, Go*, Params(bool unk1), Args(bool unk1));
+	DefineConstMethod(GetFarthestVisible, 0x86e6ef, Go*, Params(eQueryTrait unk1), Args(eQueryTrait unk1));
+	DefineConstMethod(GetFarthestVisible, 0x86d0ce, Go*, Params(QtColl& unk1), Args(QtColl& unk1));
+	DefineConstMethod(GetFarthestVisibleEnemy, 0x86e730, Go*, Params(), Args());
+	DefineConstMethod(GetFarthestVisibleFriend, 0x86e79d, Go*, Params(), Args());
+	DefineConstMethod(GetFarthestVisibleItem, 0x86e7e4, Go*, Params(), Args());
+	DefineConstMethod(GetHighestVisibleAggro, 0x411bb2, Go*, Params(), Args());
+	DefineConstMethod(GetHighestVisibleAggro, 0x411bef, Go*, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineConstMethod(GetHighestVisibleAggro, 0x86eca8, Go*, Params(float unk1, float unk2, bool unk3, const Goid_* unk4), Args(float unk1, float unk2, bool unk3, const Goid_* unk4));
+	DefineConstMethod(GetHighestVisibleAggro, 0x411bcd, Go*, Params(float unk1), Args(float unk1));
+	DefineMethod(GetOwningCoach, 0x4141c2, Go*, Params(), Args());
+	DefineConstMethod(GetVisible, 0x86deaf, Go*, Params(eQueryTrait unk1, float unk2), Args(eQueryTrait unk1, float unk2));
+	DefineConstMethod(GetVisible, 0x411ccc, Go*, Params(eQueryTrait unk1), Args(eQueryTrait unk1));
+	DefineConstMethod(GetVisible, 0x86c05e, Go*, Params(QtColl& unk1, float unk2), Args(QtColl& unk1, float unk2));
+	DefineConstMethod(GetVisible, 0x411cb3, Go*, Params(QtColl& unk1), Args(QtColl& unk1));
+	DefineConstMethod(GetVisibleAtPosition, 0x86dfda, Go*, Params(const SiegePos& unk1, eQueryTrait unk2, float unk3), Args(const SiegePos& unk1, eQueryTrait unk2, float unk3));
+	DefineConstMethod(GetVisibleAtPosition, 0x411ce5, Go*, Params(const SiegePos& unk1, float unk2), Args(const SiegePos& unk1, float unk2));
+	DefineConstMethod(GetVisibleAtPosition, 0x86c0d5, Go*, Params(const SiegePos& unk1, QtColl& unk2, float unk3), Args(const SiegePos& unk1, QtColl& unk2, float unk3));
+	DefineConstMethod(GetVisibleAtPosition, 0x411cfd, Go*, Params(const SiegePos& unk1), Args(const SiegePos& unk1));
+	DefineConstMethod(GetVisibleCastTarget, 0x8703fd, Go*, Params(Go* unk1, bool unk2, bool unk3, float unk4), Args(Go* unk1, bool unk2, bool unk3, float unk4));
+	DefineConstMethod(GetVisibleCastTarget, 0x411db7, Go*, Params(Go* unk1, bool unk2, bool unk3), Args(Go* unk1, bool unk2, bool unk3));
 	/*GoMind*/ public: gpbstring<char> /*__thiscall*/ GetFrontActionStateName(); //0x008715cf
-	/*GoMind*/ public: Job* /*__thiscall*/ GetActionJobInQueue(eJobAbstractType unk1) const; //0x00411ae4
-	/*GoMind*/ public: Job* /*__thiscall*/ GetFrontJob(eJobQ unk1) const; //0x00869f80
-	/*GoMind*/ public: Job* /*__thiscall*/ GetJobInQueue(eJobAbstractType unk1, eJobQ unk2) const; //0x00869fb1
-	/*GoMind*/ public: Job* /*__thiscall*/ SDoJob(const JobReq& unk1); //0x00871162
+	DefineConstMethod(GetActionJobInQueue, 0x411ae4, Job*, Params(eJobAbstractType unk1), Args(eJobAbstractType unk1));
+	DefineConstMethod(GetFrontJob, 0x869f80, Job*, Params(eJobQ unk1), Args(eJobQ unk1));
+	DefineConstMethod(GetJobInQueue, 0x869fb1, Job*, Params(eJobAbstractType unk1, eJobQ unk2), Args(eJobAbstractType unk1, eJobQ unk2));
+	DefineMethod(SDoJob, 0x871162, Job*, Params(const JobReq& unk1), Args(const JobReq& unk1));
 	/*GoMind*/ public: const JobAttributeBits& /*__thiscall*/ GetPlayAttributes() const; //0x0041234b
 	/*GoMind*/ public: const Goid_* /*__thiscall*/ GetAngryTarget() const; //0x00411c54
 	/*GoMind*/ public: const Goid_* /*__thiscall*/ GetFrontActionGoalObject(); //0x00869fe3
@@ -206,159 +206,159 @@ public:
 	/*GoMind*/ public: const GoidColl& /*__thiscall*/ GetEnemiesVisible(); //0x00411e84
 	/*GoMind*/ public: const GoidColl& /*__thiscall*/ GetFriendsVisible(); //0x00411e8b
 	/*GoMind*/ public: const GoidColl& /*__thiscall*/ GetItemsVisible(); //0x00411e92
-	/*GoMind*/ public: eActionOrigin /*__thiscall*/ GetFrontActionOrigin(); //0x00869ff5
-	/*GoMind*/ public: eActorDisposition /*__thiscall*/ GetDispositionOrders() const; //0x00412336
-	/*GoMind*/ public: eAggroType /*__thiscall*/ GetHighestAggroType() const; //0x0086c308
-	/*GoMind*/ public: eCombatOrders /*__thiscall*/ GetCombatOrders() const; //0x00412328
-	/*GoMind*/ public: eFocusOrders /*__thiscall*/ GetFocusOrders() const; //0x0041232f
-	/*GoMind*/ public: eJobAbstractType /*__thiscall*/ GetFrontActionJat() const; //0x0086887c
-	/*GoMind*/ public: eJobAbstractType /*__thiscall*/ GetLastEngagedJat() const; //0x00411b94
-	/*GoMind*/ public: eJobAbstractType /*__thiscall*/ GetMatchingJob(const JobAttributeBits& unk1) const; //0x0086f056
-	/*GoMind*/ public: eJobAbstractType /*__thiscall*/ GetMatchingPlay(const gpbstring<char>& unk1, const JobAttributeBits& unk2) const; //0x0086f0ea
-	/*GoMind*/ public: eMovementOrders /*__thiscall*/ GetMovementOrders() const; //0x00412321
-	/*GoMind*/ public: float /*__thiscall*/ Get2DDistance(Go* unk1) const; //0x0086aa15
-	/*GoMind*/ public: float /*__thiscall*/ GetAggro(const Goid_* unk1); //0x0086efe8
-	/*GoMind*/ public: float /*__thiscall*/ GetAggroTypeGlobalScalar() const; //0x00411bab
-	/*GoMind*/ public: float /*__thiscall*/ GetAggroTypeScalar(eAggroType unk1) const; //0x0086ec85
-	/*GoMind*/ public: float /*__thiscall*/ GetAngryDuration() const; //0x00411c6d
-	/*GoMind*/ public: float /*__thiscall*/ GetAngryTimeLeft() const; //0x00411c74
-	/*GoMind*/ public: float /*__thiscall*/ GetDistance(Go* unk1) const; //0x0086a802
-	/*GoMind*/ public: float /*__thiscall*/ GetDistanceAtPlanEnd(Go* unk1) const; //0x0086a81b
-	/*GoMind*/ public: float /*__thiscall*/ GetEngageRange() const; //0x00868b08
-	/*GoMind*/ public: float /*__thiscall*/ GetFleeDistance() const; //0x0041233d
-	/*GoMind*/ public: float /*__thiscall*/ GetHomeLeashDistance() const; //0x0086c60c
-	/*GoMind*/ public: float /*__thiscall*/ GetIdealAttackDistance(const Go* unk1) const; //0x00868d5c
-	/*GoMind*/ public: float /*__thiscall*/ GetIdealMeleeAttackDistance(const Go* unk1) const; //0x00868d29
-	/*GoMind*/ public: float /*__thiscall*/ GetInnerComfortZoneRange() const; //0x00412313
-	/*GoMind*/ public: float /*__thiscall*/ GetJumpRange() const; //0x004122c5
-	/*GoMind*/ public: float /*__thiscall*/ GetJumpSpeed() const; //0x004122cc
-	/*GoMind*/ public: float /*__thiscall*/ GetLimitedMovementRange() const; //0x004122be
-	/*GoMind*/ public: float /*__thiscall*/ GetLootRange() const; //0x0041230c
-	/*GoMind*/ public: float /*__thiscall*/ GetMeleeEngageRange() const; //0x004122f4
-	/*GoMind*/ public: float /*__thiscall*/ GetMeleeWeaponRange() const; //0x00868b9d
-	/*GoMind*/ public: float /*__thiscall*/ GetOuterComfortZoneRange() const; //0x0041231a
-	/*GoMind*/ public: float /*__thiscall*/ GetPersonalSpaceRange() const; //0x00412305
-	/*GoMind*/ public: float /*__thiscall*/ GetRangedEngageRange() const; //0x00868dbc
-	/*GoMind*/ public: float /*__thiscall*/ GetSensorScanPeriod() const; //0x0086c388
-	/*GoMind*/ public: float /*__thiscall*/ GetSightRange() const; //0x004122b7
-	/*GoMind*/ public: float /*__thiscall*/ GetTeleportRange() const; //0x004122ed
-	/*GoMind*/ public: float /*__thiscall*/ GetTimeElapsedSinceLastEnemySpotted() const; //0x0086adc6
-	/*GoMind*/ public: float /*__thiscall*/ GetWeaponRange() const; //0x00868b57
-	/*GoMind*/ public: int /*__thiscall*/ GetAllignedTeam() const; //0x00868af7
-	/*GoMind*/ public: int /*__thiscall*/ GetEngagedMeAttackerCount(bool unk1) const; //0x0086c3d4
-	/*GoMind*/ public: int /*__thiscall*/ GetEngagedMeMeleeAttackerCount(bool unk1) const; //0x0086c447
-	/*GoMind*/ public: int /*__thiscall*/ GetEngagedMeMeleeSlotUsage(Go* unk1, bool unk2) const; //0x0086c542
-	/*GoMind*/ public: int /*__thiscall*/ GetEngagedMeRangedAttackerCount(bool unk1) const; //0x0086c4cc
-	/*GoMind*/ public: int /*__thiscall*/ GetMeleeSlotUsage() const; //0x00412344
-	/*GoMind*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetMayAttack(bool unk1, unsigned long unk2); //0x00868deb
-	/*GoMind*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetMayAttackHeroes(bool unk1, unsigned long unk2); //0x00868ee2
-	/*GoMind*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetMayBeAttacked(bool unk1, unsigned long unk2); //0x00868fd9
-	/*GoMind*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetMayBeAttackedByHeroes(bool unk1, unsigned long unk2); //0x008690d0
-	/*GoMind*/ public: FuBi::Cookie__* /*__thiscall*/ RSSetRank(unsigned long unk1); //0x0086869d
+	DefineMethod(GetFrontActionOrigin, 0x869ff5, eActionOrigin, Params(), Args());
+	DefineConstMethod(GetDispositionOrders, 0x412336, eActorDisposition, Params(), Args());
+	DefineConstMethod(GetHighestAggroType, 0x86c308, eAggroType, Params(), Args());
+	DefineConstMethod(GetCombatOrders, 0x412328, eCombatOrders, Params(), Args());
+	DefineConstMethod(GetFocusOrders, 0x41232f, eFocusOrders, Params(), Args());
+	DefineConstMethod(GetFrontActionJat, 0x86887c, eJobAbstractType, Params(), Args());
+	DefineConstMethod(GetLastEngagedJat, 0x411b94, eJobAbstractType, Params(), Args());
+	DefineConstMethod(GetMatchingJob, 0x86f056, eJobAbstractType, Params(const JobAttributeBits& unk1), Args(const JobAttributeBits& unk1));
+	DefineConstMethod(GetMatchingPlay, 0x86f0ea, eJobAbstractType, Params(const gpbstring<char>& unk1, const JobAttributeBits& unk2), Args(const gpbstring<char>& unk1, const JobAttributeBits& unk2));
+	DefineConstMethod(GetMovementOrders, 0x412321, eMovementOrders, Params(), Args());
+	DefineConstMethod(Get2DDistance, 0x86aa15, float, Params(Go* unk1), Args(Go* unk1));
+	DefineMethod(GetAggro, 0x86efe8, float, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineConstMethod(GetAggroTypeGlobalScalar, 0x411bab, float, Params(), Args());
+	DefineConstMethod(GetAggroTypeScalar, 0x86ec85, float, Params(eAggroType unk1), Args(eAggroType unk1));
+	DefineConstMethod(GetAngryDuration, 0x411c6d, float, Params(), Args());
+	DefineConstMethod(GetAngryTimeLeft, 0x411c74, float, Params(), Args());
+	DefineConstMethod(GetDistance, 0x86a802, float, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(GetDistanceAtPlanEnd, 0x86a81b, float, Params(Go* unk1), Args(Go* unk1));
+	DefineConstMethod(GetEngageRange, 0x868b08, float, Params(), Args());
+	DefineConstMethod(GetFleeDistance, 0x41233d, float, Params(), Args());
+	DefineConstMethod(GetHomeLeashDistance, 0x86c60c, float, Params(), Args());
+	DefineConstMethod(GetIdealAttackDistance, 0x868d5c, float, Params(const Go* unk1), Args(const Go* unk1));
+	DefineConstMethod(GetIdealMeleeAttackDistance, 0x868d29, float, Params(const Go* unk1), Args(const Go* unk1));
+	DefineConstMethod(GetInnerComfortZoneRange, 0x412313, float, Params(), Args());
+	DefineConstMethod(GetJumpRange, 0x4122c5, float, Params(), Args());
+	DefineConstMethod(GetJumpSpeed, 0x4122cc, float, Params(), Args());
+	DefineConstMethod(GetLimitedMovementRange, 0x4122be, float, Params(), Args());
+	DefineConstMethod(GetLootRange, 0x41230c, float, Params(), Args());
+	DefineConstMethod(GetMeleeEngageRange, 0x4122f4, float, Params(), Args());
+	DefineConstMethod(GetMeleeWeaponRange, 0x868b9d, float, Params(), Args());
+	DefineConstMethod(GetOuterComfortZoneRange, 0x41231a, float, Params(), Args());
+	DefineConstMethod(GetPersonalSpaceRange, 0x412305, float, Params(), Args());
+	DefineConstMethod(GetRangedEngageRange, 0x868dbc, float, Params(), Args());
+	DefineConstMethod(GetSensorScanPeriod, 0x86c388, float, Params(), Args());
+	DefineConstMethod(GetSightRange, 0x4122b7, float, Params(), Args());
+	DefineConstMethod(GetTeleportRange, 0x4122ed, float, Params(), Args());
+	DefineConstMethod(GetTimeElapsedSinceLastEnemySpotted, 0x86adc6, float, Params(), Args());
+	DefineConstMethod(GetWeaponRange, 0x868b57, float, Params(), Args());
+	DefineConstMethod(GetAllignedTeam, 0x868af7, int, Params(), Args());
+	DefineConstMethod(GetEngagedMeAttackerCount, 0x86c3d4, int, Params(bool unk1), Args(bool unk1));
+	DefineConstMethod(GetEngagedMeMeleeAttackerCount, 0x86c447, int, Params(bool unk1), Args(bool unk1));
+	DefineConstMethod(GetEngagedMeMeleeSlotUsage, 0x86c542, int, Params(Go* unk1, bool unk2), Args(Go* unk1, bool unk2));
+	DefineConstMethod(GetEngagedMeRangedAttackerCount, 0x86c4cc, int, Params(bool unk1), Args(bool unk1));
+	DefineConstMethod(GetMeleeSlotUsage, 0x412344, int, Params(), Args());
+	DefineMethod(RCSetMayAttack, 0x868deb, FuBi::Cookie__*, Params(bool unk1, unsigned long unk2), Args(bool unk1, unsigned long unk2));
+	DefineMethod(RCSetMayAttackHeroes, 0x868ee2, FuBi::Cookie__*, Params(bool unk1, unsigned long unk2), Args(bool unk1, unsigned long unk2));
+	DefineMethod(RCSetMayBeAttacked, 0x868fd9, FuBi::Cookie__*, Params(bool unk1, unsigned long unk2), Args(bool unk1, unsigned long unk2));
+	DefineMethod(RCSetMayBeAttackedByHeroes, 0x8690d0, FuBi::Cookie__*, Params(bool unk1, unsigned long unk2), Args(bool unk1, unsigned long unk2));
+	DefineMethod(RSSetRank, 0x86869d, FuBi::Cookie__*, Params(unsigned long unk1), Args(unsigned long unk1));
 	/*GoMind*/ public: GoidColl& /*__thiscall*/ GetActorsInInnerComfortZone(); //0x00411ea3
 	/*GoMind*/ public: GoidColl& /*__thiscall*/ GetActorsInOuterComfortZone(); //0x00411eaa
 	/*GoMind*/ public: SiegePos& /*__thiscall*/ GetHomePosition(); //0x00868c61
 	/*GoMind*/ public: SiegePos& /*__thiscall*/ GetInitialPosition(); //0x00868c13
 	/*GoMind*/ public: SiegePos& /*__thiscall*/ GetLastExecutedUserAssignedActionPosition(); //0x00868bc5
 	/*GoMind*/ public: unsigned long /*__thiscall*/ GetRank(); //0x00411b49
-	/*GoMind*/ public: void /*__thiscall*/ AddAggro(float unk1, const Goid_* unk2, eAggroType unk3); //0x00874c60
-	/*GoMind*/ public: void /*__thiscall*/ AddAggroToVisible(float unk1, const Goid_* unk2, eAggroType unk3); //0x00875ef0
-	/*GoMind*/ public: void /*__thiscall*/ AddAggroToVisibleEnemies(float unk1, const Goid_* unk2, eAggroType unk3); //0x00874e61
-	/*GoMind*/ public: void /*__thiscall*/ AddAggroToVisibleFriends(float unk1, const Goid_* unk2, eAggroType unk3); //0x00874e05
-	/*GoMind*/ public: void /*__thiscall*/ Clear(); //0x00869dcf
-	/*GoMind*/ public: void /*__thiscall*/ Clear(eJobQ unk1); //0x00869dba
-	/*GoMind*/ public: void /*__thiscall*/ ClearActions(); //0x00411b1f
-	/*GoMind*/ public: void /*__thiscall*/ ClearAggro(const Goid_* unk1); //0x008729a4
-	/*GoMind*/ public: void /*__thiscall*/ ClearAllAggro(); //0x0086f01d
-	/*GoMind*/ public: void /*__thiscall*/ ClearAndCommit(eJobQ unk1); //0x00871138
-	/*GoMind*/ public: void /*__thiscall*/ ClearBrains(); //0x00411b17
-	/*GoMind*/ public: void /*__thiscall*/ GetPositionAtPlanEnd(SiegePos& unk1); //0x0086a9c8
-	/*GoMind*/ public: void /*__thiscall*/ MessageEngagedMe(const WorldMessage& unk1, const Goid_* unk2); //0x0086d608
-	/*GoMind*/ public: void /*__thiscall*/ MessageEngagedMe(eWorldEvent unk1, const Goid_* unk2); //0x0086f98f
-	/*GoMind*/ public: void /*__thiscall*/ MessageVisible(const WorldMessage& unk1); //0x0086cda1
-	/*GoMind*/ public: void /*__thiscall*/ RCSetCombatOrders(eCombatOrders unk1); //0x0086af04
-	/*GoMind*/ public: void /*__thiscall*/ RCSetDispositionOrders(eActorDisposition unk1); //0x0086b13e
-	/*GoMind*/ public: void /*__thiscall*/ RCSetFocusOrders(eFocusOrders unk1); //0x0086b021
-	/*GoMind*/ public: void /*__thiscall*/ RCSetLastEngagedObject(const Goid_* unk1, eJobAbstractType unk2, unsigned long unk3); //0x00868883
-	/*GoMind*/ public: void /*__thiscall*/ RCSetMovementOrders(eMovementOrders unk1); //0x0086ade7
-	/*GoMind*/ public: void /*__thiscall*/ RegisterFleeingFromMe(const Goid_* unk1, float unk2); //0x00874ebd
-	/*GoMind*/ public: void /*__thiscall*/ ResetAngryTarget(); //0x00868da8
-	/*GoMind*/ public: void /*__thiscall*/ RSCharge(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5); //0x008742c0
-	/*GoMind*/ public: void /*__thiscall*/ RSCharge(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4); //0x00411f49
-	/*GoMind*/ public: void /*__thiscall*/ RSDoJob(const JobReq& unk1); //0x00872d3b
-	/*GoMind*/ public: void /*__thiscall*/ RSDoJobPacker(const_mem_ptr unk1); //0x0087270e
-	/*GoMind*/ public: void /*__thiscall*/ RSDrink(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4); //0x008743be
-	/*GoMind*/ public: void /*__thiscall*/ RSDrink(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3); //0x00411fa1
-	/*GoMind*/ public: void /*__thiscall*/ RSDrinkLifeHealingPotion(eActionOrigin unk1); //0x008709f3
-	/*GoMind*/ public: void /*__thiscall*/ RSDrinkManaHealingPotion(eActionOrigin unk1); //0x00870ae0
-	/*GoMind*/ public: void /*__thiscall*/ RSDrop(const Goid_* unk1, const SiegePos& unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5); //0x00874369
-	/*GoMind*/ public: void /*__thiscall*/ RSDrop(const Goid_* unk1, const SiegePos& unk2, eQPlace unk3, eActionOrigin unk4); //0x00411f83
-	/*GoMind*/ public: void /*__thiscall*/ RSDropGold(int unk1, const SiegePos& unk2, eQPlace unk3, eActionOrigin unk4); //0x00875baf
-	/*GoMind*/ public: void /*__thiscall*/ RSEquip(const Goid_* unk1, eEquipSlot unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5); //0x00874410
-	/*GoMind*/ public: void /*__thiscall*/ RSEquip(const Goid_* unk1, eEquipSlot unk2, eQPlace unk3, eActionOrigin unk4); //0x00411fbc
-	/*GoMind*/ public: void /*__thiscall*/ RSFace(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5); //0x00874465
-	/*GoMind*/ public: void /*__thiscall*/ RSFace(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4); //0x00411fda
-	/*GoMind*/ public: void /*__thiscall*/ RSFleeFromObject(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4); //0x0041201f
-	/*GoMind*/ public: void /*__thiscall*/ RSFleeFromObject(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, int unk5, const Goid_* unk6); //0x008744bd
-	/*GoMind*/ public: void /*__thiscall*/ RSFleeFromObject(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, int unk5); //0x0041203f
-	/*GoMind*/ public: void /*__thiscall*/ RSFleeFromObject(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3); //0x00411ffc
-	/*GoMind*/ public: void /*__thiscall*/ RSFollow(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5); //0x0087451b
-	/*GoMind*/ public: void /*__thiscall*/ RSFollow(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4); //0x00412064
-	/*GoMind*/ public: void /*__thiscall*/ RSGatherAndUse(const_mem_ptr unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4); //0x00875a17
-	/*GoMind*/ public: void /*__thiscall*/ RSGatherAndUse(GoidColl& unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4); //0x0087688f
-	/*GoMind*/ public: void /*__thiscall*/ RSGet(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4); //0x00874573
-	/*GoMind*/ public: void /*__thiscall*/ RSGet(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3); //0x00412086
-	/*GoMind*/ public: void /*__thiscall*/ RSGive(const Goid_* unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5); //0x008745c5
-	/*GoMind*/ public: void /*__thiscall*/ RSGive(const Goid_* unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4); //0x004120a1
-	/*GoMind*/ public: void /*__thiscall*/ RSGuard(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4); //0x0087461a
-	/*GoMind*/ public: void /*__thiscall*/ RSGuard(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3); //0x004120bf
-	/*GoMind*/ public: void /*__thiscall*/ RSHide(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4, const Goid_* unk5); //0x0087466c
-	/*GoMind*/ public: void /*__thiscall*/ RSHide(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4); //0x004120da
-	/*GoMind*/ public: void /*__thiscall*/ RSJump(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4, int unk5); //0x008746eb
-	/*GoMind*/ public: void /*__thiscall*/ RSJump(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4); //0x00412115
-	/*GoMind*/ public: void /*__thiscall*/ RSJump(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, int unk4); //0x0041212f
-	/*GoMind*/ public: void /*__thiscall*/ RSJump(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3); //0x004120f8
-	/*GoMind*/ public: void /*__thiscall*/ RSKnockback(const Goid_* unk1, float unk2, float unk3, eQPlace unk4, eActionOrigin unk5, const Goid_* unk6); //0x00874790
-	/*GoMind*/ public: void /*__thiscall*/ RSKnockback(const Goid_* unk1, float unk2, float unk3, eQPlace unk4, eActionOrigin unk5); //0x0041214d
-	/*GoMind*/ public: void /*__thiscall*/ RSListen(const Goid_* unk1, bool unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5); //0x00874810
-	/*GoMind*/ public: void /*__thiscall*/ RSListen(const Goid_* unk1, bool unk2, eQPlace unk3, eActionOrigin unk4); //0x00412177
-	/*GoMind*/ public: void /*__thiscall*/ RSMoveAppend(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4); //0x00412239
-	/*GoMind*/ public: void /*__thiscall*/ RSMoveAppend(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5); //0x008748db
-	/*GoMind*/ public: void /*__thiscall*/ RSMoveAppend(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, float unk4); //0x00412217
-	/*GoMind*/ public: void /*__thiscall*/ RSMoveAppend(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3); //0x004121f6
-	/*GoMind*/ public: void /*__thiscall*/ RSPatrol(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4); //0x00874960
-	/*GoMind*/ public: void /*__thiscall*/ RSPatrol(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3); //0x00412257
-	/*GoMind*/ public: void /*__thiscall*/ RSSendMessageToFrontAction(eWorldEvent unk1, const Goid_* unk2, const Goid_* unk3, unsigned long unk4); //0x0086ce24
-	/*GoMind*/ public: void /*__thiscall*/ RSSetCombatOrders(eCombatOrders unk1); //0x00875064
-	/*GoMind*/ public: void /*__thiscall*/ RSSetDispositionOrders(eActorDisposition unk1); //0x00875306
-	/*GoMind*/ public: void /*__thiscall*/ RSSetFocusOrders(eFocusOrders unk1); //0x008751b5
-	/*GoMind*/ public: void /*__thiscall*/ RSSetMovementOrders(eMovementOrders unk1); //0x00874f13
-	/*GoMind*/ public: void /*__thiscall*/ RSSlide(const SiegePos& unk1, float unk2, float unk3, eQPlace unk4, eActionOrigin unk5, const Goid_* unk6); //0x008749d1
-	/*GoMind*/ public: void /*__thiscall*/ RSSlide(const SiegePos& unk1, float unk2, float unk3, eQPlace unk4, eActionOrigin unk5); //0x00412272
-	/*GoMind*/ public: void /*__thiscall*/ RSStop(eActionOrigin unk1); //0x00874a8e
-	/*GoMind*/ public: void /*__thiscall*/ RSTeleport(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4); //0x00874ad6
-	/*GoMind*/ public: void /*__thiscall*/ RSTeleport(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3); //0x0041229c
-	/*GoMind*/ public: void /*__thiscall*/ RSUnEquip(eEquipSlot unk1, eQPlace unk2, eActionOrigin unk3); //0x00874b47
-	/*GoMind*/ public: void /*__thiscall*/ RSUse(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3); //0x00874b75
-	/*GoMind*/ public: void /*__thiscall*/ SDisable(bool unk1); //0x00875830
-	/*GoMind*/ public: void /*__thiscall*/ SEnable(); //0x00875764
-	/*GoMind*/ public: void /*__thiscall*/ SetActorAutoFidgets(bool unk1); //0x00412352
-	/*GoMind*/ public: void /*__thiscall*/ SetActorWeaponPreference(eWeaponPreference unk1); //0x0041245f
-	/*GoMind*/ public: void /*__thiscall*/ SetAggroTypeGlobalScalar(float unk1); //0x00411b9b
-	/*GoMind*/ public: void /*__thiscall*/ SetAllignedTeam(int unk1); //0x00868afb
-	/*GoMind*/ public: void /*__thiscall*/ SetAngryTarget(const Goid_* unk1, float unk2); //0x00868d8f
-	/*GoMind*/ public: void /*__thiscall*/ SetGuardTarget(const Goid_* unk1); //0x00411b6d
-	/*GoMind*/ public: void /*__thiscall*/ SetHomePosition(const SiegePos& unk1); //0x00868c96
-	/*GoMind*/ public: void /*__thiscall*/ SetInitialPosition(const SiegePos& unk1); //0x00868c48
-	/*GoMind*/ public: void /*__thiscall*/ SetLastExecutedUserAssignedActionPosition(const SiegePos& unk1); //0x00868bfa
-	/*GoMind*/ public: void /*__thiscall*/ SetMayProcessAI(bool unk1); //0x0041239f
-	/*GoMind*/ public: void /*__thiscall*/ SetMayProcessSensors(bool unk1); //0x004123c4
-	/*GoMind*/ public: void /*__thiscall*/ SetRank(unsigned long unk1); //0x00411b4d
-	/*GoMind*/ public: void /*__thiscall*/ SGatherAndUse(GopColl& unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4); //0x00874b9d
-	/*GoMind*/ public: void /*__thiscall*/ SSetMayAttack(bool unk1); //0x0086b32b
-	/*GoMind*/ public: void /*__thiscall*/ SSetMayAttackHeroes(bool unk1); //0x0086b33c
-	/*GoMind*/ public: void /*__thiscall*/ SSetMayBeAttacked(bool unk1); //0x0086b34d
-	/*GoMind*/ public: void /*__thiscall*/ SSetMayBeAttackedByHeroes(bool unk1); //0x0086b35e
-	/*GoMind*/ public: void /*__thiscall*/ UnregisterFleeingFromMe(const Goid_* unk1); //0x008729de
-	/*GoMind*/ public: void /*__thiscall*/ UnregisterFleeingFromMeByDistance(float unk1); //0x00872a23
+	DefineMethod(AddAggro, 0x874c60, void, Params(float unk1, const Goid_* unk2, eAggroType unk3), Args(float unk1, const Goid_* unk2, eAggroType unk3));
+	DefineMethod(AddAggroToVisible, 0x875ef0, void, Params(float unk1, const Goid_* unk2, eAggroType unk3), Args(float unk1, const Goid_* unk2, eAggroType unk3));
+	DefineMethod(AddAggroToVisibleEnemies, 0x874e61, void, Params(float unk1, const Goid_* unk2, eAggroType unk3), Args(float unk1, const Goid_* unk2, eAggroType unk3));
+	DefineMethod(AddAggroToVisibleFriends, 0x874e05, void, Params(float unk1, const Goid_* unk2, eAggroType unk3), Args(float unk1, const Goid_* unk2, eAggroType unk3));
+	DefineMethod(Clear, 0x869dcf, void, Params(), Args());
+	DefineMethod(Clear, 0x869dba, void, Params(eJobQ unk1), Args(eJobQ unk1));
+	DefineMethod(ClearActions, 0x411b1f, void, Params(), Args());
+	DefineMethod(ClearAggro, 0x8729a4, void, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(ClearAllAggro, 0x86f01d, void, Params(), Args());
+	DefineMethod(ClearAndCommit, 0x871138, void, Params(eJobQ unk1), Args(eJobQ unk1));
+	DefineMethod(ClearBrains, 0x411b17, void, Params(), Args());
+	DefineMethod(GetPositionAtPlanEnd, 0x86a9c8, void, Params(SiegePos& unk1), Args(SiegePos& unk1));
+	DefineMethod(MessageEngagedMe, 0x86d608, void, Params(const WorldMessage& unk1, const Goid_* unk2), Args(const WorldMessage& unk1, const Goid_* unk2));
+	DefineMethod(MessageEngagedMe, 0x86f98f, void, Params(eWorldEvent unk1, const Goid_* unk2), Args(eWorldEvent unk1, const Goid_* unk2));
+	DefineMethod(MessageVisible, 0x86cda1, void, Params(const WorldMessage& unk1), Args(const WorldMessage& unk1));
+	DefineMethod(RCSetCombatOrders, 0x86af04, void, Params(eCombatOrders unk1), Args(eCombatOrders unk1));
+	DefineMethod(RCSetDispositionOrders, 0x86b13e, void, Params(eActorDisposition unk1), Args(eActorDisposition unk1));
+	DefineMethod(RCSetFocusOrders, 0x86b021, void, Params(eFocusOrders unk1), Args(eFocusOrders unk1));
+	DefineMethod(RCSetLastEngagedObject, 0x868883, void, Params(const Goid_* unk1, eJobAbstractType unk2, unsigned long unk3), Args(const Goid_* unk1, eJobAbstractType unk2, unsigned long unk3));
+	DefineMethod(RCSetMovementOrders, 0x86ade7, void, Params(eMovementOrders unk1), Args(eMovementOrders unk1));
+	DefineMethod(RegisterFleeingFromMe, 0x874ebd, void, Params(const Goid_* unk1, float unk2), Args(const Goid_* unk1, float unk2));
+	DefineMethod(ResetAngryTarget, 0x868da8, void, Params(), Args());
+	DefineMethod(RSCharge, 0x8742c0, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5));
+	DefineMethod(RSCharge, 0x411f49, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4));
+	DefineMethod(RSDoJob, 0x872d3b, void, Params(const JobReq& unk1), Args(const JobReq& unk1));
+	DefineMethod(RSDoJobPacker, 0x87270e, void, Params(const_mem_ptr unk1), Args(const_mem_ptr unk1));
+	DefineMethod(RSDrink, 0x8743be, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4));
+	DefineMethod(RSDrink, 0x411fa1, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3));
+	DefineMethod(RSDrinkLifeHealingPotion, 0x8709f3, void, Params(eActionOrigin unk1), Args(eActionOrigin unk1));
+	DefineMethod(RSDrinkManaHealingPotion, 0x870ae0, void, Params(eActionOrigin unk1), Args(eActionOrigin unk1));
+	DefineMethod(RSDrop, 0x874369, void, Params(const Goid_* unk1, const SiegePos& unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5), Args(const Goid_* unk1, const SiegePos& unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5));
+	DefineMethod(RSDrop, 0x411f83, void, Params(const Goid_* unk1, const SiegePos& unk2, eQPlace unk3, eActionOrigin unk4), Args(const Goid_* unk1, const SiegePos& unk2, eQPlace unk3, eActionOrigin unk4));
+	DefineMethod(RSDropGold, 0x875baf, void, Params(int unk1, const SiegePos& unk2, eQPlace unk3, eActionOrigin unk4), Args(int unk1, const SiegePos& unk2, eQPlace unk3, eActionOrigin unk4));
+	DefineMethod(RSEquip, 0x874410, void, Params(const Goid_* unk1, eEquipSlot unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5), Args(const Goid_* unk1, eEquipSlot unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5));
+	DefineMethod(RSEquip, 0x411fbc, void, Params(const Goid_* unk1, eEquipSlot unk2, eQPlace unk3, eActionOrigin unk4), Args(const Goid_* unk1, eEquipSlot unk2, eQPlace unk3, eActionOrigin unk4));
+	DefineMethod(RSFace, 0x874465, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5));
+	DefineMethod(RSFace, 0x411fda, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4));
+	DefineMethod(RSFleeFromObject, 0x41201f, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4));
+	DefineMethod(RSFleeFromObject, 0x8744bd, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, int unk5, const Goid_* unk6), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, int unk5, const Goid_* unk6));
+	DefineMethod(RSFleeFromObject, 0x41203f, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, int unk5), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, int unk5));
+	DefineMethod(RSFleeFromObject, 0x411ffc, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3));
+	DefineMethod(RSFollow, 0x87451b, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5));
+	DefineMethod(RSFollow, 0x412064, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, float unk4));
+	DefineMethod(RSGatherAndUse, 0x875a17, void, Params(const_mem_ptr unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4), Args(const_mem_ptr unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4));
+	DefineMethod(RSGatherAndUse, 0x87688f, void, Params(GoidColl& unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4), Args(GoidColl& unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4));
+	DefineMethod(RSGet, 0x874573, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4));
+	DefineMethod(RSGet, 0x412086, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3));
+	DefineMethod(RSGive, 0x8745c5, void, Params(const Goid_* unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5), Args(const Goid_* unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5));
+	DefineMethod(RSGive, 0x4120a1, void, Params(const Goid_* unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4), Args(const Goid_* unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4));
+	DefineMethod(RSGuard, 0x87461a, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4));
+	DefineMethod(RSGuard, 0x4120bf, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3));
+	DefineMethod(RSHide, 0x87466c, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4, const Goid_* unk5), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4, const Goid_* unk5));
+	DefineMethod(RSHide, 0x4120da, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4));
+	DefineMethod(RSJump, 0x8746eb, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4, int unk5), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4, int unk5));
+	DefineMethod(RSJump, 0x412115, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4));
+	DefineMethod(RSJump, 0x41212f, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, int unk4), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, int unk4));
+	DefineMethod(RSJump, 0x4120f8, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3));
+	DefineMethod(RSKnockback, 0x874790, void, Params(const Goid_* unk1, float unk2, float unk3, eQPlace unk4, eActionOrigin unk5, const Goid_* unk6), Args(const Goid_* unk1, float unk2, float unk3, eQPlace unk4, eActionOrigin unk5, const Goid_* unk6));
+	DefineMethod(RSKnockback, 0x41214d, void, Params(const Goid_* unk1, float unk2, float unk3, eQPlace unk4, eActionOrigin unk5), Args(const Goid_* unk1, float unk2, float unk3, eQPlace unk4, eActionOrigin unk5));
+	DefineMethod(RSListen, 0x874810, void, Params(const Goid_* unk1, bool unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5), Args(const Goid_* unk1, bool unk2, eQPlace unk3, eActionOrigin unk4, const Goid_* unk5));
+	DefineMethod(RSListen, 0x412177, void, Params(const Goid_* unk1, bool unk2, eQPlace unk3, eActionOrigin unk4), Args(const Goid_* unk1, bool unk2, eQPlace unk3, eActionOrigin unk4));
+	DefineMethod(RSMoveAppend, 0x412239, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4));
+	DefineMethod(RSMoveAppend, 0x8748db, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, float unk4, const Goid_* unk5));
+	DefineMethod(RSMoveAppend, 0x412217, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, float unk4), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, float unk4));
+	DefineMethod(RSMoveAppend, 0x4121f6, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3));
+	DefineMethod(RSPatrol, 0x874960, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4));
+	DefineMethod(RSPatrol, 0x412257, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3));
+	DefineMethod(RSSendMessageToFrontAction, 0x86ce24, void, Params(eWorldEvent unk1, const Goid_* unk2, const Goid_* unk3, unsigned long unk4), Args(eWorldEvent unk1, const Goid_* unk2, const Goid_* unk3, unsigned long unk4));
+	DefineMethod(RSSetCombatOrders, 0x875064, void, Params(eCombatOrders unk1), Args(eCombatOrders unk1));
+	DefineMethod(RSSetDispositionOrders, 0x875306, void, Params(eActorDisposition unk1), Args(eActorDisposition unk1));
+	DefineMethod(RSSetFocusOrders, 0x8751b5, void, Params(eFocusOrders unk1), Args(eFocusOrders unk1));
+	DefineMethod(RSSetMovementOrders, 0x874f13, void, Params(eMovementOrders unk1), Args(eMovementOrders unk1));
+	DefineMethod(RSSlide, 0x8749d1, void, Params(const SiegePos& unk1, float unk2, float unk3, eQPlace unk4, eActionOrigin unk5, const Goid_* unk6), Args(const SiegePos& unk1, float unk2, float unk3, eQPlace unk4, eActionOrigin unk5, const Goid_* unk6));
+	DefineMethod(RSSlide, 0x412272, void, Params(const SiegePos& unk1, float unk2, float unk3, eQPlace unk4, eActionOrigin unk5), Args(const SiegePos& unk1, float unk2, float unk3, eQPlace unk4, eActionOrigin unk5));
+	DefineMethod(RSStop, 0x874a8e, void, Params(eActionOrigin unk1), Args(eActionOrigin unk1));
+	DefineMethod(RSTeleport, 0x874ad6, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3, const Goid_* unk4));
+	DefineMethod(RSTeleport, 0x41229c, void, Params(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3), Args(const SiegePos& unk1, eQPlace unk2, eActionOrigin unk3));
+	DefineMethod(RSUnEquip, 0x874b47, void, Params(eEquipSlot unk1, eQPlace unk2, eActionOrigin unk3), Args(eEquipSlot unk1, eQPlace unk2, eActionOrigin unk3));
+	DefineMethod(RSUse, 0x874b75, void, Params(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3), Args(const Goid_* unk1, eQPlace unk2, eActionOrigin unk3));
+	DefineMethod(SDisable, 0x875830, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SEnable, 0x875764, void, Params(), Args());
+	DefineMethod(SetActorAutoFidgets, 0x412352, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetActorWeaponPreference, 0x41245f, void, Params(eWeaponPreference unk1), Args(eWeaponPreference unk1));
+	DefineMethod(SetAggroTypeGlobalScalar, 0x411b9b, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetAllignedTeam, 0x868afb, void, Params(int unk1), Args(int unk1));
+	DefineMethod(SetAngryTarget, 0x868d8f, void, Params(const Goid_* unk1, float unk2), Args(const Goid_* unk1, float unk2));
+	DefineMethod(SetGuardTarget, 0x411b6d, void, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(SetHomePosition, 0x868c96, void, Params(const SiegePos& unk1), Args(const SiegePos& unk1));
+	DefineMethod(SetInitialPosition, 0x868c48, void, Params(const SiegePos& unk1), Args(const SiegePos& unk1));
+	DefineMethod(SetLastExecutedUserAssignedActionPosition, 0x868bfa, void, Params(const SiegePos& unk1), Args(const SiegePos& unk1));
+	DefineMethod(SetMayProcessAI, 0x41239f, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetMayProcessSensors, 0x4123c4, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetRank, 0x411b4d, void, Params(unsigned long unk1), Args(unsigned long unk1));
+	DefineMethod(SGatherAndUse, 0x874b9d, void, Params(GopColl& unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4), Args(GopColl& unk1, const Goid_* unk2, eQPlace unk3, eActionOrigin unk4));
+	DefineMethod(SSetMayAttack, 0x86b32b, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetMayAttackHeroes, 0x86b33c, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetMayBeAttacked, 0x86b34d, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SSetMayBeAttackedByHeroes, 0x86b35e, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(UnregisterFleeingFromMe, 0x8729de, void, Params(const Goid_* unk1), Args(const Goid_* unk1));
+	DefineMethod(UnregisterFleeingFromMeByDistance, 0x872a23, void, Params(float unk1), Args(float unk1));
 };

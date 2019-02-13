@@ -4,19 +4,19 @@ enum eMoodRoomType;
 
 struct MoodSetting {
 	/*MoodSetting*/ public: /*static*/ unsigned int /*__cdecl*/ FUBI_PodGetSize(); //0x004126dc
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbAmbientRandom() const; //0x004128da
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbDriftEnabled() const; //0x0041283d
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbFogEnabled() const; //0x0041274f
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbFrustumEnabled() const; //0x0041270b
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbInterior() const; //0x004126f6
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbLightning() const; //0x004127f9
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbMusicEnabled() const; //0x004128c9
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbPartyLightEnabled() const; //0x00412977
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbRainEnabled() const; //0x004127c6
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbSkyboxEnabled() const; //0x0041291f
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbSnowEnabled() const; //0x0041280a
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbStandardRandom() const; //0x004128f1
-	/*MoodSetting*/ public: bool /*__thiscall*/ GetbWindEnabled() const; //0x00412896
+	DefineConstMethod(GetbAmbientRandom, 0x4128da, bool, Params(), Args());
+	DefineConstMethod(GetbDriftEnabled, 0x41283d, bool, Params(), Args());
+	DefineConstMethod(GetbFogEnabled, 0x41274f, bool, Params(), Args());
+	DefineConstMethod(GetbFrustumEnabled, 0x41270b, bool, Params(), Args());
+	DefineConstMethod(GetbInterior, 0x4126f6, bool, Params(), Args());
+	DefineConstMethod(GetbLightning, 0x4127f9, bool, Params(), Args());
+	DefineConstMethod(GetbMusicEnabled, 0x4128c9, bool, Params(), Args());
+	DefineConstMethod(GetbPartyLightEnabled, 0x412977, bool, Params(), Args());
+	DefineConstMethod(GetbRainEnabled, 0x4127c6, bool, Params(), Args());
+	DefineConstMethod(GetbSkyboxEnabled, 0x41291f, bool, Params(), Args());
+	DefineConstMethod(GetbSnowEnabled, 0x41280a, bool, Params(), Args());
+	DefineConstMethod(GetbStandardRandom, 0x4128f1, bool, Params(), Args());
+	DefineConstMethod(GetbWindEnabled, 0x412896, bool, Params(), Args());
 	/*MoodSetting*/ public: const gpbstring<char>& /*__thiscall*/ GetbackTexture() const; //0x00412959
 	/*MoodSetting*/ public: const gpbstring<char>& /*__thiscall*/ GetbottomTexture() const; //0x0041293d
 	/*MoodSetting*/ public: const gpbstring<char>& /*__thiscall*/ GetdriftTextures() const; //0x00412870
@@ -26,78 +26,78 @@ struct MoodSetting {
 	/*MoodSetting*/ public: const gpbstring<char>& /*__thiscall*/ GetmoodName() const; //0x004126e2
 	/*MoodSetting*/ public: const gpbstring<char>& /*__thiscall*/ GetrightTexture() const; //0x0041294b
 	/*MoodSetting*/ public: const gpbstring<char>& /*__thiscall*/ GettopTexture() const; //0x00412936
-	/*MoodSetting*/ public: eMoodRoomType /*__thiscall*/ GetmoodRoomType() const; //0x00412908
-	/*MoodSetting*/ public: float /*__thiscall*/ GetdriftDensity() const; //0x0041284e
-	/*MoodSetting*/ public: float /*__thiscall*/ GetdriftLowDetDensity() const; //0x0041285f
-	/*MoodSetting*/ public: float /*__thiscall*/ GetdriftMaxSize() const; //0x00412885
-	/*MoodSetting*/ public: float /*__thiscall*/ GetdriftMinSize() const; //0x00412874
-	/*MoodSetting*/ public: float /*__thiscall*/ GetfogDensity() const; //0x004127b5
-	/*MoodSetting*/ public: float /*__thiscall*/ GetfogFarDist() const; //0x00412771
-	/*MoodSetting*/ public: float /*__thiscall*/ GetfogLowDetFarDist() const; //0x00412793
-	/*MoodSetting*/ public: float /*__thiscall*/ GetfogLowDetNearDist() const; //0x00412782
-	/*MoodSetting*/ public: float /*__thiscall*/ GetfogNearDist() const; //0x00412760
-	/*MoodSetting*/ public: float /*__thiscall*/ GetfrustumDepth() const; //0x0041273e
-	/*MoodSetting*/ public: float /*__thiscall*/ GetfrustumHeight() const; //0x0041272d
-	/*MoodSetting*/ public: float /*__thiscall*/ GetfrustumWidth() const; //0x0041271c
-	/*MoodSetting*/ public: float /*__thiscall*/ GethorizonOffset() const; //0x00412960
-	/*MoodSetting*/ public: float /*__thiscall*/ GetpartyLightInnerRad() const; //0x0041298e
-	/*MoodSetting*/ public: float /*__thiscall*/ GetpartyLightOuterRad() const; //0x004129a5
-	/*MoodSetting*/ public: float /*__thiscall*/ GetpartyVertOffset() const; //0x004129bc
-	/*MoodSetting*/ public: float /*__thiscall*/ GetrainDensity() const; //0x004127d7
-	/*MoodSetting*/ public: float /*__thiscall*/ GetrainLowDetDensity() const; //0x004127e8
-	/*MoodSetting*/ public: float /*__thiscall*/ GetsnowDensity() const; //0x0041281b
-	/*MoodSetting*/ public: float /*__thiscall*/ GetsnowLowDetDensity() const; //0x0041282c
-	/*MoodSetting*/ public: float /*__thiscall*/ GettransitionTime() const; //0x004126e5
-	/*MoodSetting*/ public: float /*__thiscall*/ GetwindDirection() const; //0x004128b8
-	/*MoodSetting*/ public: float /*__thiscall*/ GetwindVelocity() const; //0x004128a7
+	DefineConstMethod(GetmoodRoomType, 0x412908, eMoodRoomType, Params(), Args());
+	DefineConstMethod(GetdriftDensity, 0x41284e, float, Params(), Args());
+	DefineConstMethod(GetdriftLowDetDensity, 0x41285f, float, Params(), Args());
+	DefineConstMethod(GetdriftMaxSize, 0x412885, float, Params(), Args());
+	DefineConstMethod(GetdriftMinSize, 0x412874, float, Params(), Args());
+	DefineConstMethod(GetfogDensity, 0x4127b5, float, Params(), Args());
+	DefineConstMethod(GetfogFarDist, 0x412771, float, Params(), Args());
+	DefineConstMethod(GetfogLowDetFarDist, 0x412793, float, Params(), Args());
+	DefineConstMethod(GetfogLowDetNearDist, 0x412782, float, Params(), Args());
+	DefineConstMethod(GetfogNearDist, 0x412760, float, Params(), Args());
+	DefineConstMethod(GetfrustumDepth, 0x41273e, float, Params(), Args());
+	DefineConstMethod(GetfrustumHeight, 0x41272d, float, Params(), Args());
+	DefineConstMethod(GetfrustumWidth, 0x41271c, float, Params(), Args());
+	DefineConstMethod(GethorizonOffset, 0x412960, float, Params(), Args());
+	DefineConstMethod(GetpartyLightInnerRad, 0x41298e, float, Params(), Args());
+	DefineConstMethod(GetpartyLightOuterRad, 0x4129a5, float, Params(), Args());
+	DefineConstMethod(GetpartyVertOffset, 0x4129bc, float, Params(), Args());
+	DefineConstMethod(GetrainDensity, 0x4127d7, float, Params(), Args());
+	DefineConstMethod(GetrainLowDetDensity, 0x4127e8, float, Params(), Args());
+	DefineConstMethod(GetsnowDensity, 0x41281b, float, Params(), Args());
+	DefineConstMethod(GetsnowLowDetDensity, 0x41282c, float, Params(), Args());
+	DefineConstMethod(GettransitionTime, 0x4126e5, float, Params(), Args());
+	DefineConstMethod(GetwindDirection, 0x4128b8, float, Params(), Args());
+	DefineConstMethod(GetwindVelocity, 0x4128a7, float, Params(), Args());
 	/*MoodSetting*/ public: unsigned long /*__thiscall*/ GetfogColor() const; //0x004127a4
 	/*MoodSetting*/ public: unsigned long /*__thiscall*/ GetpartyLightColor() const; //0x004129d3
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbackTexture(const gpbstring<char>& unk1); //0x00419c07
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbAmbientRandom(bool unk1); //0x004128e1
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbDriftEnabled(bool unk1); //0x00412841
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbFogEnabled(bool unk1); //0x00412753
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbFrustumEnabled(bool unk1); //0x0041270f
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbInterior(bool unk1); //0x004126fa
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbLightning(bool unk1); //0x004127fd
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbMusicEnabled(bool unk1); //0x004128cd
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbottomTexture(const gpbstring<char>& unk1); //0x00419ba3
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbPartyLightEnabled(bool unk1); //0x0041297e
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbRainEnabled(bool unk1); //0x004127ca
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbSkyboxEnabled(bool unk1); //0x00412926
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbSnowEnabled(bool unk1); //0x0041280e
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbStandardRandom(bool unk1); //0x004128f8
-	/*MoodSetting*/ public: void /*__thiscall*/ SetbWindEnabled(bool unk1); //0x0041289a
-	/*MoodSetting*/ public: void /*__thiscall*/ SetdriftDensity(float unk1); //0x00412852
-	/*MoodSetting*/ public: void /*__thiscall*/ SetdriftLowDetDensity(float unk1); //0x00412863
-	/*MoodSetting*/ public: void /*__thiscall*/ SetdriftMaxSize(float unk1); //0x00412889
-	/*MoodSetting*/ public: void /*__thiscall*/ SetdriftMinSize(float unk1); //0x00412878
-	/*MoodSetting*/ public: void /*__thiscall*/ SetdriftTextures(const gpbstring<char>& unk1); //0x00419b74
-	/*MoodSetting*/ public: void /*__thiscall*/ SetenvironEffect(const gpbstring<char>& unk1); //0x00419b5e
-	/*MoodSetting*/ public: void /*__thiscall*/ SetfogColor(unsigned long unk1); //0x004127a8
-	/*MoodSetting*/ public: void /*__thiscall*/ SetfogDensity(float unk1); //0x004127b9
-	/*MoodSetting*/ public: void /*__thiscall*/ SetfogFarDist(float unk1); //0x00412775
-	/*MoodSetting*/ public: void /*__thiscall*/ SetfogLowDetFarDist(float unk1); //0x00412797
-	/*MoodSetting*/ public: void /*__thiscall*/ SetfogLowDetNearDist(float unk1); //0x00412786
-	/*MoodSetting*/ public: void /*__thiscall*/ SetfogNearDist(float unk1); //0x00412764
-	/*MoodSetting*/ public: void /*__thiscall*/ SetfrontTexture(const gpbstring<char>& unk1); //0x00419bee
-	/*MoodSetting*/ public: void /*__thiscall*/ SetfrustumDepth(float unk1); //0x00412742
-	/*MoodSetting*/ public: void /*__thiscall*/ SetfrustumHeight(float unk1); //0x00412731
-	/*MoodSetting*/ public: void /*__thiscall*/ SetfrustumWidth(float unk1); //0x00412720
-	/*MoodSetting*/ public: void /*__thiscall*/ SethorizonOffset(float unk1); //0x00412967
-	/*MoodSetting*/ public: void /*__thiscall*/ SetleftTexture(const gpbstring<char>& unk1); //0x00419bbc
-	/*MoodSetting*/ public: void /*__thiscall*/ SetmoodName(const gpbstring<char>& unk1); //0x00419b4b
-	/*MoodSetting*/ public: void /*__thiscall*/ SetmoodRoomType(eMoodRoomType unk1); //0x0041290f
-	/*MoodSetting*/ public: void /*__thiscall*/ SetpartyLightColor(unsigned long unk1); //0x004129da
-	/*MoodSetting*/ public: void /*__thiscall*/ SetpartyLightInnerRad(float unk1); //0x00412995
-	/*MoodSetting*/ public: void /*__thiscall*/ SetpartyLightOuterRad(float unk1); //0x004129ac
-	/*MoodSetting*/ public: void /*__thiscall*/ SetpartyVertOffset(float unk1); //0x004129c3
-	/*MoodSetting*/ public: void /*__thiscall*/ SetrainDensity(float unk1); //0x004127db
-	/*MoodSetting*/ public: void /*__thiscall*/ SetrainLowDetDensity(float unk1); //0x004127ec
-	/*MoodSetting*/ public: void /*__thiscall*/ SetrightTexture(const gpbstring<char>& unk1); //0x00419bd5
-	/*MoodSetting*/ public: void /*__thiscall*/ SetsnowDensity(float unk1); //0x0041281f
-	/*MoodSetting*/ public: void /*__thiscall*/ SetsnowLowDetDensity(float unk1); //0x00412830
-	/*MoodSetting*/ public: void /*__thiscall*/ SettopTexture(const gpbstring<char>& unk1); //0x00419b8a
-	/*MoodSetting*/ public: void /*__thiscall*/ SettransitionTime(float unk1); //0x004126e9
-	/*MoodSetting*/ public: void /*__thiscall*/ SetwindDirection(float unk1); //0x004128bc
-	/*MoodSetting*/ public: void /*__thiscall*/ SetwindVelocity(float unk1); //0x004128ab
+	DefineMethod(SetbackTexture, 0x419c07, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetbAmbientRandom, 0x4128e1, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetbDriftEnabled, 0x412841, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetbFogEnabled, 0x412753, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetbFrustumEnabled, 0x41270f, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetbInterior, 0x4126fa, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetbLightning, 0x4127fd, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetbMusicEnabled, 0x4128cd, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetbottomTexture, 0x419ba3, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetbPartyLightEnabled, 0x41297e, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetbRainEnabled, 0x4127ca, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetbSkyboxEnabled, 0x412926, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetbSnowEnabled, 0x41280e, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetbStandardRandom, 0x4128f8, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetbWindEnabled, 0x41289a, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetdriftDensity, 0x412852, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetdriftLowDetDensity, 0x412863, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetdriftMaxSize, 0x412889, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetdriftMinSize, 0x412878, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetdriftTextures, 0x419b74, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetenvironEffect, 0x419b5e, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetfogColor, 0x4127a8, void, Params(unsigned long unk1), Args(unsigned long unk1));
+	DefineMethod(SetfogDensity, 0x4127b9, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetfogFarDist, 0x412775, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetfogLowDetFarDist, 0x412797, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetfogLowDetNearDist, 0x412786, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetfogNearDist, 0x412764, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetfrontTexture, 0x419bee, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetfrustumDepth, 0x412742, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetfrustumHeight, 0x412731, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetfrustumWidth, 0x412720, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SethorizonOffset, 0x412967, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetleftTexture, 0x419bbc, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetmoodName, 0x419b4b, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetmoodRoomType, 0x41290f, void, Params(eMoodRoomType unk1), Args(eMoodRoomType unk1));
+	DefineMethod(SetpartyLightColor, 0x4129da, void, Params(unsigned long unk1), Args(unsigned long unk1));
+	DefineMethod(SetpartyLightInnerRad, 0x412995, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetpartyLightOuterRad, 0x4129ac, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetpartyVertOffset, 0x4129c3, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetrainDensity, 0x4127db, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetrainLowDetDensity, 0x4127ec, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetrightTexture, 0x419bd5, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetsnowDensity, 0x41281f, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetsnowLowDetDensity, 0x412830, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SettopTexture, 0x419b8a, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SettransitionTime, 0x4126e9, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetwindDirection, 0x4128bc, void, Params(float unk1), Args(float unk1));
+	DefineMethod(SetwindVelocity, 0x4128ab, void, Params(float unk1), Args(float unk1));
 };

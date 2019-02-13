@@ -2,27 +2,27 @@
 
 class UIComboBox {
 public:
-	/*UIComboBox*/ private: /*static*/ int /*__cdecl*/ FUBI_Inheritance(UIWindow* unk1); //0x00456a98
-	/*UIComboBox*/ private: void /*__thiscall*/ AddElement(const gpbstring<char>& unk1, int unk2, unsigned long unk3); //0x007831e0
-	/*UIComboBox*/ private: void /*__thiscall*/ AddElement(const gpbstring<char>& unk1, int unk2); //0x007831b0
-	/*UIComboBox*/ private: void /*__thiscall*/ GetSelectedText(gpbstring<char>& unk1); //0x00783cc0
-	/*UIComboBox*/ private: void /*__thiscall*/ RemoveElement(const gpbstring<char>& unk1); //0x00783360
-	/*UIComboBox*/ private: void /*__thiscall*/ SetElementIcon(const gpbstring<char>& unk1, int unk2); //0x00783470
-	/*UIComboBox*/ private: void /*__thiscall*/ SetElementText(int unk1, int unk2, const gpbstring<char>& unk3, unsigned long unk4); //0x00783290
-	/*UIComboBox*/ public: bool /*__thiscall*/ GetButtonDown() const; //0x00783080
-	/*UIComboBox*/ public: bool /*__thiscall*/ GetDrawText() const; //0x00783060
-	/*UIComboBox*/ public: bool /*__thiscall*/ GetExpanded() const; //0x00783020
-	/*UIComboBox*/ public: UIListbox* /*__thiscall*/ GetChildListbox() const; //0x00783070
-	/*UIComboBox*/ public: int /*__thiscall*/ GetSelectedTag() const; //0x00782fc0
+	DefineStaticMethod(FUBI_Inheritance, 0x456a98, int, Params(UIWindow* unk1), Args(UIWindow* unk1));
+	DefineMethod(AddElement, 0x7831e0, void, Params(const gpbstring<char>& unk1, int unk2, unsigned long unk3), Args(const gpbstring<char>& unk1, int unk2, unsigned long unk3));
+	DefineMethod(AddElement, 0x7831b0, void, Params(const gpbstring<char>& unk1, int unk2), Args(const gpbstring<char>& unk1, int unk2));
+	DefineMethod(GetSelectedText, 0x783cc0, void, Params(gpbstring<char>& unk1), Args(gpbstring<char>& unk1));
+	DefineMethod(RemoveElement, 0x783360, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SetElementIcon, 0x783470, void, Params(const gpbstring<char>& unk1, int unk2), Args(const gpbstring<char>& unk1, int unk2));
+	DefineMethod(SetElementText, 0x783290, void, Params(int unk1, int unk2, const gpbstring<char>& unk3, unsigned long unk4), Args(int unk1, int unk2, const gpbstring<char>& unk3, unsigned long unk4));
+	DefineConstMethod(GetButtonDown, 0x783080, bool, Params(), Args());
+	DefineConstMethod(GetDrawText, 0x783060, bool, Params(), Args());
+	DefineConstMethod(GetExpanded, 0x783020, bool, Params(), Args());
+	DefineConstMethod(GetChildListbox, 0x783070, UIListbox*, Params(), Args());
+	DefineConstMethod(GetSelectedTag, 0x782fc0, int, Params(), Args());
 	/*UIComboBox*/ public: unsigned int /*__thiscall*/ GetColor() const; //0x00783010
 	/*UIComboBox*/ public: unsigned int /*__thiscall*/ GetTextColor() const; //0x00783040
-	/*UIComboBox*/ public: void /*__thiscall*/ RemoveAllElements(); //0x007833f0
-	/*UIComboBox*/ public: void /*__thiscall*/ SelectElement(const gpbstring<char>& unk1); //0x007844c0
-	/*UIComboBox*/ public: void /*__thiscall*/ SelectElementByTag(int unk1); //0x00784560
-	/*UIComboBox*/ public: void /*__thiscall*/ SetChildListbox(UIListbox* unk1); //0x00783100
-	/*UIComboBox*/ public: void /*__thiscall*/ SetColor(unsigned int unk1); //0x00783000
-	/*UIComboBox*/ public: void /*__thiscall*/ SetDrawText(bool unk1); //0x00783050
-	/*UIComboBox*/ public: void /*__thiscall*/ SetExpanded(bool unk1); //0x007839c0
-	/*UIComboBox*/ public: void /*__thiscall*/ SetSelectedTag(int unk1); //0x00784620
-	/*UIComboBox*/ public: void /*__thiscall*/ SetTextColor(unsigned int unk1); //0x00783030
+	DefineMethod(RemoveAllElements, 0x7833f0, void, Params(), Args());
+	DefineMethod(SelectElement, 0x7844c0, void, Params(const gpbstring<char>& unk1), Args(const gpbstring<char>& unk1));
+	DefineMethod(SelectElementByTag, 0x784560, void, Params(int unk1), Args(int unk1));
+	DefineMethod(SetChildListbox, 0x783100, void, Params(UIListbox* unk1), Args(UIListbox* unk1));
+	DefineMethod(SetColor, 0x783000, void, Params(unsigned int unk1), Args(unsigned int unk1));
+	DefineMethod(SetDrawText, 0x783050, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetExpanded, 0x7839c0, void, Params(bool unk1), Args(bool unk1));
+	DefineMethod(SetSelectedTag, 0x784620, void, Params(int unk1), Args(int unk1));
+	DefineMethod(SetTextColor, 0x783030, void, Params(unsigned int unk1), Args(unsigned int unk1));
 };
