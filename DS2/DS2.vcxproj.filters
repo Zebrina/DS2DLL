@@ -164,7 +164,6 @@
     <ClInclude Include="Messenger.h" />
     <ClInclude Include="MohawkGame.h" />
     <ClInclude Include="Mood.h" />
-    <ClInclude Include="MoodSettings.h" />
     <ClInclude Include="PContentDb.h" />
     <ClInclude Include="RapiAppModule.h" />
     <ClInclude Include="Report.h" />
@@ -350,9 +349,6 @@
     <ClInclude Include="GoZone.h">
       <Filter>Go</Filter>
     </ClInclude>
-    <ClInclude Include="GoFader.h">
-      <Filter>Go</Filter>
-    </ClInclude>
     <ClInclude Include="SiegeRot.h" />
     <ClInclude Include="SiegePos.h" />
     <ClInclude Include="SiegeRail.h" />
@@ -403,9 +399,6 @@
     <ClInclude Include="IntColl.h" />
     <ClInclude Include="QuestData.h" />
     <ClInclude Include="AnimReq.h" />
-    <ClInclude Include="GoDataComponent.h">
-      <Filter>Go</Filter>
-    </ClInclude>
     <ClInclude Include="MCP.h" />
     <ClInclude Include="TaskData.h" />
     <ClInclude Include="ActData.h" />
@@ -441,7 +434,6 @@
     <ClInclude Include="SiegeId.h" />
     <ClInclude Include="Skrit.h" />
     <ClInclude Include="Scid.h" />
-    <ClInclude Include="PlayerId.h" />
     <ClInclude Include="New.h" />
     <ClInclude Include="LightId.h" />
     <ClInclude Include="IMessenger.h">
@@ -476,6 +468,7 @@
     <ClInclude Include="DebugMacros.h">
       <Filter>Utility</Filter>
     </ClInclude>
+    <ClInclude Include="MoodSetting.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="UI">
@@ -496,5 +489,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="__DUMMY.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint">
+      <Filter>Utility</Filter>
+    </None>
   </ItemGroup>
 </Project>

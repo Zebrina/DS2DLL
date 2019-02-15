@@ -1,52 +1,53 @@
 #pragma once
 
-class UIUtility {
-public:
-	/*UIUtility*/ bool /*__cdecl*/ EditBoxSelectText(const gpbstring<char>& unk1, const gpbstring<char>& unk2, unsigned int unk3, unsigned int unk4); //0x0074ea90
-	/*UIUtility*/ bool /*__cdecl*/ GetCheckboxState(const gpbstring<char>& unk1, const gpbstring<char>& unk2); //0x0074e8d0
-	/*UIUtility*/ bool /*__cdecl*/ GetEditBoxText(const gpbstring<char>& unk1, gpbstring<char>& unk2); //0x0074fc60
-	/*UIUtility*/ bool /*__cdecl*/ GetEditBoxText(const gpbstring<char>& unk1, const gpbstring<char>& unk2, gpbstring<char>& unk3); //0x0074fbe0
-	/*UIUtility*/ bool /*__cdecl*/ GetRadioButtonChecked(const gpbstring<char>& unk1, const gpbstring<char>& unk2); //0x0074e9c0
-	/*UIUtility*/ bool /*__cdecl*/ GetRadioButtonChecked(const gpbstring<char>& unk1); //0x0074e9f0
-	/*UIUtility*/ bool /*__cdecl*/ GetUITextText(const gpbstring<char>& unk1, gpbstring<char>& unk2); //0x0074fb60
-	/*UIUtility*/ bool /*__cdecl*/ GetUITextText(const gpbstring<char>& unk1, const gpbstring<char>& unk2, gpbstring<char>& unk3); //0x0074fae0
-	/*UIUtility*/ bool /*__cdecl*/ IsWindowVisible(const gpbstring<char>& unk1, const gpbstring<char>& unk2); //0x0074e4a0
-	/*UIUtility*/ UIWindow* /*__cdecl*/ CreateUIWindow(const gpbstring<char>& unk1); //0x0074ebe0
-	/*UIUtility*/ int /*__cdecl*/ GetComboBoxSelectedTag(const gpbstring<char>& unk1, const gpbstring<char>& unk2); //0x0074e900
-	/*UIUtility*/ int /*__cdecl*/ GetUISliderRangeMax(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3); //0x0074ebb0
-	/*UIUtility*/ int /*__cdecl*/ GetUISliderRangeMin(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3); //0x0074eb80
-	/*UIUtility*/ int /*__cdecl*/ GetUISliderValue(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3); //0x0074eb50
-	/*UIUtility*/ int /*__cdecl*/ GetWindowTag(const gpbstring<char>& unk1, const gpbstring<char>& unk2); //0x0074e530
-	/*UIUtility*/ int /*__cdecl*/ GetWindowTag(const gpbstring<char>& unk1); //0x0074e560
-	/*UIUtility*/ void /*__cdecl*/ ClearWindowTexture(const gpbstring<char>& unk1, const gpbstring<char>& unk2); //0x0074e700
-	/*UIUtility*/ void /*__cdecl*/ GetComboBoxSelectedText(const gpbstring<char>& unk1, const gpbstring<char>& unk2, gpbstring<char>& unk3); //0x0074fa20
-	/*UIUtility*/ void /*__cdecl*/ GiveEditBoxFocus(const gpbstring<char>& unk1, const gpbstring<char>& unk2); //0x0074eaf0
-	/*UIUtility*/ void /*__cdecl*/ GiveEditBoxFocus(const gpbstring<char>& unk1); //0x0074eb20
-	/*UIUtility*/ void /*__cdecl*/ SetButtonEnabled(const gpbstring<char>& unk1, bool unk2); //0x0074e7f0
-	/*UIUtility*/ void /*__cdecl*/ SetButtonEnabled(const gpbstring<char>& unk1, const gpbstring<char>& unk2, bool unk3); //0x0074e7b0
-	/*UIUtility*/ void /*__cdecl*/ SetCheckboxState(const gpbstring<char>& unk1, bool unk2); //0x0074e860
-	/*UIUtility*/ void /*__cdecl*/ SetCheckboxState(const gpbstring<char>& unk1, const gpbstring<char>& unk2, bool unk3); //0x0074e830
-	/*UIUtility*/ void /*__cdecl*/ SetComboBoxSelectedTag(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3); //0x0074e930
-	/*UIUtility*/ void /*__cdecl*/ SetEditBoxText(const gpbstring<char>& unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3); //0x0074f110
-	/*UIUtility*/ void /*__cdecl*/ SetEditBoxText(const gpbstring<char>& unk1, const gpbstring<char>& unk2); //0x0074f1a0
-	/*UIUtility*/ void /*__cdecl*/ SetRadioButtonChecked(const gpbstring<char>& unk1, bool unk2); //0x0074e990
-	/*UIUtility*/ void /*__cdecl*/ SetRadioButtonChecked(const gpbstring<char>& unk1, const gpbstring<char>& unk2, bool unk3); //0x0074e960
-	/*UIUtility*/ void /*__cdecl*/ SetTextBoxText(const gpbstring<char>& unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3); //0x0074ec90
-	/*UIUtility*/ void /*__cdecl*/ SetTextBoxText(const gpbstring<char>& unk1, const gpbstring<char>& unk2); //0x0074ed20
-	/*UIUtility*/ void /*__cdecl*/ SetUITextText(const gpbstring<char>& unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3); //0x0074edb0
-	/*UIUtility*/ void /*__cdecl*/ SetUITextText(const gpbstring<char>& unk1, const gpbstring<char>& unk2); //0x0074ee30
-	/*UIUtility*/ void /*__cdecl*/ SetWindowEnabled(const gpbstring<char>& unk1, bool unk2); //0x0074e780
-	/*UIUtility*/ void /*__cdecl*/ SetWindowEnabled(const gpbstring<char>& unk1, const gpbstring<char>& unk2, bool unk3); //0x0074e750
-	/*UIUtility*/ void /*__cdecl*/ SetWindowRect(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3, int unk4, int unk5, int unk6); //0x0074e590
-	/*UIUtility*/ void /*__cdecl*/ SetWindowRectBottom(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3); //0x0074e630
-	/*UIUtility*/ void /*__cdecl*/ SetWindowRectLeft(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3); //0x0074e600
-	/*UIUtility*/ void /*__cdecl*/ SetWindowRectRight(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3); //0x0074e660
-	/*UIUtility*/ void /*__cdecl*/ SetWindowRectTop(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3); //0x0074e5d0
-	/*UIUtility*/ void /*__cdecl*/ SetWindowTag(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3); //0x0074e4d0
-	/*UIUtility*/ void /*__cdecl*/ SetWindowTag(const gpbstring<char>& unk1, int unk2); //0x0074e500
-	/*UIUtility*/ void /*__cdecl*/ SetWindowTexture(const gpbstring<char>& unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3); //0x0074eea0
-	/*UIUtility*/ void /*__cdecl*/ SetWindowTextureFromId(const gpbstring<char>& unk1, const gpbstring<char>& unk2, unsigned int unk3); //0x0074e690
-	/*UIUtility*/ void /*__cdecl*/ SetWindowVisible(const gpbstring<char>& unk1, bool unk2); //0x0074e470
-	/*UIUtility*/ void /*__cdecl*/ SetWindowVisible(const gpbstring<char>& unk1, const gpbstring<char>& unk2, bool unk3); //0x0074e440
-	/*UIUtility*/ void /*__cdecl*/ ToggleCheckboxState(const gpbstring<char>& unk1, const gpbstring<char>& unk2); //0x0074e890
+#include "ClassMacros.h"
+
+namespace UIUtility {
+	DefineFunction(EditBoxSelectText, 0x74ea90, bool, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, unsigned int unk3, unsigned int unk4), Args(unk1, unk2, unk3, unk4));
+	DefineFunction(GetCheckboxState, 0x74e8d0, bool, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineFunction(GetEditBoxText, 0x74fc60, bool, Params(const gpbstring<char>& unk1, gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineFunction(GetEditBoxText, 0x74fbe0, bool, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, gpbstring<char>& unk3), Args(unk1, unk2, unk3));
+	DefineFunction(GetRadioButtonChecked, 0x74e9c0, bool, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineFunction(GetRadioButtonChecked, 0x74e9f0, bool, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineFunction(GetUITextText, 0x74fb60, bool, Params(const gpbstring<char>& unk1, gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineFunction(GetUITextText, 0x74fae0, bool, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, gpbstring<char>& unk3), Args(unk1, unk2, unk3));
+	DefineFunction(IsWindowVisible, 0x74e4a0, bool, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineFunction(CreateUIWindow, 0x74ebe0, UIWindow*, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineFunction(GetComboBoxSelectedTag, 0x74e900, int, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineFunction(GetUISliderRangeMax, 0x74ebb0, int, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineFunction(GetUISliderRangeMin, 0x74eb80, int, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineFunction(GetUISliderValue, 0x74eb50, int, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineFunction(GetWindowTag, 0x74e530, int, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineFunction(GetWindowTag, 0x74e560, int, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineFunction(ClearWindowTexture, 0x74e700, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineFunction(GetComboBoxSelectedText, 0x74fa20, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, gpbstring<char>& unk3), Args(unk1, unk2, unk3));
+	DefineFunction(GiveEditBoxFocus, 0x74eaf0, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineFunction(GiveEditBoxFocus, 0x74eb20, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineFunction(SetButtonEnabled, 0x74e7f0, void, Params(const gpbstring<char>& unk1, bool unk2), Args(unk1, unk2));
+	DefineFunction(SetButtonEnabled, 0x74e7b0, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetCheckboxState, 0x74e860, void, Params(const gpbstring<char>& unk1, bool unk2), Args(unk1, unk2));
+	DefineFunction(SetCheckboxState, 0x74e830, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetComboBoxSelectedTag, 0x74e930, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetEditBoxText, 0x74f110, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetEditBoxText, 0x74f1a0, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineFunction(SetRadioButtonChecked, 0x74e990, void, Params(const gpbstring<char>& unk1, bool unk2), Args(unk1, unk2));
+	DefineFunction(SetRadioButtonChecked, 0x74e960, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetTextBoxText, 0x74ec90, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetTextBoxText, 0x74ed20, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineFunction(SetUITextText, 0x74edb0, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetUITextText, 0x74ee30, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineFunction(SetWindowEnabled, 0x74e780, void, Params(const gpbstring<char>& unk1, bool unk2), Args(unk1, unk2));
+	DefineFunction(SetWindowEnabled, 0x74e750, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetWindowRect, 0x74e590, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3, int unk4, int unk5, int unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineFunction(SetWindowRectBottom, 0x74e630, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetWindowRectLeft, 0x74e600, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetWindowRectRight, 0x74e660, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetWindowRectTop, 0x74e5d0, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetWindowTag, 0x74e4d0, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetWindowTag, 0x74e500, void, Params(const gpbstring<char>& unk1, int unk2), Args(unk1, unk2));
+	DefineFunction(SetWindowTexture, 0x74eea0, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, const gpbstring<char>& unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetWindowTextureFromId, 0x74e690, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, unsigned int unk3), Args(unk1, unk2, unk3));
+	DefineFunction(SetWindowVisible, 0x74e470, void, Params(const gpbstring<char>& unk1, bool unk2), Args(unk1, unk2));
+	DefineFunction(SetWindowVisible, 0x74e440, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineFunction(ToggleCheckboxState, 0x74e890, void, Params(const gpbstring<char>& unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
 };

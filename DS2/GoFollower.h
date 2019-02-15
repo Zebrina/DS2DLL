@@ -6,17 +6,17 @@
 
 class GoFollower {
 public:
-	DefineStaticMethod(FUBI_NetToInstance, 0x4283c1, GoFollower*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unsigned long unk1, FuBi::Cookie__** unk2));
-	/*GoFollower*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoFollower* unk1); //0x004283b8
-	DefineConstMethod(GetCurrentOrientTargetBone, 0x42837e, BoneTranslator::eBone, Params(), Args());
-	DefineConstMethod(IsOrientModeDefined, 0x42835f, bool, Params(), Args());
-	/*GoFollower*/ public: const Goid_* /*__thiscall*/ GetCurrentOrientTarget() const; //0x00428368
-	/*GoFollower*/ public: const SiegePos& /*__thiscall*/ GetCurrentOrientTargPos() const; //0x00428393
-	/*GoFollower*/ public: const SiegeRot& /*__thiscall*/ GetCurrentOrientationGoal() const; //0x004283a9
-	DefineMethod(GetCurrentTurnAngle, 0x903915, float, Params(double unk1), Args(double unk1));
-	DefineConstMethod(GetCurrentVelocity, 0x902174, float, Params(), Args());
-	DefineConstMethod(GetCurrentOrientMode, 0x42835b, MCP::eOrientMode, Params(), Args());
-	DefineMethod(RCSendPackedClipToFollowers, 0x907196, void, Params(const_mem_ptr unk1), Args(const_mem_ptr unk1));
-	DefineMethod(RCSendPackedPositionUpdateToFollowers, 0x903bca, void, Params(const_mem_ptr unk1), Args(const_mem_ptr unk1));
-	DefineMethod(RCSendPackedUpdateToFollowers, 0x907534, void, Params(const_mem_ptr unk1), Args(const_mem_ptr unk1));
+	DefineStaticMethod(FUBI_NetToInstance, 0x4283c1, GoFollower*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unk1, unk2));
+	DefineStaticMethod(FUBI_InstanceToNet, 0x4283b8, unsigned long, Params(GoFollower* unk1), Args(unk1));
+	DefineConstMethod(GetCurrentOrientTargetBone, 0x42837e, BoneTranslator::eBone, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(IsOrientModeDefined, 0x42835f, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetCurrentOrientTarget, 0x428368, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetCurrentOrientTargPos, 0x428393, const SiegePos&, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetCurrentOrientationGoal, 0x4283a9, const SiegeRot&, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetCurrentTurnAngle, 0x903915, float, Params(double unk1), Args(unk1));
+	DefineConstMethod(GetCurrentVelocity, 0x902174, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetCurrentOrientMode, 0x42835b, MCP::eOrientMode, NO_PARAMS, NO_ARGS);
+	DefineMethod(RCSendPackedClipToFollowers, 0x907196, void, Params(const_mem_ptr unk1), Args(unk1));
+	DefineMethod(RCSendPackedPositionUpdateToFollowers, 0x903bca, void, Params(const_mem_ptr unk1), Args(unk1));
+	DefineMethod(RCSendPackedUpdateToFollowers, 0x907534, void, Params(const_mem_ptr unk1), Args(unk1));
 };

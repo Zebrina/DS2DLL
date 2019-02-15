@@ -122,11 +122,9 @@
     <ClInclude Include="GoConversation.h" />
     <ClInclude Include="GoCorpse.h" />
     <ClInclude Include="GoCreateReq.h" />
-    <ClInclude Include="GoDataComponent.h" />
     <ClInclude Include="GoDb.h" />
     <ClInclude Include="GoDbImpl.h" />
     <ClInclude Include="GoDefend.h" />
-    <ClInclude Include="GoFader.h" />
     <ClInclude Include="GoFlick.h" />
     <ClInclude Include="GoFlickFX.h" />
     <ClInclude Include="GoFollower.h" />
@@ -177,7 +175,7 @@
     <ClInclude Include="Messenger.h" />
     <ClInclude Include="MohawkGame.h" />
     <ClInclude Include="Mood.h" />
-    <ClInclude Include="MoodSettings.h" />
+    <ClInclude Include="MoodSetting.h" />
     <ClInclude Include="Nema.h" />
     <ClInclude Include="NetFuBiReceive.h" />
     <ClInclude Include="NetFuBiSend.h" />
@@ -186,7 +184,6 @@
     <ClInclude Include="NISManager.h" />
     <ClInclude Include="PContentDb.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="PlayerId.h" />
     <ClInclude Include="Point2.h" />
     <ClInclude Include="QtColl.h" />
     <ClInclude Include="Quat.h" />
@@ -317,6 +314,9 @@
     <ProjectReference Include="..\Common\Common.vcxproj">
       <Project>{c96fc67e-efc0-43b8-89c2-eb8da88267b9}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

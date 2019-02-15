@@ -2,5 +2,5 @@
 
 class CharacterStats {
 public:
-	/*CharacterStats*/ public: /*static*/ unsigned int /*__cdecl*/ FUBI_PodGetSize(); //0x004cfe83
+	DefineStaticMethod(FUBI_PodGetSize, 0x4cfe83, unsigned int, NO_PARAMS, NO_ARGS);
 };

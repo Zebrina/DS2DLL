@@ -84,7 +84,8 @@
 for /f "skip=2 tokens=2,*" %%A IN ('reg query "%ds2bw_reg_key%" /v InstallationDirectory') do (
   set ds2bw_install_dir=%%B
 )
-echo f | xcopy "$(TargetPath)" "%ds2bw_install_dir%\$(TargetFileName)" /dsy</Command>
+echo f | xcopy "$(TargetPath)" "%ds2bw_install_dir%\$(TargetFileName)" /dsy
+echo f | xcopy "$(ProjectDir)DS2DllLoader.ini" "%ds2bw_install_dir%\DS2DllLoader.ini" /dsy</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -100,7 +101,8 @@ echo f | xcopy "$(TargetPath)" "%ds2bw_install_dir%\$(TargetFileName)" /dsy</Com
 for /f "skip=2 tokens=2,*" %%A IN ('reg query "%ds2bw_reg_key%" /v InstallationDirectory') do (
   set ds2bw_install_dir=%%B
 )
-echo f | xcopy "$(TargetPath)" "%ds2bw_install_dir%\$(TargetFileName)" /dsy</Command>
+echo f | xcopy "$(TargetPath)" "%ds2bw_install_dir%\$(TargetFileName)" /dsy
+echo f | xcopy "$(ProjectDir)DS2DllLoader.ini" "%ds2bw_install_dir%\DS2DllLoader.ini" /dsy</Command>
     </PostBuildEvent>
     <Link />
     <Link>
@@ -120,7 +122,8 @@ echo f | xcopy "$(TargetPath)" "%ds2bw_install_dir%\$(TargetFileName)" /dsy</Com
 for /f "skip=2 tokens=2,*" %%A IN ('reg query "%ds2bw_reg_key%" /v InstallationDirectory') do (
   set ds2bw_install_dir=%%B
 )
-echo f | xcopy "$(TargetPath)" "%ds2bw_install_dir%\$(TargetFileName)" /dsy</Command>
+echo f | xcopy "$(TargetPath)" "%ds2bw_install_dir%\$(TargetFileName)" /dsy
+echo f | xcopy "$(ProjectDir)DS2DllLoader.ini" "%ds2bw_install_dir%\DS2DllLoader.ini" /dsy</Command>
     </PostBuildEvent>
     <Link />
     <Link>
@@ -139,7 +142,12 @@ echo f | xcopy "$(TargetPath)" "%ds2bw_install_dir%\$(TargetFileName)" /dsy</Com
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DS2DllLoader.ini" />
     <None Include="exports.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Urls.h" />
+    <ClInclude Include="Version.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

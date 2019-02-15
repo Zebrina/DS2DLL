@@ -6,7 +6,7 @@ public:
 
 	};
 
-	DefineConstMethod(Translate, 0x408238, int, Params(BoneTranslator::eBone bone), Args(BoneTranslator::eBone bone));
+	DefineConstMethod(Translate, 0x408238, int, Params(BoneTranslator::eBone bone), Args(bone));
 };
 
-/*__STATIC__*/ const char* /*__cdecl*/ ToString(BoneTranslator::eBone unk1); //0x007d4c06
+DefineFunction(ToString, 0x7d4c06, const char*, Params(BoneTranslator::eBone unk1), Args(unk1));

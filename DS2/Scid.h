@@ -1,10 +1,15 @@
 #pragma once
 
+#include "ClassMacros.h"
+
+class Go;
+struct Goid_;
+
 struct Scid_ {
-	/*Scid_*/ private: /*static*/ const Scid_* /*__cdecl*/ GetInvalidScid(); //0x00502d26
-	/*Scid_*/ private: /*static*/ const Scid_* /*__cdecl*/ GetSpawnedScid(); //0x00502d2c
-	DefineConstMethod(IsInstance, 0x502d0b, bool, Params(), Args());
-	DefineConstMethod(IsValid, 0x502d00, bool, Params(), Args());
-	DefineConstMethod(GetGo, 0x502d1e, Go*, Params(), Args());
-	/*Scid_*/ private: const Goid_* /*__thiscall*/ GetGoid() const; //0x00502d16
+	DefineStaticMethod(GetInvalidScid, 0x502d26, const Scid_*, NO_PARAMS, NO_ARGS);
+	DefineStaticMethod(GetSpawnedScid, 0x502d2c, const Scid_*, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(IsInstance, 0x502d0b, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(IsValid, 0x502d00, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetGo, 0x502d1e, Go*, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetGoid, 0x502d16, const Goid_*, NO_PARAMS, NO_ARGS);
 } typedef ScId;

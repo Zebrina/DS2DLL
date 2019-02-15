@@ -1,5 +1,7 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 struct _SYSTEMTIME {
 
 } typedef SystemTime;

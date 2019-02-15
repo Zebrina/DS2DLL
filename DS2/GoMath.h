@@ -1,11 +1,11 @@
 #pragma once
 
 namespace GoMath {
-	/*GoMath*/ float /*__cdecl*/ AzimuthAngleToTarget(const Goid_* unk1, const Goid_* unk2); //0x007d6f21
-	/*GoMath*/ float /*__cdecl*/ GetAngleToWind(const Goid_* unk1); //0x007d703f
-	/*GoMath*/ float /*__cdecl*/ OrbitAngleToTarget(const Goid_* unk1, const Goid_* unk2); //0x007d6de7
-	/*GoMath*/ float /*__cdecl*/ RandomFloat(float unk1, float unk2); //0x007d6d84
-	/*GoMath*/ float /*__cdecl*/ RandomFloat(float unk1); //0x007d6da4
-	/*GoMath*/ int /*__cdecl*/ RandomInt(int unk1, int unk2); //0x007d6db8
-	/*GoMath*/ int /*__cdecl*/ RandomInt(int unk1); //0x007d6dd3
+	DefineFunction(AzimuthAngleToTarget, 0x7d6f21, float, Params(const Goid_* unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineFunction(GetAngleToWind, 0x7d703f, float, Params(const Goid_* unk1), Args(unk1));
+	DefineFunction(OrbitAngleToTarget, 0x7d6de7, float, Params(const Goid_* unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineFunction(RandomFloat, 0x7d6d84, float, Params(float unk1, float unk2), Args(unk1, unk2));
+	DefineFunction(RandomFloat, 0x7d6da4, float, Params(float unk1), Args(unk1));
+	DefineFunction(RandomInt, 0x7d6db8, int, Params(int unk1, int unk2), Args(unk1, unk2));
+	DefineFunction(RandomInt, 0x7d6dd3, int, Params(int unk1), Args(unk1));
 }

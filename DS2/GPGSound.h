@@ -3,6 +3,5 @@
 class GPGSound {
 public:
 	enum eSampleType {
-
 	};
 };

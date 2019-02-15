@@ -1,10 +1,14 @@
 #pragma once
 
 #include "GPBString.h"
-#include "Goid.h"
-#include "Quat.h"
 #include "Siege.h"
-#include "Vector3.h"
+
+struct Goid_;
+struct Quat;
+struct tagPOINT;
+struct tagRECT;
+struct tagSIZE;
+struct vector_3;
 
 class FuBi {
 public:
@@ -68,9 +72,18 @@ public:
 		static const T& GetINVALID();
 		static const T& GetZERO();
 		static int FUBI_Inheritance(tagPOINT* tagPoint);
+		static int FUBI_Inheritance(tagRECT* tagRect);
+		static int FUBI_Inheritance(tagSIZE* tagSIZE);
 		static void FUBI_GetHeaderSpec(ClassHeaderSpec& headerSpec);
 		static void ToString(gpbstring<char>& strOut, const T& value, eXfer unk3);
 	};
 
 	DefineStaticMethod(RCCreateAndLaunchFlickFX, 0x966838, Cookie__*, Params(const gpbstring<char>& unk1, const Goid_* unk2, const Goid_* unk3), Args(unk1, unk2, unk3));
 };
+
+DefineTemplateStaticMethod(FuBi::Traits<siege::database_guid>, FromString, 0x6d0d10, bool, Params(const char* unk1, siege::database_guid& unk2), Args(unk1, unk2));
+DefineTemplateStaticMethod(FuBi::Traits<siege::database_guid>, ToString, 0x6d19a0, void, Params(gpbstring<char>& unk1, const siege::database_guid& unk2, FuBi::eXfer unk3), Args(unk1, unk2, unk3));
+DefineTemplateConstMethod(FuBi::Traits<siege::database_guid>, IsNodeInAnyFrustum, 0x6d0f50, bool, NO_PARAMS, NO_ARGS);
+DefineTemplateConstMethod(FuBi::Traits<siege::database_guid>, IsValid, 0x40aca8, bool, NO_PARAMS, NO_ARGS);
+DefineTemplateConstMethod(FuBi::Traits<siege::database_guid>, GetValue, 0x40a1b3, unsigned int, NO_PARAMS, NO_ARGS);
+DefineTemplateMethod(FuBi::Traits<siege::database_guid>, SetValue, 0x40a1b8, void, Params(unsigned int unk1), Args(unk1));

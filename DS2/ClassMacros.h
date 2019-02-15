@@ -1,5 +1,7 @@
 #pragma once
 
+#include "DebugMacros.h"
+
 #ifdef Params
 #error Params already defined.
 #endif // Params
@@ -44,28 +46,23 @@
 //
 #define DefineStaticMethod(name, address, returnType, params, args) \
 	static _DefineMethod(name, __cdecl, address, returnType, params, params, args, _NON_CONST)
+//
+#define DefineFunction(name, address, returnType, params, args) \
+	_DefineMethod(name, __cdecl, address, returnType, params, params, args, _NON_CONST)
 
-#define _DefineStaticVarArgMethod(name, address, ret, ...) \
-	typedef ret (__cdecl *zzz##name)(__VA_ARGS__); \
-	static zzz##name name=(zzz##name)address; \
-	_ASSERT_ADDRESS_NOT_NULL(address)
-
-#define _DefineVarArgMethod(name, cl, addr, ret, fnParams, fnArgs) \
-	ret name(fnParams, A... args) { \
-		template <typename A_...> \
-		ret va(A_... args_) { \
-			typedef ret(cl *fn)(A_...); \
-			return ((fn)addr)(args_); \
-		} \
-		return va(fnArgs, args...); \
+#define _DefineVarArgMethod(name, addr, stat, ret, params, cnst) \
+	stat ret __cdecl name(params, ...) cnst { \
+		__asm { push addr; ret; } \
 	} _ASSERT_ADDRESS_NOT_NULL(addr)
 
-#define DefineVarArgMethod(name, address, returnType, params, args) \
-	template <typename... A> \
-	static _DefineVarArgMethod(name, __cdecl, address, returnType, params, args)
-#define DefineStaticVarArgMethod(name, address, returnType, params, args) \
-	template <typename... A> \
-	static _DefineVarArgMethod(name, __cdecl, address, returnType, params, args)
+#define DefineVarArgMethod(name, address, returnType, params) \
+	_DefineVarArgMethod(name, address, _NON_STATIC, returnType, params, _NON_CONST)
+#define DefineConstVarArgMethod(name, address, returnType, params) \
+	_DefineVarArgMethod(name, address, _NON_STATIC, returnType, params, const)
+#define DefineStaticVarArgMethod(name, address, returnType, params) \
+	_DefineVarArgMethod(name, address, static, returnType, params, _NON_CONST)
+#define DefineVarArgFunction(name, address, returnType, params) \
+	_DefineVarArgMethod(name, address, _NON_STATIC, returnType, params, _NON_CONST)
 
 #define _DefineTemplateMethod(type, name, cl, addr, stat, ret, params, tParams, tArgs, cnst) \
 	template <> \
@@ -92,3 +89,11 @@
 	static type* FUBI_GetClassSingleton() { \
 		return ((type*(*)())address)(); \
 	} _ASSERT_ADDRESS_NOT_NULL(address)
+
+#define FillStruct(from, to) char fill_##from##_##to[to - from]
+
+ASSERT_SIZEOF(bool, 0x1);
+ASSERT_SIZEOF(short, 0x2);
+ASSERT_SIZEOF(int, 0x4);
+ASSERT_SIZEOF(long, 0x4);
+ASSERT_SIZEOF(long long, 0x8);

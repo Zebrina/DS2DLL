@@ -1,12 +1,20 @@
 #include <Windows.h>
 
-#include <cstring>
+#include <cstdio>
 #include <cstdlib>
+#include <cstring>
+#include <fstream>
 
 #include "Common/Debug.h"
 #include "Common/SafeWrite.h"
 
-//#define HOOK_D3D9
+#include "DS2/Report.h"
+#include "DS2/Enums.h"
+
+#include "Version.h"
+#include "Urls.h"
+
+#define HOOK_D3D9
 
 HMODULE targetHandle;
 
@@ -38,13 +46,13 @@ HMODULE LoadTargetLibrary() {
 }
 
 typedef int(__thiscall *LoadExports_)(void*, HMODULE, uint32_t, uint32_t b);
-LoadExports_ LoadExports = (LoadExports_)0x009c1ce4;
+LoadExports_ LoadExports = (LoadExports_)0x9c1ce4;
 
 int LoadPluginExports(void* ex, const char* dir, const char* pattern) {
 	/*
 	CHAR workingDir[MAX_PATH];
 	if (GetCurrentDirectory(MAX_PATH - 2, workingDir) > 0) {
-		DEBUG_ONLY(Report::_MessageBoxF("Current directory: %s", workingDir));
+		DEBUG_ONLY(Report::MessageBoxF("Current directory: %s", workingDir));
 	}
 	*/
 
@@ -92,6 +100,15 @@ int __fastcall LoadBaseExports(void* ex, void*, HMODULE hModule, uint32_t arg2, 
 	return result;
 }
 
+void WriteUrlHook(const char* keyName, uintptr_t ptr) {
+	static UrlStringBuffer<0x512> urlStringBuffer;
+
+	CHAR buffer[MAX_PATH];
+	if (GetPrivateProfileString("Urls", keyName, NULL, buffer, sizeof(buffer), "DS2DllLoader.ini") > 0) {
+		urlStringBuffer.HookUrl(ptr, buffer);
+	}
+}
+
 void WriteHooks() {
 	/*
 	intptr_t address = (intptr_t)GetIATAddr((uint8_t*)GetModuleHandle(NULL), "dinput8.dll", "DirectInput8Create");
@@ -109,14 +126,29 @@ void WriteHooks() {
 	// __thiscall void (uint32_t, const char*, uint32_t)
 	//SafeWriteCall(0x84c93e, (uintptr_t)LoadPlugins);
 
+	// Show loader version after game version.
+	const char* versionMessage = "$MSG$Game: %S DS2Dll: " LOADER_VERSION_STR;
+	SafeWrite32(0x44e284 + 1, (uint32_t)versionMessage);
+	
 	// Hook the loading of exports (skrit functions).
 	SafeWriteCall(0x90e252, (uintptr_t)LoadBaseExports);
+
+	// Hooks urls via ini file. 
+	WriteUrlHook("sAvailableGamespyCom", URL_AVAILABLE_GAMESPY_COM_PTR);
+	WriteUrlHook("sMsGamespyCom", URL_MS_GAMESPY_COM_PTR);
+	WriteUrlHook("sNatneg1GamespyCom", URL_NATNEG1_GAMESPY_COM_PTR);
+	WriteUrlHook("sNatneg2GamespyCom", URL_NATNEG2_GAMESPY_COM_PTR);
+	WriteUrlHook("sMasterGamespyCom", URL_MASTER_GAMESPY_COM_PTR);
+	WriteUrlHook("sPeerchatGamespyCom", URL_PEERCHAT_GAMESPY_COM_PTR);
+	WriteUrlHook("sGamestatsGamespyCom", URL_GAMESTATS_GAMESPY_COM_PTR);
+	WriteUrlHook("sGpcmGamespyCom", URL_GPCM_GAMESPY_COM_PTR);
+	WriteUrlHook("sGpspGamespyCom", URL_GPSP_GAMESPY_COM_PTR);
 }
 
 extern "C" {
 #ifdef HOOK_D3D9
 	class IDirect3D9* __stdcall Direct3DCreate9(UINT SDKVersion) {
-		//DEBUG_ONLY(Report::_MessageBox("Hooking Direct3DCreate9!"));
+		//DEBUG_ONLY(Report::MessageBox("Hooking Direct3DCreate9!"));
 
 		class IDirect3D9* result = NULL;
 
@@ -135,7 +167,7 @@ extern "C" {
 	}
 	/*
 	HRESULT __stdcall Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex** d3d9Device) {
-		Report::_MessageBox("Hooking Direct3DCreate9Ex!");
+		Report::MessageBox("Hooking Direct3DCreate9Ex!");
 
 		HRESULT result = E_FAIL;
 
@@ -155,7 +187,7 @@ extern "C" {
 	*/
 #else
 	LONG __stdcall WinVerifyTrust(HWND hwnd, GUID* pgActionID, LPVOID pWVTdata) {
-		//DEBUG_ONLY(Report::_MessageBox("WinVerifyTrust!"));
+		DEBUG_ONLY(Report::MessageBox("Hooking WinVerifyTrust!"));
 
 		HRESULT result = E_FAIL;
 
@@ -188,6 +220,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 	//case DLL_THREAD_DETACH:
 	case DLL_PROCESS_DETACH:
 		FreeLibrary(targetHandle);
+		Report::MessageBox("Dll detached.");
 		break;
 	}
 	return TRUE;
