@@ -1,13 +1,18 @@
 #pragma once
 
+#include "GPBString.h"
+#include "QuestData.h"
+
+#include "ClassMacros.h"
+
 struct ActData {
-	/*ActData*/ public: /*static*/ unsigned int /*__cdecl*/ FUBI_PodGetSize(); //0x00412a9e
-	/*ActData*/ public: gpbstring<char> /*__thiscall*/ GetName() const; //0x0041890b
-	/*ActData*/ public: gpbstring<char> /*__thiscall*/ GetTab() const; //0x004188f5
-	/*ActData*/ public: gpbstring<char> /*__thiscall*/ GetTitle() const; //0x00418921
-	/*ActData*/ public: const QuestData* /*__thiscall*/ GetQuestData(unsigned int unk1) const; //0x004142cc
-	/*ActData*/ public: int /*__thiscall*/ GetIndex() const; //0x00412aa2
-	/*ActData*/ public: int /*__thiscall*/ GetPrimaryQuestCount() const; //0x004142ad
-	/*ActData*/ public: int /*__thiscall*/ GetQuestCount() const; //0x004142bf
-	/*ActData*/ public: int /*__thiscall*/ GetSecondaryQuestCount() const; //0x00412aa5
+	DefineStaticMethod(FUBI_PodGetSize, 0x412a9e, unsigned int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetName, 0x41890b, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetTab, 0x4188f5, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetTitle, 0x418921, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetQuestData, 0x4142cc, const QuestData*, Params(unsigned int unk1), Args(unk1));
+	DefineConstMethod(GetIndex, 0x412aa2, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetPrimaryQuestCount, 0x4142ad, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetQuestCount, 0x4142bf, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetSecondaryQuestCount, 0x412aa5, int, NO_PARAMS, NO_ARGS);
 };

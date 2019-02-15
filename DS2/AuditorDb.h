@@ -2,9 +2,9 @@
 
 class AuditorDb {
 public:
-	/*AuditorDb*/ public: double /*__thiscall*/ IncrementDouble(const char* unk1, double unk2); //0x0085fa5d
-	/*AuditorDb*/ public: float /*__thiscall*/ IncrementFloat(const char* unk1, float unk2); //0x0085fa00
-	/*AuditorDb*/ public: int /*__thiscall*/ Increment(const char* unk1, int unk2); //0x0085f9a2
-	/*AuditorDb*/ public: void /*__thiscall*/ ClearEntries(int unk1); //0x0085e1e0
-	/*AuditorDb*/ public: void /*__thiscall*/ RemoveEntry(int unk1, const char* unk2); //0x0085f15d
+	DefineMethod(IncrementDouble, 0x85fa5d, double, Params(const char* unk1, double unk2), Args(unk1, unk2));
+	DefineMethod(IncrementFloat, 0x85fa00, float, Params(const char* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(Increment, 0x85f9a2, int, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(ClearEntries, 0x85e1e0, void, Params(int unk1), Args(unk1));
+	DefineMethod(RemoveEntry, 0x85f15d, void, Params(int unk1, const char* unk2), Args(unk1, unk2));
 };

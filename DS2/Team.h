@@ -1,6 +1,8 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 class Team {
 public:
-	/*Team*/ public: /*static*/ unsigned int /*__cdecl*/ FUBI_PodGetSize(); //0x00502db2
+	DefineStaticMethod(FUBI_PodGetSize, 0x502db2, unsigned int, NO_PARAMS, NO_ARGS);
 };

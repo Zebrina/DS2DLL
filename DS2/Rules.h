@@ -9,55 +9,54 @@ class Rules {
 public:
 	DefineSingleton(Rules, 0x40a637);
 
-	/*Rules*/ private: /*static*/ Rules* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x0040a637
-	/*Rules*/ public: bool /*__thiscall*/ CanHit(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3); //0x00842bfe
-	/*Rules*/ public: bool /*__thiscall*/ DamageGo(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, float unk4, bool unk5, bool unk6); //0x00842d4a
-	/*Rules*/ public: bool /*__thiscall*/ DamageGoMagicPower(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, double unk4); //0x00842cc7
-	/*Rules*/ public: bool /*__thiscall*/ DamageGoPower(const gpbstring<char>& unk1, const Goid_* unk2, const Goid_* unk3, const Goid_* unk4, double unk5); //0x00842cee
-	/*Rules*/ public: bool /*__thiscall*/ DamageGoVolume(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, float unk4, float unk5, bool unk6); //0x00842d18
-	/*Rules*/ public: bool /*__thiscall*/ GetDamageRange(const Goid_* unk1, const Goid_* unk2, range_2& unk3); //0x00842c1d
-	/*Rules*/ public: bool /*__thiscall*/ IsQuestOrLoreItem(const char* unk1); //0x00845d10
-	/*Rules*/ public: bool /*__thiscall*/ STrySpawnLootThief(Go* unk1, Go* unk2); //0x0084501d
-	/*Rules*/ public: const Goid_* /*__thiscall*/ GetLootThiefGoid() const; //0x004096e5
-	/*Rules*/ public: double /*__thiscall*/ CalculateExperience(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, double unk4); //0x00842eba
-	/*Rules*/ public: double /*__thiscall*/ GetDifficultyComputerValue(unsigned int unk1); //0x00409656
-	/*Rules*/ public: double /*__thiscall*/ GetDifficultyPlayerValue(unsigned int unk1); //0x0040963f
-	/*Rules*/ public: double /*__thiscall*/ GetNextLevelXP(float unk1) const; //0x00842d77
-	/*Rules*/ public: double /*__thiscall*/ LevelToXP(float unk1) const; //0x00842dd9
-	/*Rules*/ public: float /*__thiscall*/ ComputeCustomDamage(Go* unk1, Go* unk2, Go* unk3, bool unk4); //0x00843ab4
-	/*Rules*/ public: float /*__thiscall*/ ComputeCustomDamageFromType(Go* unk1, Go* unk2, Go* unk3, eDamageType unk4, bool unk5); //0x00843c62
-	/*Rules*/ public: float /*__thiscall*/ GetAveragePartyLevel(Go* unk1); //0x0084314c
-	/*Rules*/ public: float /*__thiscall*/ GetConsciousnessLifePercent() const; //0x004096e1
-	/*Rules*/ public: float /*__thiscall*/ GetLootThiefChance() const; //0x004096f6
-	/*Rules*/ public: float /*__thiscall*/ GetMaxLevel() const; //0x0040a617
-	/*Rules*/ public: float /*__thiscall*/ GetMaxResistanceValue(); //0x004096dd
-	/*Rules*/ public: float /*__thiscall*/ GetTotalAveragePartyLevels(const GopColl& unk1); //0x00843212
-	/*Rules*/ public: float /*__thiscall*/ GetTotalDefense(const Goid_* unk1, const Goid_* unk2); //0x00841fdf
-	/*Rules*/ public: float /*__thiscall*/ GetTotalDefense(const Goid_* unk1); //0x00841fc6
-	/*Rules*/ public: float /*__thiscall*/ XPToLevel(double unk1) const; //0x00842e38
-	/*Rules*/ public: int /*__thiscall*/ GetTotalLevelingPartyMembers(Go* unk1, const FrustumId_* unk2); //0x008431b0
-	/*Rules*/ public: void /*__thiscall*/ ChangeLife(const Goid_* unk1, const Goid_* unk2, float unk3, unsigned long unk4); //0x0084474b
-	/*Rules*/ public: void /*__thiscall*/ ChangeLife(const Goid_* unk1, const Goid_* unk2, float unk3); //0x0040966d
-	/*Rules*/ public: void /*__thiscall*/ ChangeLifeLocal(const Goid_* unk1, const Goid_* unk2, float unk3); //0x00409688
-	/*Rules*/ public: void /*__thiscall*/ ChangeMana(const Goid_* unk1, float unk2, unsigned long unk3); //0x00842f4a
-	/*Rules*/ public: void /*__thiscall*/ ChangeMana(const Goid_* unk1, float unk2); //0x004096a8
-	/*Rules*/ public: void /*__thiscall*/ ChangeManaLocal(const Goid_* unk1, float unk2); //0x004096c0
-	/*Rules*/ public: void /*__thiscall*/ DamageGoMagic(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3); //0x0084208d
-	/*Rules*/ public: void /*__thiscall*/ DamageGoMagicObject(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3); //0x008420ac
-	/*Rules*/ public: void /*__thiscall*/ DamageGoMelee(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3); //0x00841ffb
-	/*Rules*/ public: void /*__thiscall*/ DamageGoMeleeMultiplier(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, float unk4, bool unk5); //0x0084201a
-	/*Rules*/ public: void /*__thiscall*/ DamageGoRanged(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3); //0x00842044
-	/*Rules*/ public: void /*__thiscall*/ DamageGoRangedMultiplier(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, float unk4, bool unk5); //0x00842063
-	/*Rules*/ public: void /*__thiscall*/ RCAwardPrimaryExperience(const Goid_* unk1, unsigned long unk2, double unk3); //0x00845d9e
-	/*Rules*/ public: void /*__thiscall*/ RCOnPartyMemberMadeMonsterAngry(Go* unk1, Go* unk2, eAggroType unk3); //0x00841eb0
-	/*Rules*/ public: void /*__thiscall*/ RCPlayLevelUpSoundAndText(const Goid_* unk1, const char* unk2); //0x008456c0
-	/*Rules*/ public: void /*__thiscall*/ RSPlayCombatSound(const Goid_* unk1, const Goid_* unk2, bool unk3); //0x0084305c
-	/*Rules*/ public: void /*__thiscall*/ SAwardExperience(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, double unk4); //0x008420e7
-	/*Rules*/ public: void /*__thiscall*/ SAwardPrimaryExperience(const Goid_* unk1, const char* unk2, double unk3, bool unk4); //0x0084665f
-	/*Rules*/ public: void /*__thiscall*/ SetLootThiefChance(float unk1); //0x004096fa
-	/*Rules*/ public: void /*__thiscall*/ SetLootThiefGoid(const Goid_* unk1); //0x004096e9
-	/*Rules*/ public: void /*__thiscall*/ SetPackMemberStats(const Goid_* unk1, bool unk2); //0x0084211e
-	/*Rules*/ public: void /*__thiscall*/ SOnPartyMemberAdded(const Goid_* unk1, const Goid_* unk2); //0x008420cb
-	/*Rules*/ public: void /*__thiscall*/ SPlayLevelUpSoundAndText(const Goid_* unk1, const char* unk2); //0x00845d95
-	/*Rules*/ public: void /*__thiscall*/ UpdateClassDesignation(const Goid_* unk1); //0x00845b93
+	DefineMethod(CanHit, 0x842bfe, bool, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3), Args(unk1, unk2, unk3));
+	DefineMethod(DamageGo, 0x842d4a, bool, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, float unk4, bool unk5, bool unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineMethod(DamageGoMagicPower, 0x842cc7, bool, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, double unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(DamageGoPower, 0x842cee, bool, Params(const gpbstring<char>& unk1, const Goid_* unk2, const Goid_* unk3, const Goid_* unk4, double unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(DamageGoVolume, 0x842d18, bool, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, float unk4, float unk5, bool unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineMethod(GetDamageRange, 0x842c1d, bool, Params(const Goid_* unk1, const Goid_* unk2, range_2& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(IsQuestOrLoreItem, 0x845d10, bool, Params(const char* unk1), Args(unk1));
+	DefineMethod(STrySpawnLootThief, 0x84501d, bool, Params(Go* unk1, Go* unk2), Args(unk1, unk2));
+	DefineConstMethod(GetLootThiefGoid, 0x4096e5, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(CalculateExperience, 0x842eba, double, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, double unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(GetDifficultyComputerValue, 0x409656, double, Params(unsigned int unk1), Args(unk1));
+	DefineMethod(GetDifficultyPlayerValue, 0x40963f, double, Params(unsigned int unk1), Args(unk1));
+	DefineConstMethod(GetNextLevelXP, 0x842d77, double, Params(float unk1), Args(unk1));
+	DefineConstMethod(LevelToXP, 0x842dd9, double, Params(float unk1), Args(unk1));
+	DefineMethod(ComputeCustomDamage, 0x843ab4, float, Params(Go* unk1, Go* unk2, Go* unk3, bool unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(ComputeCustomDamageFromType, 0x843c62, float, Params(Go* unk1, Go* unk2, Go* unk3, eDamageType unk4, bool unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(GetAveragePartyLevel, 0x84314c, float, Params(Go* unk1), Args(unk1));
+	DefineConstMethod(GetConsciousnessLifePercent, 0x4096e1, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetLootThiefChance, 0x4096f6, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMaxLevel, 0x40a617, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetMaxResistanceValue, 0x4096dd, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetTotalAveragePartyLevels, 0x843212, float, Params(const GopColl& unk1), Args(unk1));
+	DefineMethod(GetTotalDefense, 0x841fdf, float, Params(const Goid_* unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineMethod(GetTotalDefense, 0x841fc6, float, Params(const Goid_* unk1), Args(unk1));
+	DefineConstMethod(XPToLevel, 0x842e38, float, Params(double unk1), Args(unk1));
+	DefineMethod(GetTotalLevelingPartyMembers, 0x8431b0, int, Params(Go* unk1, const FrustumId_* unk2), Args(unk1, unk2));
+	DefineMethod(ChangeLife, 0x84474b, void, Params(const Goid_* unk1, const Goid_* unk2, float unk3, unsigned long unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(ChangeLife, 0x40966d, void, Params(const Goid_* unk1, const Goid_* unk2, float unk3), Args(unk1, unk2, unk3));
+	DefineMethod(ChangeLifeLocal, 0x409688, void, Params(const Goid_* unk1, const Goid_* unk2, float unk3), Args(unk1, unk2, unk3));
+	DefineMethod(ChangeMana, 0x842f4a, void, Params(const Goid_* unk1, float unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(ChangeMana, 0x4096a8, void, Params(const Goid_* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(ChangeManaLocal, 0x4096c0, void, Params(const Goid_* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(DamageGoMagic, 0x84208d, void, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3), Args(unk1, unk2, unk3));
+	DefineMethod(DamageGoMagicObject, 0x8420ac, void, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3), Args(unk1, unk2, unk3));
+	DefineMethod(DamageGoMelee, 0x841ffb, void, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3), Args(unk1, unk2, unk3));
+	DefineMethod(DamageGoMeleeMultiplier, 0x84201a, void, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, float unk4, bool unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(DamageGoRanged, 0x842044, void, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3), Args(unk1, unk2, unk3));
+	DefineMethod(DamageGoRangedMultiplier, 0x842063, void, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, float unk4, bool unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(RCAwardPrimaryExperience, 0x845d9e, void, Params(const Goid_* unk1, unsigned long unk2, double unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RCOnPartyMemberMadeMonsterAngry, 0x841eb0, void, Params(Go* unk1, Go* unk2, eAggroType unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RCPlayLevelUpSoundAndText, 0x8456c0, void, Params(const Goid_* unk1, const char* unk2), Args(unk1, unk2));
+	DefineMethod(RSPlayCombatSound, 0x84305c, void, Params(const Goid_* unk1, const Goid_* unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SAwardExperience, 0x8420e7, void, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3, double unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SAwardPrimaryExperience, 0x84665f, void, Params(const Goid_* unk1, const char* unk2, double unk3, bool unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SetLootThiefChance, 0x4096fa, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetLootThiefGoid, 0x4096e9, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(SetPackMemberStats, 0x84211e, void, Params(const Goid_* unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(SOnPartyMemberAdded, 0x8420cb, void, Params(const Goid_* unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineMethod(SPlayLevelUpSoundAndText, 0x845d95, void, Params(const Goid_* unk1, const char* unk2), Args(unk1, unk2));
+	DefineMethod(UpdateClassDesignation, 0x845b93, void, Params(const Goid_* unk1), Args(unk1));
 };

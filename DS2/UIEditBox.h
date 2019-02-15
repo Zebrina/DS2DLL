@@ -1,32 +1,34 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 class UIEditBox {
 public:
-	/*UIEditBox*/ private: /*static*/ int /*__cdecl*/ FUBI_Inheritance(UIWindow* unk1); //0x0041006e
-	/*UIEditBox*/ private: int /*__thiscall*/ GetGreaterSelection(); //0x00762470
-	/*UIEditBox*/ private: int /*__thiscall*/ GetLesserSelection(); //0x00762450
-	/*UIEditBox*/ private: void /*__thiscall*/ GetText(gpbstring<char>& unk1) const; //0x00763f00
-	/*UIEditBox*/ private: void /*__thiscall*/ ResetSelection(); //0x007624e0
-	/*UIEditBox*/ private: void /*__thiscall*/ SetText(const gpbstring<char>& unk1); //0x00763ed0
-	/*UIEditBox*/ public: bool /*__thiscall*/ GetAllowInput() const; //0x00410071
-	/*UIEditBox*/ public: bool /*__thiscall*/ GetPermanentFocus() const; //0x00410090
-	/*UIEditBox*/ public: bool /*__thiscall*/ HasPixelLimit(); //0x007624b0
-	/*UIEditBox*/ public: int /*__thiscall*/ GetColor() const; //0x004100dc
-	/*UIEditBox*/ public: int /*__thiscall*/ GetMaxPixelSize() const; //0x004100c5
-	/*UIEditBox*/ public: int /*__thiscall*/ GetMaxStringSize() const; //0x004100ae
-	/*UIEditBox*/ public: int /*__thiscall*/ GetPromptIndex() const; //0x00410121
-	/*UIEditBox*/ public: int /*__thiscall*/ GetTabStop() const; //0x00410097
-	/*UIEditBox*/ public: JUSTIFICATION /*__thiscall*/ GetJustification() const; //0x004100e3
-	/*UIEditBox*/ public: unsigned long /*__thiscall*/ GetImeColor() const; //0x0041010a
-	/*UIEditBox*/ public: void /*__thiscall*/ EnableIme(bool unk1); //0x00762a30
-	/*UIEditBox*/ public: void /*__thiscall*/ GiveFocus(); //0x00410078
-	/*UIEditBox*/ public: void /*__thiscall*/ SetAllowInput(bool unk1); //0x00763110
-	/*UIEditBox*/ public: void /*__thiscall*/ SetColor(int unk1); //0x004100cc
-	/*UIEditBox*/ public: void /*__thiscall*/ SetImeColor(unsigned long unk1); //0x004100fa
-	/*UIEditBox*/ public: void /*__thiscall*/ SetJustification(JUSTIFICATION unk1); //0x004100ea
-	/*UIEditBox*/ public: void /*__thiscall*/ SetMaxPixelSize(int unk1); //0x004100b5
-	/*UIEditBox*/ public: void /*__thiscall*/ SetMaxStringSize(int unk1); //0x0041009e
-	/*UIEditBox*/ public: void /*__thiscall*/ SetPermanentFocus(bool unk1); //0x00410080
-	/*UIEditBox*/ public: void /*__thiscall*/ SetPromptIndex(int unk1); //0x00410111
-	/*UIEditBox*/ public: void /*__thiscall*/ ShowHiddenText(bool unk1); //0x00762490
+	DefineStaticMethod(FUBI_Inheritance, 0x41006e, int, Params(UIWindow* unk1), Args(unk1));
+	DefineMethod(GetGreaterSelection, 0x762470, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetLesserSelection, 0x762450, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetText, 0x763f00, void, Params(gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(ResetSelection, 0x7624e0, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SetText, 0x763ed0, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineConstMethod(GetAllowInput, 0x410071, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetPermanentFocus, 0x410090, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(HasPixelLimit, 0x7624b0, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetColor, 0x4100dc, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMaxPixelSize, 0x4100c5, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMaxStringSize, 0x4100ae, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetPromptIndex, 0x410121, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetTabStop, 0x410097, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetJustification, 0x4100e3, JUSTIFICATION, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetImeColor, 0x41010a, unsigned long, NO_PARAMS, NO_ARGS);
+	DefineMethod(EnableIme, 0x762a30, void, Params(bool unk1), Args(unk1));
+	DefineMethod(GiveFocus, 0x410078, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SetAllowInput, 0x763110, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetColor, 0x4100cc, void, Params(int unk1), Args(unk1));
+	DefineMethod(SetImeColor, 0x4100fa, void, Params(unsigned long unk1), Args(unk1));
+	DefineMethod(SetJustification, 0x4100ea, void, Params(JUSTIFICATION unk1), Args(unk1));
+	DefineMethod(SetMaxPixelSize, 0x4100b5, void, Params(int unk1), Args(unk1));
+	DefineMethod(SetMaxStringSize, 0x41009e, void, Params(int unk1), Args(unk1));
+	DefineMethod(SetPermanentFocus, 0x410080, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetPromptIndex, 0x410111, void, Params(int unk1), Args(unk1));
+	DefineMethod(ShowHiddenText, 0x762490, void, Params(bool unk1), Args(unk1));
 };

@@ -4,45 +4,45 @@
 
 class GoDefend {
 public:
-	/*GoDefend*/ private: /*static*/ GoDefend* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x004a43df
-	/*GoDefend*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoDefend* unk1); //0x004a43d6
-	/*GoDefend*/ public: float /*__thiscall*/ EvaluateTotalDefense(); //0x00959dbc
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockCombatMagicChance() const; //0x004a565d
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockCombatMagicChanceAmount() const; //0x004a5679
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockCombatMagicDamage() const; //0x004a562c
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockCustomDamage(const char* unk1) const; //0x00959fc1
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockDamage() const; //0x004a561c
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockMeleeDamage() const; //0x004a5620
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockMeleeDamageChance() const; //0x004a564f
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockMeleeDamageChanceAmount() const; //0x004a566b
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockNatureMagicChance() const; //0x004a5664
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockNatureMagicChanceAmount() const; //0x004a5680
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockNatureMagicDamage() const; //0x004a5628
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockPartCombatMagicDamage() const; //0x004a5644
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockPartCustomDamage(const char* unk1) const; //0x0095a009
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockPartDamage() const; //0x004a5634
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockPartMeleeDamage() const; //0x004a5638
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockPartNatureMagicDamage() const; //0x004a5640
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockPartPiercingDamage() const; //0x004a5648
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockPartRangedDamage() const; //0x004a563c
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockPiercingDamage() const; //0x004a5630
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockRangedDamage() const; //0x004a5624
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockRangedDamageChance() const; //0x004a5656
-	/*GoDefend*/ public: float /*__thiscall*/ GetBlockRangedDamageChanceAmount() const; //0x004a5672
-	/*GoDefend*/ public: float /*__thiscall*/ GetChanceToDodgeHit() const; //0x004a5687
-	/*GoDefend*/ public: float /*__thiscall*/ GetChanceToDodgeHitMelee() const; //0x004a568e
-	/*GoDefend*/ public: float /*__thiscall*/ GetChanceToDodgeHitRanged() const; //0x004a5695
-	/*GoDefend*/ public: float /*__thiscall*/ GetDamageThreshold() const; //0x00959e09
-	/*GoDefend*/ public: float /*__thiscall*/ GetDamageToManaPercent() const; //0x004a56cd
-	/*GoDefend*/ public: float /*__thiscall*/ GetDefense() const; //0x004a5611
-	/*GoDefend*/ public: float /*__thiscall*/ GetDefenseBonusPercent(); //0x004a5615
-	/*GoDefend*/ public: float /*__thiscall*/ GetManaShield() const; //0x004a56c6
-	/*GoDefend*/ public: float /*__thiscall*/ GetReflectDamageAmount() const; //0x004a569c
-	/*GoDefend*/ public: float /*__thiscall*/ GetReflectDamageChance() const; //0x004a56aa
-	/*GoDefend*/ public: float /*__thiscall*/ GetReflectDamageToSelfAmount() const; //0x004a56bf
-	/*GoDefend*/ public: float /*__thiscall*/ GetReflectFixedDamageAmount() const; //0x004a56a3
-	/*GoDefend*/ public: float /*__thiscall*/ GetReflectPiercingDamageAmount() const; //0x004a56b1
-	/*GoDefend*/ public: float /*__thiscall*/ GetReflectPiercingDamageChance() const; //0x004a56b8
-	/*GoDefend*/ public: void /*__thiscall*/ RCSetDefenseNatural(float unk1); //0x00959c77
-	/*GoDefend*/ public: void /*__thiscall*/ SSetDefenseNatural(float unk1); //0x00959da9
+	DefineStaticMethod(FUBI_NetToInstance, 0x4a43df, GoDefend*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unk1, unk2));
+	DefineStaticMethod(FUBI_InstanceToNet, 0x4a43d6, unsigned long, Params(GoDefend* unk1), Args(unk1));
+	DefineMethod(EvaluateTotalDefense, 0x959dbc, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockCombatMagicChance, 0x4a565d, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockCombatMagicChanceAmount, 0x4a5679, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockCombatMagicDamage, 0x4a562c, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockCustomDamage, 0x959fc1, float, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetBlockDamage, 0x4a561c, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockMeleeDamage, 0x4a5620, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockMeleeDamageChance, 0x4a564f, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockMeleeDamageChanceAmount, 0x4a566b, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockNatureMagicChance, 0x4a5664, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockNatureMagicChanceAmount, 0x4a5680, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockNatureMagicDamage, 0x4a5628, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockPartCombatMagicDamage, 0x4a5644, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockPartCustomDamage, 0x95a009, float, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetBlockPartDamage, 0x4a5634, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockPartMeleeDamage, 0x4a5638, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockPartNatureMagicDamage, 0x4a5640, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockPartPiercingDamage, 0x4a5648, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockPartRangedDamage, 0x4a563c, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockPiercingDamage, 0x4a5630, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockRangedDamage, 0x4a5624, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockRangedDamageChance, 0x4a5656, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockRangedDamageChanceAmount, 0x4a5672, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetChanceToDodgeHit, 0x4a5687, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetChanceToDodgeHitMelee, 0x4a568e, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetChanceToDodgeHitRanged, 0x4a5695, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetDamageThreshold, 0x959e09, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetDamageToManaPercent, 0x4a56cd, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetDefense, 0x4a5611, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetDefenseBonusPercent, 0x4a5615, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetManaShield, 0x4a56c6, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetReflectDamageAmount, 0x4a569c, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetReflectDamageChance, 0x4a56aa, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetReflectDamageToSelfAmount, 0x4a56bf, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetReflectFixedDamageAmount, 0x4a56a3, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetReflectPiercingDamageAmount, 0x4a56b1, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetReflectPiercingDamageChance, 0x4a56b8, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(RCSetDefenseNatural, 0x959c77, void, Params(float unk1), Args(unk1));
+	DefineMethod(SSetDefenseNatural, 0x959da9, void, Params(float unk1), Args(unk1));
 };

@@ -1,103 +1,116 @@
 #pragma once
 
+#include "Enums.h"
+#include "Siege.h"
+
 #include "ClassMacros.h"
+
+class Go;
+struct GoidColl;
+struct GopColl;
+struct QtColl;
+struct SiegePos;
+struct vector_3;
+
+enum eQueryTrait {
+
+};
 
 class AIQuery {
 public:
 	DefineSingleton(AIQuery, 0x414099);
 
-	/*AIQuery*/ private: /*static*/ AIQuery* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x00414099
-	/*AIQuery*/ public: bool /*__thiscall*/ AddActorSummonsToCollection(GoidColl& unk1); //0x00857e6d
-	/*AIQuery*/ public: bool /*__thiscall*/ AddActorSummonsToCollection(GopColl& unk1); //0x00857de0
-	/*AIQuery*/ public: bool /*__thiscall*/ AreHumanPartyMembersInNodes(int unk1, int unk2, int unk3, int unk4); //0x00858776
-	/*AIQuery*/ public: bool /*__thiscall*/ AreScreenPartyMembersInNodes(int unk1, int unk2, int unk3, int unk4); //0x0085872b
-	/*AIQuery*/ public: bool /*__thiscall*/ CanActorPathToAttack(const Go* unk1, const Go* unk2) const; //0x0085426e
-	/*AIQuery*/ public: bool /*__thiscall*/ CanActorPathToPos(const Go* unk1, const SiegePos& unk2) const; //0x00854241
-	/*AIQuery*/ public: bool /*__thiscall*/ DoesSphereHaveHumanControlledOccupants(const SiegePos& unk1, float unk2); //0x0085db6b
-	/*AIQuery*/ public: bool /*__thiscall*/ DoesSphereHaveOccupants(const SiegePos& unk1, float unk2); //0x0085db17
-	/*AIQuery*/ public: bool /*__thiscall*/ DoesSphereHavePartyMembers(const SiegePos& unk1, float unk2); //0x0085db3f
-	/*AIQuery*/ public: bool /*__thiscall*/ FindClearLosPoint(const Go* unk1, const Go* unk2, float unk3, float unk4, float unk5, SiegePos& unk6); //0x00858b4b
-	/*AIQuery*/ public: bool /*__thiscall*/ FindClearLosPoint(const Go* unk1, const SiegePos& unk2, float unk3, float unk4, float unk5, SiegePos& unk6); //0x00858c2a
-	/*AIQuery*/ public: bool /*__thiscall*/ FindClearLosSpotForAttack(const Go* unk1, const Go* unk2, float unk3, float unk4, float unk5, SiegePos& unk6); //0x00858cdd
-	/*AIQuery*/ public: bool /*__thiscall*/ FindSpotForDrop(Go* unk1, Go* unk2, Go* unk3, float unk4, float unk5, float unk6, SiegePos& unk7, bool unk8); //0x0085712a
-	/*AIQuery*/ public: bool /*__thiscall*/ FindSpotForWalk(Go* unk1, const SiegePos& unk2, float unk3, float unk4, SiegePos& unk5, bool unk6); //0x008592e7
-	/*AIQuery*/ public: bool /*__thiscall*/ FindSpotRelativeToSource(Go* unk1, Go* unk2, bool unk3, float unk4, float unk5, float unk6, float unk7, float unk8, SiegePos& unk9, bool unk10, bool unk11, bool unk12); //0x00855f16
-	/*AIQuery*/ public: bool /*__thiscall*/ FindSpotRelativeToSource(Go* unk1, Go* unk2, bool unk3, float unk4, float unk5, float unk6, float unk7, float unk8, SiegePos& unk9, bool unk10); //0x0085717b
-	/*AIQuery*/ public: bool /*__thiscall*/ FindSpotRelativeToSource(Go* unk1, const SiegePos& unk2, bool unk3, float unk4, float unk5, float unk6, float unk7, float unk8, SiegePos& unk9, bool unk10, bool unk11, bool unk12); //0x00858d72
-	/*AIQuery*/ public: bool /*__thiscall*/ FindSpotRelativeToSource(Go* unk1, float unk2, float unk3, float unk4, SiegePos& unk5, bool unk6); //0x00856013
-	/*AIQuery*/ public: bool /*__thiscall*/ FindSpotRelativeToSource(Go* unk1, float unk2, float unk3, float unk4, SiegePos& unk5); //0x00855fd5
-	/*AIQuery*/ public: bool /*__thiscall*/ FindSpotRelativeToSource(const SiegePos* unk1, const SiegePos* unk2, bool unk3, float unk4, float unk5, float unk6, float unk7, float unk8, SiegePos& unk9, bool unk10, bool unk11); //0x00855e23
-	/*AIQuery*/ public: bool /*__thiscall*/ FindSpotRelativeToSource(const SiegePos* unk1, const SiegePos* unk2, siege::eLogicalNodeFlags unk3, float unk4, bool unk5, float unk6, float unk7, float unk8, float unk9, float unk10, bool unk11, SiegePos& unk12, bool unk13, bool unk14, bool unk15); //0x00855af4
-	/*AIQuery*/ public: bool /*__thiscall*/ FindSpotRelativeToSource(const SiegePos* unk1, const SiegePos* unk2, siege::eLogicalNodeFlags unk3, float unk4, bool unk5, float unk6, float unk7, float unk8, float unk9, float unk10, bool unk11, SiegePos& unk12, bool unk13); //0x00855e7b
-	/*AIQuery*/ public: bool /*__thiscall*/ FindSpotRelativeToSource(const SiegePos* unk1, float unk2, float unk3, float unk4, float unk5, bool unk6, SiegePos& unk7); //0x00855ecc
-	/*AIQuery*/ public: bool /*__thiscall*/ Get(Go* unk1, const QtColl& unk2, const GopColl& unk3, GopColl& unk4) const; //0x0085c342
-	/*AIQuery*/ public: bool /*__thiscall*/ Get(Go* unk1, eQueryTrait unk2, const GopColl& unk3, GopColl& unk4) const; //0x0085c327
-	/*AIQuery*/ public: bool /*__thiscall*/ GetActorsInSphere(const SiegePos& unk1, float unk2, GopColl& unk3); //0x0085da5a
-	/*AIQuery*/ public: bool /*__thiscall*/ GetAliveActorsInSphere(const SiegePos& unk1, float unk2, GopColl& unk3); //0x0085da84
-	/*AIQuery*/ public: bool /*__thiscall*/ GetEnemiesInSphere(const Goid_* unk1, const SiegePos& unk2, float unk3, GopColl& unk4); //0x0085d9f3
-	/*AIQuery*/ public: bool /*__thiscall*/ GetFirstN(Go* unk1, const QtColl& unk2, unsigned int unk3, const GopColl& unk4, GopColl& unk5) const; //0x0085bfbc
-	/*AIQuery*/ public: bool /*__thiscall*/ GetFirstN(Go* unk1, eQueryTrait unk2, unsigned int unk3, const GopColl& unk4, GopColl& unk5) const; //0x0085bf9e
-	/*AIQuery*/ public: bool /*__thiscall*/ GetFriendsInSphere(const Goid_* unk1, const SiegePos& unk2, float unk3, GopColl& unk4); //0x0085d9b6
-	/*AIQuery*/ public: bool /*__thiscall*/ GetGeometricCenter(const GopColl& unk1, vector_3& unk2); //0x00853e2d
-	/*AIQuery*/ public: bool /*__thiscall*/ GetHumanPartyMembersInNodes(int unk1, int unk2, int unk3, int unk4, GopColl& unk5); //0x00858750
-	/*AIQuery*/ public: bool /*__thiscall*/ GetHumanPartyMembersInWorldFrustum(const SiegePos& unk1, GopColl& unk2); //0x0085879b
-	/*AIQuery*/ public: bool /*__thiscall*/ GetMax(Go* unk1, const QtColl& unk2, const GopColl& unk3, GopColl& unk4) const; //0x0085c042
-	/*AIQuery*/ public: bool /*__thiscall*/ GetMax(Go* unk1, eQueryTrait unk2, const GopColl& unk3, GopColl& unk4) const; //0x0085c028
-	/*AIQuery*/ public: bool /*__thiscall*/ GetMaxN(Go* unk1, const QtColl& unk2, unsigned int unk3, const GopColl& unk4, GopColl& unk5) const; //0x0085c001
-	/*AIQuery*/ public: bool /*__thiscall*/ GetMaxN(Go* unk1, eQueryTrait unk2, unsigned int unk3, const GopColl& unk4, GopColl& unk5) const; //0x0085bfe3
-	/*AIQuery*/ public: bool /*__thiscall*/ GetMin(Go* unk1, eQueryTrait unk2, const GopColl& unk3, GopColl& unk4) const; //0x0085c0a1
-	/*AIQuery*/ public: bool /*__thiscall*/ GetMinN(Go* unk1, const QtColl& unk2, unsigned int unk3, const GopColl& unk4, GopColl& unk5) const; //0x0085c07a
-	/*AIQuery*/ public: bool /*__thiscall*/ GetMinN(Go* unk1, eQueryTrait unk2, unsigned int unk3, const GopColl& unk4, GopColl& unk5) const; //0x0085c05c
-	/*AIQuery*/ public: bool /*__thiscall*/ GetOccupantsInSphere(const SiegePos& unk1, float unk2, GopColl& unk3); //0x0085da30
-	/*AIQuery*/ public: bool /*__thiscall*/ GetOwnerPartyMembersInSphere(const Goid_* unk1, const SiegePos& unk2, float unk3, GopColl& unk4); //0x0085dadb
-	/*AIQuery*/ public: bool /*__thiscall*/ GetPartyMembersInSphere(const SiegePos& unk1, float unk2, GopColl& unk3); //0x0085daae
-	/*AIQuery*/ public: bool /*__thiscall*/ GetPartyMembersInSphereAccordingToHealNeed(const SiegePos& unk1, float unk2, bool unk3, const Goid_* unk4, GopColl& unk5, bool unk6); //0x0085c3fe
-	/*AIQuery*/ public: bool /*__thiscall*/ GetPartyMembersInSphereAccordingToRank(const SiegePos& unk1, float unk2, const Goid_* unk3, GopColl& unk4); //0x0085c59c
-	/*AIQuery*/ public: bool /*__thiscall*/ GetPathableHumanPartyMembers(const Go* unk1, float unk2, int unk3, GopColl& unk4); //0x008587b8
-	/*AIQuery*/ public: bool /*__thiscall*/ GetPathableHumanPartyMembers(const Go* unk1, float unk2, GopColl& unk3); //0x0041166d
-	/*AIQuery*/ public: bool /*__thiscall*/ GetPathableHumanPartyMembers(const Go* unk1, GopColl& unk2); //0x00411688
-	/*AIQuery*/ public: bool /*__thiscall*/ GetPathablePositionAroundSource(const Go* unk1, float unk2, float unk3, int unk4, SiegePos& unk5); //0x00856f2b
-	/*AIQuery*/ public: bool /*__thiscall*/ GetScreenPartyMembersInNodes(int unk1, int unk2, int unk3, int unk4, GopColl& unk5); //0x00858705
-	/*AIQuery*/ public: bool /*__thiscall*/ GetTerrainPosition(const SiegePos& unk1, float unk2, SiegePos& unk3); //0x008552af
-	/*AIQuery*/ public: bool /*__thiscall*/ GetTerrainPosition(const SiegePos& unk1, SiegePos& unk2); //0x008541a6
-	/*AIQuery*/ public: bool /*__thiscall*/ GetTerrainPositionAtEnd(const SiegePos& unk1, const SiegePos& unk2, float unk3, float unk4, float unk5, SiegePos& unk6); //0x0085704a
-	/*AIQuery*/ public: bool /*__thiscall*/ GetTerrainPositionAtEnd(const SiegePos& unk1, const SiegePos& unk2, float unk3, float unk4, SiegePos& unk5); //0x008552fc
-	/*AIQuery*/ public: bool /*__thiscall*/ Is(const Go* unk1, Go* unk2, eQueryTrait unk3) const; //0x0085b44b
-	/*AIQuery*/ public: bool /*__thiscall*/ Is(const Go* unk1, Go* unk2, QtColl& unk3) const; //0x0085bd2d
-	/*AIQuery*/ public: bool /*__thiscall*/ IsAreaWalkable(siege::eLogicalNodeFlags unk1, const SiegePos& unk2, unsigned long unk3, float unk4); //0x00854325
-	/*AIQuery*/ public: bool /*__thiscall*/ IsInRange(const Go* unk1, const Go* unk2, float unk3); //0x008550d4
-	/*AIQuery*/ public: bool /*__thiscall*/ IsInRange(const SiegePos& unk1, const SiegePos& unk2, float unk3); //0x008550ac
-	/*AIQuery*/ public: bool /*__thiscall*/ IsInRange2D(const SiegePos& unk1, const SiegePos& unk2, float unk3); //0x00857027
-	/*AIQuery*/ public: bool /*__thiscall*/ IsInSameFrustum(const Go* unk1, const SiegePos& unk2) const; //0x008541d3
-	/*AIQuery*/ public: bool /*__thiscall*/ IsLosClear(const Go* unk1, const Go* unk2, float unk3) const; //0x00858a45
-	/*AIQuery*/ public: bool /*__thiscall*/ IsLosClear(const Go* unk1, const Go* unk2) const; //0x008592cf
-	/*AIQuery*/ public: bool /*__thiscall*/ IsLosClear(const Go* unk1, const SiegePos& unk2) const; //0x00858ae7
-	/*AIQuery*/ public: bool /*__thiscall*/ IsLosClear(const SiegePos& unk1, const SiegePos& unk2) const; //0x00854311
-	/*AIQuery*/ public: Go* /*__thiscall*/ GetClosest(const Go* unk1, const GopColl& unk2); //0x008551f8
-	/*AIQuery*/ public: Go* /*__thiscall*/ GetClosest(const SiegePos& unk1, const GopColl& unk2); //0x0085524f
-	/*AIQuery*/ public: Go* /*__thiscall*/ GetClosestHumanControlledOccupantInSphere(const SiegePos& unk1, float unk2); //0x0085db94
-	/*AIQuery*/ public: Go* /*__thiscall*/ GetClosestPathableHumanPartyMember(const Go* unk1, float unk2); //0x008588bd
-	/*AIQuery*/ public: Go* /*__thiscall*/ GetClosestPathableHumanPartyMember(const Go* unk1); //0x004116a2
-	/*AIQuery*/ public: Go* /*__thiscall*/ GetMax(Go* unk1, eQueryTrait unk2, const GopColl& unk3) const; //0x0085c366
-	/*AIQuery*/ public: Go* /*__thiscall*/ GetMin(Go* unk1, eQueryTrait unk2, const GopColl& unk3) const; //0x0085c3b2
-	/*AIQuery*/ public: float /*__thiscall*/ Get2DDistance(const Go* unk1, const Go* unk2); //0x00854081
-	/*AIQuery*/ public: float /*__thiscall*/ Get2DDistance(const SiegePos& unk1, const SiegePos& unk2); //0x0085518d
-	/*AIQuery*/ public: float /*__thiscall*/ GetAlterationSum(const Go* unk1, eAlteration unk2) const; //0x008593a1
-	/*AIQuery*/ public: float /*__thiscall*/ GetDistance(const Go* unk1, const Go* unk2); //0x00853fc1
-	/*AIQuery*/ public: float /*__thiscall*/ GetDistance(const SiegePos& unk1, const SiegePos& unk2); //0x0085511a
-	/*AIQuery*/ public: float /*__thiscall*/ GetDistanceSquared(const SiegePos& unk1, const SiegePos& unk2); //0x00853eb7
-	/*AIQuery*/ public: float /*__thiscall*/ GetTraitValue(const Go* unk1, Go* unk2, eQueryTrait unk3) const; //0x0085b03f
-	/*AIQuery*/ public: int /*__thiscall*/ GetCount(Go* unk1, eQueryTrait unk2, const GopColl& unk3) const; //0x0085bcf1
-	/*AIQuery*/ public: int /*__thiscall*/ GetCount(Go* unk1, QtColl& unk2, const GopColl& unk3) const; //0x0085c0bb
-	/*AIQuery*/ public: GopColl& /*__thiscall*/ GetTempGopColl1(); //0x004116b7
-	/*AIQuery*/ public: GopColl& /*__thiscall*/ GetTempGopColl2(); //0x004116bb
-	/*AIQuery*/ public: GopColl& /*__thiscall*/ GetTempGopColl3(); //0x004116bf
-	/*AIQuery*/ public: QtColl& /*__thiscall*/ GetTempQtColl1(); //0x004116c3
-	/*AIQuery*/ public: void /*__thiscall*/ GetDifferenceVector(const SiegePos& unk1, const SiegePos& unk2, vector_3& unk3); //0x00853f9c
-	/*AIQuery*/ public: void /*__thiscall*/ GetLOSPoint(const Go* unk1, SiegePos& unk2) const; //0x008553b6
-	/*AIQuery*/ public: void /*__thiscall*/ GetLOSPoint(const Go* unk1, vector_3& unk2) const; //0x00855455
-	/*AIQuery*/ public: void /*__thiscall*/ GetRandomOrientation(Quat& unk1); //0x00855abc
-	/*AIQuery*/ public: void /*__thiscall*/ GetTerrainPosition(const SiegePos& unk1, float unk2, float unk3, SiegePos& unk4); //0x008524c6
-	/*AIQuery*/ public: void /*__thiscall*/ SortByDistance(const Go* unk1, const GoidColl& unk2, GopColl& unk3); //0x0085c729
-	/*AIQuery*/ public: void /*__thiscall*/ SortByDistance(const Go* unk1, const GopColl& unk2, GopColl& unk3); //0x0085c6a8
+	DefineMethod(AddActorSummonsToCollection, 0x857e6d, bool, Params(GoidColl& unk1), Args(unk1));
+	DefineMethod(AddActorSummonsToCollection, 0x857de0, bool, Params(GopColl& unk1), Args(unk1));
+	DefineMethod(AreHumanPartyMembersInNodes, 0x858776, bool, Params(int unk1, int unk2, int unk3, int unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(AreScreenPartyMembersInNodes, 0x85872b, bool, Params(int unk1, int unk2, int unk3, int unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(CanActorPathToAttack, 0x85426e, bool, Params(const Go* unk1, const Go* unk2), Args(unk1, unk2));
+	DefineConstMethod(CanActorPathToPos, 0x854241, bool, Params(const Go* unk1, const SiegePos& unk2), Args(unk1, unk2));
+	DefineMethod(DoesSphereHaveHumanControlledOccupants, 0x85db6b, bool, Params(const SiegePos& unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(DoesSphereHaveOccupants, 0x85db17, bool, Params(const SiegePos& unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(DoesSphereHavePartyMembers, 0x85db3f, bool, Params(const SiegePos& unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(FindClearLosPoint, 0x858b4b, bool, Params(const Go* unk1, const Go* unk2, float unk3, float unk4, float unk5, SiegePos& unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineMethod(FindClearLosPoint, 0x858c2a, bool, Params(const Go* unk1, const SiegePos& unk2, float unk3, float unk4, float unk5, SiegePos& unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineMethod(FindClearLosSpotForAttack, 0x858cdd, bool, Params(const Go* unk1, const Go* unk2, float unk3, float unk4, float unk5, SiegePos& unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineMethod(FindSpotForDrop, 0x85712a, bool, Params(Go* unk1, Go* unk2, Go* unk3, float unk4, float unk5, float unk6, SiegePos& unk7, bool unk8), Args(unk1, unk2, unk3, unk4, unk5, unk6, unk7, unk8));
+	DefineMethod(FindSpotForWalk, 0x8592e7, bool, Params(Go* unk1, const SiegePos& unk2, float unk3, float unk4, SiegePos& unk5, bool unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineMethod(FindSpotRelativeToSource, 0x855f16, bool, Params(Go* unk1, Go* unk2, bool unk3, float unk4, float unk5, float unk6, float unk7, float unk8, SiegePos& unk9, bool unk10, bool unk11, bool unk12), Args(unk1, unk2, unk3, unk4, unk5, unk6, unk7, unk8, unk9, unk10, unk11, unk12));
+	DefineMethod(FindSpotRelativeToSource, 0x85717b, bool, Params(Go* unk1, Go* unk2, bool unk3, float unk4, float unk5, float unk6, float unk7, float unk8, SiegePos& unk9, bool unk10), Args(unk1, unk2, unk3, unk4, unk5, unk6, unk7, unk8, unk9, unk10));
+	DefineMethod(FindSpotRelativeToSource, 0x858d72, bool, Params(Go* unk1, const SiegePos& unk2, bool unk3, float unk4, float unk5, float unk6, float unk7, float unk8, SiegePos& unk9, bool unk10, bool unk11, bool unk12), Args(unk1, unk2, unk3, unk4, unk5, unk6, unk7, unk8, unk9, unk10, unk11, unk12));
+	DefineMethod(FindSpotRelativeToSource, 0x856013, bool, Params(Go* unk1, float unk2, float unk3, float unk4, SiegePos& unk5, bool unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineMethod(FindSpotRelativeToSource, 0x855fd5, bool, Params(Go* unk1, float unk2, float unk3, float unk4, SiegePos& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(FindSpotRelativeToSource, 0x855e23, bool, Params(const SiegePos* unk1, const SiegePos* unk2, bool unk3, float unk4, float unk5, float unk6, float unk7, float unk8, SiegePos& unk9, bool unk10, bool unk11), Args(unk1, unk2, unk3, unk4, unk5, unk6, unk7, unk8, unk9, unk10, unk11));
+	DefineMethod(FindSpotRelativeToSource, 0x855af4, bool, Params(const SiegePos* unk1, const SiegePos* unk2, siege::eLogicalNodeFlags unk3, float unk4, bool unk5, float unk6, float unk7, float unk8, float unk9, float unk10, bool unk11, SiegePos& unk12, bool unk13, bool unk14, bool unk15), Args(unk1, unk2, unk3, unk4, unk5, unk6, unk7, unk8, unk9, unk10, unk11, unk12, unk13, unk14, unk15));
+	DefineMethod(FindSpotRelativeToSource, 0x855e7b, bool, Params(const SiegePos* unk1, const SiegePos* unk2, siege::eLogicalNodeFlags unk3, float unk4, bool unk5, float unk6, float unk7, float unk8, float unk9, float unk10, bool unk11, SiegePos& unk12, bool unk13), Args(unk1, unk2, unk3, unk4, unk5, unk6, unk7, unk8, unk9, unk10, unk11, unk12, unk13));
+	DefineMethod(FindSpotRelativeToSource, 0x855ecc, bool, Params(const SiegePos* unk1, float unk2, float unk3, float unk4, float unk5, bool unk6, SiegePos& unk7), Args(unk1, unk2, unk3, unk4, unk5, unk6, unk7));
+	DefineConstMethod(Get, 0x85c342, bool, Params(Go* unk1, const QtColl& unk2, const GopColl& unk3, GopColl& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(Get, 0x85c327, bool, Params(Go* unk1, eQueryTrait unk2, const GopColl& unk3, GopColl& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(GetActorsInSphere, 0x85da5a, bool, Params(const SiegePos& unk1, float unk2, GopColl& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(GetAliveActorsInSphere, 0x85da84, bool, Params(const SiegePos& unk1, float unk2, GopColl& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(GetEnemiesInSphere, 0x85d9f3, bool, Params(const Goid_* unk1, const SiegePos& unk2, float unk3, GopColl& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(GetFirstN, 0x85bfbc, bool, Params(Go* unk1, const QtColl& unk2, unsigned int unk3, const GopColl& unk4, GopColl& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineConstMethod(GetFirstN, 0x85bf9e, bool, Params(Go* unk1, eQueryTrait unk2, unsigned int unk3, const GopColl& unk4, GopColl& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(GetFriendsInSphere, 0x85d9b6, bool, Params(const Goid_* unk1, const SiegePos& unk2, float unk3, GopColl& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(GetGeometricCenter, 0x853e2d, bool, Params(const GopColl& unk1, vector_3& unk2), Args(unk1, unk2));
+	DefineMethod(GetHumanPartyMembersInNodes, 0x858750, bool, Params(int unk1, int unk2, int unk3, int unk4, GopColl& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(GetHumanPartyMembersInWorldFrustum, 0x85879b, bool, Params(const SiegePos& unk1, GopColl& unk2), Args(unk1, unk2));
+	DefineConstMethod(GetMax, 0x85c042, bool, Params(Go* unk1, const QtColl& unk2, const GopColl& unk3, GopColl& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(GetMax, 0x85c028, bool, Params(Go* unk1, eQueryTrait unk2, const GopColl& unk3, GopColl& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(GetMaxN, 0x85c001, bool, Params(Go* unk1, const QtColl& unk2, unsigned int unk3, const GopColl& unk4, GopColl& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineConstMethod(GetMaxN, 0x85bfe3, bool, Params(Go* unk1, eQueryTrait unk2, unsigned int unk3, const GopColl& unk4, GopColl& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineConstMethod(GetMin, 0x85c0a1, bool, Params(Go* unk1, eQueryTrait unk2, const GopColl& unk3, GopColl& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(GetMinN, 0x85c07a, bool, Params(Go* unk1, const QtColl& unk2, unsigned int unk3, const GopColl& unk4, GopColl& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineConstMethod(GetMinN, 0x85c05c, bool, Params(Go* unk1, eQueryTrait unk2, unsigned int unk3, const GopColl& unk4, GopColl& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(GetOccupantsInSphere, 0x85da30, bool, Params(const SiegePos& unk1, float unk2, GopColl& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(GetOwnerPartyMembersInSphere, 0x85dadb, bool, Params(const Goid_* unk1, const SiegePos& unk2, float unk3, GopColl& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(GetPartyMembersInSphere, 0x85daae, bool, Params(const SiegePos& unk1, float unk2, GopColl& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(GetPartyMembersInSphereAccordingToHealNeed, 0x85c3fe, bool, Params(const SiegePos& unk1, float unk2, bool unk3, const Goid_* unk4, GopColl& unk5, bool unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineMethod(GetPartyMembersInSphereAccordingToRank, 0x85c59c, bool, Params(const SiegePos& unk1, float unk2, const Goid_* unk3, GopColl& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(GetPathableHumanPartyMembers, 0x8587b8, bool, Params(const Go* unk1, float unk2, int unk3, GopColl& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(GetPathableHumanPartyMembers, 0x41166d, bool, Params(const Go* unk1, float unk2, GopColl& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(GetPathableHumanPartyMembers, 0x411688, bool, Params(const Go* unk1, GopColl& unk2), Args(unk1, unk2));
+	DefineMethod(GetPathablePositionAroundSource, 0x856f2b, bool, Params(const Go* unk1, float unk2, float unk3, int unk4, SiegePos& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(GetScreenPartyMembersInNodes, 0x858705, bool, Params(int unk1, int unk2, int unk3, int unk4, GopColl& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(GetTerrainPosition, 0x8552af, bool, Params(const SiegePos& unk1, float unk2, SiegePos& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(GetTerrainPosition, 0x8541a6, bool, Params(const SiegePos& unk1, SiegePos& unk2), Args(unk1, unk2));
+	DefineMethod(GetTerrainPositionAtEnd, 0x85704a, bool, Params(const SiegePos& unk1, const SiegePos& unk2, float unk3, float unk4, float unk5, SiegePos& unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineMethod(GetTerrainPositionAtEnd, 0x8552fc, bool, Params(const SiegePos& unk1, const SiegePos& unk2, float unk3, float unk4, SiegePos& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineConstMethod(Is, 0x85b44b, bool, Params(const Go* unk1, Go* unk2, eQueryTrait unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(Is, 0x85bd2d, bool, Params(const Go* unk1, Go* unk2, QtColl& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(IsAreaWalkable, 0x854325, bool, Params(siege::eLogicalNodeFlags unk1, const SiegePos& unk2, unsigned long unk3, float unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(IsInRange, 0x8550d4, bool, Params(const Go* unk1, const Go* unk2, float unk3), Args(unk1, unk2, unk3));
+	DefineMethod(IsInRange, 0x8550ac, bool, Params(const SiegePos& unk1, const SiegePos& unk2, float unk3), Args(unk1, unk2, unk3));
+	DefineMethod(IsInRange2D, 0x857027, bool, Params(const SiegePos& unk1, const SiegePos& unk2, float unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(IsInSameFrustum, 0x8541d3, bool, Params(const Go* unk1, const SiegePos& unk2), Args(unk1, unk2));
+	DefineConstMethod(IsLosClear, 0x858a45, bool, Params(const Go* unk1, const Go* unk2, float unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(IsLosClear, 0x8592cf, bool, Params(const Go* unk1, const Go* unk2), Args(unk1, unk2));
+	DefineConstMethod(IsLosClear, 0x858ae7, bool, Params(const Go* unk1, const SiegePos& unk2), Args(unk1, unk2));
+	DefineConstMethod(IsLosClear, 0x854311, bool, Params(const SiegePos& unk1, const SiegePos& unk2), Args(unk1, unk2));
+	DefineMethod(GetClosest, 0x8551f8, Go*, Params(const Go* unk1, const GopColl& unk2), Args(unk1, unk2));
+	DefineMethod(GetClosest, 0x85524f, Go*, Params(const SiegePos& unk1, const GopColl& unk2), Args(unk1, unk2));
+	DefineMethod(GetClosestHumanControlledOccupantInSphere, 0x85db94, Go*, Params(const SiegePos& unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(GetClosestPathableHumanPartyMember, 0x8588bd, Go*, Params(const Go* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(GetClosestPathableHumanPartyMember, 0x4116a2, Go*, Params(const Go* unk1), Args(unk1));
+	DefineConstMethod(GetMax, 0x85c366, Go*, Params(Go* unk1, eQueryTrait unk2, const GopColl& unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetMin, 0x85c3b2, Go*, Params(Go* unk1, eQueryTrait unk2, const GopColl& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(Get2DDistance, 0x854081, float, Params(const Go* unk1, const Go* unk2), Args(unk1, unk2));
+	DefineMethod(Get2DDistance, 0x85518d, float, Params(const SiegePos& unk1, const SiegePos& unk2), Args(unk1, unk2));
+	DefineConstMethod(GetAlterationSum, 0x8593a1, float, Params(const Go* unk1, eAlteration unk2), Args(unk1, unk2));
+	DefineMethod(GetDistance, 0x853fc1, float, Params(const Go* unk1, const Go* unk2), Args(unk1, unk2));
+	DefineMethod(GetDistance, 0x85511a, float, Params(const SiegePos& unk1, const SiegePos& unk2), Args(unk1, unk2));
+	DefineMethod(GetDistanceSquared, 0x853eb7, float, Params(const SiegePos& unk1, const SiegePos& unk2), Args(unk1, unk2));
+	DefineConstMethod(GetTraitValue, 0x85b03f, float, Params(const Go* unk1, Go* unk2, eQueryTrait unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetCount, 0x85bcf1, int, Params(Go* unk1, eQueryTrait unk2, const GopColl& unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetCount, 0x85c0bb, int, Params(Go* unk1, QtColl& unk2, const GopColl& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(GetTempGopColl1, 0x4116b7, GopColl&, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetTempGopColl2, 0x4116bb, GopColl&, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetTempGopColl3, 0x4116bf, GopColl&, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetTempQtColl1, 0x4116c3, QtColl&, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetDifferenceVector, 0x853f9c, void, Params(const SiegePos& unk1, const SiegePos& unk2, vector_3& unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetLOSPoint, 0x8553b6, void, Params(const Go* unk1, SiegePos& unk2), Args(unk1, unk2));
+	DefineConstMethod(GetLOSPoint, 0x855455, void, Params(const Go* unk1, vector_3& unk2), Args(unk1, unk2));
+	DefineMethod(GetRandomOrientation, 0x855abc, void, Params(Quat& unk1), Args(unk1));
+	DefineMethod(GetTerrainPosition, 0x8524c6, void, Params(const SiegePos& unk1, float unk2, float unk3, SiegePos& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SortByDistance, 0x85c729, void, Params(const Go* unk1, const GoidColl& unk2, GopColl& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SortByDistance, 0x85c6a8, void, Params(const Go* unk1, const GopColl& unk2, GopColl& unk3), Args(unk1, unk2, unk3));
 };

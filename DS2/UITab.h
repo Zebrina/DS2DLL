@@ -1,11 +1,13 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 class UITab {
 public:
-	/*UITab*/ private: /*static*/ int /*__cdecl*/ FUBI_Inheritance(UIWindow* unk1); //0x004541d7
-	/*UITab*/ public: bool /*__thiscall*/ GetCheck(); //0x004541da
-	/*UITab*/ public: const gpbstring<char>& /*__thiscall*/ GetRadioGroup(); //0x004541e1
-	/*UITab*/ public: void /*__thiscall*/ SetCheck(bool unk1); //0x007824e0
-	/*UITab*/ public: void /*__thiscall*/ SetForceCheck(bool unk1); //0x00782580
-	/*UITab*/ public: void /*__thiscall*/ SetRadioGroup(const gpbstring<char>& unk1); //0x00454cda
+	DefineStaticMethod(FUBI_Inheritance, 0x4541d7, int, Params(UIWindow* unk1), Args(unk1));
+	DefineMethod(GetCheck, 0x4541da, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetRadioGroup, 0x4541e1, const gpbstring<char>&, NO_PARAMS, NO_ARGS);
+	DefineMethod(SetCheck, 0x7824e0, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetForceCheck, 0x782580, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetRadioGroup, 0x454cda, void, Params(const gpbstring<char>& unk1), Args(unk1));
 };

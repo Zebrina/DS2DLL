@@ -1,8 +1,10 @@
 #pragma once
 
-enum eAnimChore;
-enum eAnimEvent;
-enum eAnimStance;
+#include "Enums.h"
+#include "ResHandle.h"
+#include "ResHandleFields.h"
+
+#include "ClassMacros.h"
 
 class nema {
 public:
@@ -10,233 +12,239 @@ public:
 
 	};
 
-	ActiveBoneChore  {
+	class ActiveBoneChore  {
 	public:
-		/*nema::ActiveBoneChore*/ public: float /*__thiscall*/ BaseAnimDurationForStance(unsigned long unk1) const; //0x005750f0
-		/*nema::ActiveBoneChore*/ public: float /*__thiscall*/ SubAnimDurationForStance(unsigned long unk1, unsigned long unk2) const; //0x00574dd0
-		/*nema::ActiveBoneChore*/ public: int /*__thiscall*/ NumSubAnimsForStance(unsigned long unk1) const; //0x00574440
+		DefineConstMethod(BaseAnimDurationForStance, 0x5750f0, float, Params(unsigned long unk1), Args(unk1));
+		DefineConstMethod(SubAnimDurationForStance, 0x574dd0, float, Params(unsigned long unk1, unsigned long unk2), Args(unk1, unk2));
+		DefineConstMethod(NumSubAnimsForStance, 0x574440, int, Params(unsigned long unk1), Args(unk1));
 	};
 
 	class ActiveVertexChore {
 	public:
-		/*nema::ActiveVertexChore*/ public: float /*__thiscall*/ BaseAnimDurationForStance(unsigned long unk1) const; //0x005752c0
-		/*nema::ActiveVertexChore*/ public: float /*__thiscall*/ SubAnimDurationForStance(unsigned long unk1, unsigned long unk2) const; //0x00574e70
-		/*nema::ActiveVertexChore*/ public: int /*__thiscall*/ NumSubAnimsForStance(unsigned long unk1) const; //0x00574470
+		DefineConstMethod(BaseAnimDurationForStance, 0x5752c0, float, Params(unsigned long unk1), Args(unk1));
+		DefineConstMethod(SubAnimDurationForStance, 0x574e70, float, Params(unsigned long unk1, unsigned long unk2), Args(unk1, unk2));
+		DefineConstMethod(NumSubAnimsForStance, 0x574470, int, Params(unsigned long unk1), Args(unk1));
 	};
 
 	class Blender {
 	public:
-		/*nema::Blender*/ public: bool /*__thiscall*/ CreateDynamicAnimation(eAnimChore unk1, eAnimStance unk2, float unk3); //0x0056db50
-		/*nema::Blender*/ public: bool /*__thiscall*/ GetLoopAtEnd(eAnimChore unk1, eAnimStance unk2, unsigned long unk3); //0x0056c1a0
-		/*nema::Blender*/ public: bool /*__thiscall*/ GetLoopAtEnd(unsigned long unk1); //0x0044228d
-		/*nema::Blender*/ public: bool /*__thiscall*/ GetSubAnimsAreLoaded(eAnimChore unk1, eAnimStance unk2) const; //0x0056b3d0
-		/*nema::Blender*/ public: bool /*__thiscall*/ InitializeTimeWarpWithDynamicAnimation(eAnimChore unk1, eAnimStance unk2); //0x0056dd70
-		/*nema::Blender*/ public: bool /*__thiscall*/ IsIdle(); //0x004421cc
-		/*nema::Blender*/ public: bool /*__thiscall*/ UpdateTimeWarp(); //0x0056a3c0
-		/*nema::Blender*/ public: gpbstring<char> /*__thiscall*/ GetActiveAnimNames(); //0x0056d7c0
-		/*nema::Blender*/ public: const gpbstring<char>& /*__thiscall*/ GetAnimName(eAnimChore unk1, eAnimStance unk2, unsigned long unk3); //0x0056c1d0
-		/*nema::Blender*/ public: const gpbstring<char>& /*__thiscall*/ GetBlendedPRSDebugName(unsigned long unk1); //0x0056b780
-		/*nema::Blender*/ public: float /*__thiscall*/ DurationOfCurrentTimeWarp() const; //0x0056a3d0
-		/*nema::Blender*/ public: float /*__thiscall*/ GetBaseDuration() const; //0x0044223c
-		/*nema::Blender*/ public: float /*__thiscall*/ GetBaseDuration(eAnimChore unk1, eAnimStance unk2) const; //0x0056b5a0
-		/*nema::Blender*/ public: float /*__thiscall*/ GetBlendGroupAnimWeight(unsigned long unk1, unsigned long unk2); //0x004421c0
-		/*nema::Blender*/ public: float /*__thiscall*/ GetBlendGroupWeight(unsigned long unk1); //0x00442198
-		/*nema::Blender*/ public: float /*__thiscall*/ GetDuration(eAnimChore unk1, eAnimStance unk2, unsigned long unk3) const; //0x0056b550
-		/*nema::Blender*/ public: float /*__thiscall*/ GetDuration(unsigned long unk1) const; //0x0044221d
-		/*nema::Blender*/ public: float /*__thiscall*/ GetKeyEventTime(eAnimChore unk1, eAnimStance unk2, unsigned long unk3, unsigned long unk4, bool unk5) const; //0x0056c130
-		/*nema::Blender*/ public: float /*__thiscall*/ GetKeyEventTime(unsigned long unk1, unsigned long unk2, bool unk3) const; //0x00442268
-		/*nema::Blender*/ public: float /*__thiscall*/ GetScalarVelocity(eAnimChore unk1, eAnimStance unk2, unsigned long unk3) const; //0x0056b510
-		/*nema::Blender*/ public: float /*__thiscall*/ GetScalarVelocity(unsigned long unk1) const; //0x004421fe
-		/*nema::Blender*/ public: float /*__thiscall*/ TimeOfCurrentTimeWarp(); //0x0056cf60
-		/*nema::Blender*/ public: int /*__thiscall*/ GetMinDurationAnim() const; //0x00442252
-		/*nema::Blender*/ public: int /*__thiscall*/ GetMinDurationAnim(eAnimChore unk1, eAnimStance unk2) const; //0x0056b5e0
-		/*nema::Blender*/ public: int /*__thiscall*/ GetNumSubAnims() const; //0x004421d0
-		/*nema::Blender*/ public: int /*__thiscall*/ GetNumSubAnims(eAnimChore unk1, eAnimStance unk2) const; //0x0056b430
-		/*nema::Blender*/ public: int /*__thiscall*/ GetSubAnimIndex(eAnimChore unk1, unsigned long unk2) const; //0x0056b480
-		/*nema::Blender*/ public: int /*__thiscall*/ GetSubAnimIndex(unsigned long unk1) const; //0x004421e6
-		/*nema::Blender*/ public: unsigned long /*__thiscall*/ GetNumberOfEvents(eAnimEvent unk1) const; //0x0056a3f0
-		/*nema::Blender*/ public: unsigned long /*__thiscall*/ GetRecentEvents() const; //0x0056a3e0
-		/*nema::Blender*/ public: unsigned long /*__thiscall*/ NumActiveBoneAnims() const; //0x00442f4c
-		/*nema::Blender*/ public: unsigned long /*__thiscall*/ NumActiveVertexAnims() const; //0x00442f56
-		/*nema::Blender*/ public: unsigned long /*__thiscall*/ OpenBlendGroup(); //0x00442121
-		/*nema::Blender*/ public: void /*__thiscall*/ AddAnimToBlendGroup(unsigned long unk1, float unk2, bool unk3); //0x0056b7b0
-		/*nema::Blender*/ public: void /*__thiscall*/ AddAnimToBlendGroup(unsigned long unk1, float unk2); //0x00442166
-		/*nema::Blender*/ public: void /*__thiscall*/ CloseBlendGroup(); //0x0044212d
-		/*nema::Blender*/ public: void /*__thiscall*/ CloseBlendGroup(bool unk1); //0x00442139
-		/*nema::Blender*/ public: void /*__thiscall*/ CloseBlendGroupWithTransition(float unk1, bool unk2); //0x0044214c
-		/*nema::Blender*/ public: void /*__thiscall*/ ResetTimeWarp(); //0x00445c61
-		/*nema::Blender*/ public: void /*__thiscall*/ SetBlendGroupAnimWeight(unsigned long unk1, unsigned long unk2, float unk3); //0x004421a4
-		/*nema::Blender*/ public: void /*__thiscall*/ SetBlendGroupWeight(unsigned long unk1, float unk2); //0x0044217e
+		DefineMethod(CreateDynamicAnimation, 0x56db50, bool, Params(eAnimChore unk1, eAnimStance unk2, float unk3), Args(unk1, unk2, unk3));
+		DefineMethod(GetLoopAtEnd, 0x56c1a0, bool, Params(eAnimChore unk1, eAnimStance unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+		DefineMethod(GetLoopAtEnd, 0x44228d, bool, Params(unsigned long unk1), Args(unk1));
+		DefineConstMethod(GetSubAnimsAreLoaded, 0x56b3d0, bool, Params(eAnimChore unk1, eAnimStance unk2), Args(unk1, unk2));
+		DefineMethod(InitializeTimeWarpWithDynamicAnimation, 0x56dd70, bool, Params(eAnimChore unk1, eAnimStance unk2), Args(unk1, unk2));
+		DefineMethod(IsIdle, 0x4421cc, bool, NO_PARAMS, NO_ARGS);
+		DefineMethod(UpdateTimeWarp, 0x56a3c0, bool, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetActiveAnimNames, 0x56d7c0, gpbstring<char>, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetAnimName, 0x56c1d0, const gpbstring<char>&, Params(eAnimChore unk1, eAnimStance unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+		DefineConstMethod(GetBlendedPRSDebugName, 0x56b780, const gpbstring<char>&, Params(unsigned long unk1), Args(unk1));
+		DefineConstMethod(DurationOfCurrentTimeWarp, 0x56a3d0, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetBaseDuration, 0x44223c, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetBaseDuration, 0x56b5a0, float, Params(eAnimChore unk1, eAnimStance unk2), Args(unk1, unk2));
+		DefineMethod(GetBlendGroupAnimWeight, 0x4421c0, float, Params(unsigned long unk1, unsigned long unk2), Args(unk1, unk2));
+		DefineMethod(GetBlendGroupWeight, 0x442198, float, Params(unsigned long unk1), Args(unk1));
+		DefineConstMethod(GetDuration, 0x56b550, float, Params(eAnimChore unk1, eAnimStance unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+		DefineConstMethod(GetDuration, 0x44221d, float, Params(unsigned long unk1), Args(unk1));
+		DefineConstMethod(GetKeyEventTime, 0x56c130, float, Params(eAnimChore unk1, eAnimStance unk2, unsigned long unk3, unsigned long unk4, bool unk5), Args(unk1, unk2, unk3, unk4, unk5));
+		DefineConstMethod(GetKeyEventTime, 0x442268, float, Params(unsigned long unk1, unsigned long unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineConstMethod(GetScalarVelocity, 0x56b510, float, Params(eAnimChore unk1, eAnimStance unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+		DefineConstMethod(GetScalarVelocity, 0x4421fe, float, Params(unsigned long unk1), Args(unk1));
+		DefineMethod(TimeOfCurrentTimeWarp, 0x56cf60, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetMinDurationAnim, 0x442252, int, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetMinDurationAnim, 0x56b5e0, int, Params(eAnimChore unk1, eAnimStance unk2), Args(unk1, unk2));
+		DefineConstMethod(GetNumSubAnims, 0x4421d0, int, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetNumSubAnims, 0x56b430, int, Params(eAnimChore unk1, eAnimStance unk2), Args(unk1, unk2));
+		DefineConstMethod(GetSubAnimIndex, 0x56b480, int, Params(eAnimChore unk1, unsigned long unk2), Args(unk1, unk2));
+		DefineConstMethod(GetSubAnimIndex, 0x4421e6, int, Params(unsigned long unk1), Args(unk1));
+		DefineConstMethod(GetNumberOfEvents, 0x56a3f0, unsigned long, Params(eAnimEvent unk1), Args(unk1));
+		DefineConstMethod(GetRecentEvents, 0x56a3e0, unsigned long, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(NumActiveBoneAnims, 0x442f4c, unsigned long, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(NumActiveVertexAnims, 0x442f56, unsigned long, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(OpenBlendGroup, 0x442121, unsigned long, NO_PARAMS, NO_ARGS);
+		DefineMethod(AddAnimToBlendGroup, 0x56b7b0, void, Params(unsigned long unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(AddAnimToBlendGroup, 0x442166, void, Params(unsigned long unk1, float unk2), Args(unk1, unk2));
+		DefineMethod(CloseBlendGroup, 0x44212d, void, NO_PARAMS, NO_ARGS);
+		DefineMethod(CloseBlendGroup, 0x442139, void, Params(bool unk1), Args(unk1));
+		DefineMethod(CloseBlendGroupWithTransition, 0x44214c, void, Params(float unk1, bool unk2), Args(unk1, unk2));
+		DefineMethod(ResetTimeWarp, 0x445c61, void, NO_PARAMS, NO_ARGS);
+		DefineMethod(SetBlendGroupAnimWeight, 0x4421a4, void, Params(unsigned long unk1, unsigned long unk2, float unk3), Args(unk1, unk2, unk3));
+		DefineMethod(SetBlendGroupWeight, 0x44217e, void, Params(unsigned long unk1, float unk2), Args(unk1, unk2));
 	};
 
 	class Aspect {
 	public:
-		/*nema::Aspect*/ private: /*static*/ bool /*__cdecl*/ FUBI_DoesHandleMgrExist(); //0x0054bdb0
-		/*nema::Aspect*/ private: /*static*/ bool /*__cdecl*/ FUBI_HandleIsValid(ResHandle<Aspect, ResHandleFields<24> > unk1); //0x0054eb60
-		/*nema::Aspect*/ private: /*static*/ Aspect* /*__cdecl*/ FUBI_HandleGet(ResHandle<Aspect, ResHandleFields<24> > unk1); //0x0054ced0
-		/*nema::Aspect*/ private: /*static*/ unsigned int /*__cdecl*/ FUBI_HandleAddRef(ResHandle<Aspect, ResHandleFields<24> > unk1); //0x0054eb40
-		/*nema::Aspect*/ private: /*static*/ unsigned int /*__cdecl*/ FUBI_HandleRelease(ResHandle<Aspect, ResHandleFields<24> > unk1); //0x0055cfc0
-		/*nema::Aspect*/ public: bool /*__thiscall*/ AttachDeformableChild(ResHandle<Aspect, ResHandleFields<24> > unk1, const Quat& unk2, const vector_3& unk3); //0x0055ba90
-		/*nema::Aspect*/ public: bool /*__thiscall*/ AttachDeformableChild(ResHandle<Aspect, ResHandleFields<24> > unk1); //0x004285b5
-		/*nema::Aspect*/ public: bool /*__thiscall*/ AttachReverseLinkedChild(ResHandle<Aspect, ResHandleFields<24> > unk1, const char* unk2, const char* unk3, const Quat& unk4, const vector_3& unk5); //0x0055b730
-		/*nema::Aspect*/ public: bool /*__thiscall*/ AttachReverseLinkedChild(ResHandle<Aspect, ResHandleFields<24> > unk1, const char* unk2, const char* unk3); //0x00428596
-		/*nema::Aspect*/ public: bool /*__thiscall*/ AttachRigidLinkedChild(ResHandle<Aspect, ResHandleFields<24> > unk1, const char* unk2, const char* unk3, const Quat& unk4, const vector_3& unk5); //0x00428558
-		/*nema::Aspect*/ public: bool /*__thiscall*/ AttachRigidLinkedChild(ResHandle<Aspect, ResHandleFields<24> > unk1, const char* unk2, const char* unk3); //0x00428575
-		/*nema::Aspect*/ public: bool /*__thiscall*/ BlenderIsIdle(); //0x0054a340
-		/*nema::Aspect*/ public: bool /*__thiscall*/ DetachAllChildren(); //0x0055bd10
-		/*nema::Aspect*/ public: bool /*__thiscall*/ DetachChild(ResHandle<Aspect, ResHandleFields<24> > unk1); //0x0055c000
-		/*nema::Aspect*/ public: bool /*__thiscall*/ GetBoneOrientation(const char* unk1, vector_3& unk2, Quat& unk3) const; //0x0054a6c0
-		/*nema::Aspect*/ public: bool /*__thiscall*/ GetChoreWasRepeated(); //0x0042889b
-		/*nema::Aspect*/ public: bool /*__thiscall*/ GetFreezeMeshFlag(); //0x0042879e
-		/*nema::Aspect*/ public: bool /*__thiscall*/ GetHideMeshFlag(); //0x00428795
-		/*nema::Aspect*/ public: bool /*__thiscall*/ GetIndexedBoneOrientation(int unk1, vector_3& unk2, Quat& unk3) const; //0x0054aa90
-		/*nema::Aspect*/ public: bool /*__thiscall*/ GetIndexedBonePosition(int unk1, vector_3& unk2) const; //0x0054ae80
-		/*nema::Aspect*/ public: bool /*__thiscall*/ GetIndexedCornerPosNorm(unsigned long unk1, unsigned long unk2, vector_3& unk3, vector_3& unk4) const; //0x005473d0
-		/*nema::Aspect*/ public: bool /*__thiscall*/ GetLockMeshFlag(); //0x004287b9
-		/*nema::Aspect*/ public: bool /*__thiscall*/ GetPrimaryBoneOrientation(vector_3& unk1, Quat& unk2) const; //0x0054acb0
-		/*nema::Aspect*/ public: bool /*__thiscall*/ GetRenderTracersFlag(); //0x004287a8
-		/*nema::Aspect*/ public: bool /*__thiscall*/ GetStandardBoneAnimationSendEvents(); //0x00428805
-		/*nema::Aspect*/ public: bool /*__thiscall*/ GetUsingCombatStance() const; //0x004287df
-		/*nema::Aspect*/ public: bool /*__thiscall*/ HasBlender() const; //0x00428818
-		/*nema::Aspect*/ public: Blender* /*__thiscall*/ GetBlender(); //0x00428824
-		/*nema::Aspect*/ public: Blender* /*__thiscall*/ GetOrCreateBlender(); //0x00546c50
-		/*nema::Aspect*/ public: ResHandle<Aspect, ResHandleFields<24> > /*__thiscall*/ GetChild(unsigned long unk1); //0x0054ce40
-		/*nema::Aspect*/ public: ResHandle<Aspect, ResHandleFields<24> > /*__thiscall*/ GetChildByDebugName(const gpbstring<char>& unk1); //0x00550b60
-		/*nema::Aspect*/ public: ResHandle<Aspect, ResHandleFields<24> > /*__thiscall*/ GetParent(); //0x00550b00
-		/*nema::Aspect*/ public: const char* /*__thiscall*/ GetDebugName() const; //0x0042b23f
-		/*nema::Aspect*/ public: const gpbstring<char>& /*__thiscall*/ GetDebugNameString() const; //0x0042854a
-		/*nema::Aspect*/ public: const Goid_* /*__thiscall*/ GetGoid() const; //0x0042854e
-		/*nema::Aspect*/ public: const Quat& /*__thiscall*/ GetLinkOffsetRotation() const; //0x004285ec
-		/*nema::Aspect*/ public: const vector_3& /*__thiscall*/ GetLinkOffsetPosition() const; //0x004285ce
-		/*nema::Aspect*/ public: eAnimChore /*__thiscall*/ GetCurrentChore() const; //0x00428855
-		/*nema::Aspect*/ public: eAnimChore /*__thiscall*/ GetNextChore() const; //0x00428878
-		/*nema::Aspect*/ public: eAnimChore /*__thiscall*/ GetPreviousChore() const; //0x0042882b
-		/*nema::Aspect*/ public: eAnimStance /*__thiscall*/ GetChoreStance(); //0x00428811
-		/*nema::Aspect*/ public: eAnimStance /*__thiscall*/ GetCurrentStance() const; //0x0042885c
-		/*nema::Aspect*/ public: eAnimStance /*__thiscall*/ GetNextStance() const; //0x0042887f
-		/*nema::Aspect*/ public: eAnimStance /*__thiscall*/ GetPreviousStance() const; //0x00428832
-		/*nema::Aspect*/ public: float /*__thiscall*/ GetCurrentAnimSpeed() const; //0x00428871
-		/*nema::Aspect*/ public: float /*__thiscall*/ GetCurrentVelocity() const; //0x004288be
-		/*nema::Aspect*/ public: float /*__thiscall*/ GetMeshPuffDistance(); //0x004287b2
-		/*nema::Aspect*/ public: float /*__thiscall*/ GetNextAnimSpeed() const; //0x00428894
-		/*nema::Aspect*/ public: float /*__thiscall*/ GetPreviousAnimSpeed() const; //0x00428847
-		/*nema::Aspect*/ public: int /*__thiscall*/ GetBoneIndex(const gpbstring<char>& unk1) const; //0x0054e820
-		/*nema::Aspect*/ public: int /*__thiscall*/ GetCurrentFlags() const; //0x0042886a
-		/*nema::Aspect*/ public: int /*__thiscall*/ GetCurrentSubAnim() const; //0x00428863
-		/*nema::Aspect*/ public: int /*__thiscall*/ GetNextFlags() const; //0x0042888d
-		/*nema::Aspect*/ public: int /*__thiscall*/ GetNextSubAnim() const; //0x00428886
-		/*nema::Aspect*/ public: int /*__thiscall*/ GetNumberOfChildren(); //0x00429e48
-		/*nema::Aspect*/ public: int /*__thiscall*/ GetNumCorners(unsigned long unk1); //0x004285fc
-		/*nema::Aspect*/ public: int /*__thiscall*/ GetPreviousFlags() const; //0x00428840
-		/*nema::Aspect*/ public: int /*__thiscall*/ GetPreviousSubAnim() const; //0x00428839
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ GetBoneFrozenState(const char* unk1) const; //0x00547b10
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ GetCurrentReqBlock() const; //0x0042884e
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ GetDiffuseColor(); //0x0042874a
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ GetHandleValue(); //0x0042ccc4
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ GetIndexedBoneFrozenState(unsigned long unk1) const; //0x00547b50
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ GetInstanceAttrFlags(); //0x00428767
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ GetNumBones() const; //0x00428617
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ GetNumSubTextures(); //0x00428552
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ GetRecentBlenderEvents() const; //0x00546c90
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ GetSharedAttrFlags(); //0x00428761
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ SetBoneFrozenState(const char* unk1, nema::eBoneFreeze unk2, bool unk3); //0x0055e900
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ SetIndexedBoneFrozenState(unsigned long unk1, nema::eBoneFreeze unk2, bool unk3); //0x0055ea10
-		/*nema::Aspect*/ public: unsigned long /*__thiscall*/ UpdateBlender(float unk1); //0x00547b80
-		/*nema::Aspect*/ public: void /*__thiscall*/ AnimationCallback(unsigned long unk1); //0x0054a310
-		/*nema::Aspect*/ public: void /*__thiscall*/ ClearInstanceAttrFlags(unsigned long unk1); //0x0042877f
-		/*nema::Aspect*/ public: void /*__thiscall*/ ForceDeformation(bool unk1); //0x00560c60
-		/*nema::Aspect*/ public: void /*__thiscall*/ HideSubMesh(int unk1); //0x00546bf0
-		/*nema::Aspect*/ public: void /*__thiscall*/ PopTexture(unsigned long unk1); //0x0054fab0
-		/*nema::Aspect*/ public: void /*__thiscall*/ PushTexture(unsigned long unk1); //0x0055b0a0
-		/*nema::Aspect*/ public: void /*__thiscall*/ ReloadBlenderSkrits(); //0x00547ba0
-		/*nema::Aspect*/ public: void /*__thiscall*/ RequestDeformation(); //0x0042873d
-		/*nema::Aspect*/ public: void /*__thiscall*/ ResetBlender(); //0x00560cb0
-		/*nema::Aspect*/ public: void /*__thiscall*/ RotateBoneX(const char* unk1, float unk2, bool unk3); //0x00547570
-		/*nema::Aspect*/ public: void /*__thiscall*/ RotateBoneX(const char* unk1, float unk2); //0x0042861d
-		/*nema::Aspect*/ public: void /*__thiscall*/ RotateBoneY(const char* unk1, float unk2, bool unk3); //0x005475f0
-		/*nema::Aspect*/ public: void /*__thiscall*/ RotateBoneY(const char* unk1, float unk2); //0x00428635
-		/*nema::Aspect*/ public: void /*__thiscall*/ RotateBoneZ(const char* unk1, float unk2, bool unk3); //0x00547670
-		/*nema::Aspect*/ public: void /*__thiscall*/ RotateBoneZ(const char* unk1, float unk2); //0x0042864d
-		/*nema::Aspect*/ public: void /*__thiscall*/ RotateIndexedBoneX(int unk1, float unk2, bool unk3); //0x00547870
-		/*nema::Aspect*/ public: void /*__thiscall*/ RotateIndexedBoneX(int unk1, float unk2); //0x004286ad
-		/*nema::Aspect*/ public: void /*__thiscall*/ RotateIndexedBoneY(int unk1, float unk2, bool unk3); //0x005478e0
-		/*nema::Aspect*/ public: void /*__thiscall*/ RotateIndexedBoneY(int unk1, float unk2); //0x004286c5
-		/*nema::Aspect*/ public: void /*__thiscall*/ RotateIndexedBoneZ(int unk1, float unk2, bool unk3); //0x00547950
-		/*nema::Aspect*/ public: void /*__thiscall*/ RotateIndexedBoneZ(int unk1, float unk2); //0x004286dd
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetDiffuseColor(unsigned long unk1); //0x00428751
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetFreezeMeshFlag(bool unk1); //0x00560370
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetHideMeshFlag(bool unk1); //0x0054fda0
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetInstanceAttrFlags(unsigned long unk1); //0x0042876b
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetLinkOffsetPosition(const vector_3& unk1); //0x004285d5
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetLinkOffsetRotation(const Quat& unk1); //0x004285f0
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetLockMeshFlag(bool unk1); //0x005604d0
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetMeshPuffDistance(float unk1); //0x00560610
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetRenderTracersFlag(bool unk1); //0x00546bc0
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetStandardBoneAnimationSendEvents(bool unk1); //0x004287eb
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetTextureFromTextureName(unsigned long unk1, const char* unk2); //0x00555580
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetupStandardBoneAnimation(bool unk1, int unk2, bool unk3, bool unk4, bool unk5); //0x0055e230
-		/*nema::Aspect*/ public: void /*__thiscall*/ SetUsingCombatStance(bool unk1); //0x004287c5
-		/*nema::Aspect*/ public: void /*__thiscall*/ ShowSubMesh(int unk1); //0x00546c20
-		/*nema::Aspect*/ public: void /*__thiscall*/ TranslateBoneX(const char* unk1, float unk2, bool unk3); //0x005476f0
-		/*nema::Aspect*/ public: void /*__thiscall*/ TranslateBoneX(const char* unk1, float unk2); //0x00428665
-		/*nema::Aspect*/ public: void /*__thiscall*/ TranslateBoneY(const char* unk1, float unk2, bool unk3); //0x00547770
-		/*nema::Aspect*/ public: void /*__thiscall*/ TranslateBoneY(const char* unk1, float unk2); //0x0042867d
-		/*nema::Aspect*/ public: void /*__thiscall*/ TranslateBoneZ(const char* unk1, float unk2, bool unk3); //0x005477f0
-		/*nema::Aspect*/ public: void /*__thiscall*/ TranslateBoneZ(const char* unk1, float unk2); //0x00428695
-		/*nema::Aspect*/ public: void /*__thiscall*/ TranslateIndexedBoneX(int unk1, float unk2, bool unk3); //0x005479c0
-		/*nema::Aspect*/ public: void /*__thiscall*/ TranslateIndexedBoneX(int unk1, float unk2); //0x004286f5
-		/*nema::Aspect*/ public: void /*__thiscall*/ TranslateIndexedBoneY(int unk1, float unk2, bool unk3); //0x00547a30
-		/*nema::Aspect*/ public: void /*__thiscall*/ TranslateIndexedBoneY(int unk1, float unk2); //0x0042870d
-		/*nema::Aspect*/ public: void /*__thiscall*/ TranslateIndexedBoneZ(int unk1, float unk2, bool unk3); //0x00547aa0
-		/*nema::Aspect*/ public: void /*__thiscall*/ TranslateIndexedBoneZ(int unk1, float unk2); //0x00428725
+		typedef ResHandle<Aspect, ResHandleFields<24>> ResHandle;
+
+		DefineStaticMethod(FUBI_DoesHandleMgrExist, 0x54bdb0, bool, NO_PARAMS, NO_ARGS);
+		DefineStaticMethod(FUBI_HandleIsValid, 0x54eb60, bool, Params(ResHandle unk1), Args(unk1));
+		DefineStaticMethod(FUBI_HandleGet, 0x54ced0, Aspect*, Params(ResHandle unk1), Args(unk1));
+		DefineStaticMethod(FUBI_HandleAddRef, 0x54eb40, unsigned int, Params(ResHandle unk1), Args(unk1));
+		DefineStaticMethod(FUBI_HandleRelease, 0x55cfc0, unsigned int, Params(ResHandle unk1), Args(unk1));
+		DefineMethod(AttachDeformableChild, 0x55ba90, bool, Params(ResHandle unk1, const Quat& unk2, const vector_3& unk3), Args(unk1, unk2, unk3));
+		DefineMethod(AttachDeformableChild, 0x4285b5, bool, Params(ResHandle unk1), Args(unk1));
+		DefineMethod(AttachReverseLinkedChild, 0x55b730, bool, Params(ResHandle unk1, const char* unk2, const char* unk3, const Quat& unk4, const vector_3& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+		DefineMethod(AttachReverseLinkedChild, 0x428596, bool, Params(ResHandle unk1, const char* unk2, const char* unk3), Args(unk1, unk2, unk3));
+		DefineMethod(AttachRigidLinkedChild, 0x428558, bool, Params(ResHandle unk1, const char* unk2, const char* unk3, const Quat& unk4, const vector_3& unk5), Args(unk1, unk2, unk3, unk4, unk5));
+		DefineMethod(AttachRigidLinkedChild, 0x428575, bool, Params(ResHandle unk1, const char* unk2, const char* unk3), Args(unk1, unk2, unk3));
+		DefineMethod(BlenderIsIdle, 0x54a340, bool, NO_PARAMS, NO_ARGS);
+		DefineMethod(DetachAllChildren, 0x55bd10, bool, NO_PARAMS, NO_ARGS);
+		DefineMethod(DetachChild, 0x55c000, bool, Params(ResHandle unk1), Args(unk1));
+		DefineConstMethod(GetBoneOrientation, 0x54a6c0, bool, Params(const char* unk1, vector_3& unk2, Quat& unk3), Args(unk1, unk2, unk3));
+		DefineMethod(GetChoreWasRepeated, 0x42889b, bool, NO_PARAMS, NO_ARGS);
+		DefineMethod(GetFreezeMeshFlag, 0x42879e, bool, NO_PARAMS, NO_ARGS);
+		DefineMethod(GetHideMeshFlag, 0x428795, bool, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetIndexedBoneOrientation, 0x54aa90, bool, Params(int unk1, vector_3& unk2, Quat& unk3), Args(unk1, unk2, unk3));
+		DefineConstMethod(GetIndexedBonePosition, 0x54ae80, bool, Params(int unk1, vector_3& unk2), Args(unk1, unk2));
+		DefineConstMethod(GetIndexedCornerPosNorm, 0x5473d0, bool, Params(unsigned long unk1, unsigned long unk2, vector_3& unk3, vector_3& unk4), Args(unk1, unk2, unk3, unk4));
+		DefineMethod(GetLockMeshFlag, 0x4287b9, bool, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetPrimaryBoneOrientation, 0x54acb0, bool, Params(vector_3& unk1, Quat& unk2), Args(unk1, unk2));
+		DefineMethod(GetRenderTracersFlag, 0x4287a8, bool, NO_PARAMS, NO_ARGS);
+		DefineMethod(GetStandardBoneAnimationSendEvents, 0x428805, bool, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetUsingCombatStance, 0x4287df, bool, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(HasBlender, 0x428818, bool, NO_PARAMS, NO_ARGS);
+		DefineMethod(GetBlender, 0x428824, Blender*, NO_PARAMS, NO_ARGS);
+		DefineMethod(GetOrCreateBlender, 0x546c50, Blender*, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetChild, 0x54ce40, ResHandle, Params(unsigned long unk1), Args(unk1));
+		DefineConstMethod(GetChildByDebugName, 0x550b60, ResHandle, Params(const gpbstring<char>& unk1), Args(unk1));
+		DefineConstMethod(GetParent, 0x550b00, ResHandle, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetDebugName, 0x42b23f, const char*, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetDebugNameString, 0x42854a, const gpbstring<char>&, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetGoid, 0x42854e, const Goid_*, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetLinkOffsetRotation, 0x4285ec, const Quat&, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetLinkOffsetPosition, 0x4285ce, const vector_3&, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetCurrentChore, 0x428855, eAnimChore, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetNextChore, 0x428878, eAnimChore, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetPreviousChore, 0x42882b, eAnimChore, NO_PARAMS, NO_ARGS);
+		DefineMethod(GetChoreStance, 0x428811, eAnimStance, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetCurrentStance, 0x42885c, eAnimStance, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetNextStance, 0x42887f, eAnimStance, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetPreviousStance, 0x428832, eAnimStance, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetCurrentAnimSpeed, 0x428871, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetCurrentVelocity, 0x4288be, float, NO_PARAMS, NO_ARGS);
+		DefineMethod(GetMeshPuffDistance, 0x4287b2, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetNextAnimSpeed, 0x428894, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetPreviousAnimSpeed, 0x428847, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetBoneIndex, 0x54e820, int, Params(const gpbstring<char>& unk1), Args(unk1));
+		DefineConstMethod(GetCurrentFlags, 0x42886a, int, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetCurrentSubAnim, 0x428863, int, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetNextFlags, 0x42888d, int, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetNextSubAnim, 0x428886, int, NO_PARAMS, NO_ARGS);
+		DefineMethod(GetNumberOfChildren, 0x429e48, int, NO_PARAMS, NO_ARGS);
+		DefineMethod(GetNumCorners, 0x4285fc, int, Params(unsigned long unk1), Args(unk1));
+		DefineConstMethod(GetPreviousFlags, 0x428840, int, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetPreviousSubAnim, 0x428839, int, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetBoneFrozenState, 0x547b10, unsigned long, Params(const char* unk1), Args(unk1));
+		DefineConstMethod(GetCurrentReqBlock, 0x42884e, unsigned long, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetDiffuseColor, 0x42874a, unsigned long, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetHandleValue, 0x42ccc4, unsigned long, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetIndexedBoneFrozenState, 0x547b50, unsigned long, Params(unsigned long unk1), Args(unk1));
+		DefineConstMethod(GetInstanceAttrFlags, 0x428767, unsigned long, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetNumBones, 0x428617, unsigned long, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetNumSubTextures, 0x428552, unsigned long, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetRecentBlenderEvents, 0x546c90, unsigned long, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetSharedAttrFlags, 0x428761, unsigned long, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(SetBoneFrozenState, 0x55e900, unsigned long, Params(const char* unk1, nema::eBoneFreeze unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineConstMethod(SetIndexedBoneFrozenState, 0x55ea10, unsigned long, Params(unsigned long unk1, nema::eBoneFreeze unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineConstMethod(UpdateBlender, 0x547b80, unsigned long, Params(float unk1), Args(unk1));
+		DefineMethod(AnimationCallback, 0x54a310, void, Params(unsigned long unk1), Args(unk1));
+		DefineMethod(ClearInstanceAttrFlags, 0x42877f, void, Params(unsigned long unk1), Args(unk1));
+		DefineMethod(ForceDeformation, 0x560c60, void, Params(bool unk1), Args(unk1));
+		DefineMethod(HideSubMesh, 0x546bf0, void, Params(int unk1), Args(unk1));
+		DefineMethod(PopTexture, 0x54fab0, void, Params(unsigned long unk1), Args(unk1));
+		DefineMethod(PushTexture, 0x55b0a0, void, Params(unsigned long unk1), Args(unk1));
+		DefineMethod(ReloadBlenderSkrits, 0x547ba0, void, NO_PARAMS, NO_ARGS);
+		DefineMethod(RequestDeformation, 0x42873d, void, NO_PARAMS, NO_ARGS);
+		DefineMethod(ResetBlender, 0x560cb0, void, NO_PARAMS, NO_ARGS);
+		DefineMethod(RotateBoneX, 0x547570, void, Params(const char* unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(RotateBoneX, 0x42861d, void, Params(const char* unk1, float unk2), Args(unk1, unk2));
+		DefineMethod(RotateBoneY, 0x5475f0, void, Params(const char* unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(RotateBoneY, 0x428635, void, Params(const char* unk1, float unk2), Args(unk1, unk2));
+		DefineMethod(RotateBoneZ, 0x547670, void, Params(const char* unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(RotateBoneZ, 0x42864d, void, Params(const char* unk1, float unk2), Args(unk1, unk2));
+		DefineMethod(RotateIndexedBoneX, 0x547870, void, Params(int unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(RotateIndexedBoneX, 0x4286ad, void, Params(int unk1, float unk2), Args(unk1, unk2));
+		DefineMethod(RotateIndexedBoneY, 0x5478e0, void, Params(int unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(RotateIndexedBoneY, 0x4286c5, void, Params(int unk1, float unk2), Args(unk1, unk2));
+		DefineMethod(RotateIndexedBoneZ, 0x547950, void, Params(int unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(RotateIndexedBoneZ, 0x4286dd, void, Params(int unk1, float unk2), Args(unk1, unk2));
+		DefineMethod(SetDiffuseColor, 0x428751, void, Params(unsigned long unk1), Args(unk1));
+		DefineMethod(SetFreezeMeshFlag, 0x560370, void, Params(bool unk1), Args(unk1));
+		DefineMethod(SetHideMeshFlag, 0x54fda0, void, Params(bool unk1), Args(unk1));
+		DefineMethod(SetInstanceAttrFlags, 0x42876b, void, Params(unsigned long unk1), Args(unk1));
+		DefineMethod(SetLinkOffsetPosition, 0x4285d5, void, Params(const vector_3& unk1), Args(unk1));
+		DefineMethod(SetLinkOffsetRotation, 0x4285f0, void, Params(const Quat& unk1), Args(unk1));
+		DefineMethod(SetLockMeshFlag, 0x5604d0, void, Params(bool unk1), Args(unk1));
+		DefineMethod(SetMeshPuffDistance, 0x560610, void, Params(float unk1), Args(unk1));
+		DefineMethod(SetRenderTracersFlag, 0x546bc0, void, Params(bool unk1), Args(unk1));
+		DefineMethod(SetStandardBoneAnimationSendEvents, 0x4287eb, void, Params(bool unk1), Args(unk1));
+		DefineMethod(SetTextureFromTextureName, 0x555580, void, Params(unsigned long unk1, const char* unk2), Args(unk1, unk2));
+		DefineMethod(SetupStandardBoneAnimation, 0x55e230, void, Params(bool unk1, int unk2, bool unk3, bool unk4, bool unk5), Args(unk1, unk2, unk3, unk4, unk5));
+		DefineMethod(SetUsingCombatStance, 0x4287c5, void, Params(bool unk1), Args(unk1));
+		DefineMethod(ShowSubMesh, 0x546c20, void, Params(int unk1), Args(unk1));
+		DefineMethod(TranslateBoneX, 0x5476f0, void, Params(const char* unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(TranslateBoneX, 0x428665, void, Params(const char* unk1, float unk2), Args(unk1, unk2));
+		DefineMethod(TranslateBoneY, 0x547770, void, Params(const char* unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(TranslateBoneY, 0x42867d, void, Params(const char* unk1, float unk2), Args(unk1, unk2));
+		DefineMethod(TranslateBoneZ, 0x5477f0, void, Params(const char* unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(TranslateBoneZ, 0x428695, void, Params(const char* unk1, float unk2), Args(unk1, unk2));
+		DefineMethod(TranslateIndexedBoneX, 0x5479c0, void, Params(int unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(TranslateIndexedBoneX, 0x4286f5, void, Params(int unk1, float unk2), Args(unk1, unk2));
+		DefineMethod(TranslateIndexedBoneY, 0x547a30, void, Params(int unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(TranslateIndexedBoneY, 0x42870d, void, Params(int unk1, float unk2), Args(unk1, unk2));
+		DefineMethod(TranslateIndexedBoneZ, 0x547aa0, void, Params(int unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+		DefineMethod(TranslateIndexedBoneZ, 0x428725, void, Params(int unk1, float unk2), Args(unk1, unk2));
 	};
 
 	class BlendGroup {
 	public:
-		/*nema::BlendGroup*/ public: bool /*__thiscall*/ AddToGroup(Blender* unk1, unsigned long unk2, unsigned long unk3, unsigned long unk4, float unk5, bool unk6); //0x00564db0
+		DefineMethod(AddToGroup, 0x564db0, bool, Params(Blender* unk1, unsigned long unk2, unsigned long unk3, unsigned long unk4, float unk5, bool unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
 	};
 
 	class FrameKeys {
 	public:
-		/*nema::FrameKeys*/ private: /*static*/ bool /*__cdecl*/ FUBI_DoesHandleMgrExist(); //0x00442f40
-		/*nema::FrameKeys*/ private: /*static*/ bool /*__cdecl*/ FUBI_HandleIsValid(ResHandle<FrameKeys, ResHandleFields16> unk1); //0x00443d03
-		/*nema::FrameKeys*/ private: /*static*/ FrameKeys* /*__cdecl*/ FUBI_HandleGet(ResHandle<FrameKeys, ResHandleFields16> unk1); //0x00443d16
-		/*nema::FrameKeys*/ private: /*static*/ unsigned int /*__cdecl*/ FUBI_HandleAddRef(ResHandle<FrameKeys, ResHandleFields16> unk1); //0x00443cf0
-		/*nema::FrameKeys*/ private: /*static*/ unsigned int /*__cdecl*/ FUBI_HandleRelease(ResHandle<FrameKeys, ResHandleFields16> unk1); //0x0044374f
-		/*nema::FrameKeys*/ public: bool /*__thiscall*/ GetLoopAtEnd() const; //0x004420fd
-		/*nema::FrameKeys*/ public: bool /*__thiscall*/ Update(Aspect* unk1, float unk2); //0x0056e970
-		/*nema::FrameKeys*/ public: const char* /*__thiscall*/ GetDebugName() const; //0x0044374b
-		/*nema::FrameKeys*/ public: const gpbstring<char>& /*__thiscall*/ GetDebugNameString() const; //0x004420f1
-		/*nema::FrameKeys*/ public: float /*__thiscall*/ GetBlendWeight() const; //0x004420f9
-		/*nema::FrameKeys*/ public: float /*__thiscall*/ GetDuration() const; //0x00442103
-		/*nema::FrameKeys*/ public: float /*__thiscall*/ GetNormalizedTime() const; //0x004420f5
+		typedef ResHandle<FrameKeys, ResHandleFields<16>> ResHandle;
+
+		DefineStaticMethod(FUBI_DoesHandleMgrExist, 0x442f40, bool, NO_PARAMS, NO_ARGS);
+		DefineStaticMethod(FUBI_HandleIsValid, 0x443d03, bool, Params(ResHandle unk1), Args(unk1));
+		DefineStaticMethod(FUBI_HandleGet, 0x443d16, FrameKeys*, Params(ResHandle unk1), Args(unk1));
+		DefineStaticMethod(FUBI_HandleAddRef, 0x443cf0, unsigned int, Params(ResHandle unk1), Args(unk1));
+		DefineStaticMethod(FUBI_HandleRelease, 0x044374f, unsigned int, Params(ResHandle unk1), Args(unk1));
+		DefineConstMethod(GetLoopAtEnd, 0x4420fd, bool, NO_PARAMS, NO_ARGS);
+		DefineMethod(Update, 0x56e970, bool, Params(Aspect* unk1, float unk2), Args(unk1, unk2));
+		DefineConstMethod(GetDebugName, 0x44374b, const char*, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetDebugNameString, 0x4420f1, const gpbstring<char>&, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetBlendWeight, 0x4420f9, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetDuration, 0x442103, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetNormalizedTime, 0x4420f5, float, NO_PARAMS, NO_ARGS);
 	};
 
 	class PRSKeys {
 	public:
-		/*nema::PRSKeys*/ private: /*static*/ bool /*__cdecl*/ FUBI_DoesHandleMgrExist(); //0x00442f34
-		/*nema::PRSKeys*/ private: /*static*/ bool /*__cdecl*/ FUBI_HandleIsValid(ResHandle<PRSKeys, ResHandleFields16> unk1); //0x00443cca
-		/*nema::PRSKeys*/ private: /*static*/ PRSKeys* /*__cdecl*/ FUBI_HandleGet(ResHandle<PRSKeys, ResHandleFields16> unk1); //0x00443cdd
-		/*nema::PRSKeys*/ private: /*static*/ unsigned int /*__cdecl*/ FUBI_HandleAddRef(ResHandle<PRSKeys, ResHandleFields16> unk1); //0x00443cb7
-		/*nema::PRSKeys*/ private: /*static*/ unsigned int /*__cdecl*/ FUBI_HandleRelease(ResHandle<PRSKeys, ResHandleFields16> unk1); //0x00443738
-		/*nema::PRSKeys*/ public: bool /*__thiscall*/ GetLoopAtEnd() const; //0x0044200f
-		/*nema::PRSKeys*/ public: bool /*__thiscall*/ UpdateAbsolute(float unk1, float unk2); //0x005717c0
-		/*nema::PRSKeys*/ public: const char* /*__thiscall*/ GetDebugName() const; //0x00442e78
-		/*nema::PRSKeys*/ public: const gpbstring<char>& /*__thiscall*/ GetDebugNameString() const; //0x00441fc0
-		/*nema::PRSKeys*/ public: const vector_3& /*__thiscall*/ GetVelocity() const; //0x004420af
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetCurrentNormalizedTime() const; //0x0044205d
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetCurrPositionX(int unk1) const; //0x00442ea8
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetCurrPositionY(int unk1) const; //0x00442ebc
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetCurrPositionZ(int unk1) const; //0x00442ed0
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetCurrRotationW(int unk1) const; //0x00442ee4
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetCurrRotationX(int unk1) const; //0x00442ef8
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetCurrRotationY(int unk1) const; //0x00442f0c
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetCurrRotationZ(int unk1) const; //0x00442f20
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetDuration() const; //0x004420a9
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetScalarVelocity() const; //0x004420c7
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetVelocityX() const; //0x004420b5
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetVelocityY() const; //0x004420bb
-		/*nema::PRSKeys*/ public: float /*__thiscall*/ GetVelocityZ() const; //0x004420c1
-		/*nema::PRSKeys*/ public: int /*__thiscall*/ GetNumTracks() const; //0x00442e9e
+		typedef ResHandle<PRSKeys, ResHandleFields<16>> ResHandle;
+
+		DefineStaticMethod(FUBI_DoesHandleMgrExist, 0x442f34, bool, NO_PARAMS, NO_ARGS);
+		DefineStaticMethod(FUBI_HandleIsValid, 0x443cca, bool, Params(ResHandle unk1), Args(unk1));
+		DefineStaticMethod(FUBI_HandleGet, 0x443cdd, PRSKeys*, Params(ResHandle unk1), Args(unk1));
+		DefineStaticMethod(FUBI_HandleAddRef, 0x443cb7, unsigned int, Params(ResHandle unk1), Args(unk1));
+		DefineStaticMethod(FUBI_HandleRelease, 0x443738, unsigned int, Params(ResHandle unk1), Args(unk1));
+		DefineConstMethod(GetLoopAtEnd, 0x44200f, bool, NO_PARAMS, NO_ARGS);
+		DefineMethod(UpdateAbsolute, 0x5717c0, bool, Params(float unk1, float unk2), Args(unk1, unk2));
+		DefineConstMethod(GetDebugName, 0x442e78, const char*, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetDebugNameString, 0x441fc0, const gpbstring<char>&, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetVelocity, 0x4420af, const vector_3&, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetCurrentNormalizedTime, 0x44205d, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetCurrPositionX, 0x442ea8, float, Params(int unk1), Args(unk1));
+		DefineConstMethod(GetCurrPositionY, 0x442ebc, float, Params(int unk1), Args(unk1));
+		DefineConstMethod(GetCurrPositionZ, 0x442ed0, float, Params(int unk1), Args(unk1));
+		DefineConstMethod(GetCurrRotationW, 0x442ee4, float, Params(int unk1), Args(unk1));
+		DefineConstMethod(GetCurrRotationX, 0x442ef8, float, Params(int unk1), Args(unk1));
+		DefineConstMethod(GetCurrRotationY, 0x442f0c, float, Params(int unk1), Args(unk1));
+		DefineConstMethod(GetCurrRotationZ, 0x442f20, float, Params(int unk1), Args(unk1));
+		DefineConstMethod(GetDuration, 0x4420a9, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetScalarVelocity, 0x4420c7, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetVelocityX, 0x4420b5, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetVelocityY, 0x4420bb, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetVelocityZ, 0x4420c1, float, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(GetNumTracks, 0x442e9e, int, NO_PARAMS, NO_ARGS);
 	};
 } typedef Nema;

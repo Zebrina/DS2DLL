@@ -4,8 +4,8 @@
 
 class GoGold {
 public:
-	/*GoGold*/ private: /*static*/ GoGold* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x007c84c1
-	/*GoGold*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoGold* unk1); //0x007c84b8
-	/*GoGold*/ public: const Goid_* /*__thiscall*/ GetDroppedBy() const; //0x007c84b4
-	/*GoGold*/ public: FuBi::Cookie__* /*__thiscall*/ RCDepositSelfIn(Go* unk1); //0x00964eb2
+	DefineStaticMethod(FUBI_NetToInstance, 0x7c84c1, GoGold*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unk1, unk2));
+	DefineStaticMethod(FUBI_InstanceToNet, 0x7c84b8, unsigned long, Params(GoGold* unk1), Args(unk1));
+	DefineConstMethod(GetDroppedBy, 0x7c84b4, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(RCDepositSelfIn, 0x964eb2, FuBi::Cookie__*, Params(Go* unk1), Args(unk1));
 };

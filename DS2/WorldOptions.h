@@ -1,69 +1,68 @@
 #pragma once
 
-#include "ClassMacros.h"
+#include "Enums.h"
 
-enum eDifficulty;
+#include "ClassMacros.h"
 
 class WorldOptions {
 public:
 	DefineSingleton(WorldOptions, 0x40a605);
 
-	/*WorldOptions*/ private: /*static*/ WorldOptions* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x0040a605
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetAlwaysGib() const; //0x004094e9
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetBlockMCP() const; //0x00409483
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetCrowdingMCP() const; //0x004094b6
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetDebugMCP() const; //0x00409494
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetGoalMCP() const; //0x00409472
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetHudMCP() const; //0x00409461
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetLabelMCP() const; //0x0040943f
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetOptimizeMCP() const; //0x00409450
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetPowerReload() const; //0x0040951f
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetShareExpEnabled() const; //0x00409517
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetShareGoldEnabled() const; //0x0040951b
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetShowAll() const; //0x004093fa
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetShowMCP() const; //0x00409413
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetShowPathsMCP() const; //0x00409402
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetShowSpatialQueries(); //0x0040952b
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetShowTriggerSys() const; //0x004094c7
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetShowTriggerSysHits() const; //0x004094d8
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetSound() const; //0x00409393
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetTestMCP() const; //0x004094a5
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetUpdateBoneAnimation() const; //0x00409523
-	/*WorldOptions*/ public: bool /*__thiscall*/ GetUpdateVertexAnimation() const; //0x00409527
-	/*WorldOptions*/ public: bool /*__thiscall*/ IsLagMCPOverride() const; //0x0040943b
-	/*WorldOptions*/ public: bool /*__thiscall*/ TestDebugHudOptions(eDebugHudOptions unk1) const; //0x004093d2
-	/*WorldOptions*/ public: bool /*__thiscall*/ TestDebugHudOptionsEq(eDebugHudOptions unk1) const; //0x004093e5
-	/*WorldOptions*/ public: eDifficulty /*__thiscall*/ GetDifficulty() const; //0x0083c6c8
-	/*WorldOptions*/ public: float /*__thiscall*/ GetDifficultyFloat() const; //0x00409513
-	/*WorldOptions*/ public: float /*__thiscall*/ GetGameSpeed(); //0x0083c7ff
-	/*WorldOptions*/ public: float /*__thiscall*/ GetLagMCP() const; //0x00409424
-	/*WorldOptions*/ public: float /*__thiscall*/ GetObjectDetailLevel() const; //0x004093fe
-	/*WorldOptions*/ public: float /*__thiscall*/ GetSmoothTransitionDuration(); //0x00409543
-	/*WorldOptions*/ public: int /*__thiscall*/ GetGibMultiplier() const; //0x004094fa
-	/*WorldOptions*/ public: int /*__thiscall*/ GetMeleeAttackerCountLimit(); //0x0040953c
-	/*WorldOptions*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetDifficulty(eDifficulty unk1); //0x0083c5ad
-	/*WorldOptions*/ public: FuBi::Cookie__* /*__thiscall*/ RCSyncOnMachineHelper(unsigned long unk1, const_mem_ptr unk2); //0x0083d156
-	/*WorldOptions*/ public: void /*__thiscall*/ ClearDebugHudOptions(eDebugHudOptions unk1); //0x004093b6
-	/*WorldOptions*/ public: void /*__thiscall*/ RCSetGameSpeed(float unk1); //0x0083c86e
-	/*WorldOptions*/ public: void /*__thiscall*/ RSSetGameSpeed(float unk1); //0x0083c958
-	/*WorldOptions*/ public: void /*__thiscall*/ SetAlwaysGib(bool unk1); //0x004094ed
-	/*WorldOptions*/ public: void /*__thiscall*/ SetBlockMCP(bool unk1); //0x00409487
-	/*WorldOptions*/ public: void /*__thiscall*/ SetCrowdingMCP(bool unk1); //0x004094ba
-	/*WorldOptions*/ public: void /*__thiscall*/ SetDebugHudOptions(eDebugHudOptions unk1, bool unk2); //0x00409396
-	/*WorldOptions*/ public: void /*__thiscall*/ SetDebugMCP(bool unk1); //0x00409498
-	/*WorldOptions*/ public: void /*__thiscall*/ SetGameSpeed(float unk1, bool unk2); //0x0083c735
-	/*WorldOptions*/ public: void /*__thiscall*/ SetGameSpeed(float unk1); //0x0040937e
-	/*WorldOptions*/ public: void /*__thiscall*/ SetGibMultiplier(int unk1); //0x004094fe
-	/*WorldOptions*/ public: void /*__thiscall*/ SetGoalMCP(bool unk1); //0x00409476
-	/*WorldOptions*/ public: void /*__thiscall*/ SetHudMCP(bool unk1); //0x00409465
-	/*WorldOptions*/ public: void /*__thiscall*/ SetLabelMCP(bool unk1); //0x00409443
-	/*WorldOptions*/ public: void /*__thiscall*/ SetLagMCP(float unk1, bool unk2); //0x00409428
-	/*WorldOptions*/ public: void /*__thiscall*/ SetOptimizeMCP(bool unk1); //0x00409454
-	/*WorldOptions*/ public: void /*__thiscall*/ SetShowMCP(bool unk1); //0x00409417
-	/*WorldOptions*/ public: void /*__thiscall*/ SetShowPathsMCP(bool unk1); //0x00409406
-	/*WorldOptions*/ public: void /*__thiscall*/ SetShowSpatialQueries(bool unk1); //0x0040952f
-	/*WorldOptions*/ public: void /*__thiscall*/ SetShowTriggerSys(bool unk1); //0x004094cb
-	/*WorldOptions*/ public: void /*__thiscall*/ SetShowTriggerSysHits(bool unk1); //0x004094dc
-	/*WorldOptions*/ public: void /*__thiscall*/ SetTestMCP(bool unk1); //0x004094a9
-	/*WorldOptions*/ public: void /*__thiscall*/ ToggleDebugHudOptions(eDebugHudOptions unk1); //0x004093c5
+	DefineConstMethod(GetAlwaysGib, 0x4094e9, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBlockMCP, 0x409483, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetCrowdingMCP, 0x4094b6, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetDebugMCP, 0x409494, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetGoalMCP, 0x409472, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetHudMCP, 0x409461, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetLabelMCP, 0x40943f, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetOptimizeMCP, 0x409450, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetPowerReload, 0x40951f, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetShareExpEnabled, 0x409517, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetShareGoldEnabled, 0x40951b, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetShowAll, 0x4093fa, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetShowMCP, 0x409413, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetShowPathsMCP, 0x409402, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetShowSpatialQueries, 0x40952b, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetShowTriggerSys, 0x4094c7, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetShowTriggerSysHits, 0x4094d8, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetSound, 0x409393, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetTestMCP, 0x4094a5, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetUpdateBoneAnimation, 0x409523, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetUpdateVertexAnimation, 0x409527, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(IsLagMCPOverride, 0x40943b, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(TestDebugHudOptions, 0x4093d2, bool, Params(eDebugHudOptions unk1), Args(unk1));
+	DefineConstMethod(TestDebugHudOptionsEq, 0x4093e5, bool, Params(eDebugHudOptions unk1), Args(unk1));
+	DefineConstMethod(GetDifficulty, 0x83c6c8, eDifficulty, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetDifficultyFloat, 0x409513, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetGameSpeed, 0x83c7ff, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetLagMCP, 0x409424, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetObjectDetailLevel, 0x4093fe, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetSmoothTransitionDuration, 0x409543, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetGibMultiplier, 0x4094fa, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetMeleeAttackerCountLimit, 0x40953c, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(RCSetDifficulty, 0x83c5ad, FuBi::Cookie__*, Params(eDifficulty unk1), Args(unk1));
+	DefineMethod(RCSyncOnMachineHelper, 0x83d156, FuBi::Cookie__*, Params(unsigned long unk1, const_mem_ptr unk2), Args(unk1, unk2));
+	DefineMethod(ClearDebugHudOptions, 0x4093b6, void, Params(eDebugHudOptions unk1), Args(unk1));
+	DefineMethod(RCSetGameSpeed, 0x83c86e, void, Params(float unk1), Args(unk1));
+	DefineMethod(RSSetGameSpeed, 0x83c958, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetAlwaysGib, 0x4094ed, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetBlockMCP, 0x409487, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetCrowdingMCP, 0x4094ba, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetDebugHudOptions, 0x409396, void, Params(eDebugHudOptions unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(SetDebugMCP, 0x409498, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetGameSpeed, 0x83c735, void, Params(float unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(SetGameSpeed, 0x40937e, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetGibMultiplier, 0x4094fe, void, Params(int unk1), Args(unk1));
+	DefineMethod(SetGoalMCP, 0x409476, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetHudMCP, 0x409465, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetLabelMCP, 0x409443, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetLagMCP, 0x409428, void, Params(float unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(SetOptimizeMCP, 0x409454, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetShowMCP, 0x409417, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetShowPathsMCP, 0x409406, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetShowSpatialQueries, 0x40952f, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetShowTriggerSys, 0x4094cb, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetShowTriggerSysHits, 0x4094dc, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetTestMCP, 0x4094a9, void, Params(bool unk1), Args(unk1));
+	DefineMethod(ToggleDebugHudOptions, 0x4093c5, void, Params(eDebugHudOptions unk1), Args(unk1));
 };

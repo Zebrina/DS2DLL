@@ -2,7 +2,6 @@
 
 // All headers.
 
-#if 0
 #include "ActData.h"
 #include "AIAction.h"
 #include "AIQuery.h"
@@ -12,12 +11,6 @@
 #include "AuditorDb.h"
 #include "BoneTranslator.h"
 #include "CameraAgent.h"
-#include "CameraEulerPosition.h"
-#include "CameraMatrixPosition.h"
-#include "CameraPosition.h"
-#include "CameraQuatPosition.h"
-#include "CameraVectorToCameraPosition.h"
-#include "CameraVectorToTargetPosition.h"
 #include "CGameOptions.h"
 #include "CharacterStats.h"
 #include "ClassMacros.h"
@@ -55,11 +48,9 @@
 #include "GoConversation.h"
 #include "GoCorpse.h"
 #include "GoCreateReq.h"
-#include "GoDataComponent.h"
 #include "GoDb.h"
 #include "GoDbImpl.h"
 #include "GoDefend.h"
-#include "GoFader.h"
 #include "GoFlick.h"
 #include "GoFlickFX.h"
 #include "GoFollower.h"
@@ -108,7 +99,7 @@
 #include "Messenger.h"
 #include "MohawkGame.h"
 #include "Mood.h"
-#include "MoodSettings.h"
+#include "MoodSetting.h"
 #include "Nema.h"
 #include "NetFuBiReceive.h"
 #include "NetFuBiSend.h"
@@ -117,7 +108,6 @@
 #include "NISManager.h"
 #include "PContentDb.h"
 #include "Player.h"
-#include "PlayerId.h"
 #include "Point2.h"
 #include "QtColl.h"
 #include "Quat.h"
@@ -237,4 +227,3 @@
 #include "WorldTerrain.h"
 #include "WorldTime.h"
 #include "ZoneManager.h"
-#endif

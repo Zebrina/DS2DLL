@@ -2,5 +2,5 @@
 
 class GoProxy {
 public:
-	/*GoSkritComponent*/ private: /*static*/ int /*__cdecl*/ FUBI_Inheritance(GoComponent* unk1); //0x00502e98
+	DefineStaticMethod(FUBI_Inheritance, 0x502e98, int, Params(GoComponent* unk1), Args(unk1));
 };

@@ -1,17 +1,19 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 struct TTMessages {
-	/*TTMessages*/ public: /*static*/ unsigned int /*__cdecl*/ FUBI_PodGetSize(); //0x00409556
-	/*TTMessages*/ public: const Scid_* /*__thiscall*/ GetBeginSendTo() const; //0x00409569
-	/*TTMessages*/ public: const Scid_* /*__thiscall*/ GetEndSendTo() const; //0x0040959c
-	/*TTMessages*/ public: eWorldEvent /*__thiscall*/ GetBeginEvent() const; //0x0040955a
-	/*TTMessages*/ public: eWorldEvent /*__thiscall*/ GetEndEvent() const; //0x0040958b
-	/*TTMessages*/ public: float /*__thiscall*/ GetBeginDelay() const; //0x0040957a
-	/*TTMessages*/ public: float /*__thiscall*/ GetEndDelay() const; //0x004095ad
-	/*TTMessages*/ public: void /*__thiscall*/ SetBeginDelay(float unk1); //0x0040957e
-	/*TTMessages*/ public: void /*__thiscall*/ SetBeginEvent(eWorldEvent unk1); //0x0040955d
-	/*TTMessages*/ public: void /*__thiscall*/ SetBeginSendTo(const Scid_* unk1); //0x0040956d
-	/*TTMessages*/ public: void /*__thiscall*/ SetEndDelay(float unk1); //0x004095b1
-	/*TTMessages*/ public: void /*__thiscall*/ SetEndEvent(eWorldEvent unk1); //0x0040958f
-	/*TTMessages*/ public: void /*__thiscall*/ SetEndSendTo(const Scid_* unk1); //0x004095a0
+	DefineStaticMethod(FUBI_PodGetSize, 0x409556, unsigned int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBeginSendTo, 0x409569, const Scid_*, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetEndSendTo, 0x40959c, const Scid_*, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBeginEvent, 0x40955a, eWorldEvent, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetEndEvent, 0x40958b, eWorldEvent, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBeginDelay, 0x40957a, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetEndDelay, 0x4095ad, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(SetBeginDelay, 0x40957e, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetBeginEvent, 0x40955d, void, Params(eWorldEvent unk1), Args(unk1));
+	DefineMethod(SetBeginSendTo, 0x40956d, void, Params(const Scid_* unk1), Args(unk1));
+	DefineMethod(SetEndDelay, 0x4095b1, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetEndEvent, 0x40958f, void, Params(eWorldEvent unk1), Args(unk1));
+	DefineMethod(SetEndSendTo, 0x4095a0, void, Params(const Scid_* unk1), Args(unk1));
 };

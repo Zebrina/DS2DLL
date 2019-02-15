@@ -6,19 +6,18 @@ class UIPetStore {
 public:
 	DefineSingleton(UIPetStore, 0x4a5722);
 
-	/*UIPetStore*/ private: /*static*/ UIPetStore* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x004a5722
-	/*UIPetStore*/ public: const Goid_* /*__thiscall*/ GetLastPurchasedPet(); //0x004a44ad
-	/*UIPetStore*/ public: int /*__thiscall*/ GetSelectedSlot(); //0x004a449e
-	/*UIPetStore*/ public: void /*__thiscall*/ BuySelectedPet(); //0x004ce8ff
-	/*UIPetStore*/ public: void /*__thiscall*/ PetPageNext(); //0x004cea51
-	/*UIPetStore*/ public: void /*__thiscall*/ PetPagePrevious(); //0x004cea3e
-	/*UIPetStore*/ public: void /*__thiscall*/ RCCreatePetMember(const Goid_* unk1, unsigned long unk2); //0x004ce0cd
-	/*UIPetStore*/ public: void /*__thiscall*/ RCCreateSelectedPetForView(const Goid_* unk1, unsigned long unk2); //0x004cda94
-	/*UIPetStore*/ public: void /*__thiscall*/ RSCreatePetMember(const Goid_* unk1, const gpbstring<char>& unk2); //0x004ce20e
-	/*UIPetStore*/ public: void /*__thiscall*/ RSCreateSelectedPetForView(const gpbstring<char>& unk1, const Goid_* unk2); //0x004cddbd
-	/*UIPetStore*/ public: void /*__thiscall*/ RSSetScreenNameForPet(const gpbstring<unsigned short>& unk1, const Goid_* unk2); //0x004cdc25
-	/*UIPetStore*/ public: void /*__thiscall*/ SelectPetSlot(int unk1); //0x004cd9bc
-	/*UIPetStore*/ public: void /*__thiscall*/ SetNewPetName(const gpbstring<char>& unk1); //0x004ce011
-	/*UIPetStore*/ public: void /*__thiscall*/ SetSelectedSlot(int unk1); //0x004a44a1
-	/*UIPetStore*/ public: void /*__thiscall*/ ViewSelectedPet(); //0x004ce598
+	DefineMethod(GetLastPurchasedPet, 0x4a44ad, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetSelectedSlot, 0x4a449e, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(BuySelectedPet, 0x4ce8ff, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(PetPageNext, 0x4cea51, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(PetPagePrevious, 0x4cea3e, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(RCCreatePetMember, 0x4ce0cd, void, Params(const Goid_* unk1, unsigned long unk2), Args(unk1, unk2));
+	DefineMethod(RCCreateSelectedPetForView, 0x4cda94, void, Params(const Goid_* unk1, unsigned long unk2), Args(unk1, unk2));
+	DefineMethod(RSCreatePetMember, 0x4ce20e, void, Params(const Goid_* unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineMethod(RSCreateSelectedPetForView, 0x4cddbd, void, Params(const gpbstring<char>& unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineMethod(RSSetScreenNameForPet, 0x4cdc25, void, Params(const gpbstring<unsigned short>& unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineMethod(SelectPetSlot, 0x4cd9bc, void, Params(int unk1), Args(unk1));
+	DefineMethod(SetNewPetName, 0x4ce011, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(SetSelectedSlot, 0x4a44a1, void, Params(int unk1), Args(unk1));
+	DefineMethod(ViewSelectedPet, 0x4ce598, void, NO_PARAMS, NO_ARGS);
 };

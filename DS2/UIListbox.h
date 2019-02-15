@@ -1,68 +1,75 @@
 #pragma once
 
+#include "GPBString.h"
+#include "UIWindow.h"
+
+#include "ClassMacros.h"
+
+class UIMessage;
+
 class UIListbox {
 public:
-	/*UIListbox*/ private: /*static*/ int /*__cdecl*/ FUBI_Inheritance(UIWindow* unk1); //0x005028ef
-	/*UIListbox*/ private: int /*__thiscall*/ AddElement(const gpbstring<char>& unk1, int unk2, unsigned long unk3); //0x00503aa6
-	/*UIListbox*/ private: int /*__thiscall*/ AddElement(const gpbstring<char>& unk1, int unk2); //0x00503a83
-	/*UIListbox*/ private: void /*__thiscall*/ GetSelectedText(gpbstring<char>& unk1); //0x00503f65
-	/*UIListbox*/ private: void /*__thiscall*/ RemoveElement(const gpbstring<char>& unk1); //0x00503afe
-	/*UIListbox*/ private: void /*__thiscall*/ SelectElement(const gpbstring<char>& unk1); //0x00503b1e
-	/*UIListbox*/ private: void /*__thiscall*/ SetElementIcon(const gpbstring<char>& unk1, int unk2); //0x00503b3e
-	/*UIListbox*/ private: void /*__thiscall*/ SetElementText(int unk1, int unk2, const gpbstring<char>& unk3, unsigned long unk4); //0x00503acc
-	/*UIListbox*/ public: bool /*__thiscall*/ GetActive(); //0x005029a5
-	/*UIListbox*/ public: bool /*__thiscall*/ GetButtonDown() const; //0x00502924
-	/*UIListbox*/ public: bool /*__thiscall*/ GetDrawSelectionBox(); //0x0050299e
-	/*UIListbox*/ public: bool /*__thiscall*/ GetHasFocus() const; //0x00502990
-	/*UIListbox*/ public: bool /*__thiscall*/ GetHitSelect() const; //0x00502989
-	/*UIListbox*/ public: bool /*__thiscall*/ GetPermanentFocus() const; //0x00502997
-	/*UIListbox*/ public: bool /*__thiscall*/ HandleInputMessage(UIMessage& unk1); //0x00774dc0
-	/*UIListbox*/ public: gpbstring<char> /*__thiscall*/ GetSelectedData(); //0x00775a00
-	/*UIListbox*/ public: const gpbstring<char>& /*__thiscall*/ GetElementData(int unk1); //0x00774860
-	/*UIListbox*/ public: int /*__thiscall*/ FUBI_RENAME_GetElementHeight(); //0x0050290a
-	/*UIListbox*/ public: int /*__thiscall*/ FUBI_RENAME_GetElementWidth(); //0x0050290f
-	/*UIListbox*/ public: int /*__thiscall*/ FUBI_RENAME_GetNumElements(); //0x00502905
-	/*UIListbox*/ public: int /*__thiscall*/ GetElementId(unsigned int unk1); //0x00773c50
-	/*UIListbox*/ public: int /*__thiscall*/ GetElementTag(unsigned int unk1); //0x00773ca0
-	/*UIListbox*/ public: int /*__thiscall*/ GetHeight() const; //0x005028f7
-	/*UIListbox*/ public: int /*__thiscall*/ GetLeadElementIndex(); //0x005028f2
-	/*UIListbox*/ public: int /*__thiscall*/ GetSelectedIndex(); //0x00773ef0
-	/*UIListbox*/ public: int /*__thiscall*/ GetSelectedTag(); //0x00773ec0
-	/*UIListbox*/ public: int /*__thiscall*/ GetWidth() const; //0x005028fe
-	/*UIListbox*/ public: unsigned int /*__thiscall*/ GetTextColor() const; //0x00485d76
-	/*UIListbox*/ public: unsigned long /*__thiscall*/ GetActiveColor() const; //0x00502972
-	/*UIListbox*/ public: unsigned long /*__thiscall*/ GetInactiveColor() const; //0x0050295b
-	/*UIListbox*/ public: unsigned long /*__thiscall*/ GetInvalidColor() const; //0x00485d7d
-	/*UIListbox*/ public: void /*__thiscall*/ AddIcon(const gpbstring<char>& unk1, int unk2); //0x00775cf0
-	/*UIListbox*/ public: void /*__thiscall*/ AutoSize(UIWindow* unk1, int unk2); //0x00773f20
-	/*UIListbox*/ public: void /*__thiscall*/ ClearSelection(); //0x00773d70
-	/*UIListbox*/ public: void /*__thiscall*/ FlashElementIcon(int unk1, float unk2); //0x00773dd0
-	/*UIListbox*/ public: void /*__thiscall*/ LoadSelectionTexture(const gpbstring<char>& unk1); //0x00772f50
-	/*UIListbox*/ public: void /*__thiscall*/ RemoveAllElements(); //0x0044a237
-	/*UIListbox*/ public: void /*__thiscall*/ RemoveAllElements(bool unk1); //0x00778880
-	/*UIListbox*/ public: void /*__thiscall*/ RemoveElement(int unk1); //0x00778790
-	/*UIListbox*/ public: void /*__thiscall*/ ResizeSlider(); //0x007748a0
-	/*UIListbox*/ public: void /*__thiscall*/ SelectElement(int unk1); //0x00774be0
-	/*UIListbox*/ public: void /*__thiscall*/ SelectElementData(const gpbstring<char>& unk1); //0x00774cc0
-	/*UIListbox*/ public: void /*__thiscall*/ SelectElementId(int unk1); //0x00774c50
-	/*UIListbox*/ public: void /*__thiscall*/ SelectElementIndex(int unk1); //0x00774d50
-	/*UIListbox*/ public: void /*__thiscall*/ SelectFirstElement(); //0x00774510
-	/*UIListbox*/ public: void /*__thiscall*/ SelectLastElement(); //0x007745a0
-	/*UIListbox*/ public: void /*__thiscall*/ SelectNextElement(); //0x007741a0
-	/*UIListbox*/ public: void /*__thiscall*/ SelectNextPage(); //0x00774400
-	/*UIListbox*/ public: void /*__thiscall*/ SelectPreviousElement(); //0x007740d0
-	/*UIListbox*/ public: void /*__thiscall*/ SelectPreviousPage(); //0x007742a0
-	/*UIListbox*/ public: void /*__thiscall*/ SetActive(bool unk1); //0x0046dd36
-	/*UIListbox*/ public: void /*__thiscall*/ SetActiveColor(unsigned long unk1); //0x00502962
-	/*UIListbox*/ public: void /*__thiscall*/ SetButtonDown(bool unk1); //0x0050292b
-	/*UIListbox*/ public: void /*__thiscall*/ SetDrawSelectionBox(bool unk1); //0x0046dd26
-	/*UIListbox*/ public: void /*__thiscall*/ SetElementData(int unk1, const gpbstring<char>& unk2); //0x00775ca0
-	/*UIListbox*/ public: void /*__thiscall*/ SetElementIcon(int unk1, int unk2); //0x00773da0
-	/*UIListbox*/ public: void /*__thiscall*/ SetElementSelectable(int unk1, bool unk2); //0x00773cf0
-	/*UIListbox*/ public: void /*__thiscall*/ SetHasFocus(bool unk1); //0x0046dd16
-	/*UIListbox*/ public: void /*__thiscall*/ SetHeight(int unk1); //0x007735e0
-	/*UIListbox*/ public: void /*__thiscall*/ SetHitSelect(bool unk1); //0x00502979
-	/*UIListbox*/ public: void /*__thiscall*/ SetInactiveColor(unsigned long unk1); //0x0050294b
-	/*UIListbox*/ public: void /*__thiscall*/ SetInvalidColor(unsigned long unk1); //0x0050293b
-	/*UIListbox*/ public: void /*__thiscall*/ SetTextColor(unsigned int unk1); //0x00502914
+	DefineStaticMethod(FUBI_Inheritance, 0x5028ef, int, Params(UIWindow* unk1), Args(unk1));
+	DefineMethod(AddElement, 0x503aa6, int, Params(const gpbstring<char>& unk1, int unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(AddElement, 0x503a83, int, Params(const gpbstring<char>& unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(GetSelectedText, 0x503f65, void, Params(gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(RemoveElement, 0x503afe, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(SelectElement, 0x503b1e, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(SetElementIcon, 0x503b3e, void, Params(const gpbstring<char>& unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(SetElementText, 0x503acc, void, Params(int unk1, int unk2, const gpbstring<char>& unk3, unsigned long unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(GetActive, 0x5029a5, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetButtonDown, 0x502924, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetDrawSelectionBox, 0x50299e, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetHasFocus, 0x502990, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetHitSelect, 0x502989, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetPermanentFocus, 0x502997, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(HandleInputMessage, 0x774dc0, bool, Params(UIMessage& unk1), Args(unk1));
+	DefineMethod(GetSelectedData, 0x775a00, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetElementData, 0x774860, const gpbstring<char>&, Params(int unk1), Args(unk1));
+	DefineMethod(FUBI_RENAME_GetElementHeight, 0x50290a, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(FUBI_RENAME_GetElementWidth, 0x50290f, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(FUBI_RENAME_GetNumElements, 0x502905, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetElementId, 0x773c50, int, Params(unsigned int unk1), Args(unk1));
+	DefineMethod(GetElementTag, 0x773ca0, int, Params(unsigned int unk1), Args(unk1));
+	DefineConstMethod(GetHeight, 0x5028f7, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetLeadElementIndex, 0x5028f2, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetSelectedIndex, 0x773ef0, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetSelectedTag, 0x773ec0, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetWidth, 0x5028fe, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetTextColor, 0x485d76, unsigned int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetActiveColor, 0x502972, unsigned long, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetInactiveColor, 0x50295b, unsigned long, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetInvalidColor, 0x485d7d, unsigned long, NO_PARAMS, NO_ARGS);
+	DefineMethod(AddIcon, 0x775cf0, void, Params(const gpbstring<char>& unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(AutoSize, 0x773f20, void, Params(UIWindow* unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(ClearSelection, 0x773d70, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(FlashElementIcon, 0x773dd0, void, Params(int unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(LoadSelectionTexture, 0x772f50, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(RemoveAllElements, 0x44a237, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(RemoveAllElements, 0x778880, void, Params(bool unk1), Args(unk1));
+	DefineMethod(RemoveElement, 0x778790, void, Params(int unk1), Args(unk1));
+	DefineMethod(ResizeSlider, 0x7748a0, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SelectElement, 0x774be0, void, Params(int unk1), Args(unk1));
+	DefineMethod(SelectElementData, 0x774cc0, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(SelectElementId, 0x774c50, void, Params(int unk1), Args(unk1));
+	DefineMethod(SelectElementIndex, 0x774d50, void, Params(int unk1), Args(unk1));
+	DefineMethod(SelectFirstElement, 0x774510, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SelectLastElement, 0x7745a0, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SelectNextElement, 0x7741a0, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SelectNextPage, 0x774400, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SelectPreviousElement, 0x7740d0, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SelectPreviousPage, 0x7742a0, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SetActive, 0x46dd36, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetActiveColor, 0x502962, void, Params(unsigned long unk1), Args(unk1));
+	DefineMethod(SetButtonDown, 0x50292b, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetDrawSelectionBox, 0x46dd26, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetElementData, 0x775ca0, void, Params(int unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineMethod(SetElementIcon, 0x773da0, void, Params(int unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(SetElementSelectable, 0x773cf0, void, Params(int unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(SetHasFocus, 0x46dd16, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetHeight, 0x7735e0, void, Params(int unk1), Args(unk1));
+	DefineMethod(SetHitSelect, 0x502979, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetInactiveColor, 0x50294b, void, Params(unsigned long unk1), Args(unk1));
+	DefineMethod(SetInvalidColor, 0x50293b, void, Params(unsigned long unk1), Args(unk1));
+	DefineMethod(SetTextColor, 0x502914, void, Params(unsigned int unk1), Args(unk1));
 };

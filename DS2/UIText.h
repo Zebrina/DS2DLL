@@ -1,15 +1,17 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 class UIText {
 public:
-	/*UIText*/ private: /*static*/ int /*__cdecl*/ FUBI_Inheritance(UIWindow* unk1); //0x005028a5
-	/*UIText*/ private: void /*__thiscall*/ GetText(gpbstring<char>& unk1) const; //0x00503f1d
-	/*UIText*/ private: void /*__thiscall*/ SetText(const gpbstring<char>& unk1, bool unk2); //0x00503a55
-	/*UIText*/ public: /*static*/ UIText* /*__cdecl*/ GetUIText(UIWindow* unk1); //0x005028af
-	/*UIText*/ public: JUSTIFICATION /*__thiscall*/ GetJustification() const; //0x005028a8
-	/*UIText*/ public: unsigned int /*__thiscall*/ GetColor() const; //0x00498485
-	/*UIText*/ public: void /*__thiscall*/ SetAutoSize(bool unk1); //0x00472beb
-	/*UIText*/ public: void /*__thiscall*/ SetColor(unsigned int unk1); //0x00472bdb
-	/*UIText*/ public: void /*__thiscall*/ SetFont(const gpbstring<char>& unk1); //0x00760ac0
-	/*UIText*/ public: void /*__thiscall*/ SetJustification(JUSTIFICATION unk1); //0x00456d41
+	DefineStaticMethod(FUBI_Inheritance, 0x5028a5, int, Params(UIWindow* unk1), Args(unk1));
+	DefineConstMethod(GetText, 0x503f1d, void, Params(gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(SetText, 0x503a55, void, Params(const gpbstring<char>& unk1, bool unk2), Args(unk1, unk2));
+	DefineStaticMethod(GetUIText, 0x5028af, UIText*, Params(UIWindow* unk1), Args(unk1));
+	DefineConstMethod(GetJustification, 0x5028a8, JUSTIFICATION, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetColor, 0x498485, unsigned int, NO_PARAMS, NO_ARGS);
+	DefineMethod(SetAutoSize, 0x472beb, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetColor, 0x472bdb, void, Params(unsigned int unk1), Args(unk1));
+	DefineMethod(SetFont, 0x760ac0, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(SetJustification, 0x456d41, void, Params(JUSTIFICATION unk1), Args(unk1));
 };

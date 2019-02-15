@@ -6,45 +6,44 @@ class LocalJournal {
 public:
 	DefineSingleton(LocalJournal, 0x41043d);
 
-	/*LocalJournal*/ public: /*static*/ LocalJournal* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x0041043d
-	/*LocalJournal*/ public: bool /*__thiscall*/ GetBool(const char* unk1, bool unk2) const; //0x0040ff76
-	/*LocalJournal*/ public: bool /*__thiscall*/ GetBool(const char* unk1) const; //0x0040ff7f
-	/*LocalJournal*/ public: bool /*__thiscall*/ GetSessionBool(const char* unk1, bool unk2) const; //0x0040ffc7
-	/*LocalJournal*/ public: bool /*__thiscall*/ GetSessionBool(const char* unk1) const; //0x0040ffd0
-	/*LocalJournal*/ public: bool /*__thiscall*/ RemoveEntry(const char* unk1); //0x0040ff09
-	/*LocalJournal*/ public: const gpbstring<char>& /*__thiscall*/ GetSessionString(const char* unk1, const gpbstring<char>& unk2) const; //0x0040ffd9
-	/*LocalJournal*/ public: const gpbstring<char>& /*__thiscall*/ GetSessionString(const char* unk1) const; //0x0040ffe2
-	/*LocalJournal*/ public: const gpbstring<char>& /*__thiscall*/ GetString(const char* unk1, const gpbstring<char>& unk2) const; //0x0040ff88
-	/*LocalJournal*/ public: const gpbstring<char>& /*__thiscall*/ GetString(const char* unk1) const; //0x0040ff91
-	/*LocalJournal*/ public: int /*__thiscall*/ GetInt(const char* unk1, int unk2) const; //0x0040ff64
-	/*LocalJournal*/ public: int /*__thiscall*/ GetInt(const char* unk1) const; //0x0040ff6d
-	/*LocalJournal*/ public: int /*__thiscall*/ GetSessionInt(const char* unk1, int unk2) const; //0x0040ffb5
-	/*LocalJournal*/ public: int /*__thiscall*/ GetSessionInt(const char* unk1) const; //0x0040ffbe
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RCAddInt(const char* unk1, int unk2, unsigned long unk3); //0x00850c6e
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetBool(const char* unk1, bool unk2, unsigned long unk3); //0x0084ff48
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetInt(const char* unk1, int unk2, unsigned long unk3); //0x0084fe1f
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetString(const char* unk1, const gpbstring<char>& unk2, unsigned long unk3); //0x0084f6c5
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RSAddInt(const char* unk1, int unk2, unsigned long unk3); //0x00851803
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RSAddTeamInt(const char* unk1, int unk2, unsigned long unk3); //0x0085169d
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RSAddTeamInt(const char* unk1, int unk2); //0x00851b13
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RSSetBool(const char* unk1, bool unk2, unsigned long unk3); //0x00850ece
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RSSetInt(const char* unk1, int unk2, unsigned long unk3); //0x00850b6e
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RSSetString(const char* unk1, const gpbstring<char>& unk2, unsigned long unk3); //0x008501b3
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RSSetTeamBool(const char* unk1, bool unk2, unsigned long unk3); //0x00850d68
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RSSetTeamBool(const char* unk1, bool unk2); //0x00851903
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RSSetTeamInt(const char* unk1, int unk2, unsigned long unk3); //0x00850a08
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RSSetTeamInt(const char* unk1, int unk2); //0x00851679
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RSSetTeamString(const char* unk1, const gpbstring<char>& unk2, unsigned long unk3); //0x0085004d
-	/*LocalJournal*/ public: FuBi::Cookie__* /*__thiscall*/ RSSetTeamString(const char* unk1, const gpbstring<char>& unk2); //0x00850fce
-	/*LocalJournal*/ public: void /*__thiscall*/ AddInt(const char* unk1, int unk2, bool unk3); //0x0084ff24
-	/*LocalJournal*/ public: void /*__thiscall*/ AddInt(const char* unk1, int unk2); //0x0040ff26
-	/*LocalJournal*/ public: void /*__thiscall*/ SetBool(const char* unk1, bool unk2, bool unk3); //0x00850044
-	/*LocalJournal*/ public: void /*__thiscall*/ SetBool(const char* unk1, bool unk2); //0x0040ff3a
-	/*LocalJournal*/ public: void /*__thiscall*/ SetInt(const char* unk1, int unk2, bool unk3); //0x0084ff1b
-	/*LocalJournal*/ public: void /*__thiscall*/ SetInt(const char* unk1, int unk2); //0x0040ff12
-	/*LocalJournal*/ public: void /*__thiscall*/ SetSessionBool(const char* unk1, bool unk2); //0x0040ffa3
-	/*LocalJournal*/ public: void /*__thiscall*/ SetSessionInt(const char* unk1, int unk2); //0x0040ff9a
-	/*LocalJournal*/ public: void /*__thiscall*/ SetSessionString(const char* unk1, const gpbstring<char>& unk2); //0x0040ffac
-	/*LocalJournal*/ public: void /*__thiscall*/ SetString(const char* unk1, const gpbstring<char>& unk2, bool unk3); //0x0084f7c1
-	/*LocalJournal*/ public: void /*__thiscall*/ SetString(const char* unk1, const gpbstring<char>& unk2); //0x0040ff50
+	DefineConstMethod(GetBool, 0x40ff76, bool, Params(const char* unk1, bool unk2), Args(unk1, unk2));
+	DefineConstMethod(GetBool, 0x40ff7f, bool, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetSessionBool, 0x40ffc7, bool, Params(const char* unk1, bool unk2), Args(unk1, unk2));
+	DefineConstMethod(GetSessionBool, 0x40ffd0, bool, Params(const char* unk1), Args(unk1));
+	DefineMethod(RemoveEntry, 0x40ff09, bool, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetSessionString, 0x40ffd9, const gpbstring<char>&, Params(const char* unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineConstMethod(GetSessionString, 0x40ffe2, const gpbstring<char>&, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetString, 0x40ff88, const gpbstring<char>&, Params(const char* unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineConstMethod(GetString, 0x40ff91, const gpbstring<char>&, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetInt, 0x40ff64, int, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineConstMethod(GetInt, 0x40ff6d, int, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetSessionInt, 0x40ffb5, int, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineConstMethod(GetSessionInt, 0x40ffbe, int, Params(const char* unk1), Args(unk1));
+	DefineMethod(RCAddInt, 0x850c6e, FuBi::Cookie__*, Params(const char* unk1, int unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RCSetBool, 0x84ff48, FuBi::Cookie__*, Params(const char* unk1, bool unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RCSetInt, 0x84fe1f, FuBi::Cookie__*, Params(const char* unk1, int unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RCSetString, 0x84f6c5, FuBi::Cookie__*, Params(const char* unk1, const gpbstring<char>& unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSAddInt, 0x851803, FuBi::Cookie__*, Params(const char* unk1, int unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSAddTeamInt, 0x85169d, FuBi::Cookie__*, Params(const char* unk1, int unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSAddTeamInt, 0x851b13, FuBi::Cookie__*, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(RSSetBool, 0x850ece, FuBi::Cookie__*, Params(const char* unk1, bool unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSSetInt, 0x850b6e, FuBi::Cookie__*, Params(const char* unk1, int unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSSetString, 0x8501b3, FuBi::Cookie__*, Params(const char* unk1, const gpbstring<char>& unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSSetTeamBool, 0x850d68, FuBi::Cookie__*, Params(const char* unk1, bool unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSSetTeamBool, 0x851903, FuBi::Cookie__*, Params(const char* unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(RSSetTeamInt, 0x850a08, FuBi::Cookie__*, Params(const char* unk1, int unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSSetTeamInt, 0x851679, FuBi::Cookie__*, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(RSSetTeamString, 0x85004d, FuBi::Cookie__*, Params(const char* unk1, const gpbstring<char>& unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSSetTeamString, 0x850fce, FuBi::Cookie__*, Params(const char* unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineMethod(AddInt, 0x84ff24, void, Params(const char* unk1, int unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(AddInt, 0x40ff26, void, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(SetBool, 0x850044, void, Params(const char* unk1, bool unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SetBool, 0x40ff3a, void, Params(const char* unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(SetInt, 0x84ff1b, void, Params(const char* unk1, int unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SetInt, 0x40ff12, void, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(SetSessionBool, 0x40ffa3, void, Params(const char* unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(SetSessionInt, 0x40ff9a, void, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(SetSessionString, 0x40ffac, void, Params(const char* unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineMethod(SetString, 0x84f7c1, void, Params(const char* unk1, const gpbstring<char>& unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SetString, 0x40ff50, void, Params(const char* unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
 };

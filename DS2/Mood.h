@@ -1,52 +1,53 @@
 #pragma once
 
+#include "MoodSetting.h"
+
 #include "ClassMacros.h"
 
 class Mood {
 public:
 	DefineSingleton(Mood, 0x414271);
 
-	/*Mood*/ private: /*static*/ Mood* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x00414271
-	/*Mood*/ public: bool /*__thiscall*/ IsAmbientTrackPlaying(); //0x00412a25
-	/*Mood*/ public: bool /*__thiscall*/ IsStandardTrackPlaying(); //0x00412a5a
-	/*Mood*/ public: const gpbstring<char>& /*__thiscall*/ GetGoRequestedMood(const Goid_* unk1); //0x0091de81
-	/*Mood*/ public: const Goid_* /*__thiscall*/ GetActiveDriftGo(); //0x004129fa
-	/*Mood*/ public: const Goid_* /*__thiscall*/ GetActiveFogGo(); //0x004129ee
-	/*Mood*/ public: const Goid_* /*__thiscall*/ GetActiveMusicGo(); //0x00412a02
-	/*Mood*/ public: const Goid_* /*__thiscall*/ GetActivePartyLightGo(); //0x00412a0a
-	/*Mood*/ public: const Goid_* /*__thiscall*/ GetActiveRainGo(); //0x004129f2
-	/*Mood*/ public: const Goid_* /*__thiscall*/ GetActiveSkyboxGo(); //0x00412a06
-	/*Mood*/ public: const Goid_* /*__thiscall*/ GetActiveSnowGo(); //0x004129f6
-	/*Mood*/ public: const Goid_* /*__thiscall*/ GetActiveSunGo(); //0x004129ea
-	/*Mood*/ public: const Goid_* /*__thiscall*/ GetActiveWindGo(); //0x004129fe
-	/*Mood*/ public: const MoodSetting& /*__thiscall*/ GetOriginalMoodSetting(const gpbstring<char>& unk1); //0x0091e068
-	/*Mood*/ public: MoodSetting& /*__thiscall*/ GetGoMoodSetting(const Goid_* unk1); //0x0091dff6
-	/*Mood*/ public: MoodSetting& /*__thiscall*/ GetMoodSetting(const gpbstring<char>& unk1); //0x0091e03c
-	/*Mood*/ public: void /*__thiscall*/ FadeMoodVolume(float unk1, float unk2); //0x0091d78c
-	/*Mood*/ public: void /*__thiscall*/ ForceUpdateDrift(float unk1); //0x0091d656
-	/*Mood*/ public: void /*__thiscall*/ ForceUpdateFog(float unk1); //0x0091d53d
-	/*Mood*/ public: void /*__thiscall*/ ForceUpdateMusic(float unk1); //0x0091ce19
-	/*Mood*/ public: void /*__thiscall*/ ForceUpdatePartyLight(float unk1); //0x0091d6eb
-	/*Mood*/ public: void /*__thiscall*/ ForceUpdateRain(float unk1); //0x0091d5d2
-	/*Mood*/ public: void /*__thiscall*/ ForceUpdateSkybox(float unk1); //0x0091ce30
-	/*Mood*/ public: void /*__thiscall*/ ForceUpdateSnow(float unk1); //0x0091d614
-	/*Mood*/ public: void /*__thiscall*/ ForceUpdateWind(float unk1); //0x0091d698
-	/*Mood*/ public: void /*__thiscall*/ PlayAmbientTrack(float unk1); //0x00412a0e
-	/*Mood*/ public: void /*__thiscall*/ PlayStandardTrack(float unk1); //0x00412a43
-	/*Mood*/ public: void /*__thiscall*/ RegisterMoodRequest(const Goid_* unk1, const gpbstring<char>& unk2, bool unk3); //0x00921503
-	/*Mood*/ public: void /*__thiscall*/ RemoveFogCorrection(float unk1); //0x0091ce47
-	/*Mood*/ public: void /*__thiscall*/ ResetMoodVolume(float unk1); //0x0091d7d5
-	/*Mood*/ public: void /*__thiscall*/ RestoreFogCorrection(float unk1); //0x0091ce6d
-	/*Mood*/ public: void /*__thiscall*/ SetActiveDriftGo(const Goid_* unk1, float unk2); //0x0091e53c
-	/*Mood*/ public: void /*__thiscall*/ SetActiveFogGo(const Goid_* unk1, float unk2); //0x0091e383
-	/*Mood*/ public: void /*__thiscall*/ SetActiveMusicGo(const Goid_* unk1, float unk2); //0x0091e639
-	/*Mood*/ public: void /*__thiscall*/ SetActivePartyLightGo(const Goid_* unk1, float unk2); //0x0091e6f3
-	/*Mood*/ public: void /*__thiscall*/ SetActiveRainGo(const Goid_* unk1, float unk2); //0x0091e450
-	/*Mood*/ public: void /*__thiscall*/ SetActiveSkyboxGo(const Goid_* unk1, float unk2); //0x0091e696
-	/*Mood*/ public: void /*__thiscall*/ SetActiveSnowGo(const Goid_* unk1, float unk2); //0x0091e4c6
-	/*Mood*/ public: void /*__thiscall*/ SetActiveSunGo(const Goid_* unk1, float unk2); //0x0091e326
-	/*Mood*/ public: void /*__thiscall*/ SetActiveWindGo(const Goid_* unk1, float unk2); //0x0091e5b2
-	/*Mood*/ public: void /*__thiscall*/ SetMood(const gpbstring<char>& unk1, float unk2); //0x0091e093
-	/*Mood*/ public: void /*__thiscall*/ StopAmbientTrack(float unk1); //0x00412a2c
-	/*Mood*/ public: void /*__thiscall*/ StopStandardTrack(float unk1); //0x00412a61
+	DefineMethod(IsAmbientTrackPlaying, 0x412a25, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(IsStandardTrackPlaying, 0x412a5a, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetGoRequestedMood, 0x91de81, const gpbstring<char>&, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(GetActiveDriftGo, 0x4129fa, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetActiveFogGo, 0x4129ee, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetActiveMusicGo, 0x412a02, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetActivePartyLightGo, 0x412a0a, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetActiveRainGo, 0x4129f2, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetActiveSkyboxGo, 0x412a06, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetActiveSnowGo, 0x4129f6, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetActiveSunGo, 0x4129ea, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetActiveWindGo, 0x4129fe, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetOriginalMoodSetting, 0x91e068, const MoodSetting&, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(GetGoMoodSetting, 0x91dff6, MoodSetting&, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(GetMoodSetting, 0x91e03c, MoodSetting&, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(FadeMoodVolume, 0x91d78c, void, Params(float unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(ForceUpdateDrift, 0x91d656, void, Params(float unk1), Args(unk1));
+	DefineMethod(ForceUpdateFog, 0x91d53d, void, Params(float unk1), Args(unk1));
+	DefineMethod(ForceUpdateMusic, 0x91ce19, void, Params(float unk1), Args(unk1));
+	DefineMethod(ForceUpdatePartyLight, 0x91d6eb, void, Params(float unk1), Args(unk1));
+	DefineMethod(ForceUpdateRain, 0x91d5d2, void, Params(float unk1), Args(unk1));
+	DefineMethod(ForceUpdateSkybox, 0x91ce30, void, Params(float unk1), Args(unk1));
+	DefineMethod(ForceUpdateSnow, 0x91d614, void, Params(float unk1), Args(unk1));
+	DefineMethod(ForceUpdateWind, 0x91d698, void, Params(float unk1), Args(unk1));
+	DefineMethod(PlayAmbientTrack, 0x412a0e, void, Params(float unk1), Args(unk1));
+	DefineMethod(PlayStandardTrack, 0x412a43, void, Params(float unk1), Args(unk1));
+	DefineMethod(RegisterMoodRequest, 0x921503, void, Params(const Goid_* unk1, const gpbstring<char>& unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RemoveFogCorrection, 0x91ce47, void, Params(float unk1), Args(unk1));
+	DefineMethod(ResetMoodVolume, 0x91d7d5, void, Params(float unk1), Args(unk1));
+	DefineMethod(RestoreFogCorrection, 0x91ce6d, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetActiveDriftGo, 0x91e53c, void, Params(const Goid_* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetActiveFogGo, 0x91e383, void, Params(const Goid_* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetActiveMusicGo, 0x91e639, void, Params(const Goid_* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetActivePartyLightGo, 0x91e6f3, void, Params(const Goid_* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetActiveRainGo, 0x91e450, void, Params(const Goid_* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetActiveSkyboxGo, 0x91e696, void, Params(const Goid_* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetActiveSnowGo, 0x91e4c6, void, Params(const Goid_* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetActiveSunGo, 0x91e326, void, Params(const Goid_* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetActiveWindGo, 0x91e5b2, void, Params(const Goid_* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetMood, 0x91e093, void, Params(const gpbstring<char>& unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(StopAmbientTrack, 0x412a2c, void, Params(float unk1), Args(unk1));
+	DefineMethod(StopStandardTrack, 0x412a61, void, Params(float unk1), Args(unk1));
 };

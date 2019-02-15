@@ -1,5 +1,11 @@
 #pragma once
 
+/*
+	Credits: SKSE Team (https://skse.silverlock.org/)
+
+	Ported for use in this project by Zebrina.
+*/
+
 #include <cstdint>
 
 void SafeWriteBuf(uintptr_t addr, void* data, size_t len);

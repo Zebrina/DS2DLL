@@ -1,97 +1,103 @@
 #pragma once
 
+#include "Enums.h"
+#include "GPBString.h"
+
 #include "ClassMacros.h"
+
+struct GoidColl;
+struct GopColl;
+struct IntColl;
 
 class GoBits {
 public:
 	DefineSingleton(GoBits, 0x7b25a3);
 
-	/*GoBits*/ private: GoidColl& /*__thiscall*/ GetGoidColl(unsigned long unk1); //0x00961264
-	/*GoBits*/ private: GopColl& /*__thiscall*/ GetGopColl(unsigned long unk1); //0x00961213
-	/*GoBits*/ private: IntColl& /*__thiscall*/ GetIntColl(unsigned long unk1); //0x009612b5
-	/*GoBits*/ private: unsigned long /*__thiscall*/ CreateGoidColl(); //0x00961d39
-	/*GoBits*/ private: unsigned long /*__thiscall*/ CreateGopColl(); //0x00961cf1
-	/*GoBits*/ private: unsigned long /*__thiscall*/ CreateIntColl(); //0x00961d81
-	/*GoBits*/ private: void /*__thiscall*/ DeleteGoidColl(unsigned long unk1); //0x00962680
-	/*GoBits*/ private: void /*__thiscall*/ DeleteGopColl(unsigned long unk1); //0x00962634
-	/*GoBits*/ private: void /*__thiscall*/ DeleteIntColl(unsigned long unk1); //0x009626cc
-	/*GoBits*/ public: /*static*/ GoBits* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x007b25a3
-	/*GoBits*/ public: bool /*__thiscall*/ GetGoBitBool(const Goid_* unk1, const char* unk2, bool unk3) const; //0x007b0a44
-	/*GoBits*/ public: bool /*__thiscall*/ GetGoBitBool(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4) const; //0x009618c2
-	/*GoBits*/ public: bool /*__thiscall*/ GetGoBitBool(const Goid_* unk1, const char* unk2, const char* unk3) const; //0x009618ed
-	/*GoBits*/ public: bool /*__thiscall*/ GetGoBitBool(const Goid_* unk1, const char* unk2) const; //0x007b0a5e
-	/*GoBits*/ public: bool /*__thiscall*/ GetQuestBool(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4) const; //0x007b086c
-	/*GoBits*/ public: bool /*__thiscall*/ GetQuestBool(const Goid_* unk1, const char* unk2, const char* unk3) const; //0x007b0875
-	/*GoBits*/ public: const gpbstring<char>& /*__thiscall*/ GetGoBitString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4) const; //0x00961669
-	/*GoBits*/ public: const gpbstring<char>& /*__thiscall*/ GetGoBitString(const Goid_* unk1, const char* unk2, const char* unk3) const; //0x009616f7
-	/*GoBits*/ public: const gpbstring<char>& /*__thiscall*/ GetGoBitString(const Goid_* unk1, const char* unk2, const gpbstring<char>& unk3) const; //0x007b0aaa
-	/*GoBits*/ public: const gpbstring<char>& /*__thiscall*/ GetGoBitString(const Goid_* unk1, const char* unk2) const; //0x007b0ac4
-	/*GoBits*/ public: const gpbstring<char>& /*__thiscall*/ GetQuestString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4) const; //0x007b08a3
-	/*GoBits*/ public: const gpbstring<char>& /*__thiscall*/ GetQuestString(const Goid_* unk1, const char* unk2, const char* unk3) const; //0x007b08ac
-	/*GoBits*/ public: float /*__thiscall*/ GetGoBitFloat(const Goid_* unk1, const char* unk2, const char* unk3, float unk4) const; //0x00961904
-	/*GoBits*/ public: float /*__thiscall*/ GetGoBitFloat(const Goid_* unk1, const char* unk2, const char* unk3) const; //0x0096192f
-	/*GoBits*/ public: float /*__thiscall*/ GetGoBitFloat(const Goid_* unk1, const char* unk2, float unk3) const; //0x007b0a75
-	/*GoBits*/ public: float /*__thiscall*/ GetGoBitFloat(const Goid_* unk1, const char* unk2) const; //0x007b0a93
-	/*GoBits*/ public: float /*__thiscall*/ GetQuestFloat(const Goid_* unk1, const char* unk2, const char* unk3, float unk4) const; //0x007b087e
-	/*GoBits*/ public: float /*__thiscall*/ GetQuestFloat(const Goid_* unk1, const char* unk2, const char* unk3) const; //0x007b089a
-	/*GoBits*/ public: int /*__thiscall*/ GetGoBitInt(const Goid_* unk1, const char* unk2, const char* unk3, int unk4) const; //0x00961880
-	/*GoBits*/ public: int /*__thiscall*/ GetGoBitInt(const Goid_* unk1, const char* unk2, const char* unk3) const; //0x009618ab
-	/*GoBits*/ public: int /*__thiscall*/ GetGoBitInt(const Goid_* unk1, const char* unk2, int unk3) const; //0x007b0a13
-	/*GoBits*/ public: int /*__thiscall*/ GetGoBitInt(const Goid_* unk1, const char* unk2) const; //0x007b0a2d
-	/*GoBits*/ public: int /*__thiscall*/ GetQuestInt(const Goid_* unk1, const char* unk2, const char* unk3, int unk4) const; //0x007b085a
-	/*GoBits*/ public: int /*__thiscall*/ GetQuestInt(const Goid_* unk1, const char* unk2, const char* unk3) const; //0x007b0863
-	/*GoBits*/ public: void /*__thiscall*/ ClearGoBit(const Goid_* unk1, const char* unk2, const char* unk3); //0x00963e49
-	/*GoBits*/ public: void /*__thiscall*/ ClearGoBit(const Goid_* unk1, const char* unk2); //0x007b0adb
-	/*GoBits*/ public: void /*__thiscall*/ RCSetGoBitString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4, eGoBitType unk5); //0x00963f88
-	/*GoBits*/ public: void /*__thiscall*/ RCSetGoBitString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4); //0x007b0d5c
-	/*GoBits*/ public: void /*__thiscall*/ RCSetGoBitString(const Goid_* unk1, const char* unk2, const gpbstring<char>& unk3); //0x007b0d76
-	/*GoBits*/ public: void /*__thiscall*/ RCSetQuestString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4); //0x007b09df
-	/*GoBits*/ public: void /*__thiscall*/ RSSetGoBitBool(const Goid_* unk1, const char* unk2, bool unk3); //0x007b0be4
-	/*GoBits*/ public: void /*__thiscall*/ RSSetGoBitBool(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4, eGoBitType unk5); //0x00964367
-	/*GoBits*/ public: void /*__thiscall*/ RSSetGoBitBool(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4); //0x007b0bca
-	/*GoBits*/ public: void /*__thiscall*/ RSSetGoBitFloat(const Goid_* unk1, const char* unk2, const char* unk3, float unk4, eGoBitType unk5); //0x009644c1
-	/*GoBits*/ public: void /*__thiscall*/ RSSetGoBitFloat(const Goid_* unk1, const char* unk2, const char* unk3, float unk4); //0x007b0c74
-	/*GoBits*/ public: void /*__thiscall*/ RSSetGoBitFloat(const Goid_* unk1, const char* unk2, float unk3); //0x007b0c92
-	/*GoBits*/ public: void /*__thiscall*/ RSSetGoBitInt(const Goid_* unk1, const char* unk2, const char* unk3, int unk4, eGoBitType unk5); //0x00964219
-	/*GoBits*/ public: void /*__thiscall*/ RSSetGoBitInt(const Goid_* unk1, const char* unk2, const char* unk3, int unk4); //0x007b0b28
-	/*GoBits*/ public: void /*__thiscall*/ RSSetGoBitInt(const Goid_* unk1, const char* unk2, int unk3); //0x007b0b42
-	/*GoBits*/ public: void /*__thiscall*/ RSSetGoBitString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4, eGoBitType unk5); //0x009640ca
-	/*GoBits*/ public: void /*__thiscall*/ RSSetGoBitString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4); //0x007b0d26
-	/*GoBits*/ public: void /*__thiscall*/ RSSetGoBitString(const Goid_* unk1, const char* unk2, const gpbstring<char>& unk3); //0x007b0d40
-	/*GoBits*/ public: void /*__thiscall*/ RSSetQuestBool(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4); //0x007b091d
-	/*GoBits*/ public: void /*__thiscall*/ RSSetQuestFloat(const Goid_* unk1, const char* unk2, const char* unk3, float unk4); //0x007b096f
-	/*GoBits*/ public: void /*__thiscall*/ RSSetQuestInt(const Goid_* unk1, const char* unk2, const char* unk3, int unk4); //0x007b08cf
-	/*GoBits*/ public: void /*__thiscall*/ RSSetQuestString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4); //0x007b09c5
-	/*GoBits*/ public: void /*__thiscall*/ SetGoBitBool(const Goid_* unk1, const char* unk2, bool unk3); //0x007b0c1a
-	/*GoBits*/ public: void /*__thiscall*/ SetGoBitBool(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4, eGoBitType unk5); //0x00963ecc
-	/*GoBits*/ public: void /*__thiscall*/ SetGoBitBool(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4); //0x007b0c00
-	/*GoBits*/ public: void /*__thiscall*/ SetGoBitFloat(const Goid_* unk1, const char* unk2, const char* unk3, float unk4, eGoBitType unk5); //0x00963f24
-	/*GoBits*/ public: void /*__thiscall*/ SetGoBitFloat(const Goid_* unk1, const char* unk2, const char* unk3, float unk4); //0x007b0cb2
-	/*GoBits*/ public: void /*__thiscall*/ SetGoBitFloat(const Goid_* unk1, const char* unk2, float unk3); //0x007b0cd0
-	/*GoBits*/ public: void /*__thiscall*/ SetGoBitInt(const Goid_* unk1, const char* unk2, const char* unk3, int unk4, eGoBitType unk5); //0x00963e74
-	/*GoBits*/ public: void /*__thiscall*/ SetGoBitInt(const Goid_* unk1, const char* unk2, const char* unk3, int unk4); //0x007b0b5e
-	/*GoBits*/ public: void /*__thiscall*/ SetGoBitInt(const Goid_* unk1, const char* unk2, int unk3); //0x007b0b78
-	/*GoBits*/ public: void /*__thiscall*/ SetGoBitString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4, eGoBitType unk5); //0x00963c09
-	/*GoBits*/ public: void /*__thiscall*/ SetGoBitString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4); //0x007b0d92
-	/*GoBits*/ public: void /*__thiscall*/ SetGoBitString(const Goid_* unk1, const char* unk2, const gpbstring<char>& unk3); //0x007b0dac
-	/*GoBits*/ public: void /*__thiscall*/ SetQuestBool(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4); //0x007b0937
-	/*GoBits*/ public: void /*__thiscall*/ SetQuestFloat(const Goid_* unk1, const char* unk2, const char* unk3, float unk4); //0x007b098d
-	/*GoBits*/ public: void /*__thiscall*/ SetQuestInt(const Goid_* unk1, const char* unk2, const char* unk3, int unk4); //0x007b08e9
-	/*GoBits*/ public: void /*__thiscall*/ SetQuestString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4); //0x007b09f9
-	/*GoBits*/ public: void /*__thiscall*/ SSetGoBitBool(const Goid_* unk1, const char* unk2, bool unk3); //0x007b0bae
-	/*GoBits*/ public: void /*__thiscall*/ SSetGoBitBool(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4, eGoBitType unk5); //0x0096430f
-	/*GoBits*/ public: void /*__thiscall*/ SSetGoBitBool(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4); //0x007b0b94
-	/*GoBits*/ public: void /*__thiscall*/ SSetGoBitFloat(const Goid_* unk1, const char* unk2, const char* unk3, float unk4, eGoBitType unk5); //0x0096445d
-	/*GoBits*/ public: void /*__thiscall*/ SSetGoBitFloat(const Goid_* unk1, const char* unk2, const char* unk3, float unk4); //0x007b0c36
-	/*GoBits*/ public: void /*__thiscall*/ SSetGoBitFloat(const Goid_* unk1, const char* unk2, float unk3); //0x007b0c54
-	/*GoBits*/ public: void /*__thiscall*/ SSetGoBitInt(const Goid_* unk1, const char* unk2, const char* unk3, int unk4, eGoBitType unk5); //0x009641c1
-	/*GoBits*/ public: void /*__thiscall*/ SSetGoBitInt(const Goid_* unk1, const char* unk2, const char* unk3, int unk4); //0x007b0af2
-	/*GoBits*/ public: void /*__thiscall*/ SSetGoBitInt(const Goid_* unk1, const char* unk2, int unk3); //0x007b0b0c
-	/*GoBits*/ public: void /*__thiscall*/ SSetGoBitString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4, eGoBitType unk5); //0x009640c1
-	/*GoBits*/ public: void /*__thiscall*/ SSetGoBitString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4); //0x007b0cf0
-	/*GoBits*/ public: void /*__thiscall*/ SSetGoBitString(const Goid_* unk1, const char* unk2, const gpbstring<char>& unk3); //0x007b0d0a
-	/*GoBits*/ public: void /*__thiscall*/ SSetQuestBool(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4); //0x007b0903
-	/*GoBits*/ public: void /*__thiscall*/ SSetQuestFloat(const Goid_* unk1, const char* unk2, const char* unk3, float unk4); //0x007b0951
-	/*GoBits*/ public: void /*__thiscall*/ SSetQuestInt(const Goid_* unk1, const char* unk2, const char* unk3, int unk4); //0x007b08b5
-	/*GoBits*/ public: void /*__thiscall*/ SSetQuestString(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4); //0x007b09ab
+	DefineMethod(GetGoidColl, 0x961264, GoidColl&, Params(unsigned long unk1), Args(unk1));
+	DefineMethod(GetGopColl, 0x961213, GopColl&, Params(unsigned long unk1), Args(unk1));
+	DefineMethod(GetIntColl, 0x9612b5, IntColl&, Params(unsigned long unk1), Args(unk1));
+	DefineMethod(CreateGoidColl, 0x961d39, unsigned long, NO_PARAMS, NO_ARGS);
+	DefineMethod(CreateGopColl, 0x961cf1, unsigned long, NO_PARAMS, NO_ARGS);
+	DefineMethod(CreateIntColl, 0x961d81, unsigned long, NO_PARAMS, NO_ARGS);
+	DefineMethod(DeleteGoidColl, 0x962680, void, Params(unsigned long unk1), Args(unk1));
+	DefineMethod(DeleteGopColl, 0x962634, void, Params(unsigned long unk1), Args(unk1));
+	DefineMethod(DeleteIntColl, 0x9626cc, void, Params(unsigned long unk1), Args(unk1));
+	DefineConstMethod(GetGoBitBool, 0x7b0a44, bool, Params(const Goid_* unk1, const char* unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetGoBitBool, 0x9618c2, bool, Params(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(GetGoBitBool, 0x9618ed, bool, Params(const Goid_* unk1, const char* unk2, const char* unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetGoBitBool, 0x7b0a5e, bool, Params(const Goid_* unk1, const char* unk2), Args(unk1, unk2));
+	DefineConstMethod(GetQuestBool, 0x7b086c, bool, Params(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(GetQuestBool, 0x7b0875, bool, Params(const Goid_* unk1, const char* unk2, const char* unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetGoBitString, 0x961669, const gpbstring<char>&, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(GetGoBitString, 0x9616f7, const gpbstring<char>&, Params(const Goid_* unk1, const char* unk2, const char* unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetGoBitString, 0x7b0aaa, const gpbstring<char>&, Params(const Goid_* unk1, const char* unk2, const gpbstring<char>& unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetGoBitString, 0x7b0ac4, const gpbstring<char>&, Params(const Goid_* unk1, const char* unk2), Args(unk1, unk2));
+	DefineConstMethod(GetQuestString, 0x7b08a3, const gpbstring<char>&, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(GetQuestString, 0x7b08ac, const gpbstring<char>&, Params(const Goid_* unk1, const char* unk2, const char* unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetGoBitFloat, 0x961904, float, Params(const Goid_* unk1, const char* unk2, const char* unk3, float unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(GetGoBitFloat, 0x96192f, float, Params(const Goid_* unk1, const char* unk2, const char* unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetGoBitFloat, 0x7b0a75, float, Params(const Goid_* unk1, const char* unk2, float unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetGoBitFloat, 0x7b0a93, float, Params(const Goid_* unk1, const char* unk2), Args(unk1, unk2));
+	DefineConstMethod(GetQuestFloat, 0x7b087e, float, Params(const Goid_* unk1, const char* unk2, const char* unk3, float unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(GetQuestFloat, 0x7b089a, float, Params(const Goid_* unk1, const char* unk2, const char* unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetGoBitInt, 0x961880, int, Params(const Goid_* unk1, const char* unk2, const char* unk3, int unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(GetGoBitInt, 0x9618ab, int, Params(const Goid_* unk1, const char* unk2, const char* unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetGoBitInt, 0x7b0a13, int, Params(const Goid_* unk1, const char* unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineConstMethod(GetGoBitInt, 0x7b0a2d, int, Params(const Goid_* unk1, const char* unk2), Args(unk1, unk2));
+	DefineConstMethod(GetQuestInt, 0x7b085a, int, Params(const Goid_* unk1, const char* unk2, const char* unk3, int unk4), Args(unk1, unk2, unk3, unk4));
+	DefineConstMethod(GetQuestInt, 0x7b0863, int, Params(const Goid_* unk1, const char* unk2, const char* unk3), Args(unk1, unk2, unk3));
+	DefineMethod(ClearGoBit, 0x963e49, void, Params(const Goid_* unk1, const char* unk2, const char* unk3), Args(unk1, unk2, unk3));
+	DefineMethod(ClearGoBit, 0x7b0adb, void, Params(const Goid_* unk1, const char* unk2), Args(unk1, unk2));
+	DefineMethod(RCSetGoBitString, 0x963f88, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(RCSetGoBitString, 0x7b0d5c, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(RCSetGoBitString, 0x7b0d76, void, Params(const Goid_* unk1, const char* unk2, const gpbstring<char>& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RCSetQuestString, 0x7b09df, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(RSSetGoBitBool, 0x7b0be4, void, Params(const Goid_* unk1, const char* unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSSetGoBitBool, 0x964367, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(RSSetGoBitBool, 0x7b0bca, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(RSSetGoBitFloat, 0x9644c1, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, float unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(RSSetGoBitFloat, 0x7b0c74, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, float unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(RSSetGoBitFloat, 0x7b0c92, void, Params(const Goid_* unk1, const char* unk2, float unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSSetGoBitInt, 0x964219, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, int unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(RSSetGoBitInt, 0x7b0b28, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, int unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(RSSetGoBitInt, 0x7b0b42, void, Params(const Goid_* unk1, const char* unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSSetGoBitString, 0x9640ca, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(RSSetGoBitString, 0x7b0d26, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(RSSetGoBitString, 0x7b0d40, void, Params(const Goid_* unk1, const char* unk2, const gpbstring<char>& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSSetQuestBool, 0x7b091d, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(RSSetQuestFloat, 0x7b096f, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, float unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(RSSetQuestInt, 0x7b08cf, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, int unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(RSSetQuestString, 0x7b09c5, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SetGoBitBool, 0x7b0c1a, void, Params(const Goid_* unk1, const char* unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SetGoBitBool, 0x963ecc, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(SetGoBitBool, 0x7b0c00, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SetGoBitFloat, 0x963f24, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, float unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(SetGoBitFloat, 0x7b0cb2, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, float unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SetGoBitFloat, 0x7b0cd0, void, Params(const Goid_* unk1, const char* unk2, float unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SetGoBitInt, 0x963e74, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, int unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(SetGoBitInt, 0x7b0b5e, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, int unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SetGoBitInt, 0x7b0b78, void, Params(const Goid_* unk1, const char* unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SetGoBitString, 0x963c09, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(SetGoBitString, 0x7b0d92, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SetGoBitString, 0x7b0dac, void, Params(const Goid_* unk1, const char* unk2, const gpbstring<char>& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SetQuestBool, 0x7b0937, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SetQuestFloat, 0x7b098d, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, float unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SetQuestInt, 0x7b08e9, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, int unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SetQuestString, 0x7b09f9, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SSetGoBitBool, 0x7b0bae, void, Params(const Goid_* unk1, const char* unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SSetGoBitBool, 0x96430f, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(SSetGoBitBool, 0x7b0b94, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SSetGoBitFloat, 0x96445d, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, float unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(SSetGoBitFloat, 0x7b0c36, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, float unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SSetGoBitFloat, 0x7b0c54, void, Params(const Goid_* unk1, const char* unk2, float unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SSetGoBitInt, 0x9641c1, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, int unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(SSetGoBitInt, 0x7b0af2, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, int unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SSetGoBitInt, 0x7b0b0c, void, Params(const Goid_* unk1, const char* unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SSetGoBitString, 0x9640c1, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4, eGoBitType unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(SSetGoBitString, 0x7b0cf0, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SSetGoBitString, 0x7b0d0a, void, Params(const Goid_* unk1, const char* unk2, const gpbstring<char>& unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SSetQuestBool, 0x7b0903, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, bool unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SSetQuestFloat, 0x7b0951, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, float unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SSetQuestInt, 0x7b08b5, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, int unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(SSetQuestString, 0x7b09ab, void, Params(const Goid_* unk1, const char* unk2, const char* unk3, const gpbstring<char>& unk4), Args(unk1, unk2, unk3, unk4));
 };

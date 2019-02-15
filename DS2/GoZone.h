@@ -2,15 +2,15 @@
 
 class GoZone {
 public:
-	/*GoZone*/ public: bool /*__thiscall*/ IsPosInZone(const SiegePos& unk1) const; //0x0090cf52
-	/*GoZone*/ public: bool /*__thiscall*/ IsPosOnBackSide(const SiegePos& unk1) const; //0x0090cf7e
-	/*GoZone*/ public: bool /*__thiscall*/ IsPosOnFrontSide(const SiegePos& unk1) const; //0x0090cf68
-	/*GoZone*/ public: bool /*__thiscall*/ IsPosOnLeftSide(const SiegePos& unk1) const; //0x0090cf94
-	/*GoZone*/ public: bool /*__thiscall*/ IsPosOnRightSide(const SiegePos& unk1) const; //0x0090cfaa
-	/*GoZone*/ public: bool /*__thiscall*/ IsValid() const; //0x004283e0
-	/*GoZone*/ public: const SiegePos& /*__thiscall*/ GetPosition(); //0x0090cfc0
-	/*GoZone*/ public: void /*__thiscall*/ GetBackDirection(vector_3& unk1); //0x0090cfed
-	/*GoZone*/ public: void /*__thiscall*/ GetFrontDirection(vector_3& unk1); //0x0090cfd2
-	/*GoZone*/ public: void /*__thiscall*/ GetLeftDirection(vector_3& unk1); //0x0090d03e
-	/*GoZone*/ public: void /*__thiscall*/ GetRightDirection(vector_3& unk1); //0x0090d023
+	DefineConstMethod(IsPosInZone, 0x90cf52, bool, Params(const SiegePos& unk1), Args(unk1));
+	DefineConstMethod(IsPosOnBackSide, 0x90cf7e, bool, Params(const SiegePos& unk1), Args(unk1));
+	DefineConstMethod(IsPosOnFrontSide, 0x90cf68, bool, Params(const SiegePos& unk1), Args(unk1));
+	DefineConstMethod(IsPosOnLeftSide, 0x90cf94, bool, Params(const SiegePos& unk1), Args(unk1));
+	DefineConstMethod(IsPosOnRightSide, 0x90cfaa, bool, Params(const SiegePos& unk1), Args(unk1));
+	DefineConstMethod(IsValid, 0x4283e0, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetPosition, 0x90cfc0, const SiegePos&, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetBackDirection, 0x90cfed, void, Params(vector_3& unk1), Args(unk1));
+	DefineMethod(GetFrontDirection, 0x90cfd2, void, Params(vector_3& unk1), Args(unk1));
+	DefineMethod(GetLeftDirection, 0x90d03e, void, Params(vector_3& unk1), Args(unk1));
+	DefineMethod(GetRightDirection, 0x90d023, void, Params(vector_3& unk1), Args(unk1));
 };

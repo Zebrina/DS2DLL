@@ -8,34 +8,33 @@ class Victory {
 public:
 	DefineSingleton(Victory, 0x4243b9);
 
-	/*Victory*/ private: /*static*/ Victory* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x004243b9
-	/*Victory*/ public: bool /*__thiscall*/ IsVictoryConditionMet(const char* unk1, int unk2); //0x008ee12f
-	/*Victory*/ public: bool /*__thiscall*/ IsVictoryConditionMet(const char* unk1); //0x008ee0ec
-	/*Victory*/ public: bool /*__thiscall*/ SetVictoryConditionValue(const char* unk1, int unk2); //0x008ee24e
-	/*Victory*/ public: double /*__thiscall*/ GetGameTimeElapsed(); //0x008eccf5
-	/*Victory*/ public: int /*__thiscall*/ GetGameStat(const char* unk1); //0x008ebcb6
-	/*Victory*/ public: int /*__thiscall*/ GetPlayerStat(const char* unk1, const PlayerId_* unk2); //0x008ebc89
-	/*Victory*/ public: int /*__thiscall*/ GetTeamStat(const char* unk1, int unk2); //0x008ebc9e
-	/*Victory*/ public: int /*__thiscall*/ GetVictoryConditionValue(const char* unk1); //0x008ee211
-	/*Victory*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetGameEnded(bool unk1); //0x008f2296
-	/*Victory*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetGameType(const gpbstring<char>& unk1, unsigned long unk2); //0x008ebc6e
-	/*Victory*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetPlayerStat(int unk1, int unk2, int unk3, unsigned long unk4); //0x008ee55b
-	/*Victory*/ public: FuBi::Cookie__* /*__thiscall*/ RCSetTeamStat(int unk1, int unk2, int unk3, unsigned long unk4); //0x008ee6e3
-	/*Victory*/ public: FuBi::Cookie__* /*__thiscall*/ RSRequestGameEnd(const PlayerId_* unk1); //0x008f6ea6
-	/*Victory*/ public: FuBi::Cookie__* /*__thiscall*/ RSSetGameEnded(bool unk1); //0x008f7019
-	/*Victory*/ public: void /*__thiscall*/ RCClearPlayerStats(unsigned long unk1); //0x008ee3ab
-	/*Victory*/ public: void /*__thiscall*/ RCDisplayMessage(const char* unk1); //0x008ebcc5
-	/*Victory*/ public: void /*__thiscall*/ RCSetMainCampaignWon(bool unk1); //0x008f1940
-	/*Victory*/ public: void /*__thiscall*/ RCSetTeamVictoryConditionMet(const char* unk1, bool unk2, int unk3); //0x008ef03c
-	/*Victory*/ public: void /*__thiscall*/ RCSetVictoryConditionMet(const char* unk1, bool unk2); //0x008eef54
-	/*Victory*/ public: void /*__thiscall*/ RCSyncEndGameTimeline(unsigned long unk1, const_mem_ptr unk2); //0x008f66ca
-	/*Victory*/ public: void /*__thiscall*/ RSSetMainCampaignWon(bool unk1); //0x008f238a
-	/*Victory*/ public: void /*__thiscall*/ SDisplayMessage(const char* unk1); //0x008ef4f9
-	/*Victory*/ public: void /*__thiscall*/ SDisplayMessage1Party(const char* unk1, Go* unk2); //0x008ef544
-	/*Victory*/ public: void /*__thiscall*/ SDisplayMessage2Party(const char* unk1, Go* unk2, Go* unk3); //0x008ef5ba
-	/*Victory*/ public: void /*__thiscall*/ SIncrementStat(const char* unk1, Player* unk2, int unk3); //0x008ef1a3
-	/*Victory*/ public: void /*__thiscall*/ SLeaderMessage(eGameStat unk1, const char* unk2); //0x008ef6a5
-	/*Victory*/ public: void /*__thiscall*/ SRequestGameEndAll(); //0x008f6ff9
-	/*Victory*/ public: void /*__thiscall*/ SSetTeamVictoryConditionMet(const char* unk1, bool unk2, int unk3); //0x008ef4ad
-	/*Victory*/ public: void /*__thiscall*/ SSetVictoryConditionMet(const char* unk1, bool unk2); //0x008ef4a4
+	DefineMethod(IsVictoryConditionMet, 0x8ee12f, bool, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(IsVictoryConditionMet, 0x8ee0ec, bool, Params(const char* unk1), Args(unk1));
+	DefineMethod(SetVictoryConditionValue, 0x8ee24e, bool, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(GetGameTimeElapsed, 0x8eccf5, double, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetGameStat, 0x8ebcb6, int, Params(const char* unk1), Args(unk1));
+	DefineMethod(GetPlayerStat, 0x8ebc89, int, Params(const char* unk1, const PlayerId_* unk2), Args(unk1, unk2));
+	DefineMethod(GetTeamStat, 0x8ebc9e, int, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(GetVictoryConditionValue, 0x8ee211, int, Params(const char* unk1), Args(unk1));
+	DefineMethod(RCSetGameEnded, 0x8f2296, FuBi::Cookie__*, Params(bool unk1), Args(unk1));
+	DefineMethod(RCSetGameType, 0x8ebc6e, FuBi::Cookie__*, Params(const gpbstring<char>& unk1, unsigned long unk2), Args(unk1, unk2));
+	DefineMethod(RCSetPlayerStat, 0x8ee55b, FuBi::Cookie__*, Params(int unk1, int unk2, int unk3, unsigned long unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(RCSetTeamStat, 0x8ee6e3, FuBi::Cookie__*, Params(int unk1, int unk2, int unk3, unsigned long unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(RSRequestGameEnd, 0x8f6ea6, FuBi::Cookie__*, Params(const PlayerId_* unk1), Args(unk1));
+	DefineMethod(RSSetGameEnded, 0x8f7019, FuBi::Cookie__*, Params(bool unk1), Args(unk1));
+	DefineMethod(RCClearPlayerStats, 0x8ee3ab, void, Params(unsigned long unk1), Args(unk1));
+	DefineMethod(RCDisplayMessage, 0x8ebcc5, void, Params(const char* unk1), Args(unk1));
+	DefineMethod(RCSetMainCampaignWon, 0x8f1940, void, Params(bool unk1), Args(unk1));
+	DefineMethod(RCSetTeamVictoryConditionMet, 0x8ef03c, void, Params(const char* unk1, bool unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RCSetVictoryConditionMet, 0x8eef54, void, Params(const char* unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(RCSyncEndGameTimeline, 0x8f66ca, void, Params(unsigned long unk1, const_mem_ptr unk2), Args(unk1, unk2));
+	DefineMethod(RSSetMainCampaignWon, 0x8f238a, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SDisplayMessage, 0x8ef4f9, void, Params(const char* unk1), Args(unk1));
+	DefineMethod(SDisplayMessage1Party, 0x8ef544, void, Params(const char* unk1, Go* unk2), Args(unk1, unk2));
+	DefineMethod(SDisplayMessage2Party, 0x8ef5ba, void, Params(const char* unk1, Go* unk2, Go* unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SIncrementStat, 0x8ef1a3, void, Params(const char* unk1, Player* unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SLeaderMessage, 0x8ef6a5, void, Params(eGameStat unk1, const char* unk2), Args(unk1, unk2));
+	DefineMethod(SRequestGameEndAll, 0x8f6ff9, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SSetTeamVictoryConditionMet, 0x8ef4ad, void, Params(const char* unk1, bool unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SSetVictoryConditionMet, 0x8ef4a4, void, Params(const char* unk1, bool unk2), Args(unk1, unk2));
 };

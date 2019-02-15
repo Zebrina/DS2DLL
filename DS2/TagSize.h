@@ -1,13 +1,15 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 struct tagSIZE {
 
 } typedef TagSize;
 
-/*FuBi::Traits<tagSIZE>*/ /*static*/ bool /*__cdecl*/ FromString(const char* unk1, tagSIZE& unk2); //0x009d52e8
-/*FuBi::Traits<tagSIZE>*/ /*static*/ void /*__cdecl*/ FUBI_GetHeaderSpec(FuBi::ClassHeaderSpec& unk1); //0x00503d84
-/*FuBi::Traits<tagSIZE>*/ /*static*/ void /*__cdecl*/ ToString(gpbstring<char>& unk1, const tagSIZE& unk2, FuBi::eXfer unk3); //0x009d52b3
-/*FuBi::Traits<tagSIZE>*/ long /*__thiscall*/ Getcx() const; //0x00502bae
-/*FuBi::Traits<tagSIZE>*/ long /*__thiscall*/ Getcy() const; //0x00502bbd
-/*FuBi::Traits<tagSIZE>*/ void /*__thiscall*/ Setcx(long unk1); //0x00502bb1
-/*FuBi::Traits<tagSIZE>*/ void /*__thiscall*/ Setcy(long unk1); //0x00502bc1
+DefineTemplateStaticMethod(FuBi::Traits<tagSIZE>, FromString, 0x9d52e8, bool, Params(const char* unk1, tagSIZE& unk2), Args(unk1, unk2));
+DefineTemplateStaticMethod(FuBi::Traits<tagSIZE>, FUBI_GetHeaderSpec, 0x503d84, void, Params(FuBi::ClassHeaderSpec& unk1), Args(unk1));
+DefineTemplateStaticMethod(FuBi::Traits<tagSIZE>, ToString, 0x9d52b3, void, Params(gpbstring<char>& unk1, const tagSIZE& unk2, FuBi::eXfer unk3), Args(unk1, unk2, unk3));
+DefineTemplateConstMethod(FuBi::Traits<tagSIZE>, Getcx, 0x502bae, long, NO_PARAMS, NO_ARGS);
+DefineTemplateConstMethod(FuBi::Traits<tagSIZE>, Getcy, 0x502bbd, long, NO_PARAMS, NO_ARGS);
+DefineTemplateMethod(FuBi::Traits<tagSIZE>, Setcx, 0x502bb1, void, Params(long unk1), Args(unk1));
+DefineTemplateMethod(FuBi::Traits<tagSIZE>, Setcy, 0x502bc1, void, Params(long unk1), Args(unk1));

@@ -1,7 +1,11 @@
 #pragma once
 
+#include "FuBi.h"
+
+#include "ClassMacros.h"
+
 struct GSize {
 
 };
 
-/*FuBi::Traits<GSize>*/ /*static*/ int /*__cdecl*/ FUBI_Inheritance(tagSIZE* unk1); //0x00502c35
+DefineTemplateStaticMethod(FuBi::Traits<GSize>, FUBI_Inheritance, 0x502c35, int, Params(tagSIZE* unk1), Args(unk1));

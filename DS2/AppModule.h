@@ -5,23 +5,22 @@
 class AppModule {
 	DefineSingleton(AppModule, 0x50358c);
 
-	/*AppModule*/ private: /*static*/ AppModule* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x0050358c
-	/*AppModule*/ public: bool /*__thiscall*/ GetAltKey() const; //0x00467c40
-	/*AppModule*/ public: bool /*__thiscall*/ GetControlKey() const; //0x00472d50
-	/*AppModule*/ public: bool /*__thiscall*/ GetLButton() const; //0x00472d5c
-	/*AppModule*/ public: bool /*__thiscall*/ GetMButton() const; //0x00472d69
-	/*AppModule*/ public: bool /*__thiscall*/ GetRButton() const; //0x00472d76
-	/*AppModule*/ public: bool /*__thiscall*/ GetShiftKey() const; //0x00409adb
-	/*AppModule*/ public: bool /*__thiscall*/ GetSpecialKey() const; //0x00502ab4
-	/*AppModule*/ public: bool /*__thiscall*/ GetXButton1() const; //0x00472d83
-	/*AppModule*/ public: bool /*__thiscall*/ GetXButton2() const; //0x00472d90
-	/*AppModule*/ public: bool /*__thiscall*/ IsMouseFixed() const; //0x00502aaa
-	/*AppModule*/ public: bool /*__thiscall*/ IsUserPaused(); //0x00424163
-	/*AppModule*/ public: bool /*__thiscall*/ RequestQuit(bool unk1); //0x00610ca8
-	/*AppModule*/ public: float /*__thiscall*/ GetFilteredFrameRate() const; //0x00428325
-	/*AppModule*/ public: float /*__thiscall*/ GetNormalizedCursorX() const; //0x004282ae
-	/*AppModule*/ public: float /*__thiscall*/ GetNormalizedCursorY() const; //0x004282b5
-	/*AppModule*/ public: int /*__thiscall*/ GetCursorX() const; //0x0044a307
-	/*AppModule*/ public: int /*__thiscall*/ GetCursorY() const; //0x0044a30e
-	/*AppModule*/ public: void /*__thiscall*/ UserPause(bool unk1); //0x00611516
+	DefineConstMethod(GetAltKey, 0x467c40, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetControlKey, 0x472d50, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetLButton, 0x472d5c, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMButton, 0x472d69, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetRButton, 0x472d76, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetShiftKey, 0x409adb, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetSpecialKey, 0x502ab4, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetXButton1, 0x472d83, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetXButton2, 0x472d90, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(IsMouseFixed, 0x502aaa, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(IsUserPaused, 0x424163, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(RequestQuit, 0x610ca8, bool, Params(bool unk1), Args(unk1));
+	DefineConstMethod(GetFilteredFrameRate, 0x428325, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetNormalizedCursorX, 0x4282ae, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetNormalizedCursorY, 0x4282b5, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetCursorX, 0x44a307, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetCursorY, 0x44a30e, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(UserPause, 0x611516, void, Params(bool unk1), Args(unk1));
 };

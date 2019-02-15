@@ -1,5 +1,5 @@
 #pragma once
 
 namespace FuelBlock {
-	/*FuelBlock*/ public: /*static*/ bool /*__cdecl*/ PreloadFuelBlock(const char* unk1, bool unk2); //0x00628e60
+	DefineStaticMethod(PreloadFuelBlock, 0x628e60, bool, Params(const char* unk1, bool unk2), Args(unk1, unk2));
 };

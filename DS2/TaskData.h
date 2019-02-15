@@ -1,11 +1,13 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 struct TaskData {
-	/*TaskData*/ public: /*static*/ unsigned int /*__cdecl*/ FUBI_PodGetSize(); //0x00412a78
-	/*TaskData*/ public: bool /*__thiscall*/ GetParallelTask() const; //0x00412a7f
-	/*TaskData*/ public: gpbstring<char> /*__thiscall*/ GetDescription() const; //0x0041885b
-	/*TaskData*/ public: gpbstring<char> /*__thiscall*/ GetName() const; //0x0041882f
-	/*TaskData*/ public: gpbstring<char> /*__thiscall*/ GetRadarIcon() const; //0x00418871
-	/*TaskData*/ public: gpbstring<char> /*__thiscall*/ GetTitle() const; //0x00418845
-	/*TaskData*/ public: int /*__thiscall*/ GetIndex() const; //0x00412a7c
+	DefineStaticMethod(FUBI_PodGetSize, 0x412a78, unsigned int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetParallelTask, 0x412a7f, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetDescription, 0x41885b, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetName, 0x41882f, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetRadarIcon, 0x418871, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetTitle, 0x418845, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetIndex, 0x412a7c, int, NO_PARAMS, NO_ARGS);
 };

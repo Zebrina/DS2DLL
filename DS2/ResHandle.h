@@ -1,6 +1,6 @@
 #pragma once
 
-template <int Size>
+template <typename T1, typename T2>
 class ResHandle {
 public:
 };

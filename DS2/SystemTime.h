@@ -1,8 +1,10 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 struct _SYSTEMTIME {
 
 } typedef SystemTime;
 
-/*FuBi::Traits<_SYSTEMTIME>*/ /*static*/ bool /*__cdecl*/ FromString(const char* unk1, _SYSTEMTIME& unk2); //0x009d53fc
-/*FuBi::Traits<_SYSTEMTIME>*/ /*static*/ void /*__cdecl*/ ToString(gpbstring<char>& unk1, const _SYSTEMTIME& unk2, FuBi::eXfer unk3); //0x009d53a8
+DefineTemplateStaticMethod(FuBi::Traits<_SYSTEMTIME>, FromString, 0x9d53fc, bool, Params(const char* unk1, _SYSTEMTIME& unk2), Args(unk1, unk2));
+DefineTemplateStaticMethod(FuBi::Traits<_SYSTEMTIME>, ToString, 0x9d53a8, void, Params(gpbstring<char>& unk1, const _SYSTEMTIME& unk2, FuBi::eXfer unk3), Args(unk1, unk2, unk3));

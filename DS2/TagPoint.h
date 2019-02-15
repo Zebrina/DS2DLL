@@ -1,13 +1,17 @@
 #pragma once
 
+#include "FuBi.h"
+
+#include "ClassMacros.h"
+
 struct tagPOINT {
 
 } typedef TagPoint;
 
-/*FuBi::Traits<tagPOINT>*/ /*static*/ bool /*__cdecl*/ FromString(const char* unk1, tagPOINT& unk2); //0x009d528d
-/*FuBi::Traits<tagPOINT>*/ /*static*/ void /*__cdecl*/ FUBI_GetHeaderSpec(FuBi::ClassHeaderSpec& unk1); //0x00503d59
-/*FuBi::Traits<tagPOINT>*/ /*static*/ void /*__cdecl*/ ToString(gpbstring<char>& unk1, const tagPOINT& unk2, FuBi::eXfer unk3); //0x009d5258
-/*FuBi::Traits<tagPOINT>*/ long /*__thiscall*/ Getx() const; //0x00502b6c
-/*FuBi::Traits<tagPOINT>*/ long /*__thiscall*/ Gety() const; //0x00502b7b
-/*FuBi::Traits<tagPOINT>*/ void /*__thiscall*/ Setx(long unk1); //0x00502b6f
-/*FuBi::Traits<tagPOINT>*/ void /*__thiscall*/ Sety(long unk1); //0x00502b7f
+DefineTemplateStaticMethod(FuBi::Traits<tagPOINT>, FromString, 0x9d528d, bool, Params(const char* str, tagPOINT& valueOut), Args(str, valueOut));
+DefineTemplateStaticMethod(FuBi::Traits<tagPOINT>, FUBI_GetHeaderSpec, 0x503d59, void, Params(FuBi::ClassHeaderSpec& headerSpec), Args(headerSpec));
+DefineTemplateStaticMethod(FuBi::Traits<tagPOINT>, ToString, 0x9d5258, void, Params(gpbstring<char>& strOut, const tagPOINT& value, FuBi::eXfer unk3), Args(strOut, value, unk3));
+DefineTemplateConstMethod(FuBi::Traits<tagPOINT>, Getx, 0x502b6c, long, NO_PARAMS, NO_ARGS);
+DefineTemplateConstMethod(FuBi::Traits<tagPOINT>, Gety, 0x502b7b, long, NO_PARAMS, NO_ARGS);
+DefineTemplateMethod(FuBi::Traits<tagPOINT>, Setx, 0x502b6f, void, Params(long x), Args(x));
+DefineTemplateMethod(FuBi::Traits<tagPOINT>, Sety, 0x502b7f, void, Params(long y), Args(y));

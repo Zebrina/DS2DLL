@@ -2,24 +2,24 @@
 
 class GoStore {
 public:
-	/*GoStore*/ private: /*static*/ GoStore* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x0046d8ce
-	/*GoStore*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoStore* unk1); //0x0046d8c5
-	/*GoStore*/ private: FuBi::Cookie__* /*__thiscall*/ RSAddPackmule(Go* unk1, Go* unk2); //0x009440ac
-	/*GoStore*/ private: void /*__thiscall*/ RCSyncReceipts(const_mem_ptr unk1, unsigned long unk2); //0x00946374
-	/*GoStore*/ private: void /*__thiscall*/ RSSyncReceipts(const Goid_* unk1); //0x00946c81
-	/*GoStore*/ public: bool /*__thiscall*/ IsShopOpen() const; //0x0046dd7f
-	/*GoStore*/ public: float /*__thiscall*/ GetItemMarkup(); //0x0046d8b4
-	/*GoStore*/ public: int /*__thiscall*/ GetNumHires(); //0x00943a61
-	/*GoStore*/ public: void /*__thiscall*/ RCAddToStore(unsigned long unk1); //0x00948721
-	/*GoStore*/ public: void /*__thiscall*/ RCRefreshStoreView(unsigned long unk1); //0x0094862c
-	/*GoStore*/ public: void /*__thiscall*/ RCRemoveFromStore(const Goid_* unk1, unsigned long unk2); //0x009483a7
-	/*GoStore*/ public: void /*__thiscall*/ RCRemoveItemFromGrid(const Goid_* unk1, unsigned long unk2); //0x00943318
-	/*GoStore*/ public: void /*__thiscall*/ RSAddShopper(const Goid_* unk1); //0x00944a60
-	/*GoStore*/ public: void /*__thiscall*/ RSAddToStore(const Goid_* unk1, const Goid_* unk2); //0x00948f4a
-	/*GoStore*/ public: void /*__thiscall*/ RSRemoveFromStore(const Goid_* unk1, const Goid_* unk2, bool unk3); //0x00948805
-	/*GoStore*/ public: void /*__thiscall*/ RSRemoveLocalItemFromStore(const gpbstring<char>& unk1, unsigned long unk2, const Goid_* unk3, bool unk4); //0x00948b87
-	/*GoStore*/ public: void /*__thiscall*/ RSRemoveShopper(const Goid_* unk1); //0x009437f2
-	/*GoStore*/ public: void /*__thiscall*/ RSSellAllOf(const_mem_ptr unk1, const Goid_* unk2); //0x00948dad
-	/*GoStore*/ public: void /*__thiscall*/ RSSellAllOfTrait(eQueryTrait unk1, const Goid_* unk2); //0x009490ee
-	/*GoStore*/ public: void /*__thiscall*/ SetItemMarkup(float unk1); //0x0046d8b8
+	DefineStaticMethod(FUBI_NetToInstance, 0x46d8ce, GoStore*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unk1, unk2));
+	DefineStaticMethod(FUBI_InstanceToNet, 0x46d8c5, unsigned long, Params(GoStore* unk1), Args(unk1));
+	DefineMethod(RSAddPackmule, 0x9440ac, FuBi::Cookie__*, Params(Go* unk1, Go* unk2), Args(unk1, unk2));
+	DefineMethod(RCSyncReceipts, 0x946374, void, Params(const_mem_ptr unk1, unsigned long unk2), Args(unk1, unk2));
+	DefineMethod(RSSyncReceipts, 0x946c81, void, Params(const Goid_* unk1), Args(unk1));
+	DefineConstMethod(IsShopOpen, 0x46dd7f, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetItemMarkup, 0x46d8b4, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetNumHires, 0x943a61, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(RCAddToStore, 0x948721, void, Params(unsigned long unk1), Args(unk1));
+	DefineMethod(RCRefreshStoreView, 0x94862c, void, Params(unsigned long unk1), Args(unk1));
+	DefineMethod(RCRemoveFromStore, 0x9483a7, void, Params(const Goid_* unk1, unsigned long unk2), Args(unk1, unk2));
+	DefineMethod(RCRemoveItemFromGrid, 0x943318, void, Params(const Goid_* unk1, unsigned long unk2), Args(unk1, unk2));
+	DefineMethod(RSAddShopper, 0x944a60, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(RSAddToStore, 0x948f4a, void, Params(const Goid_* unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineMethod(RSRemoveFromStore, 0x948805, void, Params(const Goid_* unk1, const Goid_* unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSRemoveLocalItemFromStore, 0x948b87, void, Params(const gpbstring<char>& unk1, unsigned long unk2, const Goid_* unk3, bool unk4), Args(unk1, unk2, unk3, unk4));
+	DefineMethod(RSRemoveShopper, 0x9437f2, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(RSSellAllOf, 0x948dad, void, Params(const_mem_ptr unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineMethod(RSSellAllOfTrait, 0x9490ee, void, Params(eQueryTrait unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineMethod(SetItemMarkup, 0x46d8b8, void, Params(float unk1), Args(unk1));
 };

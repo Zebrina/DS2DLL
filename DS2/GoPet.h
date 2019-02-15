@@ -2,24 +2,24 @@
 
 class GoPet {
 public:
-	/*GoPet*/ private: /*static*/ GoPet* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x00485ab4
-	/*GoPet*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoPet* unk1); //0x00485aab
-	/*GoPet*/ public: const gpbstring<char>& /*__thiscall*/ GetPetClass(); //0x00485aa7
-	/*GoPet*/ public: const Goid_* /*__thiscall*/ GetPetEmanation(); //0x00485aa3
-	/*GoPet*/ public: const Goid_* /*__thiscall*/ GetPetSpell(); //0x00485a9f
-	/*GoPet*/ public: const Goid_* /*__thiscall*/ GetPetWeapon(); //0x00485a9b
-	/*GoPet*/ public: float /*__thiscall*/ GetFullPetLevel(); //0x00485a88
-	/*GoPet*/ public: float /*__thiscall*/ GetPetLevelProgress(); //0x00485a8f
-	/*GoPet*/ public: int /*__thiscall*/ GetPetLevel(); //0x00485a84
-	/*GoPet*/ public: void /*__thiscall*/ EatItem(const Goid_* unk1); //0x00958284
-	/*GoPet*/ public: void /*__thiscall*/ RCBuildPetEquipment(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3); //0x0095672d
-	/*GoPet*/ public: void /*__thiscall*/ RCSetPetBonus(int unk1, int unk2); //0x00956b31
-	/*GoPet*/ public: void /*__thiscall*/ RCSetPetLevel(int unk1); //0x009547ad
-	/*GoPet*/ public: void /*__thiscall*/ RCSetPetStats(bool unk1); //0x00957235
-	/*GoPet*/ public: void /*__thiscall*/ RSFinishPetLevelUp(); //0x00954e00
-	/*GoPet*/ public: void /*__thiscall*/ RSRequestStatRefresh(); //0x00958ae6
-	/*GoPet*/ public: void /*__thiscall*/ RSSetPetBonus(int unk1, int unk2); //0x00957f10
-	/*GoPet*/ public: void /*__thiscall*/ RSSetPetLevel(int unk1); //0x00954f3e
-	/*GoPet*/ public: void /*__thiscall*/ RSSetPetStats(const Goid_* unk1, bool unk2, bool unk3); //0x0095807b
-	/*GoPet*/ public: void /*__thiscall*/ SBuildPetStats(bool unk1, bool unk2); //0x00958a66
+	DefineStaticMethod(FUBI_NetToInstance, 0x485ab4, GoPet*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unk1, unk2));
+	DefineStaticMethod(FUBI_InstanceToNet, 0x485aab, unsigned long, Params(GoPet* unk1), Args(unk1));
+	DefineMethod(GetPetClass, 0x485aa7, const gpbstring<char>&, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetPetEmanation, 0x485aa3, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetPetSpell, 0x485a9f, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetPetWeapon, 0x485a9b, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetFullPetLevel, 0x485a88, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetPetLevelProgress, 0x485a8f, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetPetLevel, 0x485a84, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(EatItem, 0x958284, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(RCBuildPetEquipment, 0x95672d, void, Params(const Goid_* unk1, const Goid_* unk2, const Goid_* unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RCSetPetBonus, 0x956b31, void, Params(int unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(RCSetPetLevel, 0x9547ad, void, Params(int unk1), Args(unk1));
+	DefineMethod(RCSetPetStats, 0x957235, void, Params(bool unk1), Args(unk1));
+	DefineMethod(RSFinishPetLevelUp, 0x954e00, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(RSRequestStatRefresh, 0x958ae6, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(RSSetPetBonus, 0x957f10, void, Params(int unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(RSSetPetLevel, 0x954f3e, void, Params(int unk1), Args(unk1));
+	DefineMethod(RSSetPetStats, 0x95807b, void, Params(const Goid_* unk1, bool unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SBuildPetStats, 0x958a66, void, Params(bool unk1, bool unk2), Args(unk1, unk2));
 };

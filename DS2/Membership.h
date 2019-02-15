@@ -2,7 +2,7 @@
 
 class Membership {
 public:
-	/*Membership*/ public: bool /*__thiscall*/ Contains(const gpbstring<char>& unk1) const; //0x0080645e
-	/*Membership*/ public: bool /*__thiscall*/ ContainsAll(const Membership& unk1) const; //0x008040c0
-	/*Membership*/ public: bool /*__thiscall*/ ContainsAny(const Membership& unk1) const; //0x0080408a
+	DefineConstMethod(Contains, 0x80645e, bool, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineConstMethod(ContainsAll, 0x8040c0, bool, Params(const Membership& unk1), Args(unk1));
+	DefineConstMethod(ContainsAny, 0x80408a, bool, Params(const Membership& unk1), Args(unk1));
 };

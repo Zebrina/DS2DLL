@@ -1,10 +1,12 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 class UIChatBox {
 public:
-	/*UIChatBox*/ private: gpbstring<char> /*__thiscall*/ GetLastSubmittedTextInAnsi(); //0x0040b3e4
-	/*UIChatBox*/ private: gpbstring<char> /*__thiscall*/ GetTextInAnsi(); //0x0040b3bd
-	/*UIChatBox*/ private: void /*__thiscall*/ SubmitText(const gpbstring<char>& unk1, unsigned long unk2, bool unk3); //0x0040b40b
-	/*UIChatBox*/ public: void /*__thiscall*/ Clear(); //0x00754d60
-	/*UIChatBox*/ public: void /*__thiscall*/ SetTextVisible(bool unk1); //0x00409357
+	DefineMethod(GetLastSubmittedTextInAnsi, 0x40b3e4, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetTextInAnsi, 0x40b3bd, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineMethod(SubmitText, 0x40b40b, void, Params(const gpbstring<char>& unk1, unsigned long unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(Clear, 0x754d60, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SetTextVisible, 0x409357, void, Params(bool unk1), Args(unk1));
 };

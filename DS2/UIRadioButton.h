@@ -1,19 +1,21 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 class UIRadioButton {
 public:
-	/*UIRadioButton*/ private: /*static*/ int /*__cdecl*/ FUBI_Inheritance(UIWindow* unk1); //0x005028b7
-	/*UIRadioButton*/ public: bool /*__thiscall*/ GetAllowUserPress() const; //0x005028d1
-	/*UIRadioButton*/ public: bool /*__thiscall*/ GetCheck() const; //0x0046dcc5
-	/*UIRadioButton*/ public: bool /*__thiscall*/ GetInvalid() const; //0x005028e8
-	/*UIRadioButton*/ public: bool /*__thiscall*/ IsDisabled(); //0x00485d68
-	/*UIRadioButton*/ public: const gpbstring<char>& /*__thiscall*/ GetRadioGroup() const; //0x005028ba
-	/*UIRadioButton*/ public: void /*__thiscall*/ LoadSelectionTexture(const gpbstring<char>& unk1); //0x0079fb20
-	/*UIRadioButton*/ public: void /*__thiscall*/ ResetButtonStatus(); //0x0079f1a0
-	/*UIRadioButton*/ public: void /*__thiscall*/ SetAllowUserPress(bool unk1); //0x005028c1
-	/*UIRadioButton*/ public: void /*__thiscall*/ SetCheck(bool unk1); //0x0079e960
-	/*UIRadioButton*/ public: void /*__thiscall*/ SetForceCheck(bool unk1); //0x0079eac0
-	/*UIRadioButton*/ public: void /*__thiscall*/ SetInvalid(bool unk1); //0x005028d8
-	/*UIRadioButton*/ public: void /*__thiscall*/ SetMidState(bool unk1); //0x0079f2d0
-	/*UIRadioButton*/ public: void /*__thiscall*/ SetRadioGroup(const gpbstring<char>& unk1); //0x00503f4c
+	DefineStaticMethod(FUBI_Inheritance, 0x5028b7, int, Params(UIWindow* unk1), Args(unk1));
+	DefineConstMethod(GetAllowUserPress, 0x5028d1, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetCheck, 0x46dcc5, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetInvalid, 0x5028e8, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(IsDisabled, 0x485d68, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetRadioGroup, 0x5028ba, const gpbstring<char>&, NO_PARAMS, NO_ARGS);
+	DefineMethod(LoadSelectionTexture, 0x79fb20, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(ResetButtonStatus, 0x79f1a0, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SetAllowUserPress, 0x5028c1, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetCheck, 0x79e960, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetForceCheck, 0x79eac0, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetInvalid, 0x5028d8, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetMidState, 0x79f2d0, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetRadioGroup, 0x503f4c, void, Params(const gpbstring<char>& unk1), Args(unk1));
 };

@@ -1,40 +1,42 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 class UITextBox {
 public:
-	/*UITextBox*/ private: /*static*/ int /*__cdecl*/ FUBI_Inheritance(UIWindow* unk1); //0x00410128
-	/*UITextBox*/ private: gpbstring<char> /*__thiscall*/ GetTextInAnsi() const; //0x004105e1
-	/*UITextBox*/ private: int /*__thiscall*/ ReformatTooltip(const gpbstring<char>& unk1, int unk2, unsigned long unk3); //0x0041066e
-	/*UITextBox*/ private: int /*__thiscall*/ SetLineText(int unk1, const gpbstring<char>& unk2, unsigned long unk3); //0x00410628
-	/*UITextBox*/ private: void /*__thiscall*/ SetText(const gpbstring<char>& unk1); //0x00410608
-	/*UITextBox*/ private: void /*__thiscall*/ SetToolTipText(const gpbstring<char>& unk1); //0x0041064e
-	/*UITextBox*/ public: bool /*__thiscall*/ FUBI_RENAME_GetScrolling(); //0x00410158
-	/*UITextBox*/ public: bool /*__thiscall*/ GetDisableUpdate() const; //0x004101e7
-	/*UITextBox*/ public: bool /*__thiscall*/ GetFixedLocation() const; //0x004101a2
-	/*UITextBox*/ public: bool /*__thiscall*/ GetScrollThrough() const; //0x004101d0
-	/*UITextBox*/ public: bool /*__thiscall*/ GetTypeMode(); //0x0041021c
-	/*UITextBox*/ public: bool /*__thiscall*/ IsFinishedScrolling(); //0x0041015d
-	/*UITextBox*/ public: float /*__thiscall*/ GetScrollRate() const; //0x00410174
-	/*UITextBox*/ public: float /*__thiscall*/ GetTypeRate(); //0x00410205
-	/*UITextBox*/ public: int /*__thiscall*/ FUBI_RENAME_GetElementHeight(); //0x0041014a
-	/*UITextBox*/ public: int /*__thiscall*/ FUBI_RENAME_GetLeadElement(); //0x0041013c
-	/*UITextBox*/ public: int /*__thiscall*/ GetFontHeight() const; //0x004101b9
-	/*UITextBox*/ public: int /*__thiscall*/ GetLineSpacer() const; //0x004101fe
-	/*UITextBox*/ public: JUSTIFICATION /*__thiscall*/ GetJustification() const; //0x0041017b
-	/*UITextBox*/ public: unsigned int /*__thiscall*/ FUBI_RENAME_GetMaxActiveElements(); //0x00410137
-	/*UITextBox*/ public: unsigned int /*__thiscall*/ FUBI_RENAME_GetNumElements(); //0x00410132
-	/*UITextBox*/ public: unsigned long /*__thiscall*/ GetTextColor() const; //0x0041012b
-	/*UITextBox*/ public: void /*__thiscall*/ CenterWindowToMousePos(); //0x0075d910
-	/*UITextBox*/ public: void /*__thiscall*/ FUBI_RENAME_SetLeadElement(int unk1); //0x00410141
-	/*UITextBox*/ public: void /*__thiscall*/ FUBI_RENAME_SetScrolling(bool unk1); //0x0041014f
-	/*UITextBox*/ public: void /*__thiscall*/ SetDisableUpdate(bool unk1); //0x004101d7
-	/*UITextBox*/ public: void /*__thiscall*/ SetFixedLocation(bool unk1); //0x00410192
-	/*UITextBox*/ public: void /*__thiscall*/ SetFontHeight(int unk1); //0x004101a9
-	/*UITextBox*/ public: void /*__thiscall*/ SetJustification(JUSTIFICATION unk1); //0x00410182
-	/*UITextBox*/ public: void /*__thiscall*/ SetLineSpacer(int unk1); //0x004101ee
-	/*UITextBox*/ public: void /*__thiscall*/ SetScrollRate(float unk1); //0x00410164
-	/*UITextBox*/ public: void /*__thiscall*/ SetScrollThrough(bool unk1); //0x004101c0
-	/*UITextBox*/ public: void /*__thiscall*/ SetTextColor(unsigned int unk1); //0x0075fa90
-	/*UITextBox*/ public: void /*__thiscall*/ SetTypeMode(bool unk1); //0x00410223
-	/*UITextBox*/ public: void /*__thiscall*/ SetTypeRate(float unk1); //0x0041020c
+	DefineStaticMethod(FUBI_Inheritance, 0x410128, int, Params(UIWindow* unk1), Args(unk1));
+	DefineConstMethod(GetTextInAnsi, 0x4105e1, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineMethod(ReformatTooltip, 0x41066e, int, Params(const gpbstring<char>& unk1, int unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SetLineText, 0x410628, int, Params(int unk1, const gpbstring<char>& unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SetText, 0x410608, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(SetToolTipText, 0x41064e, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(FUBI_RENAME_GetScrolling, 0x410158, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetDisableUpdate, 0x4101e7, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetFixedLocation, 0x4101a2, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetScrollThrough, 0x4101d0, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetTypeMode, 0x41021c, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(IsFinishedScrolling, 0x41015d, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetScrollRate, 0x410174, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetTypeRate, 0x410205, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(FUBI_RENAME_GetElementHeight, 0x41014a, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(FUBI_RENAME_GetLeadElement, 0x41013c, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetFontHeight, 0x4101b9, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetLineSpacer, 0x4101fe, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetJustification, 0x41017b, JUSTIFICATION, NO_PARAMS, NO_ARGS);
+	DefineMethod(FUBI_RENAME_GetMaxActiveElements, 0x410137, unsigned int, NO_PARAMS, NO_ARGS);
+	DefineMethod(FUBI_RENAME_GetNumElements, 0x410132, unsigned int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetTextColor, 0x41012b, unsigned long, NO_PARAMS, NO_ARGS);
+	DefineMethod(CenterWindowToMousePos, 0x75d910, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(FUBI_RENAME_SetLeadElement, 0x410141, void, Params(int unk1), Args(unk1));
+	DefineMethod(FUBI_RENAME_SetScrolling, 0x41014f, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetDisableUpdate, 0x4101d7, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetFixedLocation, 0x410192, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetFontHeight, 0x4101a9, void, Params(int unk1), Args(unk1));
+	DefineMethod(SetJustification, 0x410182, void, Params(JUSTIFICATION unk1), Args(unk1));
+	DefineMethod(SetLineSpacer, 0x4101ee, void, Params(int unk1), Args(unk1));
+	DefineMethod(SetScrollRate, 0x410164, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetScrollThrough, 0x4101c0, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetTextColor, 0x75fa90, void, Params(unsigned int unk1), Args(unk1));
+	DefineMethod(SetTypeMode, 0x410223, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetTypeRate, 0x41020c, void, Params(float unk1), Args(unk1));
 };

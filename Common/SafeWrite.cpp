@@ -1,3 +1,9 @@
+/*
+	Credits: SKSE Team (https://skse.silverlock.org/)
+
+	Ported for use in this project by Zebrina.
+*/
+
 #include "SafeWrite.h"
 
 #include <Windows.h>

@@ -2,13 +2,13 @@
 
 class GoStash {
 public:
-	/*GoStash*/ private: /*static*/ GoStash* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x00472780
-	/*GoStash*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoStash* unk1); //0x00472777
-	/*GoStash*/ public: float /*__thiscall*/ GetActivateRange() const; //0x009507ad
-	/*GoStash*/ public: void /*__thiscall*/ RCAddToStash(const Goid_* unk1, unsigned long unk2); //0x0095089d
-	/*GoStash*/ public: void /*__thiscall*/ RCDisableOmniStatus(const Goid_* unk1, const Goid_* unk2); //0x0095051e
-	/*GoStash*/ public: void /*__thiscall*/ RCEnableOmniStatus(const Goid_* unk1); //0x009503d3
-	/*GoStash*/ public: void /*__thiscall*/ RCRemoveFromStash(const Goid_* unk1, unsigned long unk2); //0x00950a42
-	/*GoStash*/ public: void /*__thiscall*/ RSAddToStash(const Goid_* unk1, const Goid_* unk2); //0x00950c52
-	/*GoStash*/ public: void /*__thiscall*/ RSRemoveFromStash(const Goid_* unk1, const Goid_* unk2, bool unk3); //0x00950eb8
+	DefineStaticMethod(FUBI_NetToInstance, 0x472780, GoStash*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unk1, unk2));
+	DefineStaticMethod(FUBI_InstanceToNet, 0x472777, unsigned long, Params(GoStash* unk1), Args(unk1));
+	DefineConstMethod(GetActivateRange, 0x9507ad, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(RCAddToStash, 0x95089d, void, Params(const Goid_* unk1, unsigned long unk2), Args(unk1, unk2));
+	DefineMethod(RCDisableOmniStatus, 0x95051e, void, Params(const Goid_* unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineMethod(RCEnableOmniStatus, 0x9503d3, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(RCRemoveFromStash, 0x950a42, void, Params(const Goid_* unk1, unsigned long unk2), Args(unk1, unk2));
+	DefineMethod(RSAddToStash, 0x950c52, void, Params(const Goid_* unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineMethod(RSRemoveFromStash, 0x950eb8, void, Params(const Goid_* unk1, const Goid_* unk2, bool unk3), Args(unk1, unk2, unk3));
 };

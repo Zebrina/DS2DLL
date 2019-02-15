@@ -6,57 +6,56 @@ class UIFrontend {
 public:
 	DefineSingleton(UIFrontend, 0x410450);
 
-	/*UIFrontend*/ private: /*static*/ UIFrontend* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x00410450
-	/*UIFrontend*/ public: bool /*__thiscall*/ CanStartWorld(const gpbstring<char>& unk1); //0x00451d69
-	/*UIFrontend*/ public: bool /*__thiscall*/ GetBackToSp(); //0x0041028e
-	/*UIFrontend*/ public: bool /*__thiscall*/ HasPartyContinue(); //0x004521fd
-	/*UIFrontend*/ public: bool /*__thiscall*/ ProcessUserDataAccessInfoRequest(); //0x0044a11e
-	/*UIFrontend*/ public: bool /*__thiscall*/ ProcessUserRegistrationFormCancel(); //0x0044e868
-	/*UIFrontend*/ public: bool /*__thiscall*/ ProcessUserRegistrationFormOK(); //0x0044e5f4
-	/*UIFrontend*/ public: bool /*__thiscall*/ ProcessUserRemoveRequest(); //0x0044a121
-	/*UIFrontend*/ public: bool /*__thiscall*/ ShowUserRegistrationForm(); //0x0044cabd
-	/*UIFrontend*/ public: bool /*__thiscall*/ TransitionFromPartyImport(bool unk1); //0x00451f48
-	/*UIFrontend*/ public: bool /*__thiscall*/ TransitionToPartyImport(); //0x00451ef7
-	/*UIFrontend*/ public: const gpbstring<char>& /*__thiscall*/ GetDrawnMapTemplate(); //0x00410287
-	/*UIFrontend*/ public: const gpbstring<char>& /*__thiscall*/ GetSelectedMapName(); //0x0044a0e9
-	/*UIFrontend*/ public: int /*__thiscall*/ GetMPSelectorIndex(); //0x00410270
-	/*UIFrontend*/ public: int /*__thiscall*/ GetSelectorIndex(); //0x00410259
-	/*UIFrontend*/ public: void /*__thiscall*/ ActivateAboutBox(); //0x0044e4d4
-	/*UIFrontend*/ public: void /*__thiscall*/ ActivateOptions(); //0x0044ae0a
-	/*UIFrontend*/ public: void /*__thiscall*/ AttemptLoadSelectedGame(); //0x00452a15
-	/*UIFrontend*/ public: void /*__thiscall*/ DeleteActiveParty(); //0x0044c8dd
-	/*UIFrontend*/ public: void /*__thiscall*/ DestroyDrawnMap(); //0x0044ae15
-	/*UIFrontend*/ public: void /*__thiscall*/ InitFrontendDialog(); //0x0044a109
-	/*UIFrontend*/ public: void /*__thiscall*/ LoadGameSelect(); //0x0044e558
-	/*UIFrontend*/ public: void /*__thiscall*/ LoadSelectedGame(); //0x0045267a
-	/*UIFrontend*/ public: void /*__thiscall*/ PlayFrontendSound(const gpbstring<char>& unk1); //0x0044b75a
-	/*UIFrontend*/ public: void /*__thiscall*/ RefreshSelectedCharacter(); //0x0044d99e
-	/*UIFrontend*/ public: void /*__thiscall*/ SetDrawnMapTemplate(const gpbstring<char>& unk1); //0x004108e2
-	/*UIFrontend*/ public: void /*__thiscall*/ SetMPSelectorIndex(int unk1); //0x00410277
-	/*UIFrontend*/ public: void /*__thiscall*/ SetSelectorIndex(int unk1); //0x00410260
-	/*UIFrontend*/ public: void /*__thiscall*/ SetWorldMode(const gpbstring<char>& unk1); //0x0044df7b
-	/*UIFrontend*/ public: void /*__thiscall*/ ShowBookmarkGames(); //0x004501ff
-	/*UIFrontend*/ public: void /*__thiscall*/ ShowNextParty(); //0x0044d981
-	/*UIFrontend*/ public: void /*__thiscall*/ ShowPreviousParty(); //0x0044d965
-	/*UIFrontend*/ public: void /*__thiscall*/ ShowSaveGames(); //0x00450207
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionFromCreateParty(bool unk1); //0x0044edf5
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionFromDifficulty(); //0x0044c87d
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionFromLoadGame(); //0x0044c6d9
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionFromMain(); //0x0044c636
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionFromMapSelect(); //0x0044c803
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionFromMP(); //0x0044c8ad
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionFromSP(); //0x0044c666
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToContinue(); //0x0044ad26
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToCreateParty(); //0x0044e320
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToDifficulty(); //0x0044c833
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToExit(); //0x0044ad18
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToLoadGame(bool unk1); //0x00450e1a
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToLogo(); //0x0044ba7a
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToMain(); //0x0044e225
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToMapSelect(); //0x0044c709
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToMP(); //0x0044d265
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToMPGamespy(); //0x0044adc8
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToMPInternet(); //0x0044ad86
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToMPNetwork(); //0x0044ad44
-	/*UIFrontend*/ public: void /*__thiscall*/ TransitionToSP(bool unk1); //0x00452105
+	DefineMethod(CanStartWorld, 0x451d69, bool, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(GetBackToSp, 0x41028e, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(HasPartyContinue, 0x4521fd, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(ProcessUserDataAccessInfoRequest, 0x44a11e, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(ProcessUserRegistrationFormCancel, 0x44e868, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(ProcessUserRegistrationFormOK, 0x44e5f4, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(ProcessUserRemoveRequest, 0x44a121, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(ShowUserRegistrationForm, 0x44cabd, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionFromPartyImport, 0x451f48, bool, Params(bool unk1), Args(unk1));
+	DefineMethod(TransitionToPartyImport, 0x451ef7, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetDrawnMapTemplate, 0x410287, const gpbstring<char>&, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetSelectedMapName, 0x44a0e9, const gpbstring<char>&, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetMPSelectorIndex, 0x410270, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetSelectorIndex, 0x410259, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(ActivateAboutBox, 0x44e4d4, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(ActivateOptions, 0x44ae0a, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(AttemptLoadSelectedGame, 0x452a15, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(DeleteActiveParty, 0x44c8dd, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(DestroyDrawnMap, 0x44ae15, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(InitFrontendDialog, 0x44a109, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(LoadGameSelect, 0x44e558, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(LoadSelectedGame, 0x45267a, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(PlayFrontendSound, 0x44b75a, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(RefreshSelectedCharacter, 0x44d99e, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SetDrawnMapTemplate, 0x4108e2, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(SetMPSelectorIndex, 0x410277, void, Params(int unk1), Args(unk1));
+	DefineMethod(SetSelectorIndex, 0x410260, void, Params(int unk1), Args(unk1));
+	DefineMethod(SetWorldMode, 0x44df7b, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(ShowBookmarkGames, 0x4501ff, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(ShowNextParty, 0x44d981, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(ShowPreviousParty, 0x44d965, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(ShowSaveGames, 0x450207, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionFromCreateParty, 0x44edf5, void, Params(bool unk1), Args(unk1));
+	DefineMethod(TransitionFromDifficulty, 0x44c87d, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionFromLoadGame, 0x44c6d9, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionFromMain, 0x44c636, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionFromMapSelect, 0x44c803, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionFromMP, 0x44c8ad, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionFromSP, 0x44c666, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionToContinue, 0x44ad26, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionToCreateParty, 0x44e320, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionToDifficulty, 0x44c833, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionToExit, 0x44ad18, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionToLoadGame, 0x450e1a, void, Params(bool unk1), Args(unk1));
+	DefineMethod(TransitionToLogo, 0x44ba7a, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionToMain, 0x44e225, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionToMapSelect, 0x44c709, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionToMP, 0x44d265, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionToMPGamespy, 0x44adc8, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionToMPInternet, 0x44ad86, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionToMPNetwork, 0x44ad44, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(TransitionToSP, 0x452105, void, Params(bool unk1), Args(unk1));
 };

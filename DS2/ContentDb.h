@@ -6,29 +6,28 @@ class ContentDb {
 public:
 	DefineSingleton(ContentDb, 0x40a20f);
 
-	/*ContentDb*/ private: /*static*/ ContentDb* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x0040a20f
-	/*ContentDb*/ public: bool /*__thiscall*/ DoesTemplateExist(const char* unk1) const; //0x007e1ec2
-	/*ContentDb*/ public: bool /*__thiscall*/ DoesTemplateHaveComponent(const char* unk1, const char* unk2) const; //0x007e3f46
-	/*ContentDb*/ public: bool /*__thiscall*/ EvalBoolFormula(const char* unk1, bool unk2); //0x007dd617
-	/*ContentDb*/ public: bool /*__thiscall*/ EvalBoolFormula(const char* unk1); //0x00408464
-	/*ContentDb*/ public: bool /*__thiscall*/ GetTemplateBool(const char* unk1, bool unk2); //0x007e41c6
-	/*ContentDb*/ public: bool /*__thiscall*/ GetTemplateBool(const char* unk1); //0x00408486
-	/*ContentDb*/ public: gpbstring<char> /*__thiscall*/ GetTemplateInternalFieldAddress(const char* unk1, const char* unk2); //0x007e210c
-	/*ContentDb*/ public: gpbstring<char> /*__thiscall*/ GetTemplateScreenName(const char* unk1) const; //0x007e3f08
-	/*ContentDb*/ public: gpbstring<char> /*__thiscall*/ GetTemplateString(const char* unk1, const gpbstring<char>& unk2); //0x007e41f0
-	/*ContentDb*/ public: gpbstring<char> /*__thiscall*/ GetTemplateString(const char* unk1); //0x0040b2cc
-	/*ContentDb*/ public: const Scid_* /*__thiscall*/ GetTemplateScid(const char* unk1, const Scid_* unk2); //0x007e420b
-	/*ContentDb*/ public: const Scid_* /*__thiscall*/ GetTemplateScid(const char* unk1); //0x004084ac
-	/*ContentDb*/ public: double /*__thiscall*/ EvalFloatFormula(const char* unk1, double unk2); //0x007dd5e2
-	/*ContentDb*/ public: double /*__thiscall*/ EvalFloatFormula(const char* unk1); //0x0040843d
-	/*ContentDb*/ public: float /*__thiscall*/ GetTemplateFloat(const char* unk1, float unk2); //0x007e41db
-	/*ContentDb*/ public: float /*__thiscall*/ GetTemplateFloat(const char* unk1); //0x00408497
-	/*ContentDb*/ public: int /*__thiscall*/ EvalIntFormula(const char* unk1, int unk2); //0x007dd5ff
-	/*ContentDb*/ public: int /*__thiscall*/ EvalIntFormula(const char* unk1); //0x00408453
-	/*ContentDb*/ public: int /*__thiscall*/ GetLargeGoldAmount() const; //0x00408436
-	/*ContentDb*/ public: int /*__thiscall*/ GetMaxPartyGold() const; //0x00408421
-	/*ContentDb*/ public: int /*__thiscall*/ GetMediumGoldAmount() const; //0x0040842f
-	/*ContentDb*/ public: int /*__thiscall*/ GetSmallGoldAmount() const; //0x00408428
-	/*ContentDb*/ public: int /*__thiscall*/ GetTemplateInt(const char* unk1, int unk2); //0x007e41b1
-	/*ContentDb*/ public: int /*__thiscall*/ GetTemplateInt(const char* unk1); //0x00408475
+	DefineConstMethod(DoesTemplateExist, 0x7e1ec2, bool, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(DoesTemplateHaveComponent, 0x7e3f46, bool, Params(const char* unk1, const char* unk2), Args(unk1, unk2));
+	DefineMethod(EvalBoolFormula, 0x7dd617, bool, Params(const char* unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(EvalBoolFormula, 0x408464, bool, Params(const char* unk1), Args(unk1));
+	DefineMethod(GetTemplateBool, 0x7e41c6, bool, Params(const char* unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(GetTemplateBool, 0x408486, bool, Params(const char* unk1), Args(unk1));
+	DefineMethod(GetTemplateInternalFieldAddress, 0x7e210c, gpbstring<char>, Params(const char* unk1, const char* unk2), Args(unk1, unk2));
+	DefineConstMethod(GetTemplateScreenName, 0x7e3f08, gpbstring<char>, Params(const char* unk1), Args(unk1));
+	DefineMethod(GetTemplateString, 0x7e41f0, gpbstring<char>, Params(const char* unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineMethod(GetTemplateString, 0x40b2cc, gpbstring<char>, Params(const char* unk1), Args(unk1));
+	DefineMethod(GetTemplateScid, 0x7e420b, const Scid_*, Params(const char* unk1, const Scid_* unk2), Args(unk1, unk2));
+	DefineMethod(GetTemplateScid, 0x4084ac, const Scid_*, Params(const char* unk1), Args(unk1));
+	DefineMethod(EvalFloatFormula, 0x7dd5e2, double, Params(const char* unk1, double unk2), Args(unk1, unk2));
+	DefineMethod(EvalFloatFormula, 0x40843d, double, Params(const char* unk1), Args(unk1));
+	DefineMethod(GetTemplateFloat, 0x7e41db, float, Params(const char* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(GetTemplateFloat, 0x408497, float, Params(const char* unk1), Args(unk1));
+	DefineMethod(EvalIntFormula, 0x7dd5ff, int, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(EvalIntFormula, 0x408453, int, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetLargeGoldAmount, 0x408436, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMaxPartyGold, 0x408421, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMediumGoldAmount, 0x40842f, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetSmallGoldAmount, 0x408428, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetTemplateInt, 0x7e41b1, int, Params(const char* unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(GetTemplateInt, 0x408475, int, Params(const char* unk1), Args(unk1));
 };

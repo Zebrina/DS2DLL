@@ -6,7 +6,6 @@ class UIStoreManager {
 public:
 	DefineSingleton(UIStoreManager, 0x429ea2);
 
-	/*UIStoreManager*/ private: /*static*/ UIStoreManager* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x00429ea2
-	/*UIStoreManager*/ public: bool /*__thiscall*/ DoesPartyHaveTemplate(const gpbstring<char>& unk1); //0x004d1a07
-	/*UIStoreManager*/ public: const Goid_* /*__thiscall*/ GetActiveStoreBuyer(); //0x00428d5f
+	DefineMethod(DoesPartyHaveTemplate, 0x4d1a07, bool, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(GetActiveStoreBuyer, 0x428d5f, const Goid_*, NO_PARAMS, NO_ARGS);
 };

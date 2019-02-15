@@ -2,16 +2,16 @@
 
 class Skill {
 public:
-	/*Skill*/ public: /*static*/ unsigned int /*__cdecl*/ FUBI_PodGetSize(); //0x00408531
-	/*Skill*/ public: bool /*__thiscall*/ AwardExperience(double unk1, bool unk2); //0x007f0ffb
-	/*Skill*/ public: const gpbstring<char>& /*__thiscall*/ GetName() const; //0x0040853b
-	/*Skill*/ public: double /*__thiscall*/ GetExperience() const; //0x0040853e
-	/*Skill*/ public: float /*__thiscall*/ GetLevel() const; //0x0040a287
-	/*Skill*/ public: float /*__thiscall*/ GetLevelBias() const; //0x0040854e
-	/*Skill*/ public: float /*__thiscall*/ GetLevelMasteryRatio() const; //0x0040a292
-	/*Skill*/ public: float /*__thiscall*/ GetLevelNoBias() const; //0x0040a28e
-	/*Skill*/ public: float /*__thiscall*/ GetMaxBonusLevel() const; //0x0040854a
-	/*Skill*/ public: float /*__thiscall*/ GetMaxLevel() const; //0x00408546
-	/*Skill*/ public: float /*__thiscall*/ GetNaturalLevel() const; //0x0040a283
-	/*Skill*/ public: float /*__thiscall*/ GetNaturalLevelMasteryRatio() const; //0x0040a2ae
+	DefineStaticMethod(FUBI_PodGetSize, 0x408531, unsigned int, NO_PARAMS, NO_ARGS);
+	DefineMethod(AwardExperience, 0x7f0ffb, bool, Params(double unk1, bool unk2), Args(unk1, unk2));
+	DefineConstMethod(GetName, 0x40853b, const gpbstring<char>&, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetExperience, 0x40853e, double, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetLevel, 0x40a287, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetLevelBias, 0x40854e, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetLevelMasteryRatio, 0x40a292, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetLevelNoBias, 0x40a28e, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMaxBonusLevel, 0x40854a, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMaxLevel, 0x408546, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetNaturalLevel, 0x40a283, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetNaturalLevelMasteryRatio, 0x40a2ae, float, NO_PARAMS, NO_ARGS);
 };

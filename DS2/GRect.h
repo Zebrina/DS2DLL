@@ -1,7 +1,13 @@
 #pragma once
 
+#include "FuBi.h"
+
+#include "ClassMacros.h"
+
+struct tagRECT;
+
 struct GRect {
 
 };
 
-/*FuBi::Traits<GRect>*/ /*static*/ int /*__cdecl*/ FUBI_Inheritance(tagRECT* unk1); //0x00502c38
+DefineTemplateStaticMethod(FuBi::Traits<GRect>, FUBI_Inheritance, 0x502c38, int, Params(tagRECT* unk1), Args(unk1));

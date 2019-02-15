@@ -7,4 +7,4 @@ public:
 	};
 };
 
-/*__STATIC__*/ const char* /*__cdecl*/ ToString(Gamespy::eConnectionType unk1); //0x00582c5c
+DefineFunction(ToString, 0x582c5c, const char*, Params(Gamespy::eConnectionType unk1), Args(unk1));

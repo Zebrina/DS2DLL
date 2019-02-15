@@ -6,14 +6,13 @@ class UISkillTrainerStore {
 public:
 	DefineSingleton(UISkillTrainerStore, 0x474008);
 
-	/*UISkillTrainerStore*/ private: /*static*/ UISkillTrainerStore* /*__cdecl*/ FUBI_GetClassSingleton$(); //0x00474008
-	/*UISkillTrainerStore*/ public: void /*__thiscall*/ BuyNextUpgrade(); //0x004cf7d2
-	/*UISkillTrainerStore*/ public: void /*__thiscall*/ ConfirmNextUpgrade(); //0x004cfa19
-	/*UISkillTrainerStore*/ public: void /*__thiscall*/ HideSelectedDescription(); //0x004cf1c6
-	/*UISkillTrainerStore*/ public: void /*__thiscall*/ RCPurchaseSkill(const Goid_* unk1, const gpbstring<char>& unk2, int unk3); //0x004cf405
-	/*UISkillTrainerStore*/ public: void /*__thiscall*/ ResetDescriptionTimer(const gpbstring<char>& unk1, int unk2); //0x004cf995
-	/*UISkillTrainerStore*/ public: void /*__thiscall*/ RSPurchaseSkill(const Goid_* unk1, const gpbstring<char>& unk2); //0x004cf628
-	/*UISkillTrainerStore*/ public: void /*__thiscall*/ SetActivePage(const gpbstring<char>& unk1); //0x0047eb48
-	/*UISkillTrainerStore*/ public: void /*__thiscall*/ SetRolloverSkill(const gpbstring<char>& unk1); //0x0047eb5e
-	/*UISkillTrainerStore*/ public: void /*__thiscall*/ UpdateSelectedDescription(); //0x004cfc12
+	DefineMethod(BuyNextUpgrade, 0x4cf7d2, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(ConfirmNextUpgrade, 0x4cfa19, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(HideSelectedDescription, 0x4cf1c6, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(RCPurchaseSkill, 0x4cf405, void, Params(const Goid_* unk1, const gpbstring<char>& unk2, int unk3), Args(unk1, unk2, unk3));
+	DefineMethod(ResetDescriptionTimer, 0x4cf995, void, Params(const gpbstring<char>& unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(RSPurchaseSkill, 0x4cf628, void, Params(const Goid_* unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
+	DefineMethod(SetActivePage, 0x47eb48, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(SetRolloverSkill, 0x47eb5e, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(UpdateSelectedDescription, 0x4cfc12, void, NO_PARAMS, NO_ARGS);
 };

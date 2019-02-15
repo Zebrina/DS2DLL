@@ -1,11 +1,13 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 class UIPopupMenu {
 public:
-	/*UIPopupMenu*/ private: int /*__thiscall*/ FUBI_RENAME_GetSelectedElement(); //0x005029c3
-	/*UIPopupMenu*/ private: void /*__thiscall*/ FUBI_RENAME_AddElement(const gpbstring<char>& unk1, int unk2); //0x00503b61
-	/*UIPopupMenu*/ private: void /*__thiscall*/ FUBI_RENAME_RemoveAllElements(); //0x005029d1
-	/*UIPopupMenu*/ private: void /*__thiscall*/ FUBI_RENAME_RemoveElement(const gpbstring<char>& unk1); //0x00503b84
-	/*UIPopupMenu*/ private: void /*__thiscall*/ FUBI_RENAME_RemoveElement(int unk1); //0x005029c8
-	/*UIPopupMenu*/ private: void /*__thiscall*/ FUBI_RENAME_ShowAtCursor(eAlignment unk1); //0x005029ba
+	DefineMethod(FUBI_RENAME_GetSelectedElement, 0x5029c3, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(FUBI_RENAME_AddElement, 0x503b61, void, Params(const gpbstring<char>& unk1, int unk2), Args(unk1, unk2));
+	DefineMethod(FUBI_RENAME_RemoveAllElements, 0x5029d1, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(FUBI_RENAME_RemoveElement, 0x503b84, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(FUBI_RENAME_RemoveElement, 0x5029c8, void, Params(int unk1), Args(unk1));
+	DefineMethod(FUBI_RENAME_ShowAtCursor, 0x5029ba, void, Params(eAlignment unk1), Args(unk1));
 };

@@ -1,6 +1,8 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 class UILine {
 public:
-	/*UILine*/ private: /*static*/ int /*__cdecl*/ FUBI_Inheritance(UIWindow* unk1); //0x004da2db
+	DefineStaticMethod(FUBI_Inheritance, 0x4da2db, int, Params(UIWindow* unk1), Args(unk1));
 };

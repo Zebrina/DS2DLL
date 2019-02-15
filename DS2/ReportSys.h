@@ -1,26 +1,28 @@
 #pragma once
 
+#include "ClassMacros.h"
+
 #include "GPBString.h"
 
 class ReportSys {
 public:
 	class Context {
 	public:
-		/*ReportSys::Context*/ public: bool /*__cdecl*/ OutputF(const char* unk1, ...); //0x00428a6e
-		/*ReportSys::Context*/ public: bool /*__thiscall*/ IsEnabled() const; //0x004289f0
-		/*ReportSys::Context*/ public: bool /*__thiscall*/ IsInReport() const; //0x00428a2d
-		/*ReportSys::Context*/ public: bool /*__thiscall*/ Output(const char* unk1, int unk2); //0x006727da
-		/*ReportSys::Context*/ public: bool /*__thiscall*/ Output(const char* unk1); //0x00428a5d
-		/*ReportSys::Context*/ public: bool /*__thiscall*/ Output(const gpbstring<char>& unk1); //0x00429e81
-		/*ReportSys::Context*/ public: bool /*__thiscall*/ OutputEol(); //0x00428a82
-		/*ReportSys::Context*/ public: bool /*__thiscall*/ OutputRaw(const char* unk1, int unk2); //0x006726f3
-		/*ReportSys::Context*/ public: bool /*__thiscall*/ OutputRaw(const char* unk1); //0x00428a4c
-		/*ReportSys::Context*/ public: void /*__thiscall*/ BeginReport(); //0x00672237
-		/*ReportSys::Context*/ public: void /*__thiscall*/ Disable(); //0x004289eb
-		/*ReportSys::Context*/ public: void /*__thiscall*/ Enable(bool unk1); //0x004289de
-		/*ReportSys::Context*/ public: void /*__thiscall*/ EndReport(); //0x006722f7
-		/*ReportSys::Context*/ public: void /*__thiscall*/ Indent(); //0x00428a36
-		/*ReportSys::Context*/ public: void /*__thiscall*/ Outdent(); //0x00428a41
-		/*ReportSys::Context*/ public: void /*__thiscall*/ Toggle(); //0x00429e6e
+		//*ReportSys::Context*/ public: bool /*__cdecl*/ OutputF(const char* unk1, ...); //0x428a6e
+		DefineConstMethod(IsEnabled, 0x4289f0, bool, NO_PARAMS, NO_ARGS);
+		DefineConstMethod(IsInReport, 0x428a2d, bool, NO_PARAMS, NO_ARGS);
+		DefineMethod(Output, 0x6727da, bool, Params(const char* unk1, int unk2), Args(unk1, unk2));
+		DefineMethod(Output, 0x428a5d, bool, Params(const char* unk1), Args(unk1));
+		DefineMethod(Output, 0x429e81, bool, Params(const gpbstring<char>& unk1), Args(unk1));
+		DefineMethod(OutputEol, 0x428a82, bool, NO_PARAMS, NO_ARGS);
+		DefineMethod(OutputRaw, 0x6726f3, bool, Params(const char* unk1, int unk2), Args(unk1, unk2));
+		DefineMethod(OutputRaw, 0x428a4c, bool, Params(const char* unk1), Args(unk1));
+		DefineMethod(BeginReport, 0x672237, void, NO_PARAMS, NO_ARGS);
+		DefineMethod(Disable, 0x4289eb, void, NO_PARAMS, NO_ARGS);
+		DefineMethod(Enable, 0x4289de, void, Params(bool unk1), Args(unk1));
+		DefineMethod(EndReport, 0x6722f7, void, NO_PARAMS, NO_ARGS);
+		DefineMethod(Indent, 0x428a36, void, NO_PARAMS, NO_ARGS);
+		DefineMethod(Outdent, 0x428a41, void, NO_PARAMS, NO_ARGS);
+		DefineMethod(Toggle, 0x429e6e, void, NO_PARAMS, NO_ARGS);
 	};
 };

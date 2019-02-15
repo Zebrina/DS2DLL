@@ -1,185 +1,196 @@
 #pragma once
 
+#include "Enums.h"
+#include "FuBi.h"
+
+struct FFXID_;
+struct Goid_;
+class Skill;
+
+enum eActiveSkillDelivery {
+
+};
+
 class GoActor {
 public:
 	struct GenericState {
 
 	};
 
-	/*GoActor*/ private: /*static*/ GoActor* /*__cdecl*/ FUBI_NetToInstance(unsigned long unk1, FuBi::Cookie__** unk2); //0x004087f1
-	/*GoActor*/ private: /*static*/ unsigned long /*__cdecl*/ FUBI_InstanceToNet(GoActor* unk1); //0x004087e8
-	/*GoActor*/ public: bool /*__thiscall*/ CanUseActiveSkill(eActiveSkillDelivery unk1); //0x00802932
-	/*GoActor*/ public: bool /*__thiscall*/ DoesActiveEquipmentSupportSkill(const gpbstring<char>& unk1); //0x00802a8f
-	/*GoActor*/ public: bool /*__thiscall*/ DoesEquipmentSupportSkill(const gpbstring<char>& unk1); //0x00802a35
-	/*GoActor*/ public: bool /*__thiscall*/ GetActiveSkillReady() const; //0x004086d6
-	/*GoActor*/ public: bool /*__thiscall*/ GetActiveSkillRelease() const; //0x004086dd
-	/*GoActor*/ public: bool /*__thiscall*/ GetCanBeResurrected() const; //0x00408782
-	/*GoActor*/ public: bool /*__thiscall*/ GetCanCast(); //0x0040a2fa
-	/*GoActor*/ public: bool /*__thiscall*/ GetCanDamageBeReflected(); //0x00408793
-	/*GoActor*/ public: bool /*__thiscall*/ GetCanDualWield() const; //0x007f6c6e
-	/*GoActor*/ public: bool /*__thiscall*/ GetCanLevelUp() const; //0x0040859b
-	/*GoActor*/ public: bool /*__thiscall*/ GetCanShowHealth() const; //0x0040877e
-	/*GoActor*/ public: bool /*__thiscall*/ GetDropsSpellbook() const; //0x004085ab
-	/*GoActor*/ public: bool /*__thiscall*/ GetGenericState(int unk1, GoActor::GenericState& unk2); //0x007ffa50
-	/*GoActor*/ public: bool /*__thiscall*/ GetHasPowerDamageState() const; //0x007f98c1
-	/*GoActor*/ public: bool /*__thiscall*/ GetHasWeaponEnchant(); //0x007fa592
-	/*GoActor*/ public: bool /*__thiscall*/ GetIsHero() const; //0x004085a2
-	/*GoActor*/ public: bool /*__thiscall*/ GetIsMale() const; //0x007f9644
-	/*GoActor*/ public: bool /*__thiscall*/ GetIsSummoned() const; //0x0040863b
-	/*GoActor*/ public: bool /*__thiscall*/ GetMarkedAgony(); //0x0040a32b
-	/*GoActor*/ public: bool /*__thiscall*/ GetMarkedDeath(); //0x0040a324
-	/*GoActor*/ public: bool /*__thiscall*/ GetMarkedFire(); //0x0040a348
-	/*GoActor*/ public: bool /*__thiscall*/ GetMarkedHarvest(); //0x0040a332
-	/*GoActor*/ public: bool /*__thiscall*/ GetUsingActiveSkill() const; //0x004086f4
-	/*GoActor*/ public: bool /*__thiscall*/ GetUsingPowerDamage() const; //0x00408722
-	/*GoActor*/ public: bool /*__thiscall*/ HasAuraState(const char* unk1) const; //0x007fb5bb
-	/*GoActor*/ public: bool /*__thiscall*/ HasGenericState(const char* unk1) const; //0x007fb4a7
-	/*GoActor*/ public: bool /*__thiscall*/ IsActiveSkillSelected(); //0x00408763
-	/*GoActor*/ public: bool /*__thiscall*/ SetNaturalSkillLevel(const char* unk1, float unk2); //0x00408684
-	/*GoActor*/ public: bool /*__thiscall*/ SetSkillLevel(const char* unk1, float unk2); //0x0040869c
-	/*GoActor*/ public: bool /*__thiscall*/ SetSkillLevelBase(const char* unk1, float unk2, bool unk3); //0x007f98f1
-	/*GoActor*/ public: bool /*__thiscall*/ SRemoveSummoned(); //0x007ffac0
-	/*GoActor*/ public: gpbstring<char> /*__thiscall*/ MakeNatrualResistanceToolTipAnsi() const; //0x007ffc6d
-	/*GoActor*/ public: gpbstring<char> /*__thiscall*/ MakeNaturalResistanceListAnsi() const; //0x007ff33e
-	/*GoActor*/ public: gpbstring<char> /*__thiscall*/ MakeResistanceListAnsi(); //0x007ff1bd
-	/*GoActor*/ public: gpbstring<char> /*__thiscall*/ MakeResistanceToolTipAnsi(); //0x007ff0e9
-	/*GoActor*/ public: gpbstring<char> /*__thiscall*/ MakeResistanceToolTipAnsi(eDamageType unk1, float unk2) const; //0x007fe5cf
-	/*GoActor*/ public: Skill* /*__thiscall*/ GetSkill(const char* unk1) const; //0x004086b4
-	/*GoActor*/ public: const gpbstring<char>& /*__thiscall*/ GetCurrentActiveSkill() const; //0x0040874c
-	/*GoActor*/ public: const gpbstring<char>& /*__thiscall*/ GetGenericStateName(int unk1) const; //0x007f958b
-	/*GoActor*/ public: const gpbstring<char>& /*__thiscall*/ GetQuickSlotSkill(int unk1) const; //0x007faf9d
-	/*GoActor*/ public: const gpbstring<char>& /*__thiscall*/ GetRace() const; //0x007f960d
-	/*GoActor*/ public: const FFXID_* /*__thiscall*/ GetPreLaunchFFXId() const; //0x0040870b
-	/*GoActor*/ public: const Goid_* /*__thiscall*/ GetCorpse(); //0x004087ae
-	/*GoActor*/ public: const Goid_* /*__thiscall*/ GetGenericStateCaster(const char* unk1) const; //0x007fb574
-	/*GoActor*/ public: const Goid_* /*__thiscall*/ GetGenericStateCaster(int unk1) const; //0x007f9551
-	/*GoActor*/ public: const Goid_* /*__thiscall*/ GetGenericStateSpellGoid(const char* unk1) const; //0x007fb52d
-	/*GoActor*/ public: const Goid_* /*__thiscall*/ GetGenericStateSpellGoid(int unk1) const; //0x007f9517
-	/*GoActor*/ public: const Goid_* /*__thiscall*/ GetSummonCaster(); //0x0040862a
-	/*GoActor*/ public: const Goid_* /*__thiscall*/ GetSummoned(); //0x00408619
-	/*GoActor*/ public: const Goid_* /*__thiscall*/ SCreatePowerObject(const gpbstring<char>& unk1); //0x007f9837
-	/*GoActor*/ public: double /*__thiscall*/ GetSkillExperience(const char* unk1) const; //0x0040864e
-	/*GoActor*/ public: eActiveSkillDelivery /*__thiscall*/ GetActiveSkillDelivery(); //0x00408773
-	/*GoActor*/ public: eActorAlignment /*__thiscall*/ GetAlignment() const; //0x0040877a
-	/*GoActor*/ public: float /*__thiscall*/ GetActiveSkillReloadBonus() const; //0x0040a2d8
-	/*GoActor*/ public: float /*__thiscall*/ GetActiveSkillReloadDamage() const; //0x004086c0
-	/*GoActor*/ public: float /*__thiscall*/ GetActiveSkillReloadMaxDamage() const; //0x004086c7
-	/*GoActor*/ public: float /*__thiscall*/ GetAuraValue(const char* unk1, const Goid_* unk2); //0x007fb66b
-	/*GoActor*/ public: float /*__thiscall*/ GetBuffResistance(); //0x0040a2ee
-	/*GoActor*/ public: float /*__thiscall*/ GetCastReloadBonusPercent(); //0x0040a30f
-	/*GoActor*/ public: float /*__thiscall*/ GetChanceToCastTemplate(const gpbstring<char>& unk1, bool unk2); //0x007fc511
-	/*GoActor*/ public: float /*__thiscall*/ GetDebuffResistance(); //0x0040a2e7
-	/*GoActor*/ public: float /*__thiscall*/ GetFreezeChance(); //0x0040a2e3
-	/*GoActor*/ public: float /*__thiscall*/ GetGenericStateSpellLevel(const char* unk1) const; //0x007fb4e5
-	/*GoActor*/ public: float /*__thiscall*/ GetHealingBonusPercent() const; //0x0040a31d
-	/*GoActor*/ public: float /*__thiscall*/ GetHighestSkillLevel() const; //0x007f82e9
-	/*GoActor*/ public: float /*__thiscall*/ GetMagicFindChance() const; //0x0040a2df
-	/*GoActor*/ public: float /*__thiscall*/ GetMeleeReloadBonusPercent(); //0x0040a301
-	/*GoActor*/ public: float /*__thiscall*/ GetMonsterLevel() const; //0x007f6c8b
-	/*GoActor*/ public: float /*__thiscall*/ GetNaturalResistance(eDamageType unk1); //0x007fafa6
-	/*GoActor*/ public: float /*__thiscall*/ GetNaturalSkillLevel(const char* unk1) const; //0x00408672
-	/*GoActor*/ public: float /*__thiscall*/ GetNaturalStateResistance(const gpbstring<char>& unk1); //0x007fa874
-	/*GoActor*/ public: float /*__thiscall*/ GetRangedReloadBonusPercent(); //0x0040a308
-	/*GoActor*/ public: float /*__thiscall*/ GetResistance(eDamageType unk1); //0x007fafe6
-	/*GoActor*/ public: float /*__thiscall*/ GetSacrificePercent() const; //0x0040a316
-	/*GoActor*/ public: float /*__thiscall*/ GetSkillLevel(const char* unk1) const; //0x00408660
-	/*GoActor*/ public: float /*__thiscall*/ GetSpotRequestWaitTime() const; //0x007f96b6
-	/*GoActor*/ public: float /*__thiscall*/ GetStateResistance(const gpbstring<char>& unk1); //0x007fa8cb
-	/*GoActor*/ public: float /*__thiscall*/ GetStrongestAuraValue(const char* unk1); //0x007fb5f9
-	/*GoActor*/ public: float /*__thiscall*/ GetSummonAttackSpeedBonusPercent() const; //0x0040a2d4
-	/*GoActor*/ public: float /*__thiscall*/ GetSummonDamageBonusPercent() const; //0x0040a2d0
-	/*GoActor*/ public: float /*__thiscall*/ GetUnconsciousDuration() const; //0x007f88d9
-	/*GoActor*/ public: int /*__thiscall*/ GetBarBackroundIndex() const; //0x007f979a
-	/*GoActor*/ public: int /*__thiscall*/ GetBonusSkillPoints() const; //0x0040873b
-	/*GoActor*/ public: int /*__thiscall*/ GetMaxBuffs() const; //0x007f96ef
-	/*GoActor*/ public: int /*__thiscall*/ GetMaxDebuffs() const; //0x007f9728
-	/*GoActor*/ public: int /*__thiscall*/ GetNumAppliedBuffs(); //0x007fa4f9
-	/*GoActor*/ public: int /*__thiscall*/ GetNumAppliedDebuffs(); //0x007fa561
-	/*GoActor*/ public: int /*__thiscall*/ GetTuningPointId(); //0x004087aa
-	/*GoActor*/ public: FuBi::Cookie__* /*__thiscall*/ RCUpdatePortraitTexture(); //0x007f81cb
-	/*GoActor*/ public: unsigned long /*__thiscall*/ GetMapLocationId() const; //0x0040864a
-	/*GoActor*/ public: void /*__thiscall*/ ActivateQuickSlotSkill(int unk1); //0x0040876a
-	/*GoActor*/ public: void /*__thiscall*/ GetClass(gpbstring<char>& unk1); //0x0040c880
-	/*GoActor*/ public: void /*__thiscall*/ RCAddAuraState(const char* unk1, const char* unk2, const Goid_* unk3, float unk4, const FFXID_* unk5); //0x00802016
-	/*GoActor*/ public: void /*__thiscall*/ RCAddBonusSkillPoints(int unk1); //0x007f6b80
-	/*GoActor*/ public: void /*__thiscall*/ RCAddGenericState(const char* unk1, const char* unk2, float unk3, const Goid_* unk4, const Goid_* unk5, float unk6, bool unk7); //0x0080126e
-	/*GoActor*/ public: void /*__thiscall*/ RCAddIncantationState(const char* unk1, const char* unk2, float unk3, const Goid_* unk4, const Goid_* unk5, const char* unk6); //0x0080136d
-	/*GoActor*/ public: void /*__thiscall*/ RCRecalcReloadAmount(float unk1, float unk2, unsigned long unk3); //0x007f6f02
-	/*GoActor*/ public: void /*__thiscall*/ RCRemoveAuraState(const char* unk1, const Goid_* unk2); //0x00801b7a
-	/*GoActor*/ public: void /*__thiscall*/ RCRemoveGenericState(const char* unk1); //0x007fed07
-	/*GoActor*/ public: void /*__thiscall*/ RCResetReloadDamage(bool unk1); //0x007f69a9
-	/*GoActor*/ public: void /*__thiscall*/ RCSetActiveSkillRelease(bool unk1, unsigned long unk2); //0x007f6a99
-	/*GoActor*/ public: void /*__thiscall*/ RCSetActiveSkillReloadBonus(float unk1); //0x007f9939
-	/*GoActor*/ public: void /*__thiscall*/ RCSetAlignment(eActorAlignment unk1); //0x007f86d6
-	/*GoActor*/ public: void /*__thiscall*/ RCSetCanBeResurrected(bool unk1); //0x007f7082
-	/*GoActor*/ public: void /*__thiscall*/ RCSetCanShowHealth(bool unk1); //0x007f87bb
-	/*GoActor*/ public: void /*__thiscall*/ RCSetCurrentActiveSkill(const gpbstring<char>& unk1); //0x00802f9d
-	/*GoActor*/ public: void /*__thiscall*/ RCSetNaturalSkillLevel(const char* unk1, float unk2); //0x007fb7b4
-	/*GoActor*/ public: void /*__thiscall*/ RCSetSkillLevels(float unk1, float unk2, float unk3); //0x007f6c99
-	/*GoActor*/ public: void /*__thiscall*/ RCSetSummonCaster(const Goid_* unk1); //0x007f686d
-	/*GoActor*/ public: void /*__thiscall*/ RCSetSummoned(const Goid_* unk1); //0x007f675a
-	/*GoActor*/ public: void /*__thiscall*/ RCSetUnconsiousEndTime(double unk1); //0x007f7179
-	/*GoActor*/ public: void /*__thiscall*/ RCSetUsingActiveSkill(bool unk1, unsigned long unk2); //0x007fb6cd
-	/*GoActor*/ public: void /*__thiscall*/ RCStartActiveSkillReload(float unk1, float unk2, unsigned long unk3); //0x007f6de0
-	/*GoActor*/ public: void /*__thiscall*/ RCSubtractReloadDamage(float unk1); //0x007f8322
-	/*GoActor*/ public: void /*__thiscall*/ RSResetUnconsciousDuration(float unk1); //0x007f890a
-	/*GoActor*/ public: void /*__thiscall*/ RSSetActiveSkillRelease(bool unk1); //0x007f8414
-	/*GoActor*/ public: void /*__thiscall*/ RSSetActiveSkillReloadBonus(float unk1); //0x007fa6bf
-	/*GoActor*/ public: void /*__thiscall*/ RSSetCurrentActiveSkill(const gpbstring<char>& unk1); //0x00803082
-	/*GoActor*/ public: void /*__thiscall*/ RSSetNaturalSkillLevel(const char* unk1, float unk2); //0x007fc7d9
-	/*GoActor*/ public: void /*__thiscall*/ RSSetSkillLevels(float unk1, float unk2, float unk3); //0x007f8523
-	/*GoActor*/ public: void /*__thiscall*/ RSSetUsingActiveSkill(bool unk1); //0x007fc6d3
-	/*GoActor*/ public: void /*__thiscall*/ SAddAuraState(const char* unk1, const char* unk2, const Goid_* unk3, float unk4, const FFXID_* unk5); //0x008021b8
-	/*GoActor*/ public: void /*__thiscall*/ SAddBonusSkillPoints(int unk1); //0x007f851a
-	/*GoActor*/ public: void /*__thiscall*/ SAddGenericState(const char* unk1, const char* unk2, float unk3, const Goid_* unk4, const Goid_* unk5, float unk6, bool unk7); //0x0080188c
-	/*GoActor*/ public: void /*__thiscall*/ SAddGenericState(const char* unk1, const char* unk2, float unk3, const Goid_* unk4, const Goid_* unk5, float unk6); //0x004085b5
-	/*GoActor*/ public: void /*__thiscall*/ SAddIncantationState(const char* unk1, const char* unk2, float unk3, const Goid_* unk4, const Goid_* unk5, const char* unk6); //0x008018b5
-	/*GoActor*/ public: void /*__thiscall*/ SCastPassiveSpellsOnHit(const Goid_* unk1); //0x004087d7
-	/*GoActor*/ public: void /*__thiscall*/ SCastPassiveSpellsWhenHit(const Goid_* unk1); //0x004087c6
-	/*GoActor*/ public: void /*__thiscall*/ SCreateCorpse(const Goid_* unk1); //0x007f9a34
-	/*GoActor*/ public: void /*__thiscall*/ SetActiveSkillReady(bool unk1); //0x007fa5e7
-	/*GoActor*/ public: void /*__thiscall*/ SetActiveSkillRelease(bool unk1); //0x004086e4
-	/*GoActor*/ public: void /*__thiscall*/ SetActiveSkillReloadBonus(float unk1); //0x0040ace7
-	/*GoActor*/ public: void /*__thiscall*/ SetActiveSkillSelected(bool unk1); //0x00408753
-	/*GoActor*/ public: void /*__thiscall*/ SetBonusSkillPoints(int unk1); //0x0040873f
-	/*GoActor*/ public: void /*__thiscall*/ SetBuffResistance(float unk1); //0x0040ad5b
-	/*GoActor*/ public: void /*__thiscall*/ SetCanCast(bool unk1); //0x0040ad6b
-	/*GoActor*/ public: void /*__thiscall*/ SetClass(const gpbstring<char>& unk1); //0x0040b314
-	/*GoActor*/ public: void /*__thiscall*/ SetCurrentActiveSkill(const gpbstring<char>& unk1); //0x008028c7
-	/*GoActor*/ public: void /*__thiscall*/ SetDebuffResistance(float unk1); //0x0040ad29
-	/*GoActor*/ public: void /*__thiscall*/ SetFreezeChance(float unk1); //0x0040ad04
-	/*GoActor*/ public: void /*__thiscall*/ SetHealingBonusPercent(float unk1); //0x0040ad8b
-	/*GoActor*/ public: void /*__thiscall*/ SetMagicFindChance(float unk1); //0x0040acf7
-	/*GoActor*/ public: void /*__thiscall*/ SetMarkedAgony(bool unk1); //0x0040adab
-	/*GoActor*/ public: void /*__thiscall*/ SetMarkedDeath(bool unk1); //0x0040ad9b
-	/*GoActor*/ public: void /*__thiscall*/ SetMarkedFire(bool unk1); //0x0040adcb
-	/*GoActor*/ public: void /*__thiscall*/ SetMarkedHarvest(bool unk1); //0x0040adbb
-	/*GoActor*/ public: void /*__thiscall*/ SetNaturalResistance(eDamageType unk1, float unk2); //0x007feebe
-	/*GoActor*/ public: void /*__thiscall*/ SetNaturalStateResistance(const gpbstring<char>& unk1, float unk2); //0x008001a3
-	/*GoActor*/ public: void /*__thiscall*/ SetPreLaunchFFXId(const FFXID_* unk1); //0x004086fb
-	/*GoActor*/ public: void /*__thiscall*/ SetResistance(eDamageType unk1, float unk2); //0x007fef22
-	/*GoActor*/ public: void /*__thiscall*/ SetSacrificePercent(float unk1); //0x0040ad7b
-	/*GoActor*/ public: void /*__thiscall*/ SetStateResistance(const gpbstring<char>& unk1, float unk2); //0x00800228
-	/*GoActor*/ public: void /*__thiscall*/ SetSummonCaster(const Goid_* unk1); //0x0040862e
-	/*GoActor*/ public: void /*__thiscall*/ SetSummoned(const Goid_* unk1); //0x0040861d
-	/*GoActor*/ public: void /*__thiscall*/ SetTuningPointId(int unk1); //0x0040879d
-	/*GoActor*/ public: void /*__thiscall*/ SetUsingActiveSkill(bool unk1); //0x007fae9b
-	/*GoActor*/ public: void /*__thiscall*/ SRecalcReloadAmount(); //0x00802d7b
-	/*GoActor*/ public: void /*__thiscall*/ SRemoveAuraState(const char* unk1, const Goid_* unk2); //0x0080210b
-	/*GoActor*/ public: void /*__thiscall*/ SRemoveBuffs(); //0x004085fa
-	/*GoActor*/ public: void /*__thiscall*/ SRemoveDebuffs(); //0x00408606
-	/*GoActor*/ public: void /*__thiscall*/ SRemoveGenericState(const char* unk1); //0x007ffa47
-	/*GoActor*/ public: void /*__thiscall*/ SRemoveSpellState(const gpbstring<char>& unk1); //0x007ffbcf
-	/*GoActor*/ public: void /*__thiscall*/ SRemoveSpellStates(bool unk1, bool unk2); //0x004085dd
-	/*GoActor*/ public: void /*__thiscall*/ SResetReloadDamage(); //0x004086ce
-	/*GoActor*/ public: void /*__thiscall*/ SResetReloadDamage(bool unk1); //0x007f840b
-	/*GoActor*/ public: void /*__thiscall*/ SSetAlignment(eActorAlignment unk1); //0x007f9a22
-	/*GoActor*/ public: void /*__thiscall*/ SSetCanBeResurrected(bool unk1); //0x007f88a0
-	/*GoActor*/ public: void /*__thiscall*/ SSetCanDamageBeReflected(bool unk1); //0x00408786
-	/*GoActor*/ public: void /*__thiscall*/ SSetCanShowHealth(bool unk1); //0x007f9a2b
-	/*GoActor*/ public: void /*__thiscall*/ SSetSummonCaster(const Goid_* unk1); //0x007f8091
-	/*GoActor*/ public: void /*__thiscall*/ SSetSummoned(const Goid_* unk1); //0x007f8088
-	/*GoActor*/ public: void /*__thiscall*/ SSetUsingPowerDamage(bool unk1); //0x00408712
-	/*GoActor*/ public: void /*__thiscall*/ SStartActiveSkillReload(); //0x00802ae9
-	/*GoActor*/ public: void /*__thiscall*/ SSubtractReloadDamage(float unk1); //0x007f980a
+	DefineStaticMethod(FUBI_NetToInstance, 0x4087f1, GoActor*, Params(unsigned long unk1, FuBi::Cookie__** unk2), Args(unk1, unk2));
+	DefineStaticMethod(FUBI_InstanceToNet, 0x4087e8, unsigned long, Params(GoActor* unk1), Args(unk1));
+	DefineMethod(CanUseActiveSkill, 0x802932, bool, Params(eActiveSkillDelivery unk1), Args(unk1));
+	DefineMethod(DoesActiveEquipmentSupportSkill, 0x802a8f, bool, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(DoesEquipmentSupportSkill, 0x802a35, bool, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineConstMethod(GetActiveSkillReady, 0x4086d6, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetActiveSkillRelease, 0x4086dd, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetCanBeResurrected, 0x408782, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetCanCast, 0x40a2fa, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetCanDamageBeReflected, 0x408793, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetCanDualWield, 0x7f6c6e, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetCanLevelUp, 0x40859b, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetCanShowHealth, 0x40877e, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetDropsSpellbook, 0x4085ab, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetGenericState, 0x7ffa50, bool, Params(int unk1, GoActor::GenericState& unk2), Args(unk1, unk2));
+	DefineConstMethod(GetHasPowerDamageState, 0x7f98c1, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetHasWeaponEnchant, 0x7fa592, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetIsHero, 0x4085a2, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetIsMale, 0x7f9644, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetIsSummoned, 0x40863b, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetMarkedAgony, 0x40a32b, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetMarkedDeath, 0x40a324, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetMarkedFire, 0x40a348, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetMarkedHarvest, 0x40a332, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetUsingActiveSkill, 0x4086f4, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetUsingPowerDamage, 0x408722, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(HasAuraState, 0x7fb5bb, bool, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(HasGenericState, 0x7fb4a7, bool, Params(const char* unk1), Args(unk1));
+	DefineMethod(IsActiveSkillSelected, 0x408763, bool, NO_PARAMS, NO_ARGS);
+	DefineMethod(SetNaturalSkillLevel, 0x408684, bool, Params(const char* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetSkillLevel, 0x40869c, bool, Params(const char* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetSkillLevelBase, 0x7f98f1, bool, Params(const char* unk1, float unk2, bool unk3), Args(unk1, unk2, unk3));
+	DefineMethod(SRemoveSummoned, 0x7ffac0, bool, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(MakeNatrualResistanceToolTipAnsi, 0x7ffc6d, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(MakeNaturalResistanceListAnsi, 0x7ff33e, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineMethod(MakeResistanceListAnsi, 0x7ff1bd, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineMethod(MakeResistanceToolTipAnsi, 0x7ff0e9, gpbstring<char>, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(MakeResistanceToolTipAnsi, 0x7fe5cf, gpbstring<char>, Params(eDamageType unk1, float unk2), Args(unk1, unk2));
+	DefineConstMethod(GetSkill, 0x4086b4, Skill*, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetCurrentActiveSkill, 0x40874c, const gpbstring<char>&, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetGenericStateName, 0x7f958b, const gpbstring<char>&, Params(int unk1), Args(unk1));
+	DefineConstMethod(GetQuickSlotSkill, 0x7faf9d, const gpbstring<char>&, Params(int unk1), Args(unk1));
+	DefineConstMethod(GetRace, 0x7f960d, const gpbstring<char>&, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetPreLaunchFFXId, 0x40870b, const FFXID_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetCorpse, 0x4087ae, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetGenericStateCaster, 0x7fb574, const Goid_*, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetGenericStateCaster, 0x7f9551, const Goid_*, Params(int unk1), Args(unk1));
+	DefineConstMethod(GetGenericStateSpellGoid, 0x7fb52d, const Goid_*, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetGenericStateSpellGoid, 0x7f9517, const Goid_*, Params(int unk1), Args(unk1));
+	DefineMethod(GetSummonCaster, 0x40862a, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetSummoned, 0x408619, const Goid_*, NO_PARAMS, NO_ARGS);
+	DefineMethod(SCreatePowerObject, 0x7f9837, const Goid_*, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineConstMethod(GetSkillExperience, 0x40864e, double, Params(const char* unk1), Args(unk1));
+	DefineMethod(GetActiveSkillDelivery, 0x408773, eActiveSkillDelivery, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetAlignment, 0x40877a, eActorAlignment, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetActiveSkillReloadBonus, 0x40a2d8, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetActiveSkillReloadDamage, 0x4086c0, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetActiveSkillReloadMaxDamage, 0x4086c7, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetAuraValue, 0x7fb66b, float, Params(const char* unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineMethod(GetBuffResistance, 0x40a2ee, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetCastReloadBonusPercent, 0x40a30f, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetChanceToCastTemplate, 0x7fc511, float, Params(const gpbstring<char>& unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(GetDebuffResistance, 0x40a2e7, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetFreezeChance, 0x40a2e3, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetGenericStateSpellLevel, 0x7fb4e5, float, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetHealingBonusPercent, 0x40a31d, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetHighestSkillLevel, 0x7f82e9, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMagicFindChance, 0x40a2df, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetMeleeReloadBonusPercent, 0x40a301, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMonsterLevel, 0x7f6c8b, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetNaturalResistance, 0x7fafa6, float, Params(eDamageType unk1), Args(unk1));
+	DefineConstMethod(GetNaturalSkillLevel, 0x408672, float, Params(const char* unk1), Args(unk1));
+	DefineMethod(GetNaturalStateResistance, 0x7fa874, float, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(GetRangedReloadBonusPercent, 0x40a308, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetResistance, 0x7fafe6, float, Params(eDamageType unk1), Args(unk1));
+	DefineConstMethod(GetSacrificePercent, 0x40a316, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetSkillLevel, 0x408660, float, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetSpotRequestWaitTime, 0x7f96b6, float, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetStateResistance, 0x7fa8cb, float, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(GetStrongestAuraValue, 0x7fb5f9, float, Params(const char* unk1), Args(unk1));
+	DefineConstMethod(GetSummonAttackSpeedBonusPercent, 0x40a2d4, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetSummonDamageBonusPercent, 0x40a2d0, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetUnconsciousDuration, 0x7f88d9, float, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBarBackroundIndex, 0x7f979a, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetBonusSkillPoints, 0x40873b, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMaxBuffs, 0x7f96ef, int, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMaxDebuffs, 0x7f9728, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetNumAppliedBuffs, 0x7fa4f9, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetNumAppliedDebuffs, 0x7fa561, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(GetTuningPointId, 0x4087aa, int, NO_PARAMS, NO_ARGS);
+	DefineMethod(RCUpdatePortraitTexture, 0x7f81cb, FuBi::Cookie__*, NO_PARAMS, NO_ARGS);
+	DefineConstMethod(GetMapLocationId, 0x40864a, unsigned long, NO_PARAMS, NO_ARGS);
+	DefineMethod(ActivateQuickSlotSkill, 0x40876a, void, Params(int unk1), Args(unk1));
+	DefineMethod(GetClass, 0x40c880, void, Params(gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(RCAddAuraState, 0x802016, void, Params(const char* unk1, const char* unk2, const Goid_* unk3, float unk4, const FFXID_* unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(RCAddBonusSkillPoints, 0x7f6b80, void, Params(int unk1), Args(unk1));
+	DefineMethod(RCAddGenericState, 0x80126e, void, Params(const char* unk1, const char* unk2, float unk3, const Goid_* unk4, const Goid_* unk5, float unk6, bool unk7), Args(unk1, unk2, unk3, unk4, unk5, unk6, unk7));
+	DefineMethod(RCAddIncantationState, 0x80136d, void, Params(const char* unk1, const char* unk2, float unk3, const Goid_* unk4, const Goid_* unk5, const char* unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineMethod(RCRecalcReloadAmount, 0x7f6f02, void, Params(float unk1, float unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RCRemoveAuraState, 0x801b7a, void, Params(const char* unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineMethod(RCRemoveGenericState, 0x7fed07, void, Params(const char* unk1), Args(unk1));
+	DefineMethod(RCResetReloadDamage, 0x7f69a9, void, Params(bool unk1), Args(unk1));
+	DefineMethod(RCSetActiveSkillRelease, 0x7f6a99, void, Params(bool unk1, unsigned long unk2), Args(unk1, unk2));
+	DefineMethod(RCSetActiveSkillReloadBonus, 0x7f9939, void, Params(float unk1), Args(unk1));
+	DefineMethod(RCSetAlignment, 0x7f86d6, void, Params(eActorAlignment unk1), Args(unk1));
+	DefineMethod(RCSetCanBeResurrected, 0x7f7082, void, Params(bool unk1), Args(unk1));
+	DefineMethod(RCSetCanShowHealth, 0x7f87bb, void, Params(bool unk1), Args(unk1));
+	DefineMethod(RCSetCurrentActiveSkill, 0x802f9d, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(RCSetNaturalSkillLevel, 0x7fb7b4, void, Params(const char* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(RCSetSkillLevels, 0x7f6c99, void, Params(float unk1, float unk2, float unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RCSetSummonCaster, 0x7f686d, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(RCSetSummoned, 0x7f675a, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(RCSetUnconsiousEndTime, 0x7f7179, void, Params(double unk1), Args(unk1));
+	DefineMethod(RCSetUsingActiveSkill, 0x7fb6cd, void, Params(bool unk1, unsigned long unk2), Args(unk1, unk2));
+	DefineMethod(RCStartActiveSkillReload, 0x7f6de0, void, Params(float unk1, float unk2, unsigned long unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RCSubtractReloadDamage, 0x7f8322, void, Params(float unk1), Args(unk1));
+	DefineMethod(RSResetUnconsciousDuration, 0x7f890a, void, Params(float unk1), Args(unk1));
+	DefineMethod(RSSetActiveSkillRelease, 0x7f8414, void, Params(bool unk1), Args(unk1));
+	DefineMethod(RSSetActiveSkillReloadBonus, 0x7fa6bf, void, Params(float unk1), Args(unk1));
+	DefineMethod(RSSetCurrentActiveSkill, 0x803082, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(RSSetNaturalSkillLevel, 0x7fc7d9, void, Params(const char* unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(RSSetSkillLevels, 0x7f8523, void, Params(float unk1, float unk2, float unk3), Args(unk1, unk2, unk3));
+	DefineMethod(RSSetUsingActiveSkill, 0x7fc6d3, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SAddAuraState, 0x8021b8, void, Params(const char* unk1, const char* unk2, const Goid_* unk3, float unk4, const FFXID_* unk5), Args(unk1, unk2, unk3, unk4, unk5));
+	DefineMethod(SAddBonusSkillPoints, 0x7f851a, void, Params(int unk1), Args(unk1));
+	DefineMethod(SAddGenericState, 0x80188c, void, Params(const char* unk1, const char* unk2, float unk3, const Goid_* unk4, const Goid_* unk5, float unk6, bool unk7), Args(unk1, unk2, unk3, unk4, unk5, unk6, unk7));
+	DefineMethod(SAddGenericState, 0x4085b5, void, Params(const char* unk1, const char* unk2, float unk3, const Goid_* unk4, const Goid_* unk5, float unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineMethod(SAddIncantationState, 0x8018b5, void, Params(const char* unk1, const char* unk2, float unk3, const Goid_* unk4, const Goid_* unk5, const char* unk6), Args(unk1, unk2, unk3, unk4, unk5, unk6));
+	DefineMethod(SCastPassiveSpellsOnHit, 0x4087d7, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(SCastPassiveSpellsWhenHit, 0x4087c6, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(SCreateCorpse, 0x7f9a34, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(SetActiveSkillReady, 0x7fa5e7, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetActiveSkillRelease, 0x4086e4, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetActiveSkillReloadBonus, 0x40ace7, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetActiveSkillSelected, 0x408753, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetBonusSkillPoints, 0x40873f, void, Params(int unk1), Args(unk1));
+	DefineMethod(SetBuffResistance, 0x40ad5b, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetCanCast, 0x40ad6b, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetClass, 0x40b314, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(SetCurrentActiveSkill, 0x8028c7, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(SetDebuffResistance, 0x40ad29, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetFreezeChance, 0x40ad04, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetHealingBonusPercent, 0x40ad8b, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetMagicFindChance, 0x40acf7, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetMarkedAgony, 0x40adab, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetMarkedDeath, 0x40ad9b, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetMarkedFire, 0x40adcb, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetMarkedHarvest, 0x40adbb, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SetNaturalResistance, 0x7feebe, void, Params(eDamageType unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetNaturalStateResistance, 0x8001a3, void, Params(const gpbstring<char>& unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetPreLaunchFFXId, 0x4086fb, void, Params(const FFXID_* unk1), Args(unk1));
+	DefineMethod(SetResistance, 0x7fef22, void, Params(eDamageType unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetSacrificePercent, 0x40ad7b, void, Params(float unk1), Args(unk1));
+	DefineMethod(SetStateResistance, 0x800228, void, Params(const gpbstring<char>& unk1, float unk2), Args(unk1, unk2));
+	DefineMethod(SetSummonCaster, 0x40862e, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(SetSummoned, 0x40861d, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(SetTuningPointId, 0x40879d, void, Params(int unk1), Args(unk1));
+	DefineMethod(SetUsingActiveSkill, 0x7fae9b, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SRecalcReloadAmount, 0x802d7b, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SRemoveAuraState, 0x80210b, void, Params(const char* unk1, const Goid_* unk2), Args(unk1, unk2));
+	DefineMethod(SRemoveBuffs, 0x4085fa, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SRemoveDebuffs, 0x408606, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SRemoveGenericState, 0x7ffa47, void, Params(const char* unk1), Args(unk1));
+	DefineMethod(SRemoveSpellState, 0x7ffbcf, void, Params(const gpbstring<char>& unk1), Args(unk1));
+	DefineMethod(SRemoveSpellStates, 0x4085dd, void, Params(bool unk1, bool unk2), Args(unk1, unk2));
+	DefineMethod(SResetReloadDamage, 0x4086ce, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SResetReloadDamage, 0x7f840b, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SSetAlignment, 0x7f9a22, void, Params(eActorAlignment unk1), Args(unk1));
+	DefineMethod(SSetCanBeResurrected, 0x7f88a0, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SSetCanDamageBeReflected, 0x408786, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SSetCanShowHealth, 0x7f9a2b, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SSetSummonCaster, 0x7f8091, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(SSetSummoned, 0x7f8088, void, Params(const Goid_* unk1), Args(unk1));
+	DefineMethod(SSetUsingPowerDamage, 0x408712, void, Params(bool unk1), Args(unk1));
+	DefineMethod(SStartActiveSkillReload, 0x802ae9, void, NO_PARAMS, NO_ARGS);
+	DefineMethod(SSubtractReloadDamage, 0x7f980a, void, Params(float unk1), Args(unk1));
 };
