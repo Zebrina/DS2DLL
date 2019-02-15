@@ -214,7 +214,6 @@
     <ClInclude Include="Skrit.h" />
     <ClInclude Include="StaticMethods.h" />
     <ClInclude Include="String.h" />
-    <ClInclude Include="SystemTime.h" />
     <ClInclude Include="TagPoint.h" />
     <ClInclude Include="TagRect.h" />
     <ClInclude Include="TagSize.h" />

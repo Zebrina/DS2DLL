@@ -86,7 +86,7 @@ public:
 	DefineMethod(GetTargetSpeed, 0x8c34d8, float, Params(unsigned long unk1), Args(unk1));
 	DefineMethod(SetEffectTexture, 0x8c3708, unsigned int, Params(unsigned long unk1, const gpbstring<char>& unk2, float unk3, float unk4), Args(unk1, unk2, unk3, unk4));
 	DefineMethod(SetEffectTexture, 0x8c36e3, unsigned int, Params(unsigned long unk1, const gpbstring<char>& unk2), Args(unk1, unk2));
-	//DefineVarArgMethod(AttachSimulationf, 0x8c8b4e, unsigned long, Params(unsigned long unk1, float unk2, float unk3, const char* unk4));
+	DefineVarArgMethod(AttachSimulationf, 0x8c8b4e, unsigned long, Params(unsigned long unk1, float unk2, float unk3, const char* unk4), Args(unk1, unk2, unk3, unk4));
 	DefineMethod(AttachGlobalSimulation, 0x8c3693, unsigned long, Params(unsigned long unk1, const gpbstring<char>& unk2, float unk3), Args(unk1, unk2, unk3));
 	DefineMethod(AttachSimulation, 0x8c364e, unsigned long, Params(unsigned long unk1, const gpbstring<char>& unk2, float unk3), Args(unk1, unk2, unk3));
 	DefineMethod(AttachTargetSimulation, 0x423c4b, unsigned long, Params(unsigned long unk1, const gpbstring<char>& unk2, float unk3), Args(unk1, unk2, unk3));

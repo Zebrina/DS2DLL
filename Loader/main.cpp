@@ -10,6 +10,7 @@
 
 #include "DS2/Report.h"
 #include "DS2/Enums.h"
+#include "DS2/UINews.h"
 
 #include "Version.h"
 #include "Urls.h"

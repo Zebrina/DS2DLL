@@ -463,7 +463,6 @@
       <Filter>Multiplayer</Filter>
     </ClInclude>
     <ClInclude Include="Guid.h" />
-    <ClInclude Include="SystemTime.h" />
     <ClInclude Include="Matrix3x3.h" />
     <ClInclude Include="DebugMacros.h">
       <Filter>Utility</Filter>

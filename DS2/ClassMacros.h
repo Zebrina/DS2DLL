@@ -50,19 +50,20 @@
 #define DefineFunction(name, address, returnType, params, args) \
 	_DefineMethod(name, __cdecl, address, returnType, params, params, args, _NON_CONST)
 
-#define _DefineVarArgMethod(name, addr, stat, ret, params, cnst) \
-	stat ret __cdecl name(params, ...) cnst { \
-		__asm { push addr; ret; } \
+#define _DefineVarArgMethod(name, addr, stat, ret, params, fnParams, fnArgs, cnst) \
+	template<typename... A> stat ret name(params, A... args) cnst { \
+		typedef ret(__cdecl *fn)(fnParams, ...); \
+		return ((fn)addr)(fnArgs, args...); \
 	} _ASSERT_ADDRESS_NOT_NULL(addr)
 
-#define DefineVarArgMethod(name, address, returnType, params) \
-	_DefineVarArgMethod(name, address, _NON_STATIC, returnType, params, _NON_CONST)
-#define DefineConstVarArgMethod(name, address, returnType, params) \
-	_DefineVarArgMethod(name, address, _NON_STATIC, returnType, params, const)
-#define DefineStaticVarArgMethod(name, address, returnType, params) \
-	_DefineVarArgMethod(name, address, static, returnType, params, _NON_CONST)
-#define DefineVarArgFunction(name, address, returnType, params) \
-	_DefineVarArgMethod(name, address, _NON_STATIC, returnType, params, _NON_CONST)
+#define DefineVarArgMethod(name, address, returnType, params, args) \
+	_DefineVarArgMethod(name, address, _NON_STATIC, returnType, params, _PushVarArg(void*, params), _PushVarArg(this, args), _NON_CONST)
+#define DefineConstVarArgMethod(name, address, returnType, params, args) \
+	_DefineVarArgMethod(name, address, _NON_STATIC, returnType, params, _PushVarArg(void*, params), _PushVarArg(this, args), const)
+#define DefineStaticVarArgMethod(name, address, returnType, params, args) \
+	_DefineVarArgMethod(name, address, static, returnType, params, params, args, _NON_CONST)
+#define DefineVarArgFunction(name, address, returnType, params, args) \
+	_DefineVarArgMethod(name, address, _NON_STATIC, returnType, params, params, args, _NON_CONST)
 
 #define _DefineTemplateMethod(type, name, cl, addr, stat, ret, params, tParams, tArgs, cnst) \
 	template <> \

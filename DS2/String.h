@@ -24,9 +24,9 @@ namespace String {
 	DefineFunction(Mid, 0x997584, gpbstring<char>, Params(const gpbstring<char>& unk1, int unk2), Args(unk1, unk2));
 	DefineFunction(Right, 0x9975af, gpbstring<char>, Params(const gpbstring<char>& unk1, int unk2), Args(unk1, unk2));
 	DefineFunction(Append, 0x997371, gpbstring<char>&, Params(gpbstring<char>& unk1, const char* unk2), Args(unk1, unk2));
-	//DefineVarArgFunction(AppendF, 0x9973ae, gpbstring<char>&, Params(gpbstring<char>& unk1, const char* unk2));
+	DefineVarArgFunction(AppendF, 0x9973ae, gpbstring<char>&, Params(gpbstring<char>& unk1, const char* unk2));
 	DefineFunction(Assign, 0x99745f, gpbstring<char>&, Params(gpbstring<char>& unk1, const char* unk2), Args(unk1, unk2));
-	//DefineVarArgFunction(AssignF, 0x99749c, gpbstring<char>&, Params(gpbstring<char>& unk1, const char* unk2));
+	DefineVarArgFunction(AssignF, 0x99749c, gpbstring<char>&, Params(gpbstring<char>& unk1, const char* unk2));
 	DefineFunction(GetDelimitedFloat, 0x9978e3, float, Params(const char* unk1, int unk2, char unk3, float unk4), Args(unk1, unk2, unk3, unk4));
 	DefineFunction(GetDelimitedFloat, 0x427a52, float, Params(const char* unk1, int unk2, char unk3), Args(unk1, unk2, unk3));
 	DefineFunction(GetDelimitedFloat, 0x427a6e, float, Params(const char* unk1, int unk2), Args(unk1, unk2));

@@ -106,7 +106,7 @@ DefineFunction(MakeFourCcString, 0x996fd6, gpbstring<char>, Params(int unk1, boo
 DefineFunction(MakeFourCcString, 0x996fbe, gpbstring<char>, Params(int unk1), Args(unk1));
 DefineFunction(MakeNodeFlagString, 0x6d17d0, gpbstring<char>, Params(siege::eLogicalNodeFlags unk1), Args(unk1));
 DefineFunction(MakeSiegePosString, 0x6d1a00, gpbstring<char>, Params(const SiegePos& unk1), Args(unk1));
-//DefineVarArgFunction(MakeStringF, 0x99725c, gpbstring<char>, Params(const char* unk1));
+DefineVarArgFunction(MakeStringF, 0x99725c, gpbstring<char>, Params(const char* unk1));
 DefineFunction(ToFullString, 0x7ee2c5, gpbstring<char>, Params(eDamageType unk1), Args(unk1));
 DefineFunction(GoidClassToString, 0x502cb9, const char*, Params(const Goid_* unk1), Args(unk1));
 DefineFunction(GoidToDebugString, 0x7eea43, const char*, Params(const Goid_* unk1), Args(unk1));

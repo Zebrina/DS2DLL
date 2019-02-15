@@ -29,11 +29,11 @@ public:
 	DefineMethod(GetActorWhoCarriesObject, 0x474d6c, const Goid_*, Params(const Goid_* unk1), Args(unk1));
 	DefineConstMethod(RSTeleportGameObject, 0x476404, FuBi::Cookie__*, Params(const Goid_* unk1, const SiegePos& unk2, bool unk3), Args(unk1, unk2, unk3));
 	DefineMethod(GetSelectedItems, 0x4795eb, GoidColl&, NO_PARAMS, NO_ARGS);
-	//DefineConstVarArgMethod(DisplayMsgF, 0x47d801, void, Params(const char* unk1));
-	//DefineConstVarArgMethod(DisplayMsgSoundF, 0x47da24, void, Params(const char* unk1, const char* unk2));
-	//DefineConstVarArgMethod(SDisplayMsgF, 0x47dadf, void, Params(unsigned long unk1, const char* unk2));
-	//DefineConstVarArgMethod(SDisplayMsgSoundF, 0x47db68, void, Params(unsigned long unk1, const char* unk2, const char* unk3));
-	//DefineConstVarArgMethod(SScreenMsgToPlayersF, 0x47e859, void, Params(const SiegePos& unk1, const char* unk2));
+	DefineConstVarArgMethod(DisplayMsgF, 0x47d801, void, Params(const char* fmt), Args(fmt));
+	DefineConstVarArgMethod(DisplayMsgSoundF, 0x47da24, void, Params(const char* unk1, const char* unk2), Args(unk1, unk2));
+	DefineConstVarArgMethod(SDisplayMsgF, 0x47dadf, void, Params(unsigned long unk1, const char* unk2), Args(unk1, unk2));
+	DefineConstVarArgMethod(SDisplayMsgSoundF, 0x47db68, void, Params(unsigned long unk1, const char* unk2, const char* unk3), Args(unk1, unk2, unk3));
+	DefineConstVarArgMethod(SScreenMsgToPlayersF, 0x47e859, void, Params(const SiegePos& pos, const char* fmt), Args(pos, fmt));
 	DefineConstMethod(DisplayMsgSound, 0x47b6af, void, Params(const char* unk1, const char* unk2), Args(unk1, unk2));
 	DefineConstMethod(DisplayMsgSoundEx, 0x47b574, void, Params(const char* unk1, const char* unk2, const char* unk3, const char* unk4, const char* unk5, const char* unk6, const char* unk7), Args(unk1, unk2, unk3, unk4, unk5, unk6, unk7));
 	DefineMethod(RankPartyMembers, 0x477e13, void, NO_PARAMS, NO_ARGS);

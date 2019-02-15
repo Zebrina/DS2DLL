@@ -3,6 +3,8 @@
 #include "GPBString.h"
 #include "Siege.h"
 
+#include <Windows.h>
+
 struct Goid_;
 struct Quat;
 struct tagPOINT;
@@ -80,6 +82,9 @@ public:
 
 	DefineStaticMethod(RCCreateAndLaunchFlickFX, 0x966838, Cookie__*, Params(const gpbstring<char>& unk1, const Goid_* unk2, const Goid_* unk3), Args(unk1, unk2, unk3));
 };
+
+DefineTemplateStaticMethod(FuBi::Traits<_SYSTEMTIME>, FromString, 0x9d53fc, bool, Params(const char* unk1, _SYSTEMTIME& unk2), Args(unk1, unk2));
+DefineTemplateStaticMethod(FuBi::Traits<_SYSTEMTIME>, ToString, 0x9d53a8, void, Params(gpbstring<char>& unk1, const _SYSTEMTIME& unk2, FuBi::eXfer unk3), Args(unk1, unk2, unk3));
 
 DefineTemplateStaticMethod(FuBi::Traits<siege::database_guid>, FromString, 0x6d0d10, bool, Params(const char* unk1, siege::database_guid& unk2), Args(unk1, unk2));
 DefineTemplateStaticMethod(FuBi::Traits<siege::database_guid>, ToString, 0x6d19a0, void, Params(gpbstring<char>& unk1, const siege::database_guid& unk2, FuBi::eXfer unk3), Args(unk1, unk2, unk3));
