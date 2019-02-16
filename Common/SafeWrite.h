@@ -19,3 +19,6 @@ void SafeWrite64(uintptr_t addr, uint64_t data);
 // 5 bytes written to src
 bool SafeWriteJump(uintptr_t src, uintptr_t dst);
 bool SafeWriteCall(uintptr_t src, uintptr_t dst);
+
+// Added by Zebrina.
+void SafeWriteStr(uintptr_t addr, const char* str);

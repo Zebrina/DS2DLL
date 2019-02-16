@@ -72,3 +72,8 @@ bool SafeWriteCall(uintptr_t src, uintptr_t dst)
 {
 	return SafeWriteJump_Internal(src, dst, 0xE8);
 }
+
+// Added by Zebrina.
+void SafeWriteStr(uintptr_t addr, const char* str) {
+	SafeWriteBuf(addr, (void*)str, strlen(str) + 1);
+}
