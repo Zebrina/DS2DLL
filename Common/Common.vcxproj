@@ -67,10 +67,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Debug.h" />
+    <ClInclude Include="Logging.h" />
     <ClInclude Include="MemUtil.h" />
     <ClInclude Include="SafeWrite.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Logging.cpp" />
     <ClCompile Include="MemUtil.cpp" />
     <ClCompile Include="SafeWrite.cpp" />
   </ItemGroup>
