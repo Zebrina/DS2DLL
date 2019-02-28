@@ -1,0 +1,9 @@
+/*
+[t:enum,n:*]
+{
+	name = eAlterationEx;
+
+	* = alter_max_life_percent = 181;
+	* = alter_max_mana_percent = 182;
+}
+*/

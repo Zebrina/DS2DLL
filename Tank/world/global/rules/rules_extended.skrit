@@ -1,0 +1,21 @@
+#include "rules.skrit"
+
+// *****************************************************************************
+// *** Hooks for max life/mana calculation.
+// *****************************************************************************
+
+float CalculateMaxLifeExtended$(Go client$) {
+    float max_life$ = CalculateMaxLife$(client$);
+
+    max_life$ = max_life$ * (1.0 + 0.01 * AIQuery.GetAlterationSum(client$, alter_max_life_percentage));
+
+    return max_life$;
+}
+
+float CalculateMaxManaExtended$(Go client$) {
+    float max_mana$ = CalculateMaxMana$(client$);
+
+    max_mana$ = max_mana$ * (1.0 + 0.01 * AIQuery.GetAlterationSum(client$, alter_max_mana_percentage));
+
+    return max_mana$;
+}

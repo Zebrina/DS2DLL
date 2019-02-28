@@ -1,1 +1,0 @@
-int DUMMY = 0;

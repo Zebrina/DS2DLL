@@ -1,0 +1,4 @@
+LIBRARY ProjectTemplate
+EXPORTS
+GetPluginInfo
+LoadPlugin

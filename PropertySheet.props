@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <DungeonSiege2Dir>C:\Games\Dungeon Siege II\</DungeonSiege2Dir>
+    <DungeonSiege2PluginsDir>C:\Games\Dungeon Siege II\Plugins\</DungeonSiege2PluginsDir>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="DungeonSiege2Dir">
+      <Value>$(DungeonSiege2Dir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="DungeonSiege2PluginsDir">
+      <Value>$(DungeonSiege2PluginsDir)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

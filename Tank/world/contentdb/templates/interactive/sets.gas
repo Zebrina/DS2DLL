@@ -1,0 +1,9255 @@
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////          Dual Wield Set 1          ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_dws1_01
+//
+//	ITEM:		Helm from Dual Wield Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_dws1_01]
+{
+	doc = "amr_hlm_set_dws1_01";
+	specializes = base_helm_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Smoke's Cowl";
+		base_screen_name = "Hood";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 04;
+		armor_type = type03;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type03_04;
+		set = DWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 16;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.05;
+				description			= "+5% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_death_resistance;
+				value				= 0.12;
+				description			= "+12% Death Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.04;
+				description			= "+4% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+ 		}
+ 	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 15.0;
+		}
+ 	}
+	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_dws1_01
+//
+//	ITEM:		Boots from Dual Wield Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_dws1_01]
+{
+	doc = "amr_bot_set_dws1_01";
+	specializes = base_boots_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Shadowstep";
+		base_screen_name = "Boots";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 019;
+		armor_type = type01;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type01_019;
+		set = DWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 5;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_resistance;
+				value				= 0.08;
+				description			= "+8% Melee Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_chance_to_dodge_hit_ranged;
+				value				= 0.12;
+				description			= "+12% Chance to Dodge Ranged Attacks";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magic_find_chance;
+				value				= 15;
+				description			= "+<value>% Chance to Find Magic Items";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+ 		}
+ 	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 18.0;
+		}
+	}
+	[loot_drop_indicator]{}
+}
+
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_dws1_01
+//
+//	ITEM:		Gloves from Dual Wield Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_dws1_01]
+{
+	doc = "amr_glv_set_dws1_01";
+	specializes = base_gloves_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Nightspirit";
+		base_screen_name = "Gloves";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 022;
+		armor_type = type03;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type03_022;
+		set = DWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 9;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 8;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_fire_resistance;
+				value				= 0.16;
+				description			= "+16% Fire Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_gold_dropped;
+				value				= 0.75;
+				description			= "+75% Gold Dropped";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 24.0;
+		}
+ 	}
+	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	sd_1h_set_dws1_01
+//
+//	ITEM:		1H Sword from Dual Wield Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:sd_1h_set_dws1_01]
+{
+	specializes = base_sword_template;
+	doc = "1h_sword_set_dws1_01";
+	[aspect]
+	{
+		model = m_w_swd_phan-razor;
+		tracer_texture = b_sfx_tra_generic-11;
+		[textures]{0 = b_w_swd_phan-razor;}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Phantom Razor";
+		base_screen_name = "Falchion";
+		rarity = set;
+	}
+	[gui]
+	{
+ 	 	equip_requirements = melee:#item_level - 2.0;
+		inventory_height = 3;
+		inventory_width = 1;
+		inventory_icon = b_gui_ig_i_w_swd_phan-razor;
+		set = DWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "phantom_razor";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx = ffx_wpn_phantom_razor
+									  &hit_ffx	  = ffx_spell_ice_sword_hit;
+			}
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 14;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_ice;
+				value				= 7;
+				max_value			= 12;
+				description			= "Adds 7 to 12 Ice Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_3;
+				value				= 2;
+				description			= "+<value> to Critical Strike, Dual Wield, and Alacrity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_steal;
+				value				= 8;
+				description			= "<value>% Health Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 31.0;
+ 	 	}
+    }
+	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	dg_1h_set_dws1_01
+//
+//	ITEM:		Dagger from Dual Wield Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:dg_1h_set_dws1_01]
+{
+	specializes = base_dagger_template;
+	doc = "dagger_set_dws1_01";
+	[aspect]
+	{
+		model = m_w_dag_whisper;
+		tracer_texture = b_sfx_tra_generic-39;
+		[textures]
+		{
+			0 = b_w_swd_phan-razor;
+		}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Whisper";
+		base_screen_name = "Dirk";
+		rarity = set;
+	}
+	[gui]
+	{
+ 	 	equip_requirements = melee:#item_level - 2.0;
+		inventory_height = 2;
+		inventory_width = 1;
+		inventory_icon = b_gui_ig_i_w_dgr_whisper;
+		set = DWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "whisper";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx = ffx_wpn_whisper
+									  &hit_ffx	  = ffx_spell_death_sword_hit;
+			}
+   			[*]
+   			{
+				alteration			= alter_melee_damage_max;
+				value				= 12;
+				description			= "+<value> Max Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+   			}
+   			[*]
+   			{
+ 				alteration			= alter_melee_damage_source_percent;
+  				value				= 0.25;
+ 				description			= "+25% Damage";
+   				duration			= #infinite;
+   				is_permanent		= true;
+   				is_single_instance	= false;
+   			}
+   			[*]
+   			{
+ 				alteration			= alter_custom_damage_death;
+ 				value				= 4;
+ 				max_value			= 7;
+ 				description			= "Adds 4 to 7 Death Damage";
+   				duration			= #infinite;
+   				is_permanent		= true;
+   				is_single_instance	= false;
+   			}
+			[*]
+			{
+				alteration 			= alter_chance_to_dodge_hit_melee;
+				value 				= 0.05;
+				description 		= "+5% Chance to Dodge Melee Attacks";
+				duration 			= #infinite;
+				is_permanent 		= true;
+				is_single_instance 	= false;
+			}
+   		}
+   	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 21.0;
+ 	 	}
+    }
+	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////          Dual Wield Set 2          ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_dws2_01
+//
+//	ITEM:		Boots from Dual Wield Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_dws2_01]
+{
+	doc = "amr_bot_set_dws2_01";
+	specializes = base_boots_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Windstep";
+		base_screen_name = "Boots";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 029;
+		armor_type = type02;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type02_029;
+		set = DWS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 15;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_lightning_resistance;
+				value				= 0.25;
+				description			= "+25% Lightning Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration 			= alter_chance_to_dodge_hit_ranged;
+				value 				= 0.25;
+				description 		= "+25% Chance to Dodge Ranged Attacks";
+				duration 			= #infinite;
+				is_permanent 		= true;
+				is_single_instance 	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_1;
+				value				= 2;
+				description			= "+<value> to Critical Shot, Dodge, and Survival";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 50.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	sd_1h_set_dws2_01
+//
+//	ITEM:		1H Sword from Dual Wield Set
+////////////////////////////////////////////////////
+
+[t:template,n:sd_1h_set_dws2_01]
+{
+	specializes = base_sword_template;
+	doc = "1h_sword_set_dws2_01";
+	[aspect]
+	{
+		model = m_w_swd_torrent;
+		tracer_texture = b_sfx_tra_generic-64;
+		[textures]
+		{
+			0 = b_w_swd_torrent;
+		}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Torrent";
+		base_screen_name = "Sword";
+		rarity = set;
+	}
+	[gui]
+	{
+ 	 	equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_w_swd_torrent;
+		set = DWS2_set;
+		inventory_height = 4;
+		inventory_width = 1;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "torrent";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx = ffx_wpn_torrent;
+			}
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 125;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_bonus;
+				value				= 12;
+				description			= "Restores <value> Health Per Hit";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.2;
+				description			= "+20% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_3;
+				value				= 3;
+				description			= "+<value> to Critical Strike, Dual Wield, and Alacrity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 53.0;
+ 	 	}
+    	}
+    	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ax_1h_set_dws2_01
+//
+//	ITEM:		1H Axe from Dual Wield Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:ax_1h_set_dws2_01]
+{
+	specializes = base_axe_template;
+	doc = "ax_dual_wield_set_2";
+	[aspect]
+	{
+		model = m_w_axe_thunderstroke;
+		tracer_texture = b_sfx_tra_generic-31;
+		[textures]
+		{
+			0 =  b_w_swd_torrent;
+		}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Thunderstroke";
+		base_screen_name = "Heavy Edged Axe";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_w_axe_thunderstroke;
+		set = DWS2_set;
+		inventory_height = 3;
+		inventory_width = 2;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "thunderstroke";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx = ffx_wpn_thunderstroke;
+			}
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 28;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_lightning;
+				value				= 9;
+				max_value			= 26;
+				description			= "Adds 9 to 26 Lightning Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "melee_lightning";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx		= ffx_spell_lightning_sword
+									  &hit_ffx			= ffx_spell_lightning_sword_hit;
+			}
+			[*]
+			{
+				alteration			= alter_lightning_resistance;
+				value				= 0.2;
+				description			= "+20% Lightning Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_1;
+				value				= 2;
+				description			= "+<value> to Barricade, Toughness, and Reinforced Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 46.0;
+ 	 	}
+    	}
+    	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amulet_set_dws2_01
+//
+//	ITEM:		Amulet from Dual Wield Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amulet_set_dws2_01]
+{
+	doc = "amulet_set_dws2_01";
+	specializes = amulet;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Eye of the Tempest";
+		base_screen_name = "Amulet";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_amulet_064;
+		set = DWS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 43;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 150;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magical_resistance;
+				value				= 0.15;
+				description			= "+15% Magic Damage Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_resistance;
+				value				= 0.08;
+				description			= "+8% Melee Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 58.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////          Dual Wield Set 3          ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	sd_1h_set_dws3_01
+//
+//	ITEM:		1H Sword from Dual Wield Set 3
+////////////////////////////////////////////////////
+
+[t:template,n:sd_1h_set_dws3_01]
+{
+	specializes = base_sword_template;
+	doc = "1h_sword_set_dws2_01";
+	[aspect]
+	{
+		model = m_w_swd_luunlong;
+		tracer_texture = b_sfx_tra_generic-47;
+		[textures]
+		{
+			0 = b_w_swd_luunlong;	//Placeholder
+		}
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		allow_modifiers = false;
+		screen_name = "Citaa";
+		base_screen_name = "Long Sword";
+		rarity = set;
+	}
+	[gui]
+	{
+ 	 	equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_w_swd_LuunLong;
+		set = DWS3_set;
+		inventory_height = 3;
+		inventory_width = 1;
+		item_level = 36.0;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "Citaa";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx = ffx_wpn_citaa;
+			}
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 28;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_source_percent;
+				value				= 0.42;
+				description			= "+42% Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_death;
+				value				= 9;
+				max_value			= 15;
+				description			= "Adds 9 to 15 Death Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_3;
+				value				= 2;
+				description			= "+<value> to Critical Strike, Dual Wield, and Alacrity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	sd_1h_set_dws3_02
+//
+//	ITEM:		1H Sword from Dual Wield Set 3
+////////////////////////////////////////////////////
+
+[t:template,n:sd_1h_set_dws3_02]
+{
+	specializes = base_sword_template;
+	doc = "1h_sword_set_dws2_01";
+	[aspect]
+	{
+		model = m_w_swd_luunshort;
+		tracer_texture = b_sfx_tra_generic-64;
+		[textures]
+		{
+			0 = b_w_swd_luunlong;
+		}
+	}
+	[common]
+	{
+		is_pcontent_allowed = false;
+		allow_modifiers = false;
+		screen_name = "Giethaa";
+		base_screen_name = "Short Sword";
+		rarity = set;
+	}
+	[gui]
+	{
+ 	 	equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_w_swd_luunshort;
+		set = DWS3_set;
+		inventory_height = 3;
+		inventory_width = 1;
+		item_level = 36.0;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "giethaa";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx = ffx_wpn_giethaa;
+			}
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 18;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "stat_strength";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx		= ffx_spell_str_bonus_sword;
+			}
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 67;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_death;
+				value				= 9;
+				max_value			= 15;
+				description			= "Adds 9 to 15 Death Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "melee_death";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx		= ffx_spell_death_sword
+									  &hit_ffx			= ffx_spell_death_sword_hit;
+			}
+		}
+	}
+	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////         1H Weapon Set 1            ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_1hws1_01
+//
+//	ITEM:		Body from 1H Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_1hws1_01]
+{
+	doc = "amr_bdy_set_1hws1_01";
+	specializes = base_body_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Lorethal's Courage";
+		base_screen_name = "Full Plate";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 013;
+		armor_type = a3;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a3_013;
+		inventory_height = 3;
+		inventory_width = 2;
+		set = 1HWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 14;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.35;
+				description			= "+35% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_resistance;
+				value				= 0.06;
+				description			= "+6% Melee Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_MELEE_PASSIVE_SKILLS;
+				value				= 1;
+				description			= "+<value> to Melee Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 30.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_1hws1_01
+//
+//	ITEM:		Helm from 1H Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_1hws1_01]
+{
+	doc = "amr_hlm_set_1hws1_01";
+	specializes = base_helm_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Lorethal's Nobility";
+		base_screen_name = "Bascinet";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 04;
+		armor_type = type09;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type09_04;
+		set = 1HWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_life_steal;
+				value				= 5;
+				description			= "<value>% Health Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.20;
+				description			= "+20% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_death_resistance;
+				value				= 0.12;
+				description			= "+12% Death Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_1;
+				value				= 1;
+				description			= "+<value> to Barricade, Toughness, and Reinforced Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 11.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_1hws1_01
+//
+//	ITEM:		Boots from 1H Weapon Set1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_1hws1_01]
+{
+	doc = "amr_bot_set_1hws1_01";
+	specializes = base_boots_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Lorethal's Determination";
+		base_screen_name = "Greaves";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 006;
+		armor_type = type03;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type03_006;
+		set = 1HWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 22;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 7;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ice_resistance;
+				value				= 0.12;
+				description			= "+12% Ice Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_fire_resistance;
+				value				= 0.12;
+				description			= "+12% Fire Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 14.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_1hws1_01
+//
+//	ITEM:		Gloves from 1H Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_1hws1_01]
+{
+	doc = "amr_glv_set_1hws1_01";
+	specializes = base_gloves_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Lorethal's Grace";
+		base_screen_name = "Gauntlets";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 003;
+		armor_type = type06;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type06_003;
+		set = 1HWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 3;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 5;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_lightning_resistance;
+				value				= 0.1;
+				description			= "+10% Lightning Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.03;
+				description			= "+3% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 8.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_shd_set_1hws1_01
+//
+//	ITEM:		Shield from 1H Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_shd_set_1hws1_01]
+{
+	doc = "amr_shd_set_1hws1_01";
+	specializes = base_shield;
+	[aspect]
+	{
+		model = m_w_shd_command;
+ 	 	[textures]
+ 	 	{
+ 	 		0 =  b_w_mce_sacrifice;
+ 	 	}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Lorethal's Command";
+		base_screen_name = "Shield";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level-2.0,aegis:1;
+		inventory_icon = b_gui_ig_i_w_shd_command;	 	////$$  updated 11/11 ~cn.
+		inventory_height = 3;
+		inventory_width = 2;
+		set = 1HWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.1;
+				description			= "+10% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.30;
+				description			= "+30% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_resistance;
+				value				= 0.12;
+				description			= "+12% Ranged Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_chance_to_block_melee_damage;
+				value				= 26;
+				description			= "+<value>% Chance to Block Melee Attacks";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 26.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	mc_1h_set_1hws1_01
+//
+//	ITEM:		Mace from 1H Weapon Set 1 (TBD)
+////////////////////////////////////////////////////
+
+[t:template,n:mc_1h_set_1hws1_01]
+{
+	specializes = base_mace_template;
+	doc = "mc_1h_set_1hws1_01";
+	[aspect]
+	{
+		model = m_w_mce_sacrifice;
+		tracer_texture = b_sfx_tra_generic-09;
+		[textures]
+		{
+			0 = b_w_mce_sacrifice;
+		}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Lorethal's Sacrifice";
+		base_screen_name = "Flanged Mace";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_w_mce_sacrifice;
+		set = 1HWS1_set;
+		inventory_height = 3;
+		inventory_width = 1;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "sacrifice";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx = ffx_wpn_sacrifice
+									  &hit_ffx	  = ffx_spell_fire_sword_hit;
+			}
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 6;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 8;
+				description			= "+<value> Max Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_source_percent;
+				value				= 0.25;
+				description			= "+25% Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_fire;
+				value				= 4;
+				max_value			= 5;
+				description			= "Adds 4 to 5 Fire Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 17.0;
+ 	 	}
+    	}
+    	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amulet_set_1hws1_01
+//
+//	ITEM:		Amulet from 1H Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amulet_set_1hws1_01]
+{
+	doc = "amulet_set_1hws1_01";
+	specializes = amulet;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Lorethal's Honor";
+		base_screen_name = "Amulet";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_amulet_050;
+		set = 1HWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 7;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 1;
+				description			= "Adds 1 to 2 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 2;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 2;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 3;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magic_find_chance;
+				value				= 8;
+				description			= "+<value>% Chance to Find Magic Items";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 5.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_1hws1_01
+//
+//	ITEM:		Ring from 1H Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_1hws1_01]
+{
+	doc = "ring_set_1hws1_01";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Lorethal's Eminence";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_ring_025;
+		set = 1HWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_life_steal;
+				value				= 6;
+				description			= "<value>% Health Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.12;
+				description			= "+12% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magical_resistance;
+				value				= 0.08;
+				description			= "+8% Magic Damage Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_1;
+				value				= 1;
+				description			= "+<value> to Barricade, Toughness, and Reinforced Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 20.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////         1H Weapon Set 2            ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_1hws2_01
+//
+//	ITEM:		Helm from Dual 1H Weapon Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_1hws2_01]
+{
+	doc = "amr_hlm_set_1hws2_01";
+	specializes = base_helm_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Serpent of Vistira";
+		base_screen_name = "Helm";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 03;
+		armor_type = type08;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type08_03;
+		set = 1HWS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 120;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_reflect_damage;
+				value				= 40;
+				description			= "<value>% of Physical Damage Reflected to Enemy";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 15;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_1;
+				value				= 3;
+				description			= "+<value> to Barricade, Toughness, and Reinforced Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 50.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_1hws2_01
+//
+//	ITEM:		Boots from 1H Weapon Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_1hws2_01]
+{
+	doc = "amr_bot_set_1hws2_01";
+	specializes = base_boots_fighter;
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Skin of Vistira";
+		base_screen_name = "Greaves";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 004;
+		armor_type = type06;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type06_004;
+		set = 1HWS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.16;
+				description			= "+16% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 12;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magical_resistance;
+				value				= 0.15;
+				description			= "+15% Magic Damage Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_MELEE_PASSIVE_SKILLS;
+				value				= 1;
+				description			= "+<value> to Melee Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 38.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_1hws2_01
+//
+//	ITEM:		Gloves from 1H Weapon Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_1hws2_01]
+{
+	doc = "amr_glv_set_1hws2_01";
+	specializes = base_gloves_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Fangs of Vistira";
+		base_screen_name = "Gauntlets";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 013;
+		armor_type = type01;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type01_013;
+		set = 1HWS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 28;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 33;
+				description			= "+<value> Max Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 33;
+				description			= "";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_steal;
+				value				= 11;
+				description			= "<value>% Health Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.06;
+				description			= "+6% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 45.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_shd_set_1hws2_01
+//
+//	ITEM:		Shield from 1H Weapon Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_shd_set_1hws2_01]
+{
+	doc = "amr_shd_set_1hws2_02";
+	specializes = base_shield;
+	[aspect]
+	{
+		model = m_w_shd_008;
+ 	 	[textures]
+ 	 	{
+ 	 		0 =  b_w_shd_008;
+ 	 	}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Mirror of Vistira";
+		base_screen_name = "Shield";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level-2.0,aegis:1;
+		inventory_icon = b_gui_ig_i_w_shd_008;
+		set = 1HWS2_set;
+		inventory_height = 3;
+		inventory_width = 2;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_reflect_damage;
+				value				= 30;
+				description			= "<value>% of Physical Damage Reflected to Enemy";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.5;
+				description			= "+50% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_death_resistance;
+				value				= 0.24;
+				description			= "+24% Death Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_chance_to_block_melee_damage;
+				value				= 15;
+				description			= "+<value>% Chance to Block Melee Attacks";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 42.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////         2H Weapon Set 1            ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_2hws1_01
+//
+//	ITEM:		Gloves from 2H Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_2hws1_01]
+{
+	doc = "amr_glv_set_2hws1_01";
+	specializes = base_gloves_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Frostheim's Grip";
+		base_screen_name = "Gauntlets";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 006;
+		armor_type = type07;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type07_006;
+		set = 2HWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 55;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 11;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ice_resistance;
+				value				= 0.20;
+				description			= "+20% Ice Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_2;
+				value				= 2;
+				description			= "+<value> to Fortitude, Overbear, and Smite";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 32.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	sd_2h_set_2hws1_01
+//
+//	ITEM:		2H Sword from 2H Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:sd_2h_set_2hws1_01]
+{
+	specializes = base_2h_sword_template;
+	doc = "sd_2h_set_2hws1_01";
+	[aspect]
+	{
+		model = m_w_swd_frostheim;
+		tracer_texture = b_sfx_tra_generic-43;
+		[textures]
+		{
+			0 = b_w_swd_frostheim;
+		}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Frostheim";
+		base_screen_name = "Flamberge";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level-2.0,overbear:1;
+		inventory_icon = b_gui_ig_i_w_swd_frostheim;
+		set = 2HWS1_set;
+		inventory_height = 4;
+		inventory_width = 1;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "frostheim";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx = ffx_wpn_frostheim;
+			}
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 16;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_source_percent;
+				value				= 0.35;
+				description			= "+35% Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_ice;
+				value				= 6;
+				max_value			= 11;
+				description			= "Adds 6 to 11 Ice Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "melee_ice";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx		= ffx_spell_ice_sword
+									  &hit_ffx			= ffx_spell_ice_sword_hit;
+			}
+			[*]
+			{
+				alteration			= alter_fire_resistance;
+				value				= 0.18;
+				description			= "+18% Fire Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 29.0;
+ 	 	}
+    	}
+    	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_2hws1_01
+//
+//	ITEM:		Ring from 2H Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_2hws1_01]
+{
+	doc = "ring_set_2hws1_01";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Frostheim's Claw";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_ring_043;
+		set = 2HWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 8;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 5;
+				description			= "Adds 5 to 8 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 8;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 5;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 8;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_reflect_damage;
+				value				= 20;
+				description			= "<value>% of Physical Damage Reflected to Enemy";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_steal;
+				value				= 7;
+				description			= "<value>% Health Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 23.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_2hws1_02
+//
+//	ITEM:		Ring from 2H Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_2hws1_02]
+{
+	doc = "ring_set_2hws1_02";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Frostheim's Binding";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_ring_044;
+		set = 2HWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 36;
+				description			= "+<value> Max Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 36;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.12;
+				description			= "+12% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ice_resistance;
+				value				= 0.2;
+				description			= "+20% Ice Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.06;
+				description			= "+6% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 35.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////         2H Weapon Set 2            ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_2hws2_01
+//
+//	ITEM:		Helm from 2H Weapon Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_2hws2_01]
+{
+	doc = "amr_hlm_set_2hws2_01";
+	specializes = base_helm_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Fire King's Crown";
+		base_screen_name = "Helm";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 06;
+		armor_type = type07;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type07_06;
+		set = 2HWS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_reflect_damage;
+				value				= 40;
+				description			= "<value>% of Physical Damage Reflected to Enemy";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 15;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_fire_resistance;
+				value				= 0.25;
+				description			= "+25% Fire Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_resistance;
+				value				= 0.10;
+				description			= "+10% Melee Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 53.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_2hws2_01
+//
+//	ITEM:		Body from 2H Weapon Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_2hws2_01]
+{
+	doc = "amr_glv_set_2hws2_01";
+	specializes = base_body_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Fire King's Trappings";
+		base_screen_name = "Body Armor";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 013;
+		armor_type = a4;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a4_013;
+		inventory_height = 3;
+		inventory_width = 2;
+		set = 2HWS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 40;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 140;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.60;
+				description			= "+60% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_resistance;
+				value				= 0.14;
+				description			= "+14% Ranged Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 56.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	hm_2h_set_2hws2_01
+//
+//	ITEM:		Hammer from 2H Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:hm_2h_set_2hws2_01]
+{
+	specializes = base_2h_hammer_template;
+	doc = "hm_2h_set_2hws2_01";
+
+	[aspect]
+	{
+		model = m_w_hmr_foecrusher;
+		tracer_texture = b_sfx_tra_generic-35;
+		[textures]
+		{
+			0 =  b_w_hmr_foecrusher;
+		}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Fire King's Foecrusher";
+		base_screen_name = "Maul";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level-2.0,overbear:1;
+		inventory_icon = b_gui_ig_i_w_hmr_foecrusher;
+		inventory_height = 4;
+		inventory_width = 2;
+		set = 2HWS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "foecrusher";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx = ffx_wpn_foecrusher
+									  &hit_ffx	  = ffx_spell_fire_sword_hit;
+			}
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 45;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_source_percent;
+				value				= 0.65;
+				description			= "+65% Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_fire;
+				value				= 24;
+				max_value			= 29;
+				description			= "Adds 24 to 29 Fire Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_2;
+				value				= 3;
+				description			= "+<value> to Fortitude, Overbear, and Smite";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 62.0;
+ 	 	}
+    	}
+    	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_2hws2_02
+//
+//	ITEM:		Ring from 2H Weapon Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_2hws2_01]
+{
+	doc = "ring_set_2hws2_01";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Fire King's Will";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_ring_034;
+		set = 2HWS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.20;
+				description			= "+20% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_fire_resistance;
+				value				= 0.25;
+				description			= "+25% Fire Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.06;
+				description			= "+6% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_MELEE_PASSIVE_SKILLS;
+				value				= 1;
+				description			= "+<value> to Melee Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 45.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////            Bow Set 1               ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_bs1_01
+//
+//	ITEM:		Boots from Bow Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_bs1_01]
+{
+	doc = "amr_bot_set_bs1_01";
+	specializes = base_boots_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Savior's Trail";
+		base_screen_name = "Boots";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 020;
+		armor_type = type01;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type01_020;
+		set = BS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 8;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_fire_resistance;
+				value				= 0.1;
+				description			= "+10% Fire Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_chance_to_dodge_hit_melee;
+				value				= 0.05;
+				description			= "+5% Chance to Dodge Melee Attacks";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magic_find_chance;
+				value				= 8;
+				description			= "+<value>% Chance to Find Magic Items";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 6.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_bs1_01
+//
+//	ITEM:		Gloves from Bow Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_bs1_01]
+{
+	doc = "amr_glv_set_bs1_01";
+	specializes = base_gloves_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Savior's Signal";
+		base_screen_name = "Gloves";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 005;
+		armor_type = type07;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type07_005;
+		set = BS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 6;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ice_resistance;
+				value				= 0.12;
+				description			= "+12% Ice Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.03;
+				description			= "+3% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_1;
+				value				= 2;
+				description			= "+<value> to Critical Shot, Dodge, and Survival";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 12.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	bw_set_bs1_01
+//
+//	ITEM:		Bow from Bow Set 1 (TBD)
+////////////////////////////////////////////////////
+
+[t:template,n:bw_set_bs1_01]
+{
+	specializes = base_bow_template;
+	doc = "bow_set_bs1_01";
+	[aspect]
+	{
+		model = m_w_bow_skewer;
+		[textures]
+		{
+			0 = b_w_bow_skewer;
+		}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Skewer of Olimarch";
+		base_screen_name = "Long Bow";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_w_bow_skewer;
+		set = BS1_set;
+		inventory_height = 3;
+		inventory_width = 1;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "skewerofoglimarch";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?bow_ffx			= ffx_wpn_skewerofoglimarch
+									  &projectile_ffx	= ffx_wpn_skewerofoglimarch_arrow;
+			}
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 9;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_source_percent;
+				value				= 0.22;
+				description			= "+22% Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_lightning;
+				value				= 2;
+				max_value			= 7;
+				description			= "Adds 2 to 7 Lightning Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "ranged_lightning";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?projectile_ffx		= ffx_spell_lightning_arrow
+									  &hit_ffx				= ffx_spell_lightning_sword_hit;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_2;
+				value				= 1;
+				description			= "+<value> to Biting Arrow, Far Shot, and Shockwave";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 18.0;
+ 	 	}
+    	}
+    	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_bs1_01
+//
+//	ITEM:		Ring from Bow Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_bs1_01]
+{
+	doc = "ring_set_bs1_01";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Savior's Halo";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_ring_003;
+		set = BS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 25;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_steal;
+				value				= 5;
+				description			= "<value>% Health Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.05;
+				description			= "+5% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_lightning_resistance;
+				value				= 0.12;
+				description			= "+12% Lightning Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 9.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////            Bow Set 2               ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_bs2_01
+//
+//	ITEM:		Helm from Dual Bow Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_bs2_01]
+{
+	doc = "amr_hlm_set_bs2_01";
+	specializes = base_helm_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Spite";
+		base_screen_name = "Helm";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 03;
+		armor_type = type16;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type16_03;
+		set = BS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 100;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 36;
+				description			= "+<value> Max Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 36;
+				description			= "";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_reflect_damage;
+				value				= 35;
+				description			= "<value>% of Physical Damage Reflected to Enemy";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 14;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 57.0;
+		}
+    	}
+    	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_bs2_01
+//
+//	ITEM:		Gloves from Bow Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_bs2_01]
+{
+	doc = "amr_glv_set_bs2_01";
+	specializes = base_gloves_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Envy";
+		base_screen_name = "Gloves";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 007;
+		armor_type = type07;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type07_007;
+		set = BS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 57;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_bonus;
+				value				= 14;
+				description			= "Restores <value> Health Per Hit";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_1;
+				value				= 3;
+				description			= "+<value> to Barricade, Toughness, and Reinforced Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[ranged_skills_set1]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_1;
+				value				= 3;
+				description			= "+<value> to Critical Shot, Dodge, and Survival";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 57.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	bw_set_bs2_01
+//
+//	ITEM:		Bow from Bow Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:bw_set_bs2_01]
+{
+	specializes = base_bow_template;
+	doc = "bow_set_bs2_01";
+	[aspect]
+	{
+		model = m_w_bow_vengeance;
+		[textures]
+		{
+			0 = b_w_bow_vengeance;
+		}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Vengeance";
+		base_screen_name = "Composite Bow";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_w_bow_vengeance;
+		set = BS2_set;
+		inventory_height = 3;
+		inventory_width = 1;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "vengeance";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?bow_ffx = ffx_wpn_vengeance;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_source_percent;
+				value				= 0.52;
+				description			= "+52% Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_death;
+				value				= 15;
+				max_value			= 25;
+				description			= "Adds 15 to 25 Death Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "ranged_death";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?projectile_ffx		= ffx_spell_death_arrow
+									  &hit_ffx				= ffx_spell_death_sword_hit;
+			}
+			[*]
+			{
+				alteration			= ALTER_RANGED_PASSIVE_SKILLS;
+				value				= 2;
+				description			= "+<value> to Ranged Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_2;
+				value				= 3;
+				description			= "+<value> to Biting Arrow, Far Shot, and Shockwave";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 50.0;
+ 	 	}
+    	}
+    	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amulet_set_bs2_01
+//
+//	ITEM:		Amulet from Bow Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amulet_set_bs2_01]
+{
+	doc = "amulet_set_bs2_01";
+	specializes = amulet;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Ire";
+		base_screen_name = "Amulet";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_amulet_041;
+		set = BS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 35;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_reflect_damage;
+				value				= 35;
+				description			= "<value>% of Physical Damage Reflected to Enemy";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.2;
+				description			= "+20% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.07;
+				description			= "+7% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 44.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////         Crossbow Set 1             ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_cbs1_01
+//
+//	ITEM:		Body from 1H Crossbow Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_CBS1_01]
+{
+	doc = "amr_bdy_set_CBS1_01";
+	specializes = base_body_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Soldier's Reborn Shroud";
+		base_screen_name = "Body Armor";						// Placeholder - Update with detail word for body armor
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 015;
+		armor_type = a4;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a4_015;
+		inventory_height = 3;
+		inventory_width = 2;
+		set = CBS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.45;
+				description			= "+45% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_death_resistance;
+				value				= 0.22;
+				description			= "+22% Death Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_physical_resistance;
+				value				= 0.08;
+				description			= "+8% Melee and Ranged Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_1;
+				value				= 3;
+				description			= "+<value> to Critical Shot, Dodge, and Survival";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 34.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_cbs1_01
+//
+//	ITEM:		Gloves from Crossbow Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_cbs1_01]
+{
+	doc = "amr_glv_set_cbs1_01";
+	specializes = base_gloves_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Soldier's Vigilance";
+		base_screen_name = "Gloves";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 005;
+		armor_type = type06;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type06_005;
+		set = CBS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 18;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 10;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magical_resistance;
+				value				= 0.12;
+				description			= "+12% Magic Damage Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.06;
+				description			= "+6% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 30.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	cb_set_cbs1_01
+//
+//	ITEM:		Crossbow from Crossbow Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:cb_set_cbs1_01]
+{
+	specializes = base_crossbow_template;
+	doc = "cb_set_cbs1_01";
+	[aspect]
+	{
+		model = m_w_csb_justice;
+		[textures]
+		{
+			0 = b_w_csb_justice;
+		}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Soldier's Justice";
+		base_screen_name = "Arbalest";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0,biting_arrow:1;
+		inventory_icon = b_gui_ig_i_w_csb_justice;
+		set = CBS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "soldiers_justice";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?bow_ffx			= ffx_wpn_soldiers_justice
+									  &projectile_ffx	= ffx_spell_fire_arrow
+									  &hit_ffx			= ffx_spell_fire_sword_hit;
+			}
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 30;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				//custom_effect		= "stat_dexterity";
+				//custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+				//					  ?projectile_ffx	= ffx_spell_dex_bonus_arrow;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 26;
+				description			= "+<value> Max Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_source_percent;
+				value				= 0.45;
+				description			= "+45% Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_custom_damage_fire;
+				value				= 12;
+				max_value			= 15;
+				description			= "Adds 12 to 15 Fire Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				//custom_effect		= "ranged_fire";
+				//custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+				//					  ?projectile_ffx		= ffx_spell_fire_arrow
+				//					  &hit_ffx				= ffx_spell_fire_sword_hit;
+			}
+			[*]
+			{
+				alteration			= ALTER_RANGED_PASSIVE_SKILLS;
+				value				= 2;
+				description			= "+<value> to Ranged Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 39.0;
+ 	 	}
+   	}
+   	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////        Thrown Weapon Set 1         ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_tws1_01
+//
+//	ITEM:		Body from Thrown Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_tws1_01]
+{
+	doc = "amr_bdy_set_tws1_01";
+	specializes = base_body_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Gale Raiment";
+		base_screen_name = "Hauberk";						// Placeholder - Update with detail word for body armor
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 009;
+		armor_type = a1;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a1_009;
+		set = TWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 10;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.30;
+				description			= "+30% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.15;
+				description			= "+15% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.05;
+				description			= "+5% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_RANGED_PASSIVE_SKILLS;
+				value				= 1;
+				description			= "+<value> to Ranged Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 36.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	th_gl_set_tws1_01
+//
+//	ITEM:		Glaive Axe from Thrown Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:th_gl_set_tws1_01]
+{
+	specializes = base_thrown;
+	doc = "th_ax_set_tws1_01";
+	[aspect]
+	{
+		model = m_w_thn_fourthwind;
+		[textures]
+		{
+			0 =  b_w_thn_fourthwind;
+		}
+	}
+	[attack]
+	{
+		is_wielded_weapon = false;
+		ammo_template = fourthwind_projectile;
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "The Fourth Wind";
+		base_screen_name = "Glaive";
+		rarity = set;
+	}
+	[gui]
+	{
+		active_icon = b_gui_ig_i_ic_w_glaive-01;
+		equip_requirements = ranged:#item_level-2.0,quick_draw:1;
+		inventory_icon = b_gui_ig_i_w_thn_fourthwind;
+		inventory_height = 2;
+		inventory_width = 2;
+		set = TWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "4thwind";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?projectile_ffx = ffx_wpn_4thwind;
+			}
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 16;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 16;
+				description			= "+<value> Max Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_source_percent;
+				value				= 0.33;
+				description			= "+33% Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_3;
+				value				= 2;
+				description			= "+<value> to Quick Draw, Bleed, and Penetrate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 28.0;
+ 	 	}
+   	 }
+   	 [loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_tws1_01
+//
+//	ITEM:		Ring from Thrown Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_tws1_01]
+{
+	doc = "ring_set_tws1_01";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Wind of Calamity";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_ring_055;
+		set = TWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 13;
+				description			= "+<value> Max Ranged Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 10;
+				description			= "+<value> Min Ranged Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_reflect_damage;
+				value				= 20;
+				description			= "<value>% of Physical Damage Reflected to Enemy";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_3;
+				value				= 1;
+				description			= "+<value> to Quick Draw, Bleed, and Penetrate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 24.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_tws1_02
+//
+//	ITEM:		Ring from Thrown Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_tws1_02]
+{
+	doc = "ring_set_tws1_02";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Wind of Recovery";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_ring_056;
+		set = TWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 55;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_bonus;
+				value				= 6;
+				description			= "Restores <value> Health Per Hit";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.15;
+				description			= "+15% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.06;
+				description			= "+6% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 31.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_tws1_03
+//
+//	ITEM:		Ring from Thrown Weapon Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_tws1_03]
+{
+	doc = "ring_set_tws1_03";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Wind of Omens";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_ring_057;
+		set = TWS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 12;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration 			= alter_chance_to_dodge_hit_melee;
+				value 				= 0.08;
+				description 		= "+8% Chance to Dodge Melee Attacks";
+				duration 			= #infinite;
+				is_permanent 		= true;
+				is_single_instance 	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_1;
+				value				= 2;
+				description			= "+<value> to Critical Shot, Dodge, and Survival";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magic_find_chance;
+				value				= 40;	// Average value 10%
+				description			= "+<value>% Chance to Find Magic Items";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 48.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////            Staff Set 1             ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_ss1_01
+//
+//	ITEM:		Helm from Staff Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_ss1_01]
+{
+	doc = "amr_hlm_set_ss1_01";
+	specializes = base_helm_nmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Thena's Calming Gaze";
+		base_screen_name = "Hood";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 10;
+		armor_type = type01;
+	}
+	[gui]
+	{
+		equip_requirements = nature magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type01_10;
+		set = SS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 6;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_mana_steal;
+				value				= 6;
+				description			= "<value>% Mana Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.30;
+				description			= "+30% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= nmagic_suite_1;
+				value				= 1;
+				description			= "+<value> to Summon Fortitude, Summon Might, and Summon Bond";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 18.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_ss1_01
+//
+//	ITEM:		Boots from Staff Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_ss1_01]
+{
+	doc = "amr_bot_set_ss1_01";
+	specializes = base_boots_nmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Thena's Tranquil Path";
+		base_screen_name = "Boots";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 030;
+		armor_type = type02;
+	}
+	[gui]
+	{
+		equip_requirements = nature magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type02_030;
+		set = SS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_mana_recovery_unit;
+				value				= 0.05;
+				description			= "+5% Mana Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 5;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ice_resistance;
+				value				= 0.10;
+				description			= "+10% Ice Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_fire_resistance;
+				value				= 0.10;
+				description			= "+10% Fire Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 6.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_ss1_01
+//
+//	ITEM:		Gloves from Staff Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_ss1_01]
+{
+	doc = "amr_glv_set_ss1_01";
+	specializes = base_gloves_nmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Thena's Soothing Touch";
+		base_screen_name = "Gloves";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 013;
+		armor_type = type05;
+	}
+	[gui]
+	{
+		equip_requirements = nature magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type05_013;
+		set = SS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_mana;
+				value				= 22;
+				description			= "+<value> Mana";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_mana_bonus;
+				value				= 2;
+				description			= "Restores <value> Mana Per Hit";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_death_resistance;
+				value				= 0.12;
+				description			= "+12% Death Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= nmagic_suite_3;
+				value				= 1;
+				description			= "+<value> to Nurturing Gift, Enveloping Embrace, and Feral Wrath";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 14.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	st_mg_set_ss1_01
+//
+//	ITEM:		Mage Staff from Staff Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:st_mg_set_ss1_01]
+{
+	specializes = base_mage_staff_template;
+	doc = "st_mg_set_ss1_01";
+	[aspect]
+	{
+		model = m_w_stf_thenascomp;
+		tracer_texture = b_sfx_tra_generic-36;
+		[textures]
+		{
+			0 = b_w_stf_thenascomp;
+		}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Thena's Companion";
+		base_screen_name = "Shillelah";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = nature magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_w_stf_thenascomp;
+		set = SS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "thenascomp";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx = ffx_wpn_thenascomp;
+			}
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 3;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 12;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_nmagic_damage_percent;
+				value				= 0.1;
+				description			= "+10% Nature Magic Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magic_find_chance;
+				value				= 10;	// Average value 10%
+				description			= "+<value>% Chance to Find Magic Items";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 10.0;
+ 	 	}
+   	}
+   	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////            Staff Set 2             ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_ss2_01
+//
+//	ITEM:		Body from Staff Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_ss2_01]
+{
+	doc = "amr_bdy_set_ss2_01";
+	specializes = base_body_nmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Mantle of the North";
+		base_screen_name = "Body";						// Placeholder - Update with detail word for body armor
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 018;
+		armor_type = a5;
+	}
+	[gui]
+	{
+		equip_requirements = nature magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a5_018;
+		inventory_height = 3;
+		inventory_width = 2;
+		set = SS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 25;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.55;
+				description			= "+55% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ice_resistance;
+				value				= 0.25;
+				description			= "+25% Ice Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= nmagic_suite_2;
+				value				= 3;
+				description			= "+<value> to Aquatic Affinity, Arctic Mastery, and Freezing";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 51.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	st_mg_set_ss2_01
+//
+//	ITEM:		Mage Staff from Staff Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:st_mg_set_ss2_01]
+{
+	specializes = base_mage_staff_template;
+	doc = "st_mg_set_ss2_01";
+	[aspect]
+	{
+		model = m_w_stf_guardian;
+		tracer_texture = b_sfx_tra_generic-62;
+		[textures]
+		{
+			0 = b_w_stf_guardian;
+		}
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Guardian of the North";
+		base_screen_name = "Staff";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = nature magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_w_stf_guardian;
+		set = SS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "guardian_of_the_north";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx = ffx_wpn_guardian_of_the_north;
+			}
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 150;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_nmagic_damage_percent;
+				value				= 0.3;
+				description			= "+30% Nature Magic Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "melee_ice";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx		= ffx_spell_ice_sword
+									  &hit_ffx			= ffx_spell_ice_sword_hit;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 25;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= nmagic_suite_3;
+				value				= 3;
+				description			= "+<value> to Nurturing Gift, Enveloping Embrace, and Feral Wrath";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 58.0;
+ 	 	}
+    	}
+    	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amulet_set_ss2_01
+//
+//	ITEM:		Amulet from Staff Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amulet_set_ss2_01]
+{
+	doc = "amulet_set_ss2_01";
+	specializes = amulet;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Soul of the North";
+		base_screen_name = "Amulet";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = nature magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_amulet_039;
+		set = SS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_mana_steal;
+				value				= 10;
+				description			= "<value>% Mana Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magical_resistance;
+				value				= 0.15;
+				description			= "+15% Magic Damage Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.08;
+				description			= "+8% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_NATURE_MAGIC_PASSIVE_SKILLS;
+				value				= 1;
+				description			= "+<value> to Nature Magic Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 47.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////           Cestus Set 1             ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_cs1_01
+//
+//	ITEM:		Body from Cestus Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_cs1_01]
+{
+	doc = "amr_bdy_set_cs1_01";
+	specializes = base_body_cmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Endbringer's Vestment";
+		base_screen_name = "Vestment";						// Placeholder - Update with detail word for body armor
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 020;
+		armor_type = a5;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a5_020;
+		inventory_height = 3;
+		inventory_width = 2;
+		set = CS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_mana;
+				value				= 48;
+				description			= "+<value> Mana";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_reflect_damage;
+				value				= 20;
+				description			= "<value>% of Physical Damage Reflected to Enemy";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.25;
+				description			= "+25% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= cmagic_suite_2;
+				value				= 2;
+				description			= "+<value> to Brilliance, Amplified Lightning, and Arcing";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 24.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_cs1_01
+//
+//	ITEM:		Boots from Cestus Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_cs1_01]
+{
+	doc = "amr_bot_set_cs1_01";
+	specializes = base_boots_cmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Unraveler's Boots";
+		base_screen_name = "Boots";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 031;
+		armor_type = type02;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type02_031;
+		set = CS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 12;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_mana_recovery_unit;
+				value				= 0.12;
+				description			= "+12% Mana Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 12;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= cmagic_suite_1;
+				value				= 2;
+				description			= "+<value> to Debilitation, Grim Necromancy, and Vampirism";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 28.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ce_set_cs1_01
+//
+//	ITEM:		Cestus from Cestus Set 1 (TBD)
+////////////////////////////////////////////////////
+
+[t:template,n:ce_set_cs1_01]
+{
+	specializes = base_cestus_template;
+	doc = "ce_set_cs1_01";
+	[aspect]
+	{
+		model = m_w_ces_chaos-left;
+		[textures]
+		{
+			0 = b_w_ces_chaos;
+		}
+	}
+	[attack]
+	{
+		ammo_template = ce_set_cs1_01_righthand;
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Chaos Grips";
+		base_screen_name = "Cestus";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_w_ces_chaos;		// Placeholder (?) - Erase this note when finalized  - JM  02.12.04
+		set = CS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "chaosgrips";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx		= ffx_wpn_chaosgrips
+									  &projectile_ffx	= ffx_wpn_chaosgrips
+									  &hit_ffx			= ffx_spell_fire_sword_hit;
+			}
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 14;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_cmagic_damage_percent;
+				value				= 0.2;
+				description			= "+20% Combat Magic Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.06;
+				description			= "+6% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= cmagic_suite_3;
+				value				= 2;
+				description			= "+<value> to Devastation, Searing Flames, and Ignite";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 34.0;
+ 	 	}
+    	}
+    	[loot_drop_indicator]{}
+}
+[t:template,n:ce_set_cs1_01_righthand]
+{
+	specializes = ammo;
+	[aspect]
+	{
+		model = m_w_ces_chaos;
+		[textures]
+		{
+			0 =  b_w_ces_chaos;
+		}
+	}
+	[attack]
+	{
+		attack_class = ac_arrow;
+	}
+	[physics] {}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////           Cestus Set 2             ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_cs2_01
+//
+//	ITEM:		Helm from Cestus Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_cs2_01]
+{
+	doc = "amr_hlm_set_cs2_01";
+	specializes = base_helm_cmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "The Lich's Eye";
+		base_screen_name = "Ornate Crown";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 04;
+		armor_type = type17;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type17_04;
+		set = CS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 30;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 20;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magical_resistance;
+				value				= 0.15;
+				description			= "+15% Magic Damage Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= cmagic_suite_2;
+				value				= 3;
+				description			= "+<value> to Brilliance, Amplified Lightning, and Arcing";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 56.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ce_set_cs2_01
+//
+//	ITEM:		Cestus from Cestus Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:ce_set_cs2_01]
+{
+	specializes = base_cestus_template;
+	doc = "ce_set_cs2_01";
+	[aspect]
+	{
+		model = m_w_ces_lich-left;
+		[textures]
+		{
+			0 = b_w_ces_lich;
+		}
+	}
+	[attack]
+	{
+		ammo_template = ce_set_cs2_01_righthand;
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "The Lich's Hands";
+		base_screen_name = "Cestus";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_w_ces_lich;
+		set = CS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_generic;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+				custom_effect		= "lichshands";
+				custom_effect_skrit = world\global\enchantments\weapon_enchant.skrit
+									  ?weapon_ffx		= ffx_wpn_lichshands
+									  &projectile_ffx	= ffx_wpn_lichshands
+									  &hit_ffx			= ffx_spell_death_sword_hit;
+			}
+			[*]
+			{
+				alteration			= alter_cmagic_damage_percent;
+				value				= 0.35;
+				description			= "+35% Combat Magic Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_steal;
+				value				= 12;
+				description			= "<value>% Health Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_mana_steal;
+				value				= 12;
+				description			= "<value>% Mana Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= cmagic_suite_1;
+				value				= 3;
+				description			= "+<value> to Debilitation, Grim Necromancy, and Vampirism";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[pcontent]
+ 	{
+ 	 	[base]
+ 	 	{
+			item_level = 63.0;
+ 	 	}
+    	}
+    	[loot_drop_indicator]{}
+}
+[t:template,n:ce_set_cs2_01_righthand]
+{
+	specializes = ammo;
+	[aspect]
+	{
+		model = m_w_ces_lich;
+		[textures]
+		{
+			0 =  b_w_ces_lich;
+		}
+	}
+	[attack]
+	{
+		attack_class = ac_arrow;
+	}
+	[physics] {}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amulet_set_cs2_01
+//
+//	ITEM:		Amulet from Cestus Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amulet_set_cs2_01]
+{
+	doc = "amulet_set_cs2_01";
+	specializes = amulet;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "The Lich's Heart [Test]";
+		base_screen_name = "Amulet";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_amulet_063;
+		set = CS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 160;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_death_resistance;
+				value				= 0.25;
+				description			= "+25% Death Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_physical_resistance;
+				value				= 0.12;
+				description			= "+12% Melee and Ranged Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_COMBAT_MAGIC_PASSIVE_SKILLS;
+				value				= 3;
+				description			= "+<value> to Combat Magic Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+            [*]
+			{
+				alteration			= alter_max_mana_percent;
+				value				= 250;
+				description			= "+<value>% Mana";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 60.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_cs2_01
+//
+//	ITEM:		Ring from Cestus Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_cs2_01]
+{
+	doc = "ring_set_cs2_01";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "The Lich's Tooth";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_ring_028;
+		set = CS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_cmagic_damage_percent;
+				value				= 0.10;
+				description			= "+10% Combat Magic Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_mana_bonus;
+				value				= 14;
+				description			= "Restores <value> Mana Per Hit";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.08;
+				description			= "+8% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= cmagic_suite_3;
+				value				= 3;
+				description			= "+<value> to Devastation, Searing Flames, and Ignite";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 52.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											///////////////////////////////////////////
+											///////////////////////////////////////////
+											///           Armor Set 1              ////
+											///////////////////////////////////////////
+											///////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_as1_01
+//
+//	ITEM:		Body from Armor Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_as1_01]
+{
+	doc = "amr_bdy_set_as1_01";
+	specializes = base_body_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Eternal Dignity";
+		base_screen_name = "Jerkin";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 010;
+		armor_type = a1;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a1_010;
+		set = AS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 15;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.22;
+				description			= "+22% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_2;
+				value				= 1;
+				description			= "+<value> to Biting Arrow, Far Shot, and Shockwave";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_3;
+				value				= 1;
+				description			= "+<value> to Quick Draw, Bleed, and Penetrate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 14.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_as1_01
+//
+//	ITEM:		Helm from Armor Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_as1_01]
+{
+	doc = "amr_hlm_set_as1_01";
+	specializes = base_helm_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Eternal Beauty";
+		base_screen_name = "Hood";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 09;
+		armor_type = type01;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type01_09;
+		set = AS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_life_steal;
+				value				= 5;
+				description			= "<value>% Health Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.12;
+				description			= "+12% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.30;
+				description			= "+30% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_1;
+				value				= 1;
+				description			= "+<value> to Critical Shot, Dodge, and Survival";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 22.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_as1_01
+//
+//	ITEM:		Boots from Armor Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_as1_01]
+{
+	doc = "amr_bot_set_as1_01";
+	specializes = base_boots_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Eternal Elegance";
+		base_screen_name = "Boots";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 028;
+		armor_type = type02;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type02_028;
+		set = AS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 9;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 6;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_fire_resistance;
+				value				= 0.15;
+				description			= "+15% Fire Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_chance_to_dodge_hit_melee;
+				value				= 0.12;
+				description			= "+12% Chance to Dodge Melee Attacks";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 27.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_as1_01
+//
+//	ITEM:		Gloves from Armor Set 1
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_as1_01]
+{
+	doc = "amr_glv_set_as1_01";
+	specializes = base_gloves_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Eternal Finesse";
+		base_screen_name = "Gloves";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 020;
+		armor_type = type03;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type03_020;
+		set = AS1_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 13;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 8;
+				description			= "+<value> Max Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 8;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_steal;
+				value				= 7;
+				description			= "<value>% Health Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 10;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.08;
+				description			= "+8% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 16.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////           Armor Set 2              ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_as2_01
+//
+//	ITEM:		Body from Armor Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_as2_01]
+{
+	doc = "amr_bdy_set_as2_01";
+	specializes = base_body_nmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Azuka of Four's Robe";
+		base_screen_name = "Robe";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 017;
+		armor_type = a5;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level-2.0|nature magic:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a5_017;
+		inventory_height = 3;
+		inventory_width = 2;
+		set = AS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_mana;
+				value				= 150;
+				description			= "+<value> Mana";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.55;
+				description			= "+55% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= nmagic_suite_1;
+				value				= 3;
+				description			= "+<value> to Summon Fortitude, Summon Might, and Summon Bond";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= nmagic_suite_3;
+				value				= 3;
+				description			= "+<value> to Nurturing Gift, Enveloping Embrace, and Feral Wrath";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 48.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_as2_01
+//
+//	ITEM:		Helm from Armor Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_as2_01]
+{
+	doc = "amr_hlm_set_as2_01";
+	specializes = base_helm_nmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Corum of Four's Helm";
+		base_screen_name = "Helm";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 12;
+		armor_type = type20;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level-2.0|nature magic:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type20_12;
+		set = AS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 14;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_cmagic_damage_percent;
+				value				= 0.22;
+				description			= "+22% Combat Magic Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 12;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= cmagic_suite_2;
+				value				= 2;
+				description			= "+<value> to Brilliance, Amplified Lightning, and Arcing";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 35.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_as2_01
+//
+//	ITEM:		Boots from Armor Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_as2_01]
+{
+	doc = "amr_bot_set_as2_010";
+	specializes = base_boots_nmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Treil of Four's Boots";
+		base_screen_name = "Boots";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 018;
+		armor_type = type01;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level-2.0|nature magic:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type01_018;
+		set = AS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_mana_steal;
+				value				= 10;
+				description			= "<value>% Mana Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 15;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_COMBAT_MAGIC_PASSIVE_SKILLS;
+				value				= 1;
+				description			= "+<value> to Combat Magic Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= cmagic_suite_3;
+				value				= 2;
+				description			= "+<value> to Devastation, Searing Flames, and Ignite";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 39.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amulet_set_as2_01
+//
+//	ITEM:		Amulet from Armor Set 2
+////////////////////////////////////////////////////
+
+[t:template,n:amulet_set_as2_01]
+{
+	doc = "amulet_set_as2_01";
+	specializes = amulet;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Kreya of Four's Pendant";
+		base_screen_name = "Amulet";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level-2.0|nature magic:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_amulet_038;
+		set = AS2_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 18;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_nmagic_damage_percent;
+				value				= 0.25;
+				description			= "+25% Nature Magic Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_NATURE_MAGIC_PASSIVE_SKILLS;
+				value				= 1;
+				description			= "+<value> to Nature Magic Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= nmagic_suite_2;
+				value				= 2;
+				description			= "+<value> to Aquatic Affinity, Arctic Mastery, and Freezing";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 37.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////           Armor Set 3              ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_as3_01
+//
+//	ITEM:		Boots from Armor Set 3
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_as3_01]
+{
+	doc = "amr_bot_set_as3_01";
+	specializes = base_boots_cmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Magesilk Boots";
+		base_screen_name = "Boots";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 021;
+		armor_type = type02;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level-2.0|nature magic:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type02_021;
+		set = AS3_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 3;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.05;
+				description			= "+5% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 5;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_lightning_resistance;
+				value				= 0.1;
+				description			= "+10% Lightning Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 8.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_as3_01
+//
+//	ITEM:		Gloves from Armor Set 3
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_as3_01]
+{
+	doc = "amr_glv_set_as3_01";
+	specializes = base_gloves_cmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Magesilk Gloves";
+		base_screen_name = "Gloves";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 021;
+		armor_type = type03;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level-2.0|nature magic:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type03_021;
+		set = AS3_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_mana;
+				value				= 15;
+				description			= "+<value> Mana";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_mana_recovery_unit;
+				value				= 0.05;
+				description			= "+5% Mana Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 6;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_fire_resistance;
+				value				= 0.12;
+				description			= "+12% Fire Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 11.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amulet_set_as3_01
+//
+//	ITEM:		Amulet from Armor Set 3
+////////////////////////////////////////////////////
+
+[t:template,n:amulet_set_as3_01]
+{
+	doc = "amulet_set_as3_01";
+	specializes = amulet;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Master's Focusing Charm";
+		base_screen_name = "Amulet";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level-2.0|nature magic:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_amulet_007;
+		set = AS3_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_nmagic_damage_percent;
+				value				= 0.1;
+				description			= "+10% Nature Magic Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_cmagic_damage_percent;
+				value				= 0.1;
+				description			= "+10% Combat Magic Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_mana_steal;
+				value				= 6;
+				description			= "<value>% Mana Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= nmagic_suite_2;
+				value				= 1;
+				description			= "+<value> to Aquatic Affinity, Arctic Mastery, and Freezing";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 22.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as3_01
+//
+//	ITEM:		Ring from Armor Set 3
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as3_01]
+{
+	doc = "ring_set_as3_01";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Master's Insight";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level-2.0|nature magic:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_ring_045;
+		set = AS3_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 5;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magical_resistance;
+				value				= 0.06;
+				description			= "+6% Magic Damage Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.04;
+				description			= "+4% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= cmagic_suite_3;
+				value				= 1;
+				description			= "+<value> to Devastation, Searing Flames, and Ignite";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 15.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////           Armor Set 4              ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_as4_01
+//
+//	ITEM:		Body from Armor Set 4
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_as4_01]
+{
+	doc = "amr_bdy_set_as4_01";
+	specializes = base_body_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Stonecase";
+		base_screen_name = "Layered Plate";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 014;
+		armor_type = a4;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a4_014;
+		set = AS4_set;
+		inventory_height = 3;
+		inventory_width = 2;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 95;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 14;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.5;
+				description			= "+50% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_1;
+				value				= 3;
+				description			= "+<value> to Barricade, Toughness, and Reinforced Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 44.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_as4_01
+//
+//	ITEM:		Helm from Armor Set 4
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_as4_01]
+{
+	doc = "amr_hlm_set_as4_01";
+	specializes = base_helm_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "The Iron Crown";
+		base_screen_name = "Helm";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 07;
+		armor_type = type07;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type07_07;
+		set = AS4_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 20;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 25;
+				description			= "+<value> Max Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 25;
+				description			= "";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 12;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_resistance;
+				value				= 0.08;
+				description			= "+8% Melee Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 38.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_as4_01
+//
+//	ITEM:		Gloves from Armor Set 4
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_as4_01]
+{
+	doc = "amr_glv_set_as4_01";
+	specializes = base_gloves_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Forge Gauntlets";
+		base_screen_name = "Gauntlets";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 004;
+		armor_type = type06;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type06_004;
+		set = AS4_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 32;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 15;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_resistance;
+				value				= 0.15;
+				description			= "+15% Ranged Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_MELEE_PASSIVE_SKILLS;
+				value				= 2;
+				description			= "+<value> to Melee Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 49.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////           Armor Set 5              ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_as5_01
+//
+//	ITEM:		Body from Armor Set 5
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_as5_01]
+{
+	doc = "amr_bdy_set_as5_01";
+	specializes = base_body_cmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Keh's Majesty";
+		base_screen_name = "Robe";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 019;
+		armor_type = a5;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level-2.0|nature magic:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a5_019;
+		set = AS5_set;
+		inventory_height = 3;
+		inventory_width = 2;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 35;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 160;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.65;
+				description			= "+65% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_fire_resistance;
+				value				= 0.25;
+				description			= "+25% Fire Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 62.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_as5_01
+//
+//	ITEM:		Gloves from Armor Set 5
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_as5_01]
+{
+	doc = "amr_glv_set_as5_01";
+	specializes = base_gloves_cmage;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Keh's Liberators";
+		base_screen_name = "Gloves";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 023;
+		armor_type = type03;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level-2.0|nature magic:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type03_023;
+		set = AS5_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 20;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_death_resistance;
+				value				= 0.25;
+				description			= "+25% Death Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.08;
+				description			= "+8% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 54.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as5_01
+//
+//	ITEM:		Ring from Armor Set 5
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as5_01]
+{
+	doc = "ring_set_as5_01";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Keh's Rulership";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level-2.0|nature magic:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_ring_063;
+		set = AS5_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 45;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_max_mana;
+				value				= 275;
+				description			= "+<value> Mana";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magical_resistance;
+				value				= 0.16;
+				description			= "+16% Magic Damage Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_NATURE_MAGIC_PASSIVE_SKILLS;
+				value				= 2;
+				description			= "+<value> to Nature Magic Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_COMBAT_MAGIC_PASSIVE_SKILLS;
+				value				= 2;
+				description			= "+<value> to Combat Magic Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 68.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as5_02
+//
+//	ITEM:		Ring from Armor Set 5
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as5_02]
+{
+	doc = "ring_set_as5_02";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Keh's Might";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = combat magic:#item_level-2.0|nature magic:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_ring_064;
+		set = AS5_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_nmagic_damage_percent;
+				value				= 0.15;
+				description			= "+15% Nature Magic Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_cmagic_damage_percent;
+				value				= 0.1;
+				description			= "+10% Combat Magic Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_mana_steal;
+				value				= 12;
+				description			= "<value>% Mana Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.20;
+				description			= "+20% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_resistance;
+				value				= 0.15;
+				description			= "+15% Melee Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 57.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////     Armor Set 6   (Elite Set)      ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_as6_01
+//
+//	ITEM:		Body from Armor Set 6
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_as6_01]
+{
+	doc = "amr_bdy_set_as6_01";
+	specializes = base_body_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "The Warlord's Cage";
+		base_screen_name = "Scaled Plate";						// Placeholder - Update with detail word for body armor
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 014;
+		armor_type = a3;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a3_014;
+		set = AS6_set;
+		inventory_height = 3;
+		inventory_width = 2;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 62;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 29;
+				description			= "Adds 29 to 48 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 48;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 29;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 48;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.70;
+				description			= "+70% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_1;
+				value				= 4;
+				description			= "+<value> to Barricade, Toughness, and Reinforced Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 74.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_as6_01
+//
+//	ITEM:		Helm from Armor Set 6
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_as6_01]
+{
+	doc = "amr_hlm_set_as6_01";
+	specializes = base_helm_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "The Warlord's Horns";
+		base_screen_name = "Helm";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 04;
+		armor_type = type16;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type10_04;
+		set = AS6_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 15;
+				description			= "Adds 15 to 44 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 44;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 15;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 44;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_steal;
+				value				= 12;
+				description			= "<value>% Health Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 16;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_2;
+				value				= 3;
+				description			= "+<value> to Fortitude, Overbear, and Smite";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 63.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_as6_01
+//
+//	ITEM:		Boots from Armor Set 6
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_as6_01]
+{
+	doc = "amr_bot_set_as6_01";
+	specializes = base_boots_fighter;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "The Warlord's Tread";
+		base_screen_name = "Greaves";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 005;
+		armor_type = type06;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type06_005;
+		set = AS6_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 160;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_reflect_damage;
+				value				= 45;
+				description			= "<value>% of Physical Damage Reflected to Enemy";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 18;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_3;
+				value				= 3;
+				description			= "+<value> to Critical Strike, Dual Wield, and Alacrity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 60.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amulet_set_as6_01
+//
+//	ITEM:		Amulet from Armor Set 6
+////////////////////////////////////////////////////
+
+[t:template,n:amulet_set_as6_01]
+{
+	doc = "amulet_set_as6_01";
+	specializes = amulet;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "The Warlord's Crest";
+		base_screen_name = "Amulet";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_amulet_040;
+		set = AS6_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 54;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 67;
+				description			= "+<value> Max Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 67;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_resistance;
+				value				= 0.10;
+				description			= "+10% Melee Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_MELEE_PASSIVE_SKILLS;
+				value				= 2;
+				description			= "+<value> to Melee Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 68.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as6_01
+//
+//	ITEM:		Ring from Armor Set 6
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as6_01]
+{
+	doc = "ring_set_as6_01";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "The Warlord's Sign";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = melee:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_ring_011;
+		set = AS6_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 125;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 20;
+				description			= "Adds 20 to 25 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 25;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 20;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 25;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magical_resistance;
+				value				= 0.15;
+				description			= "+15% Magic Damage Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.10;
+				description			= "+10% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 54.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////  Armor Set 7 (Elite Set Retexture) ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_as7_01
+//
+//	ITEM:		Body from Armor Set 7
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_as7_01]
+{
+	doc = "amr_bdy_set_as7_01";
+	specializes = base_body_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Plainswalker's Passing";
+		base_screen_name = "Suit";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 019;
+		armor_type = a2;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a2_019;
+		set = AS7_set;
+		inventory_height = 3;
+		inventory_width = 2;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_armor_source_percent;
+				value				= 0.70;
+				description			= "+70% Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magical_resistance;
+				value				= 0.16;
+				description			= "+16% Magic Damage Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_physical_resistance;
+				value				= 0.12;
+				description			= "+12% Melee and Ranged Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_1;
+				value				= 4;
+				description			= "+<value> to Critical Shot, Dodge, and Survival";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 72.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_as7_01
+//
+//	ITEM:		Helm from Armor Set 7
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_as7_01]
+{
+	doc = "amr_hlm_set_as7_01";
+	specializes = base_helm_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Plainswalker's Heroism";
+		base_screen_name = "Spiked Helmet";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 03;
+		armor_type = type02;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type02_03;
+		set = AS7_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 54;
+				description			= "+<value> Max Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 54;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 16;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magical_resistance;
+				value				= 0.25;
+				description			= "+25% Magic Damage Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_2;
+				value				= 4;
+				description			= "+<value> to Biting Arrow, Far Shot, and Shockwave";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 60.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_as7_01
+//
+//	ITEM:		Boots from Armor Set 7
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_as7_01]
+{
+	doc = "amr_bot_set_as7_01";
+	specializes = base_boots_ranger;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Plainswalker's Travelers";
+		base_screen_name = "Boots";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 022;
+		armor_type = type01;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type01_022;
+		set = AS7_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 38;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ice_resistance;
+				value				= 0.25;
+				description			= "+25% Ice Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_chance_to_dodge_hit_melee;
+				value				= 0.12;
+				description			= "+12% Chance to Dodge Melee Attacks";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_3;
+				value				= 3;
+				description			= "+<value> to Quick Draw, Bleed, and Penetrate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 44.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amulet_set_as7_01
+//
+//	ITEM:		Amulet from Armor Set 7
+////////////////////////////////////////////////////
+
+[t:template,n:amulet_set_as7_01]
+{
+	doc = "amulet_set_dws2_01";
+	specializes = amulet;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Plainswalker's Legend";
+		base_screen_name = "Amulet";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level - 2.0;
+		inventory_icon = b_gui_ig_i_it_amulet_045;
+		set = AS7_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 45;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 130;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_lightning_resistance;
+				value				= 0.25;
+				description			= "+25% Lightning Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_RANGED_PASSIVE_SKILLS;
+				value				= 2;
+				description			= "+<value> to Ranged Skills";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 53.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as7_01
+//
+//	ITEM:		Ring from Armor Set 7
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as7_01]
+{
+	doc = "ring_set_as7_01";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Plainswalker's Relic";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = ranged:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_ring_036;
+		set = AS7_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 9;
+				description			= "Adds 9 to 28 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 28;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 9;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 28;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_steal;
+				value				= 11;
+				description			= "<value>% Health Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_death_resistance;
+				value				= 0.25;
+				description			= "+25% Death Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.10;
+				description			= "+10% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 48.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////           Armor Set 8              ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amulet_set_as8_01
+//
+//	ITEM:		Amulet from Armor Set 8
+////////////////////////////////////////////////////
+
+[t:template,n:amulet_set_as8_01]
+{
+	doc = "amulet_set_as8_01";
+	specializes = amulet;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Nexus Prism";
+		base_screen_name = "Amulet";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_amulet_036;
+		set = AS8_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 68;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magical_resistance;
+				value				= 0.12;
+				description			= "+12% Magic Damage Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= melee_suite_1;
+				value				= 1;
+				description			= "+<value> to Barricade, Toughness, and Reinforced Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= ranged_suite_1;
+				value				= 1;
+				description			= "+<value> to Critical Shot, Dodge, and Survival";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= nmagic_suite_2;
+				value				= 1;
+				description			= "+<value> to Aquatic Affinity, Arctic Mastery, and Freezing";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_skill_suite;
+				suite				= cmagic_suite_3;
+				value				= 1;
+				description			= "+<value> to Devastation, Searing Flames, and Ignite";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 36.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as8_01
+//
+//	ITEM:		Ring from Armor Set 8
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as8_01]
+{
+	doc = "ring_set_as8_01";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Jewel of Fire";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_ring_030;
+		set = AS8_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 4;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 1;
+				description			= "Adds 1 to 2 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 2;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 1;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 2;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_fire_resistance;
+				value				= 0.10;
+				description			= "+10% Fire Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_magic_find_chance;
+				value				= 8;
+				description			= "+<value>% Chance to Find Magic Items";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 6.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as8_02
+//
+//	ITEM:		Ring from Armor Set 8
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as8_02]
+{
+	doc = "ring_set_as8_02";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Jewel of Lightning";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_ring_033;
+		set = AS8_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 6;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 2;
+				description			= "Adds 2 to 5 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 5;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 2;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 5;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_lightning_resistance;
+				value				= 0.12;
+				description			= "+12% Lightning Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_gold_dropped;
+				value				= 0.60;
+				description			= "+60% Gold Dropped";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 14.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as8_03
+//
+//	ITEM:		Ring from Armor Set 8
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as8_03]
+{
+	doc = "ring_set_as8_03";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Jewel of Ice";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_ring_031;
+		set = AS8_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 4;
+				description			= "Adds 4 to 7 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 7;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 4;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 7;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 8;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ice_resistance;
+				value				= 0.16;
+				description			= "+16% Ice Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_resistance;
+				value				= 0.14;
+				description			= "+14% Ranged Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 21.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as8_04
+//
+//	ITEM:		Ring from Armor Set 8
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as8_04]
+{
+	doc = "ring_set_as8_04";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		screen_name = "Jewel of Death";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_ring_032;
+		set = AS8_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 10;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 6;
+				description			= "Adds 6 to 11 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 11;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 6;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 11;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_bonus;
+				value				= 5;
+				description			= "Restores <value> Health Per Hit";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_death_resistance;
+				value				= 0.18;
+				description			= "+18% Death Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[pcontent]
+	{
+		[base]
+		{
+			item_level = 29.0;
+		}
+ 	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////           Armor Set 9              ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amulet_set_as9_01
+//
+//	ITEM:		Amulet from Armor Set 9
+////////////////////////////////////////////////////
+
+[t:template,n:amulet_set_as9_01]
+{
+	doc = "amulet_set_as9_01";
+	specializes = amulet;
+
+	[common]
+	{
+		is_pcontent_allowed = false;
+		allow_modifiers = false;
+		screen_name = "Soranith's Amulet";
+		base_screen_name = "Amulet";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_amulet_061;
+		set = AS9_set;
+		item_level = 34.0;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 15;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_mana_recovery_unit;
+				value				= 0.15;
+				description			= "+15% Mana Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_death_resistance;
+				value				= 0.15;
+				description			= "+15% Death Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as9_01
+//
+//	ITEM:		Ring from Armor Set 9
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as9_01]
+{
+	doc = "ring_set_as9_01";
+	specializes = ring;
+
+	[common]
+	{
+		is_pcontent_allowed = false;
+		allow_modifiers = false;
+		screen_name = "Soranith's Gold Ring";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_ring_061;
+		set = AS9_set;
+		item_level = 34.0;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 20;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 4;
+				description			= "Adds 4 to 6 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 6;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 4;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 6;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_fire_resistance;
+				value				= 0.20;
+				description			= "+20% Fire Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as9_02
+//
+//	ITEM:		Ring from Armor Set 9
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as9_02]
+{
+	doc = "ring_set_as9_02";
+	specializes = ring;
+
+	[common]
+	{
+		is_pcontent_allowed = false;
+		allow_modifiers = false;
+		screen_name = "Soranith's Silver Ring";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_it_ring_051;
+		item_level = 34.0;
+		set = AS9_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 27;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 4;
+				description			= "Adds 4 to 6 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 6;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 4;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 6;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_lightning_resistance;
+				value				= 0.20;
+				description			= "+20% Lightning Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////           Armor Set 10             ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bdy_set_as10_01
+//
+//	ITEM:		Body Armor from Armor Set 10
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bdy_set_as10_01]
+{
+	doc = "amr_bdy_set_as10_01";
+	specializes = base_body_fighter;
+
+	[aspect]
+	{
+		[armor_ornaments] {* = type03_shoulder_01;}
+		gold_value = 13;  //TAG=jmc_fixed// [t:template,n:amr_bdy_set_as10_01]
+		use_pcontent_gold_value = false;
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		is_pcontent_allowed = false;
+		screen_name = "Vigilant Hauberk";
+		base_screen_name = "Dryad Armor";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 013;
+		armor_type = a1;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_suit_a1_013;
+		inventory_height = 2;
+		inventory_width = 2;
+		item_level = 6.0;
+		set = as10_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_strength;
+				value				= 4;
+				description			= "+<value> Strength";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 12;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_hlm_set_as10_01
+//
+//	ITEM:		Helm from Armor Set 10
+////////////////////////////////////////////////////
+
+[t:template,n:amr_hlm_set_as10_01]
+{
+	doc = "amr_hlm_set_as10_01";
+	specializes = base_helm_fighter;
+
+	[aspect]
+	{
+		gold_value = 27;  //TAG=jmc_fixed// [t:template,n:amr_hlm_set_as10_01]
+		use_pcontent_gold_value = false;
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		is_pcontent_allowed = false;
+		screen_name = "Vigilant Crest";
+		base_screen_name = "Dryad Helm";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 07;
+		armor_type = type11;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_hlmt_type11_07;
+		item_level = 10.0;
+		set = as10_set;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_intelligence;
+				value				= 4;
+				description			= "+<value> Intelligence";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_max_mana;
+				value				= 20;
+				description			= "+<value> Mana";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_death_resistance;
+				value				= 0.05;
+				description			= "+5% Death Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_bot_set_as10_01
+//
+//	ITEM:		Boots from Armor Set 10
+////////////////////////////////////////////////////
+
+[t:template,n:amr_bot_set_as10_01]
+{
+	doc = "amr_bot_set_as10_01";
+	specializes = base_boots_fighter;
+
+	[aspect]
+	{
+		gold_value = 18;  //TAG=jmc_fixed// [t:template,n:amr_bot_set_as10_01]
+		use_pcontent_gold_value = false;
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		is_pcontent_allowed = false;
+		screen_name = "Vigilant Boots";
+		base_screen_name = "Dryad Boots";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 003;
+		armor_type = type05;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_boot_type03_005;
+		set = as10_set;
+		item_level = 8.0;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_dexterity;
+				value				= 4;
+				description			= "+<value> Dexterity";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.05;
+				description			= "+5% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_armor;
+				value				= 4;
+				description			= "+<value> Armor";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amr_glv_set_as10_01
+//
+//	ITEM:		Gloves from Armor Set 10
+////////////////////////////////////////////////////
+
+[t:template,n:amr_glv_set_as10_01]
+{
+	doc = "amr_glv_set_as10_01";
+	specializes = base_gloves_fighter;
+
+	[aspect]
+	{
+		gold_value = 8;  //TAG=jmc_fixed// [t:template,n:amr_glv_set_as10_01]
+		use_pcontent_gold_value = false;
+	}
+	[common]
+	{
+		allow_modifiers = false;
+		is_pcontent_allowed = false;
+		screen_name = "Vigilant Gloves";
+		base_screen_name = "Dryad Gloves";
+		rarity = set;
+	}
+	[defend]
+	{
+		armor_style = 014;
+		armor_type = type05;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		inventory_icon = b_gui_ig_i_amr_gntl_type05_014;
+		set = as10_set;
+		item_level = 5.0;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_nmagic_damage_percent;
+				value				= 0.04;
+				description			= "+4% Nature Magic Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_mana_recovery_unit;
+				value				= 0.05;
+				description			= "+5% Mana Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_lightning_resistance;
+				value				= 0.04;
+				description			= "+4% Lightning Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[loot_drop_indicator]{}
+}
+
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+											////           Armor Set 11             ////
+											////////////////////////////////////////////
+											////////////////////////////////////////////
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as11_01
+//
+//	ITEM:		Ring from Armor Set 11
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as11_01]
+{
+	doc = "ring_set_as11_01";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		is_pcontent_allowed = false;
+		screen_name = "Spirit of Rest";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		set = as11_set;
+		inventory_icon = b_gui_ig_i_it_ring_052;
+		use_class = IST_ALL;
+		item_level=28.0;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 35;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_max_mana;
+				value				= 35;
+				description			= "+<value> Mana";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_mana_recovery_unit;
+				value				= 0.12;
+				description			= "+12% Mana Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_recovery_unit;
+				value				= 0.12;
+				description			= "+12% Health Regeneration";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	ring_set_as11_02
+//
+//	ITEM:		Ring from Armor Set 11
+////////////////////////////////////////////////////
+
+[t:template,n:ring_set_as11_02]
+{
+	doc = "ring_set_as11_02";
+	specializes = ring;
+
+	[common]
+	{
+		allow_modifiers = false;
+		is_pcontent_allowed = false;
+		screen_name = "Spirit of Unrest";
+		base_screen_name = "Ring";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		set = as11_set;
+		inventory_icon = b_gui_ig_i_it_ring_053;
+		use_class = IST_ALL;
+		item_level=28.0;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_melee_damage_min;
+				value				= 4;
+				description			= "Adds 4 to 6 Weapon Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_melee_damage_max;
+				value				= 6;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_min;
+				value				= 4;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_ranged_damage_max;
+				value				= 6;
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_life_steal;
+				value				= 5;
+				description			= "<value>% Health Steal";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_reflect_damage;
+				value				= 20;
+				description			= "<value>% of Physical Damage Reflected to Enemy";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_death_resistance;
+				value				= 0.15;
+				description			= "+15% Death Resistance";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[loot_drop_indicator]{}
+}
+
+////////////////////////////////////////////////////
+//	TEMPLATE:	amulet_set_as11_01
+//
+//	ITEM:		Ring from Armor Set 11
+////////////////////////////////////////////////////
+
+[t:template,n:amulet_set_as11_01]
+{
+	doc = "amulet_set_as11_01";
+	specializes = amulet;
+
+	[common]
+	{
+		allow_modifiers = false;
+		is_pcontent_allowed = false;
+		screen_name = "Spirit of Repose";
+		base_screen_name = "Amulet";
+		rarity = set;
+	}
+	[gui]
+	{
+		equip_requirements = uber:#item_level-2.0;
+		set = as11_set;
+		inventory_icon = b_gui_ig_i_it_amulet_043;
+		use_class = IST_ALL;
+		item_level=40.0;
+	}
+	[magic]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				alteration			= alter_max_life;
+				value				= 80;
+				description			= "+<value> Health";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_max_mana;
+				value				= 80;
+				description			= "+<value> Mana";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= ALTER_POWER_DAMAGE_PERCENT;
+				value				= 0.03;
+				description			= "+3% Power Damage";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+			[*]
+			{
+				alteration			= alter_power_reload;
+				value				= 0.06;
+				description			= "+6% Power Recharge Rate";
+				duration			= #infinite;
+				is_permanent		= true;
+				is_single_instance	= false;
+			}
+		}
+	}
+ 	[loot_drop_indicator]{}
+}
