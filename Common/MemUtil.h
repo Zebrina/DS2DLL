@@ -1,9 +1,18 @@
 #pragma once
 
+template <typename T, typename X>
+T Reinterpret(X x) {
+	union U {
+		X x;
+		T t;
+	};
+	U u;
+	u.x = x;
+	return u.t;
+}
+
 /*
 #include <utility>
-
-STATIC_ASSERT(sizeof(void*) == sizeof(UInt64));
 
 #define _SetFlags(flags, mask) ((flags)|=(mask))
 #define _ClearFlags(flags, mask) ((flags)&=(~(mask)))
@@ -44,7 +53,7 @@ STATIC_ASSERT(sizeof(void*) == sizeof(UInt64));
 	__asm _ASM_##id##_SKIP_HOOK:
 
 namespace MemUtil {
-	#include "ClassMacros.h"
+	
 
 class IntPtr {
 	public:

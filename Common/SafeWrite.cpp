@@ -6,8 +6,6 @@
 
 #include "SafeWrite.h"
 
-#include <Windows.h>
-
 void SafeWriteBuf(uintptr_t addr, void* data, size_t len)
 {
 	DWORD oldProtect;
@@ -71,4 +69,9 @@ bool SafeWriteJump(uintptr_t src, uintptr_t dst)
 bool SafeWriteCall(uintptr_t src, uintptr_t dst)
 {
 	return SafeWriteJump_Internal(src, dst, 0xE8);
+}
+
+// Added by Zebrina.
+void SafeWriteStr(uintptr_t addr, const char* str) {
+	SafeWriteBuf(addr, (void*)str, strlen(str) + 1);
 }
