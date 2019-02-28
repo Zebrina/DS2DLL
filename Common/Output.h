@@ -1,6 +1,8 @@
 #pragma once
 
 #include <cstdio>
+#include <string>
+#include <vector>
 
 static constexpr short DEFAULT_TAB_SIZE = 4;
 
@@ -8,49 +10,38 @@ class OutputBase {
 public:
 	bool IsOpen() const;
 
-	template <typename... VA, const char* TAG = nullptr>
-	inline int Message(const char* format, VA... va) {
-		return MessageWithTag(nullptr, format, va);
-	}
-	template <typename... VA>
-	inline int Warning(const char* format, VA... va) {
-		return MessageWithTag("[WARNING]", format, va);
-	}
-	template <typename... VA>
-	inline int Error(const char* format, VA... va) {
-		return MessageWithTag("[ERROR]", format, va);
-	}
+	int Message(const char* format, ...);
+	int Warning(const char* format, ...);
+	int Error(const char* format, ...);
+
+	void BeginSection(const std::string& section);
+	void EndSection();
 
 protected:
 	FILE* fd;
 	short tabSize;
 	short indentLevel;
+	std::vector<std::string> sections;
 
 	constexpr OutputBase();
 	OutputBase(FILE* fd, short tabSize, short indentLevel = 0);
+	OutputBase(const OutputBase&) = default;
+	OutputBase(OutputBase&&) = default;
 
-	template <typename... VA>
-	int MessageWithTag(const char* tag, const char* format, VA... va) {
-		int n = 0;
-		if (fd) {
-			if (tag) {
-				n = fprintf(fd, tag) + fprintf(fd, " ");
-			}
-			n += fprintf(fd, format, va...);
-			if (n > 0) {
-				fprintf(fd, "\n");
-				n += 1;
-			}
-		}
-		return n;
-	}
+	void IncreaseIndent();
+	void DecreaseIndent();
+	int Tab();
+
+private:
+	int MessageWithTag(const char* tag, const char* format, va_list args);
 };
 
 class Print : public OutputBase {
 public:
 	Print(short tabSize = DEFAULT_TAB_SIZE);
 	Print(FILE* stream, short tabSize = DEFAULT_TAB_SIZE);
-	Print(const Print&);
+	Print(const Print&) = default;
+	Print(Print&&) = default;
 
 	void Close();
 };
@@ -58,11 +49,11 @@ public:
 class Log : public OutputBase {
 public:
 	enum FileMode : uint16_t {
-		WRITE = 'w\0',
+		OVERWRITE = 'w\0',
 		APPEND = 'a\0',
 	};
 
-	Log(const char* fileName, FileMode mode = WRITE, short tabSize = DEFAULT_TAB_SIZE);
+	Log(const char* fileName, FileMode mode = OVERWRITE, short tabSize = DEFAULT_TAB_SIZE);
 	Log(const Log&) = delete;
 	Log(Log&&);
 	~Log();
