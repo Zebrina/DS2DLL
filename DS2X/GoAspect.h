@@ -248,7 +248,10 @@ public:
 	FillStruct(0x05c, 0x061);
 	// 0x061
 	bool enchantInvincibility;
-	FillStruct(0x062, 0x064);
+	// 0x062
+	bool b_0x62;
+	// 0x063
+	bool b_0x63;
 	// 0x064
 	eLifeState lifeState;
 	// 0x068
@@ -273,7 +276,12 @@ public:
 	float lastLifeDelta;
 	// 0x0a0
 	bool managesOwnDamage;
-	FillStruct(0x0a1, 0x0a4);
+	// 0x0a1
+	bool b_0x2;
+	// 0x0a2
+	bool b_0x2;
+	// 0x0a3
+	bool b_0x3;
 	// 0x0a4
 	float damageToApply;
 	FillStruct(0x0a8, 0x0ac);

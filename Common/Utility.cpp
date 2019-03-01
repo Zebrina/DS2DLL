@@ -1,5 +1,41 @@
 #include "Utility.h"
 
+int PrintLine(const char* format, va_list args, bool includeLastError) {
+	int n = vprintf(format, args);
+	if (n > 0) {
+		if (includeLastError) {
+			DWORD error = GetLastError();
+			if (error == 0) {
+				constexpr const char EXPECTED_ERROR[] = " Expected an error but there was none.";
+				fputs(EXPECTED_ERROR, stdout);
+				n += sizeof(EXPECTED_ERROR);
+			} else {
+				n += printf(" Error code: %i.", error);
+			}
+		}
+
+		putchar('\n');
+		n += 1;
+	}
+	return n;
+}
+
+int PrintLine(const char* format, ...) {
+	va_list args;
+	va_start(args, format);
+	int n = PrintLine(format, args, false);
+	va_end(args);
+	return n;
+}
+
+int PrintSystemError(const char* format, ...) {
+	va_list args;
+	va_start(args, format);
+	int n = PrintLine(format, args, true);
+	va_end(args);
+	return n;
+}
+
 void SystemPause() {
 	system("pause");
 }

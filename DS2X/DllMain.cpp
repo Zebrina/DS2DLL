@@ -1,24 +1,28 @@
 #include "DllMain.h"
 
-#include "Alteration.h"
-#include "Report.h"
+//#include "Alteration.h"
+#include "HookExportTable.h"
+//#include "StandingOrders.h"
 
 HMODULE DS2XModuleHandle = NULL;
 
 int __fastcall HookMain(void* this_) {
-	Report::MessageBox("Inside HookMain!");
 	return ((int(__thiscall*)(void*))0x4348b0)(this_);
 }
 
 void WriteHooks() {
 	//FreeLibrary(DS2XModuleHandle);
 
-	const char* versionMessage = "$MSG$Game: %S DS2Dll: " "0.1.0";
+	//const char* versionMessage = "$MSG$Game: %S DS2Dll: " "0.1.0";
+	const char* versionMessage = "$MSG$DS2DllLoader - 0.1.0";
 	SafeWrite32(0x44e284 + 1, (uint32_t)versionMessage);
 
 	//SafeWriteCall(0x427a9f, (intptr_t)HookMain);
 
-	WriteAlterationHooks();
+	//Alteration::Initialize();
+	//StandingOrders::Initialize();
+
+	ExportTable::WriteHooks();
 
 	FlushInstructionCache(GetCurrentProcess(), NULL, 0);
 }
