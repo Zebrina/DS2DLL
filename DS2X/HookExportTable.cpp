@@ -49,7 +49,7 @@ int __fastcall LoadExportTableHook(void* ex, void*, HMODULE hModule, void* arg2,
 	return result;
 }
 
-void ExportTable::WriteHooks(LoaderInfo& settings) {
+void ExportTable::WriteHooks() {
 	// Hook the loading of exports (skrit functions).
 	SafeWriteCall(0x90e252, (uintptr_t)LoadExportTableHook);
 }
