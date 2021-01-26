@@ -5,6 +5,8 @@
     <ClCompile Include="SafeWrite.cpp" />
     <ClCompile Include="Utility.cpp" />
     <ClCompile Include="Output.cpp" />
+    <ClCompile Include="StringUtil.cpp" />
+    <ClCompile Include="CommandLineUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassMacros.h" />
@@ -16,16 +18,11 @@
     <ClInclude Include="Utility.h" />
     <ClInclude Include="Version.h" />
     <ClInclude Include="Output.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="IDE">
-      <UniqueIdentifier>{e1086c9a-5e72-44c7-969a-6114fdfa9f0a}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cpp.hint">
-      <Filter>IDE</Filter>
-    </None>
-    <None Include="Utility.inl" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="StringUtil.h" />
+    <ClInclude Include="CommandLineUtil.h" />
+    <ClInclude Include="AssemblyWriter.h" />
+    <ClInclude Include="Assembly.h" />
+    <ClInclude Include="Events.h" />
   </ItemGroup>
 </Project>

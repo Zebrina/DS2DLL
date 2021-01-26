@@ -1,165 +1,47 @@
 #define MAINICON 101
 
-#include "Resources.h"
+#include "CommandLineUtil.h"
+#include "Version.h"
+#include "LoaderApp.h"
+#include "LoaderUtil.h"
 
-#include <cstdio>
 #include <cstdlib>
 #include <cstring>
-#include <fstream>
-
-#include "SafeWrite.h"
-
-#include "DS2X/Alteration.h"
-#include "DS2X/Report.h"
-#include "DS2X/Enums.h"
-#include "DS2X/UINews.h"
-
-#include "Version.h"
-
 #include <cstdlib>
-
-#include "DS2X/DllMain.h"
-
-#include "stdio.h"
-#include "Windows.h"
-#include "tlhelp32.h"
-#include "tchar.h"
-#include "wchar.h"
-
 #include <Shlwapi.h>
+#include <string>
 
-struct Settings {
-	const char* sGamePath;
-	const char* sDllPath;
-	UInt32 iTimeout;
-	bool bPrompt;
-	bool bSkipCRC;
-};
+static const char* INDICIUM_SUPRA_DLL = "Indicium-Supra.dll";
+static const char* INDICIUM_IMGUI_DLL = "Indicium-ImGui.dll";
 
-#define ERR_EXE_NOT_FOUND 1
-#define ERR_EXE_INVALID_CRC 2
-#define ERR_DLL_NOT_FOUND 3
-#define ERR_DLL_INVALID_CRC 4
-#define ERR_CREATE_PROCESS_FAILED 5
-#define ERR_RESUME_THREAD_FAILED 6
+AppResult RunApp(const CommandLineArgValues& args) {
+	CommandLineKeyValues cmdKeyValues;
+	CommandLineArgsToKeyValues(cmdKeyValues, args);
 
-bool LoadRemoteDLL(HANDLE hProcess, const char* dllPath, DWORD timeout = INFINITE) {
-	bool result = false;
-	size_t dllPathBufLen = strlen(dllPath) + 1;
+    char gamePath[MAX_PATH];
+    char dllPath[MAX_PATH];
+    //char ds2DllPath[MAX_PATH];
+    //char ds2DllDebugPath[MAX_PATH];
+    char elysAllSavesPath[MAX_PATH];
 
-	void* hookBase = VirtualAllocEx(hProcess, NULL, dllPathBufLen, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
-	if (hookBase) {
-		void* loadLibraryAddress = (void*)GetProcAddress(GetModuleHandle("kernel32.dll"), "LoadLibraryA");
+	CommandLineExtractStringValue(cmdKeyValues, "game_path", gamePath, "DungeonSiege2.exe");
+	CommandLineExtractStringValue(cmdKeyValues, "dll_path", dllPath, "DS2DLL.dll");
+	//CommandLineExtractStringValue(cmdKeyValues, "ds2dll_path", ds2DllPath, "plugins");
+	//CommandLineExtractStringValue(cmdKeyValues, "ds2dll_debug_path", ds2DllDebugPath, "");
+	CommandLineExtractStringValue(cmdKeyValues, "elys_all_saves_path", elysAllSavesPath, "ElysDS2BWAllSaves.dll");
+	DWORD timeout = INFINITE;
+	RELEASE_ONLY(CommandLineExtractIntValue(cmdKeyValues, "injection_timeout", (int&)timeout, 10000));
 
-		if (WriteProcessMemory(hProcess, hookBase, dllPath, dllPathBufLen, NULL)) {
-			HANDLE thread = CreateRemoteThread(hProcess, NULL, 0, (LPTHREAD_START_ROUTINE)loadLibraryAddress, hookBase, 0, NULL);
-			if (thread) {
-				switch (WaitForSingleObject(thread, timeout))
-				{
-				case WAIT_OBJECT_0:
-					PrintLine("hook thread complete");
-					result = true;
-					break;
-				case WAIT_ABANDONED:
-					PrintLine("Process::InstallHook: waiting for thread = WAIT_ABANDONED");
-					break;
-				case WAIT_TIMEOUT:
-					PrintLine("Process::InstallHook: waiting for thread = WAIT_TIMEOUT");
-					break;
-				}
-				CloseHandle(thread);
-			} else {
-				PrintSystemError("CreateRemoteThread failed.");
-			}
-		}
-
-		VirtualFreeEx(hProcess, (void*)hookBase, 0, MEM_RELEASE);
-	} else {
-		PrintSystemError("VirtualAllocEx failed.");
+	if (PathFileExistsA(gamePath) == FALSE) {
+		return RES_ERR_EXE_NOT_FOUND;
 	}
 
-	return result;
-}
-
-bool ArgCmp(const char* arg, const char* shortCmd, const char* longCmd = "") {
-	return strcmp(arg, shortCmd) == 0 || strcmp(arg, longCmd) == 0;
-}
-
-int ParseLoaderArguments(Settings& settings, const char** arguments, int count) {
-	settings.sGamePath = "DungeonSiege2.exe";
-	settings.sDllPath = "DS2X.dll";
-	settings.iTimeout = 10000;
-	settings.bSkipCRC = false;
-
-	enum {
-		APS_IDENTIFY,
-		APS_DS2PATH,
-		APS_DLLPATH,
-		APS_TIMEOUT,
-		APS_DONE,
-	} aps = APS_IDENTIFY;
-
-	int index = 0;
-	while (aps != APS_DONE && ++index < count) {
-		const char* arg = arguments[index];
-		switch (aps) {
-		case APS_IDENTIFY:
-			if (ArgCmp(arg, "-h", "--help")) {
-				return -1;
-			} else if (ArgCmp(arg, "-ds2", "--ds2-path")) {
-				aps = APS_DS2PATH;
-			} else if (ArgCmp(arg, "-dll", "--dll-path")) {
-				aps = APS_DLLPATH;
-			} else if (ArgCmp(arg, "-t", "--timeout")) {
-				aps = APS_TIMEOUT;
-			} else if (ArgCmp(arg, "--skip-crc")) {
-				settings.bSkipCRC = true;
-			} else {
-				aps = APS_DONE;
-			}
-			break;
-		case APS_DS2PATH:
-			settings.sGamePath = arg;
-			aps = APS_IDENTIFY;
-			break;
-		case APS_DLLPATH:
-			settings.sDllPath = arg;
-			aps = APS_IDENTIFY;
-			break;
-		case APS_TIMEOUT:
-			int timeout = strtol(arg, NULL, 10);
-			if (timeout > 0) {
-				settings.iTimeout = timeout;
-			}
-			aps = APS_IDENTIFY;
-			break;
-		}
+	if (PathFileExistsA(dllPath) == FALSE) {
+		return RES_ERR_DLL_NOT_FOUND;
 	}
 
-	return index;
-}
-
-int main(int argc, const char* argv[]) {
-	FILETIME now;
-	GetSystemTimeAsFileTime(&now);
-
-	//const char* aGamePath = "DungeonSiege2.exe";
-	//const char* aDllPath = "DS2X.dll";
-	//const char* aHookMain = "?HookMain@@YGXAAULoaderInfo@@@Z";
-
-	Settings settings;
-	int ds2ArgvOffset = ParseLoaderArguments(settings, argv, argc);
-	if (ds2ArgvOffset < 0) {
-		return 0;
-	}
-
-	if (PathFileExists(settings.sGamePath) == FALSE) {
-		return ERR_EXE_NOT_FOUND;
-	}
-
-	if (PathFileExists(settings.sDllPath) == FALSE) {
-		return ERR_DLL_NOT_FOUND;
-	}
+	char ds2Args[MAX_PATH];
+	CommandLineKeyValuesToString(ds2Args, MAX_PATH, cmdKeyValues);
 
 	STARTUPINFO	startupInfo;
 	ZeroMemory(&startupInfo, sizeof(startupInfo));
@@ -167,68 +49,87 @@ int main(int argc, const char* argv[]) {
 	PROCESS_INFORMATION	procInfo;
 	ZeroMemory(&procInfo, sizeof(procInfo));
 
-	char ds2Args[MAX_PATH] = " ";
-	StrConcat(ds2Args, sizeof(ds2Args), argv + ds2ArgvOffset, argc - ds2ArgvOffset, " ");
-
-	if (!CreateProcess(settings.sGamePath, ds2Args, NULL, NULL, FALSE, CREATE_SUSPENDED, NULL, NULL, &startupInfo, &procInfo)) {
-		if (GetLastError() == 740) {
-			PrintSystemError("Failed to launch process '%s%s'. Try running as administrator.", settings.sGamePath, ds2Args);
+	if (!CreateProcessA(gamePath, ds2Args, NULL, NULL, FALSE, CREATE_SUSPENDED, NULL, NULL, &startupInfo, &procInfo)) {
+		if (GetLastError() == ERROR_ELEVATION_REQUIRED) {
+			return RES_ERR_CREATE_PROCESS_ELEVATION_REQUIRED;
+			DEBUG_ONLY(PrintSystemError("Failed to launch process '%s%s'. Try running as administrator.", gamePath, ds2Args));
 		} else {
-			PrintSystemError("Failed to launch process '%s%s'.", settings.sGamePath, ds2Args);
+			DEBUG_ONLY(PrintSystemError("Failed to launch process '%s%s'.", gamePath, ds2Args));
 		}
 
-		return ERR_CREATE_PROCESS_FAILED;
+		return RES_ERR_CREATE_PROCESS_FAILED;
 	}
 
-	/*
-	LoaderInfo info;
-	info.hProcess = procInfo.hProcess;
-	info.out = stdout;
-	HMODULE hModule = LoadLibraryA(aDllPath);
-	if (hModule) {
-		_HookMain hookMain = (_HookMain)GetProcAddress(hModule, aHookMain);
-		if (hookMain) {
-			hookMain(info);
-		}
-		FreeLibrary(hModule);
-		if (!hookMain) {
-			PrintSystemError("Failed to get library '%s' procedure address '%s'.", aDllPath, aHookMain);
-			SystemPause();
-			return 2;
-		}
-	} else {
-		PrintSystemError("Failed to load library '%s'.", aDllPath);
-	}
-	*/
+	AppResult result = RES_OK;
 
-	int resultCode = 0;
+	DEBUG_ONLY(
+		DWORD procExitCode;
+		if (GetExitCodeProcess(procInfo.hProcess, &procExitCode)) {
+			DEBUG_ONLY(PrintLine("Process exited with code '0x%.8x'.", procExitCode));
+		} else {
+			result = RES_ERR_GET_EXIT_CODE_PROCESS_FAILED;
+		}
+	);
 
-	DEBUG_ONLY({
+	DEBUG_ONLY(
 		PrintLine("Confirm to begin DLL injection.");
 		SystemPause();
-	});
+	);
 
-	if (LoadRemoteDLL(procInfo.hProcess, settings.sDllPath)) {
-		if (!ResumeThread(procInfo.hThread)) {
-			PrintSystemError("Failed to resume thread in process '%'.", settings.sGamePath);
-			resultCode = ERR_RESUME_THREAD_FAILED;
-		} else {
-			PrintLine("DLL injection successful!");
-			DEBUG_ONLY(WaitForSingleObject(procInfo.hThread, INFINITE));
+#if 0
+    if (result == RES_OK) {
+        result = LoadRemoteDll(procInfo.hProcess, INDICIUM_SUPRA_DLL, timeout);
+        if (result == RES_OK) {
+            DEBUG_ONLY(PrintLine("Injected: (%s).", INDICIUM_SUPRA_DLL));
+            result = LoadRemoteDll(procInfo.hProcess, INDICIUM_IMGUI_DLL, timeout);
+            if (result == RES_OK) {
+                DEBUG_ONLY(PrintLine("Injected: (%s).", INDICIUM_IMGUI_DLL));
+            }
+        }
+    }
+#endif
+
+	if (result == RES_OK && PathFileExistsA(elysAllSavesPath)) {
+		DEBUG_ONLY(PrintLine("Ely's DS2BWAllSaves found."));
+		if (LoadRemoteDll(procInfo.hProcess, elysAllSavesPath, timeout) == RES_OK) {
+			DEBUG_ONLY(PrintLine("Injected: (%s).", elysAllSavesPath));
 		}
-	} else {
-		PrintLine("DLL injection failed.");
-
-		TerminateProcess(procInfo.hProcess, 0);
 	}
 
-	// Clean up.
+	if (result == RES_OK) {
+		result = LoadRemoteDll(procInfo.hProcess, dllPath, timeout);
+		if (result == RES_OK && ResumeThread(procInfo.hThread) == 0xffffffff) {
+			result = RES_ERR_RESUME_THREAD_FAILED;
+		} else {
+			DEBUG_ONLY(PrintLine("Injected: (%s).", dllPath));
+		}
+	}
+
+	if (result != RES_OK) {
+		TerminateProcess(procInfo.hProcess, 0);
+		AlertError(L"Process terminated!");
+	}
+
 	CloseHandle(procInfo.hProcess);
 	CloseHandle(procInfo.hThread);
 
-	if (resultCode != 0) {
-		SystemPause();
+	return result;
+}
+
+int main(int argc, const char* argv[]) {
+	CommandLineArgValues args(argv + 1, argv + argc);
+
+	//FILETIME now;
+	//GetSystemTimeAsFileTime(&now);
+
+	AppResult result = RunApp(args);
+
+	DWORD lastError;
+	if (result != RES_OK) {
+		AlertError(AppResultToString(result));
+	} else if (lastError = GetLastError() != 0) {
+		AlertError(L"Last error returned '0x%.8x'.", lastError);
 	}
 
-	return resultCode;
+	return result;
 }

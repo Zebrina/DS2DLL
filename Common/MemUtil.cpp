@@ -1,5 +1,44 @@
 #include "MemUtil.h"
 
+#if 0
+static inline uintptr_t GetVirtualFunctionTable(void* ptr) {
+	return *(uintptr_t*)ptr;
+}
+static inline uintptr_t GetVirtualFunctionTableFunction(uintptr_t vftbl, uint32_t offset) {
+	return ((uintptr_t*)vftbl)[offset];
+}
+static inline uintptr_t GetVirtualFunction(void* ptr, uint32_t offset) {
+	return GetVirtualFunctionTableFunction(GetVirtualFunctionTable(ptr), offset);
+}
+#endif
+
+constexpr VirtualFunctionTable::VirtualFunctionTable(uintptr_t vftbl) :
+	vftbl(vftbl) {
+}
+VirtualFunctionTable::VirtualFunctionTable(void* ptr) :
+	vftbl(GetVfTbl(ptr)) {
+}
+
+uintptr_t VirtualFunctionTable::GetFunctionPtr(uint32_t offset) const {
+	return GetVfTblFn(vftbl, offset);
+}
+
+VirtualFunctionTable::operator uint32_t() const {
+	return vftbl;
+}
+
+VirtualFunctionTable& VirtualFunctionTable::operator=(uintptr_t otherVftbl) {
+	vftbl = otherVftbl;
+	return *this;
+}
+
+bool VirtualFunctionTable::operator==(const VirtualFunctionTable& other) const {
+	return vftbl == other.vftbl;
+}
+bool VirtualFunctionTable::operator!=(const VirtualFunctionTable& other) const {
+	return vftbl != other.vftbl;
+}
+
 /*
 #include "skse64_common/SafeWrite.h"
 

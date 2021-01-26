@@ -49,8 +49,8 @@ public:
 class Log : public OutputBase {
 public:
 	enum FileMode : uint16_t {
-		OVERWRITE = 'w\0',
-		APPEND = 'a\0',
+		OVERWRITE,
+		APPEND,
 	};
 
 	Log(const char* fileName, FileMode mode = OVERWRITE, short tabSize = DEFAULT_TAB_SIZE);
@@ -62,6 +62,7 @@ public:
 	void Close();
 
 private:
-	__forceinline const char* InterpretFileMode(FileMode& mode);
 	inline void CloseFile(FILE*& fdOut);
+
+	static const char* FileModeToString(FileMode mode);
 };

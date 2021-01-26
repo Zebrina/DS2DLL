@@ -1,0 +1,8 @@
+[t:text,n:text_ds2dll_version_template]
+{
+  i draw_order = 85;
+    font_type = b_gui_fnt_16p_ringbearer-gold;
+    justify = right;
+    rect = 39,620,322,643;
+    text = "Version 1.0";
+}

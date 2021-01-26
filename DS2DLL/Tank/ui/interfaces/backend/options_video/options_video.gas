@@ -1,0 +1,244 @@
+[options_video]
+{
+	centered = background;
+	interface = true;
+	[t:dialog_box,n:background]
+	{
+		rect = 150,89,650,511;
+	}
+	[t:button,n:button_defaults]
+	{
+	  b common_control = true;
+		common_template = button_large;
+	  i draw_order = 58;
+	  b help_tool_tip = true;
+		rect = 421,415,610,439;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		[t:text,n:button_defaults_text]
+		{
+		  i draw_order = 68;
+		  i font_size = 12;
+			font_type = b_gui_fnt_12p_ringbearer-gold;
+			justify = center;
+		  i parent_offset = 16;
+			rect = 471,421,571,439;
+			text = "Defaults";
+		}
+		[messages]
+		{
+			onbuttonpress = notify(default_options_video) & playsound(s_ui_fe_bttn_tiny_down);
+		}
+	}
+	[t:button,n:button_texture_filtering]
+	{
+	  b common_control = true;
+		common_template = button_large;
+		disable_color = 0x55FFFFFF;
+	  i draw_order = 15;
+	  b help_tool_tip = true;
+		rect = 421,236,571,260;
+		[t:text,n:button_texture_filtering_text]
+		{
+		  i draw_order = 68;
+		  i font_size = 12;
+			font_type = b_gui_fnt_12p_ringbearer-gold;
+			justify = center;
+		  i parent_offset = 16;
+			rect = 496,242,571,260;
+		}
+		[messages]
+		{
+			onbuttonpress = notify(toggle_option_texture_filtering) & playsound(s_ui_fe_bttn_tiny_down);
+		}
+	}
+	[t:combo_box,n:combo_box_shaders]
+	{
+	  b auto_size = true;
+	  b common_control = true;
+		common_template = combo_box_1;
+	  i draw_order = 200;
+		font_type = b_gui_fnt_12p_ringbearer-gold;
+	  i max_visible_elements = 4;
+		rect = 421,340,571,355;
+	  b show_text = true;
+		text = "";
+	  x text_color = 0xFFFFFFFF;
+	  b truncate = false;
+	}
+	[t:combo_box,n:combo_screen_res]
+	{
+	  b auto_size = true;
+	  b common_control = true;
+		common_template = combo_box_1;
+	  i draw_order = 200;
+		font_type = b_gui_fnt_12p_ringbearer-gold;
+	  b help_tool_tip = true;
+	  i max_visible_elements = 4;
+		rect = 421,167,571,182;
+	  b show_text = true;
+		text = "";
+	  x text_color = 0xFFFFFFFF;
+	  b truncate = false;
+	}
+	[t:combo_box,n:combo_shadows]
+	{
+	  b auto_size = true;
+	  b common_control = true;
+		common_template = combo_box_1;
+	  i draw_order = 100;
+		font_type = b_gui_fnt_12p_ringbearer-gold;
+	  b help_tool_tip = true;
+	  i max_visible_elements = 4;
+		rect = 421,200,571,215;
+	  b show_text = true;
+		text = "";
+	  x text_color = 0xFFFFFFFF;
+	  b truncate = false;
+	}
+	[t:dialog_box,n:options_bg]
+	{
+	  b common_control = true;
+		common_template = dialog_mp_sa-reserve-box;
+	  i draw_order = 10;
+		rect = 182,158,618,452;
+	}
+	[t:slider,n:slider_gamma]
+	{
+	  b common_control = true;
+		common_template = slider_track;
+	  i disable_color = 1442840575;
+	  i draw_order = 20;
+	  b dynamic_button = true;
+	  b help_tool_tip = true;
+	  i max_value = 100;
+	  i min_value = 0;
+		rect = 453,274,537,290;
+	  b repeater_buttons = true;
+		slide_axis = horizontal;
+	  i step_value = 10;
+		uvcoords = 0.000000,0.000000,5.250000,1.000000;
+		[messages]
+		{
+			onbuttonpress = playsound(s_ui_fe_slider_up);
+			onchange = notify(slider_change_gamma);
+			onsliderlostfocus = playsound(s_ui_fe_slider_down);
+		}
+	}
+	[t:slider,n:slider_objectdetail]
+	{
+	  b common_control = true;
+		common_template = slider_track;
+	  i disable_color = 1442840575;
+	  i draw_order = 20;
+	  b dynamic_button = true;
+	  b help_tool_tip = true;
+	  i max_value = 10;
+	  i min_value = 0;
+		rect = 453,307,537,323;
+	  b repeater_buttons = true;
+		slide_axis = horizontal;
+	  i step_value = 1;
+		uvcoords = 0.000000,0.000000,5.250000,1.000000;
+		[messages]
+		{
+			onbuttonpress = playsound(s_ui_fe_slider_up);
+			onchange = notify(slider_change_objectdetail);
+			onsliderlostfocus = playsound(s_ui_fe_slider_down);
+		}
+	}
+	[t:text,n:text_filtering]
+	{
+	  i draw_order = 74;
+	  i font_size = 12;
+		font_type = b_gui_fnt_12p_ringbearer-gold;
+	  b help_tool_tip = true;
+		justify = right;
+		rect = 231,233,401,257;
+		text = "Texture Filtering";
+	}
+	[t:text,n:text_gamma]
+	{
+	  i draw_order = 78;
+	  i font_size = 12;
+		font_type = b_gui_fnt_12p_ringbearer-gold;
+	  b help_tool_tip = true;
+		justify = right;
+		rect = 231,274,401,290;
+		text = "Gamma Correction";
+	}
+	[t:text,n:text_gamma_minus]
+	{
+	  i draw_order = 78;
+	  i font_size = 12;
+		font_type = b_gui_fnt_16p_ringbearer-gold;
+		justify = right;
+		rect = 408,274,424,290;
+		text = "-";
+	}
+	[t:text,n:text_gamma_plus]
+	{
+	  i draw_order = 78;
+	  i font_size = 12;
+		font_type = b_gui_fnt_16p_ringbearer-gold;
+		rect = 568,274,584,290;
+		text = "+";
+	}
+	[t:text,n:text_objectdetail]
+	{
+	  i draw_order = 78;
+	  i font_size = 14;
+		font_type = b_gui_fnt_12p_ringbearer-gold;
+	  b help_tool_tip = true;
+		justify = right;
+		rect = 231,307,401,323;
+		text = "Object Detail";
+	}
+	[t:text,n:text_objectdetail_minus]
+	{
+	  i draw_order = 78;
+	  i font_size = 12;
+		font_type = b_gui_fnt_16p_ringbearer-gold;
+		justify = right;
+		rect = 408,307,424,323;
+		text = "-";
+	}
+	[t:text,n:text_objectdetail_plus]
+	{
+	  i draw_order = 78;
+	  i font_size = 12;
+		font_type = b_gui_fnt_16p_ringbearer-gold;
+		rect = 568,307,584,323;
+		text = "+";
+	}
+	[t:text,n:text_screen_res]
+	{
+	  i draw_order = 70;
+	  i font_size = 12;
+		font_type = b_gui_fnt_12p_ringbearer-gold;
+	  b help_tool_tip = true;
+		justify = right;
+		rect = 231,167,401,183;
+		text = "Screen Resolution";
+	}
+	[t:text,n:text_shaders]
+	{
+	  i draw_order = 72;
+	  i font_size = 12;
+		font_type = b_gui_fnt_12p_ringbearer-gold;
+	  b help_tool_tip = true;
+		justify = right;
+		rect = 131,334,401,358;
+		text = "Shaders";
+	}
+	[t:text,n:text_shadows]
+	{
+	  i draw_order = 73;
+	  i font_size = 12;
+		font_type = b_gui_fnt_12p_ringbearer-gold;
+	  b help_tool_tip = true;
+		justify = right;
+		rect = 231,200,401,216;
+		text = "Shadows";
+	}
+}

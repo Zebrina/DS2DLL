@@ -106,7 +106,7 @@ void Print::Close() {
 #pragma warning(push)
 #pragma warning(disable: 4996)
 Log::Log(const char* fileName, FileMode mode, short tabSize) :
-	OutputBase(fopen(fileName, InterpretFileMode(mode)), tabSize) {
+	OutputBase(fopen(fileName, FileModeToString(mode)), tabSize) {
 }
 #pragma warning(pop)
 Log::Log(Log&& other) :
@@ -119,7 +119,7 @@ Log::~Log() {
 
 errno_t Log::Open(const char* fileName, FileMode mode) {
 	CloseFile(fd);
-	return fopen_s(&fd, fileName, InterpretFileMode(mode));
+	return fopen_s(&fd, fileName, FileModeToString(mode));
 }
 
 void Log::Close() {
@@ -127,11 +127,19 @@ void Log::Close() {
 	fd = nullptr;
 }
 
-__forceinline const char* Log::InterpretFileMode(FileMode& mode) {
-	return (const char*)&mode;
-}
 inline void Log::CloseFile(FILE*& fdOut) {
 	if (fd) {
 		fclose(fd);
+	}
+}
+
+const char* Log::FileModeToString(FileMode mode) {
+	switch (mode) {
+	case OVERWRITE:
+		return "w";
+	case APPEND:
+		return "a";
+	default:
+		return "";
 	}
 }

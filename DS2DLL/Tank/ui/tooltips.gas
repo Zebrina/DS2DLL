@@ -1,0 +1,973 @@
+///////////////////////////////////////////////////////////////////////
+//
+// tooltips.gas
+//
+// Contains static rollover help for all UI windows.
+//
+///////////////////////////////////////////////////////////////////////
+
+
+[tooltips]
+{
+	default_tooltip_gui = gui_tooltip;
+
+///////////////////////////////////////////////////////////////////////
+// Frontend
+
+[multiplayer_provider]
+{
+	help_textbox = frontend_help;
+	[help]
+	{
+		button_network = "Host or join a game across a local area network";
+		button_internet = "Host or join a game on the Internet";
+		button_gamespy = "Host or join a game on the Internet using a Vault character";
+		button_back		= "Back to the Main Menu";
+	}
+}
+
+[main_menu]
+{
+	help_textbox = frontend_help_main_menu;
+	[help]
+	{
+		button_single_player = "Enter the World of Dungeon Siege II (single player campaign)";
+		button_multiplayer = "Enter the World of Dungeon Siege II (network campaign)";
+		button_options = "Configure the video, audio, input, and game settings";
+		button_continue = "Resume the most recently saved single player campaign";	// $$ DJA - Clicking the character or the text should continue
+		button_about_bg = "View the Dungeon Siege II version and product support ID";
+		button_exit = "Exit to Windows";
+	}
+}
+
+[single_player]
+{
+	help_textbox = frontend_help;
+	[help]
+	{
+		button_party_left = "Previous character";
+		button_party_right = "Next character";
+		button_delete = "Delete this character";
+		button_create_new = "Create a new character";	// $$ DJA - Text is not wired to button
+		button_back = "Back to the Main Menu";
+		button_back_import = "Back to Character Select";
+		button_next = "Continue with this character";
+		button_import = "Import Dungeon Siege 2 Hero";
+		button_convert = "Convert selected Hero";
+	}
+}
+
+[create_party]
+{
+	help_textbox = frontend_help;
+	[help]
+	{
+//		character_background = "Hold the left mouse button and move the mouse to rotate your character";
+		text_race = "Click the arrows to select your hero's race";				// Should appear over entire race box
+		text_gender = "Click the arrows to select your hero's gender";			// Should appear over entire gender box
+		text_look = "Click the arrows to select your hero's appearance";	// Should appear over entire appearance box
+		text_hair = "Click the arrows to select your hero's hair style";	// Should appear over entire hair style box
+		text_hair_color = "Click the arrows to select your hero's hair color";	// Should appear over entire hair color box
+		name_edit_box = "Type your hero's name";
+		button_back = "Back to Character Select";
+		button_back_main = "Back to Main Menu";
+		button_next = "Continue with this character";
+	}
+}
+
+[map_chooser]
+{
+	help_textbox = frontend_help;
+	[help]
+	{
+		button_back = "Back to Character Select";
+		button_next = "Continue with the selected map";
+	}
+}
+
+[load_game]
+{
+	help_textbox = frontend_help;
+	[help]
+	{
+//		button_saved_games = "Show saved games";
+//		button_bookmarks = "Show unlocked bookmark games";
+		button_mercenary = "Select difficulty\nMercenary - for new adventurers";
+		button_veteran = "Select difficulty\nVeteran - complete Mercenary to unlock";
+		button_elite = "Select difficulty\nElite - complete Veteran to unlock";
+//		load_game_listbox = "Select the campaign to resume";
+//		map_image = "World map";
+		button_back = "Back to Select Map";
+		button_back_no_maps = "Back to Character Select";
+		button_next = "Start selected game";
+	}
+}
+
+[difficulty_menu]
+{
+	help_textbox = frontend_help;
+	[help]
+	{
+		button_easy = "DEPRECATED - Will not be available once the UI layout is adjusted.";
+		button_normal = "Normal mode is a balanced challenge for new and experienced players.  Both you and your opponents deal normal damage and there are many treasures to find on your journey";
+		button_hard = "Brutal mode is an extreme challenge for hardcore players.  Your foes are more deadly and harder to kill, but the most powerful artifacts can only be found in Brutal mode.";
+		button_back = "Back to Select Difficulty";
+	}
+}
+
+///////////////////////////////////////////////////////////////////////
+// Options
+
+[options]
+{
+	[tips]
+	{
+		button_cancel = "Discard all changes and close Options interface";
+		button_ok = "Accept all changes and close Options interface";
+		tab_audio = "View Audio related options";
+		tab_game = "View Game related options";
+		tab_input = "View Input related options";
+		tab_video = "View Video related options";
+	}
+}
+
+[options_video]
+{
+	[tips]
+	{
+		combo_screen_res = "Select the screen resolution and color depth";
+		text_screen_res = "Select the screen resolution and color depth";
+		combo_shadows = "Select the detail level of shadows, from no shadows to complex shadowing";
+		text_shadows = "Select the detail level of shadows, from no shadows to complex shadowing";
+		button_texture_filtering = "Select either bilinear filtering or the more realistic and 3D-card-intensive trilinear filtering";
+		text_filtering = "Select either bilinear filtering or the more realistic and 3D-card-intensive trilinear filtering";
+		slider_gamma = "Adjust the brightness of Dungeon Siege II";
+		text_gamma = "Adjust the brightness of Dungeon Siege II";
+		slider_objectdetail = "Select the level of detail for background objects like trees, rocks, benches, etc";
+		text_objectdetail = "Select the level of detail for background objects like trees, rocks, benches, etc";
+		button_defaults = "Restore the default video settings";
+		combo_box_shaders = "Select the level of shading in the game";
+		text_shaders = "Select the level of shading in the game";
+		button_ok = "Press to accept settings";
+		button_cancel = "Press to cancel settings";
+	}
+}
+
+[options_audio]
+{
+	tip_textbox = gui_tooltip;
+	[tips]
+	{
+		button_sound = "Turn all sounds and music on or off";
+		text_sound = "Turn all sounds and music on or off";
+		slider_mastervolume = "Set the overall volume of sounds and music";
+		text_mastervolume = "Set the overall volume of sounds and music";
+		slider_musicvolume = "Set the volume of music";
+		text_musicvolume = "Set the volume of music";
+		slider_sfxvolume = "Set the volume of sound effects";
+		text_sfxvolume = "Set the volume of sound effects";
+		slider_ambientvolume = "Set the volume of ambient background sounds like birdsong, wind, and fires";
+		text_ambientvolume = "Set the volume of ambient background sounds like birdsong, wind, and fires";
+		slider_voicevolume = "Set the volume of character voices";
+		text_voicevolume = "Set the volume of character voices";
+		button_defaults = "Restore the default audio settings";
+
+		button_ok = "Press to accept settings";
+		button_cancel = "Press to cancel settings";
+		button_eax = "Take advantage of EAX(tm) enhanced audio technology on compatible sound cards";
+		text_eax = "Take advantage of EAX(tm) enhanced audio technology on compatible sound cards";
+	}
+}
+
+[options_input]
+{
+	tip_textbox = gui_tooltip;
+	[tips]
+	{
+//		button_flip_mouse = "Select the mouse button used to move, attack, and pick up items";
+//		button_flip_mouse_text = "Select the mouse button used to move, attack, and pick up items";
+		button_flip_mouse		= "Change the functionality of right & left click for all game-actions (not UI)";
+		text_mouse_flip	= "Change the functionality of right & left click for all game-actions (not UI)";
+		button_inverse_camera_x = "Invert the horizontal camera controls";
+		text_camera_flip_x = "Invert the horizontal camera controls";
+		button_inverse_y_camera = "Invert the vertical camera controls";
+		text_camera_y_flip = "Invert the vertical camera controls";
+		button_screen_edge_tracking = "Set whether the camera pans when the mouse is moved to the screen edge";
+		text_screen_edge_tracking = "Set whether the camera pans when the mouse is moved to the screen edge";
+		slider_camera_sensitivity = "Set the camera panning rate";
+		text_camera_sensitivity = "Set the camera panning rate";
+		slider_mouse_sensitivity = "Set the mouse pointer speed";
+		text_mouse_sensitivity = "Set the mouse pointer speed";
+		button_bindings = "Customize the keyboard settings";
+		text_bindings = "Customize the keyboard settings";
+		button_defaults = "Restore the default input settings";
+		button_lock_camera_x = "Lock the rotation of the camera";
+		text_lock_camera_x = "Lock the rotation of the camera";
+		button_lock_camera_y = "Lock the pitch of the camera";
+		text_lock_camera_y = "Lock the pitch of the camera";
+
+		button_ok = "Press to accept settings";
+		button_cancel = "Press to cancel settings";
+	}
+}
+
+[options_bindings]
+{
+	tip_textbox = gui_tooltip;
+	[tips]
+	{
+		button_defaults = "Restore the default hotkey settings";
+		button_back = "Return to Input options";
+
+		button_ok = "Press to accept settings";
+		button_cancel = "Press to cancel settings";
+	}
+}
+
+[options_game]
+{
+	tip_textbox = gui_tooltip;
+	[tips]
+	{
+		button_back = "Show page 1 of game options";
+		button_more = "show page 2 of game options";
+		button_framerate = "Turn the framerate display on or off";
+		text_framerate = "Turn the framerate display on or off";
+		button_showtooltips = "Turn rollover information on or off";
+		text_showtooltips = "Turn rollover information on or off";
+		slider_gamespeed = "Set how quickly time passes in the game";
+		text_gamespeed = "Set how quickly time passes in the game";
+		slider_textscroll = "Set the scroll rate of on-screen dialog text";
+		text_textscroll = "Set the scroll rate of on-screen dialog text";
+		slider_maxtext = "Set the amount of dialog text displayed";
+		text_maxtext = "Set the amount of dialog text displayed";
+		button_defaults = "Restore the default game settings";
+		button_tutorial_tips = "Turn the tutorial tips on or off";
+		text_tutorial_tips = "Turn the tutorial tips on or off";
+		combo_box_difficulty = "Select the game's difficulty";
+		text_difficulty = "Select the game's difficulty";
+		button_dismemberment = "Turn dismemberment on or off";
+		text_dismemberment = "Turn dismemberment on or off";
+		button_item_filters = "Customize which items display labels";
+		text_item_filters = "Customize which items display labels";
+		combo_box_blood_color = "Select how blood is displayed in the game";
+		text_blood_color = "Select how blood is displayed in the game";
+		button_priority_boost = "Sets Dungeon Siege II to highest priority in Windows";
+		text_priority_boost = "Sets Dungeon Siege II to highest priority in Windows";
+		button_run_in_background = "Keep Dungeon Siege II running while tabbed out";
+		text_run_in_background = "Keep Dungeon Siege II running while tabbed out";
+		button_share_experience = "Turn experience sharing among party members on or off";
+		text_share_experience = "Turn experience sharing among party members on or off";
+		button_reset_dialogs = "Reset all hidden help dialogs so they will display as if starting a new game";
+		window_reset_dialogs = "Reset all hidden help dialogs so they will display as if starting a new game";
+		window_attack_automation = "Turn attack automation on or off for your selected hero (only available from within the game)";
+		button_attack_automation = "Turn attack automation on or off for your selected hero (only available from within the game)";
+		window_defend_automation = "Turn defend automation on or off for your selected hero (only available from within the game)";
+		button_defend_automation = "Turn defend automation on or off for your selected hero (only available from within the game)";
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////
+// Multiplayer
+
+[lobby]
+{
+	[tips]
+	{
+		button_choose_party = "Select party to use in multiplayer games";
+		button_exit = "Exit multiplayer lobby";
+//		button_instant_action = "Let matchmaking service select game for you";
+		button_options = "Multiplayer options";
+		button_login = "Sign in with a GameSpy profile to access your friends list";
+		tab_buddylist = "View Friends list";
+		tab_chatroom = "View players in current chat room";
+		tab_chat = "View internet chat rooms";
+		tab_games = "View multiplayer games";
+		button_send_message = "Send message";
+		button_add_buddy = "Add new buddy to your friends list";
+		button_remove_buddy = "Remove selected buddy from your friends list";
+	}
+}
+
+[lobby_gamelist_groups]
+{
+	[tips]
+	{
+		listreport_grouplist = "Multiplayer portal list - double click a portal to enter";
+		button_join_group = "Enter selected multiplayer portal";
+	}
+}
+
+[lobby_gamespy_options]
+{
+	[tips]
+	{
+		button_cancel = "Discard changes and close options";
+		button_gamelist_customize = "Customize game list";
+		button_ok = "Accept changes";
+		checkbox_autoconnect = "Check to autoconnect to Friends list on startup";
+		checkbox_autoconnect_text = "Check to autoconnect to Friends list on startup";
+		button_move_to_available = "Move selected column to Available list";
+		button_move_to_use = "Move selected column to Used list";
+		listbox_columns_available = "Available game information columns";
+		listbox_columns_used = "Game information columns shown in game list";
+		text_used_desc = "Game information columns shown in game list";
+		text_available_text = "Available game information columns";
+	}
+}
+
+[lobby_chat_channel]
+{
+	[tips]
+	{
+		button_create_room = "Create new Internet chat room";
+		button_filter_rooms = "Filter Internet chat room list";
+		button_leave_room = "Exit current Internet chat room";
+		button_refresh_channel_list = "Refresh current Internet chat room list";
+	}
+}
+
+[lobby_chat_filter_rooms]
+{
+	[tips]
+	{
+		button_cancel = "Close filter interface and discard changes";
+		button_ok = "Close interface and apply filter to Internet chat list";
+	}
+}
+
+[lobby_chat_create_room]
+{
+	[tips]
+	{
+		button_cancel = "Close interface and discard changes";
+		button_ok = "Close interface and create a new Internet chat room";
+	}
+}
+
+[lobby_gamelist_games]
+{
+	[tips]
+	{
+		button_gameinfo = "View detailed information about the game that's selected in the game list";
+		button_host_game = "Host a multiplayer game";
+		button_join_game = "Join game that is currently selected in the game list";
+		button_leave_group = "Return to portal selection";
+		button_search = "Customize search criteria to define what games appear in the game listing";
+		button_refresh = "Refresh the game list";
+//		edit_box_game_name = "Only list games that contain this in the name";
+		listreport_gamelist = "Game list - double click a game to join";
+	}
+}
+
+[lobby_gamelist_game_info]
+{
+	[text]
+	{
+		game_name = "Name of the game";
+		map = "Name of the map played in this game";
+		world_diff = "Difficulty set in this game";
+		gamediff = "Game difficulty set in this game";
+		connection = "Connection indicator of this game";
+		ave_party_lvl = "Average level of the party used by the host of this game";
+		num_players = "Current and Maximum number of players in this game";
+		num_characters = "Current and Maximum number of characters used in this game";
+		hero_level = "Level of the host's main character";
+		share_gold = "Is gold sharing enabled in this game";
+		new_characters = "Are only new characters allowed in this game";
+		max_party_size = "Maximum number of characters allowed per player in this game";
+	}
+
+	[tips]
+	{
+		button_back = "Return to game list";
+		button_join_game = "Join this game";
+
+		game_name_desc_text = @game_name;
+		game_name = @game_name;
+		map_desc_text =@map;
+		map = @map;
+		world_difficulty_desc_text = @world_diff;
+		world_difficulty = @world_diff;
+		game_difficulty_desc_text = @gamediff;
+		game_difficulty = @gamediff;
+		connection_speed_desc_text = @connection;
+		game_connection_speed = @connection;
+		ave_party_lvl_desc_text = @ave_party_lvl;
+		ave_party_lvl = @ave_party_lvl;
+		char_lvl_desc_text = @hero_level;
+		char_lvl = @hero_level;
+		num_players_desc_text = @num_players;
+		num_players = @num_players;
+		num_players_out_of_desc_text = @num_players;
+		num_players_out_of = @num_players;
+		num_characters_desc_text = @num_characters;
+		num_characters = @num_characters;
+		num_characters_out_of_desc_text = @num_characters;
+		num_characters_out = @num_characters;
+		num_char_per_party_desc_text = @max_party_size;
+		num_char_per_party = @max_party_size;
+		share_gold_desc_text = @share_gold;
+		share_gold = @share_gold;
+		new_characters_only_desc_text = @new_characters;
+		new_characters_only = @new_characters;
+	}
+}
+
+[lobby_gamelist_search]
+{
+	[text]
+	{
+		map = "Select map name to use as filter in the main game list";
+		worlddiff = "Select difficulty to use as filter in the main game list";
+		connection = "Select connection speed to use as filter in the main game list";
+		share_gold = "Select gold sharing level to use as filter in the main game list";
+		use_char_lvl_limit = "Check to use character level limit as filter option";
+		use_ave_party_lvl_limit = "Check to use party level limit as filter option";
+		charlvl_from = "Enter minimum character level";
+		charlvl_to = "Enter maximum character level";
+		partylvl_from = "Enter minimum party level";
+		partylvl_to = "Enter maximum party level";
+	}
+
+	[tips]
+	{
+		button_cancel = "Close Search panel and return to the game list";
+		button_restore = "Restore all search parameters to default";
+		button_search = "Use selected search options to find available games";
+		button_advsearch = "Switch to Advanced Search panel";
+
+		text_map = @map;
+		combo_box_map = @map;
+		combo_box_worlddiff = @worlddiff;
+		text_world_diff = @worlddiff;
+		combo_box_connection = @connection;
+		text_connection_speed = @connection;
+		combo_box_share_gold = @share_gold;
+		text_gold_share_desc = @share_gold;
+		checkbox_use_char_lvl_limit = @use_char_lvl_limit;
+		text_character_level_limit = @use_char_lvl_limit;
+		checkbox_use_ave_party_lvl_limit = @use_ave_party_lvl_limit;
+		text_party_level_limit = @use_ave_party_lvl_limit;
+		edit_box_charlvl_from = @charlvl_from;
+		text_char_lvl_limit_from = @charlvl_from;
+		text_char_lvl_limit_to = @charlvl_to;
+		edit_box_charlvl_to = @charlvl_to;
+		edit_box_partylvl_from = @partylvl_from;
+		text_party_lvl_limit_from = @partylvl_from;
+		edit_box_partylvl_to = @partylvl_to;
+		text_party_lvl_limit_to = @partylvl_to;
+	}
+}
+
+[lobby_gamelist_advsearch]
+{
+	[text]
+	{
+		map = "Select map name to use as filter in the main game list";
+		worlddiff = "Select difficulty to use as filter in the main game list";
+		connection = "Select connection speed to use as filter in the main game list";
+		share_gold = "Select gold sharing level to use as filter in the main game list";
+		use_char_lvl_limit = "Check to use character level limit as filter option";
+		use_ave_party_lvl_limit = "Check to use party level limit as filter option";
+		charlvl_from = "Enter minimum character level";
+		charlvl_to = "Enter maximum character level";
+		partylvl_from = "Enter minimum party level";
+		partylvl_to = "Enter maximum party level";
+		charlvl_from = "Enter minimum character level";
+		charlvl_to = "Enter maximum character level";
+		partylvl_from = "Enter minimum party level";
+		partylvl_to = "Enter maximum party level";
+		full_game = "Select if you would like to filter full games";
+		password = "Select if you would like to filter password protected games";
+		game_name = "Enter name of a game as a filter option";
+		game_modes = "Select game mode to use as filter option";
+		gamediff = "Select game difficulty to use as filter option";
+		mods= "Select user created mods to use as a filter option";
+	}
+
+	[tips]
+	{
+		checkbox_use_char_lvl_limit = @use_char_lvl_limit;
+		checkbox_use_ave_party_lvl_limit = @use_ave_party_lvl_limit;
+		text_gold_share_desc = @share_gold;
+		text_full_games_desc = @full_game;
+		text_password_desc = @password;
+		text_party_level_limit_from_desc= @partylvl_from;
+		text_party_level_limit_to_desc= @partylvl_to;
+		text_char_level_limit_from_desc = @charlvl_from;
+		text_char_level_limit_to_desc = @charlvl_to;
+		text_map_desc = @map;
+		text_world_diff = @worlddiff;
+		text_game_diff_desc = @gamediff;
+		connect_desc_text = @connection;
+		text_game_mode_desc = @game_modes;
+		text_game_name_desc = @game_name;
+		text_mods_desc = @mods;
+		text_char_lvl_desc = @use_char_lvl_limit;
+		text_party_lvl_desc = @use_ave_party_lvl_limit;
+		combo_box_mods = @mods;
+		combo_box_game_modes = @game_modes;
+		combo_box_connection = @connection;
+		combo_box_gamediff = @gamediff;
+		combo_box_map = @map;
+		combo_box_worlddiff = @worlddiff;
+		combo_box_share_gold = @share_gold;
+		combo_box_full_games = @full_game;
+		combo_box_password = @password;
+		edit_box_gamename = @game_name;
+		edit_box_partylvl_from = @partylvl_from;
+		edit_box_partylvl_to = @partylvl_to;
+		edit_box_charlvl_from = @charlvl_from;
+		edit_box_charlvl_to = @charlvl_to;
+
+		button_cancel = "Close Advanced Search panel and return to the game list";
+		button_restore = "Restore all search parameters to default";
+		button_search = "Use selected search options to find available games";
+		button_simplesearch = "Switch to Simple Search panel";
+	}
+}
+
+[host_game]
+{
+	[tips]
+	{
+		button_ok = "Host this multiplayer game";
+		button_cancel = "Cancel the creation of this multiplayer game";
+		combo_box_modes = "Select Game Mode for this game";
+		game_mode_text = "Select Game Mode for this game";
+		game_name_edit_box = "Enter name of this game";
+		host_game_name = "Enter name of this game";
+		game_password_edit_box = "Enter password for this game if you would like this game to be password protected";
+		game_password_text = "Enter password for this game if you would like this game to be password protected";
+		text_box_mode_description = "Description of the selected game mode";
+	}
+}
+
+[staging_area]
+{
+	[tips]
+	{
+		button_map_settings = "View and change the Map Settings (only the host may change these)";
+		button_game_settings = "View and change the Game Settings (only the host may change these)";
+		staging_area_chat_editbox = "Type messages here, and then press Enter to send";
+		staging_checkbox_ready = "Click when you are ready to start the game";
+		checkbox_ready_text = "Click when you are ready to start the game";
+		staging_area_button_start_game = "Click to start the game";
+		staging_area_button_leave_game = "Click to leave the game";
+		staging_area_button_join_game = "Click to join the game";
+		staging_game_settings_listbox = "View Game Settings, as configured by the host";
+		button_login = "Sign in with a GameSpy profile to access your friends list";
+		tab_buddylist = "View Friends list";
+		tab_chatroom = "View players in current chat room";
+		button_add_buddy = "Add new buddy to your friends list";
+		button_remove_buddy = "Remove selected buddy from your friends list";
+		button_send_message = "Send message";
+		button_notready = "Cancel your ready state";
+		button_ready = "Set ready so you can join the host as soon as the game is ready";
+	}
+}
+
+[end_game_summary]
+{
+	[text]
+	{
+		show_player_trend_line_text = "Toggle the display of this character's line";
+	}
+
+	[tips]
+	{
+		end_game_chat_editbox = "Type messages here, and then press Enter to send";
+		end_game_return_to_staging = "Return to the Staging Area for another game";
+		button_login = "Sign in with a GameSpy profile to access your friends list";
+		tab_buddylist = "View Friends list";
+		tab_chatroom = "View players in current chat room";
+		button_add_buddy = "Add new buddy to your friends list";
+		button_remove_buddy = "Remove selected buddy from your friends list";
+		button_send_message = "Send message";
+		end_game_close = "Close the Game Summary screen and return to Main Menu";
+
+		player1name_checkbox = @show_player_trend_line_text;
+		player1name = @show_player_trend_line_text;
+		player2name_checkbox = @show_player_trend_line_text;
+		player2name = @show_player_trend_line_text;
+		player3name_checkbox = @show_player_trend_line_text;
+		player3name = @show_player_trend_line_text;
+		player4name_checkbox = @show_player_trend_line_text;
+		player4name = @show_player_trend_line_text;
+		player5name_checkbox = @show_player_trend_line_text;
+		player5name = @show_player_trend_line_text;
+		player6name_checkbox = @show_player_trend_line_text;
+		player6name = @show_player_trend_line_text;
+		player7name_checkbox = @show_player_trend_line_text;
+		player7name = @show_player_trend_line_text;
+		player8name_checkbox = @show_player_trend_line_text;
+		player8name = @show_player_trend_line_text;
+	}
+}
+
+[end_game_summary_stats]
+{
+	[tips]
+	{
+		button_timeline = "Show a graphical representation of the game statistics";
+		kills_header = "kills tool tip";
+		deaths_header = "deaths tool tip";
+		melee_gained_header = "Melee levels gained this game";
+		ranged_gained_header = "Ranged levels gained this game";
+		cmagic_gained_header = "Combat Magic levels gained this game";
+		nmagic_gained_header = "Nature Magic levels gained this game";
+		experience_gained_header = "experience_gained tool tip";
+		gold_gained_header = "gold_gained tool tip";
+		loot_gained_header = "loot_gained tool tip";
+		loot_value_header = "loot_value tool tip";
+		stat_header_header = "default stat header helper";
+	}
+}
+
+[end_game_summary_timeline]
+{
+	[tips]
+	{
+		details_radio1 = "Number of monsters killed this game";
+		details_radio1_text = "Number of monsters killed this game";
+		details_radio2 = "Number of deaths this game";
+		details_radio2_text = "Number of deaths this game";
+		details_radio3 = "Melee levels gained this game";
+		details_radio3_text = "Melee levels gained this game";
+		details_radio4 = "Ranged levels gained this game";
+		details_radio4_text = "Ranged levels gained this game";
+		details_radio5 = "Combat Magic levels gained this game";
+		details_radio5_text = "Combat Magic levels gained this game";
+		details_radio6 = "Nature Magic levels gained this game";
+		details_radio6_text = "Nature Magic levels gained this game";
+		details_radio7 = "Gold acquired from monsters and chests";
+		details_radio7_text = "Gold acquired from monsters and chests";
+		details_radio8 = "Items acquired from monsters and chests";
+		details_radio8_text = "Items acquired from monsters and chests";
+		details_radio9 = "Total value of items acquired from monsters and chests";
+		details_radio9_text = "Total value of items acquired from monsters and chests";
+
+		timeline_button_stats = "Show a summary of game statistics";
+	}
+}
+
+[staging_area_players]
+{
+	// shared help text between multiple windows
+	[text]
+	{
+		status_ingame = "This player is currently in-game";
+		player_ready = "Indicates this player is ready to begin the game";
+		player_ping = "Indicates the connection speed between you and this player";
+		man_party = "Click to manage your active party";
+		view_party = "Click to view details about your active party";
+		player_map = "Indicates map";
+		player_level = "Indicates player hero level";
+		player_character = "Indicates player's party name";
+		player_party_size = "Indicates player's party size";
+		party_name = "Indicates player name";
+		map_name = "Indicates active map on the server";
+	}
+
+	[tips]
+	{
+		player1_ingame = @status_ingame;
+		player2_ingame = @status_ingame;
+		player3_ingame = @status_ingame;
+		player4_ingame = @status_ingame;
+		player5_ingame = @status_ingame;
+		player6_ingame = @status_ingame;
+		player7_ingame = @status_ingame;
+		player8_ingame = @status_ingame;
+
+		player1_ready = @player_ready;
+		player2_ready = @player_ready;
+		player3_ready = @player_ready;
+		player4_ready = @player_ready;
+		player5_ready = @player_ready;
+		player6_ready = @player_ready;
+		player7_ready = @player_ready;
+		player8_ready = @player_ready;
+
+		player1_ping = @player_ping;
+		player2_ping = @player_ping;
+		player3_ping = @player_ping;
+		player4_ping = @player_ping;
+		player5_ping = @player_ping;
+		player6_ping = @player_ping;
+		player7_ping = @player_ping;
+		player8_ping = @player_ping;
+
+		button_man_party1 = @man_party;
+		button_view_party1 = @view_party;
+
+		map_1_text = @player_map;
+		map_2_text = @player_map;
+		map_3_text = @player_map;
+		map_4_text = @player_map;
+		map_5_text = @player_map;
+		map_6_text = @player_map;
+		map_7_text = @player_map;
+		map_8_text = @player_map;
+
+		level1_text = @player_level;
+		level2_text = @player_level;
+		level3_text = @player_level;
+		level4_text = @player_level;
+		level5_text = @player_level;
+		level6_text = @player_level;
+		level7_text = @player_level;
+		level8_text = @player_level;
+
+		character1_text = @player_character;
+		character2_text = @player_character;
+		character3_text = @player_character;
+		character4_text = @player_character;
+		character5_text = @player_character;
+		character6_text = @player_character;
+		character7_text = @player_character;
+		character8_text = @player_character;
+
+		party_size1_text = @player_party_size;
+		party_size2_text = @player_party_size;
+		party_size3_text = @player_party_size;
+		party_size4_text = @player_party_size;
+		party_size5_text = @player_party_size;
+		party_size6_text = @player_party_size;
+		party_size7_text = @player_party_size;
+		party_size8_text = @player_party_size;
+
+		player_nick_1_text = @party_name;
+		player_nick_2_text = @party_name;
+		player_nick_3_text = @party_name;
+		player_nick_4_text = @party_name;
+		player_nick_5_text = @party_name;
+		player_nick_6_text = @party_name;
+		player_nick_7_text = @party_name;
+		player_nick_8_text = @party_name;
+	}
+}
+
+[staging_area_party_details]
+{
+	[text]
+	{
+		cmagic = "Indicates combat magic level of the character";
+		melee = "Indicates melee level of the character";
+		nmagic = "Indicates nature magic level of the character";
+		ranged = "Indicates ranged level of the character";
+		character_name = "Name of the character";
+		class_name = "Indicates class of the character";
+	}
+
+	[tips]
+	{
+		staging_character_cancel = "Close party details screen and return to player list screen";
+
+		character0_cmagic = @cmagic;
+		character0_icon_cmagic = @cmagic;
+		character0_icon_melee = @melee;
+		character0_icon_nmagic = @nmagic;
+		character0_icon_ranged = @ranged;
+		character0_melee = @melee;
+		character0_name = @character_name;
+		character0_nmagic = @nmagic;
+		character0_ranged = @ranged;
+		character0_skills = @class_name;
+
+		character1_cmagic = @cmagic;
+		character1_icon_cmagic = @cmagic;
+		character1_icon_melee = @melee;
+		character1_icon_nmagic = @nmagic;
+		character1_icon_ranged = @ranged;
+		character1_melee = @melee;
+		character1_name = @character_name;
+		character1_nmagic = @nmagic;
+		character1_ranged = @ranged;
+		character1_skills = @class_name;
+
+		character2_cmagic = @cmagic;
+		character2_icon_cmagic = @cmagic;
+		character2_icon_melee = @melee;
+		character2_icon_nmagic = @nmagic;
+		character2_icon_ranged = @ranged;
+		character2_melee = @melee;
+		character2_name = @character_name;
+		character2_nmagic = @nmagic;
+		character2_ranged = @ranged;
+		character2_skills = @class_name;
+
+		character3_cmagic = @cmagic;
+		character3_icon_cmagic = @cmagic;
+		character3_icon_melee = @melee;
+		character3_icon_nmagic = @nmagic;
+		character3_icon_ranged = @ranged;
+		character3_melee = @melee;
+		character3_name = @character_name;
+		character3_nmagic = @nmagic;
+		character3_ranged = @ranged;
+		character3_skills = @class_name;
+	}
+}
+
+[staging_area_party_manager]
+{
+	[tips]
+	{
+		button_move_to_active = "Move selected character from reserve list to active roster";
+		button_move_to_reserve = "Move selected character from active roster to reserve list";
+		staging_character_ok = "Accept changes and return to player list";
+		staging_character_cancel = "Discard changes and return to player list";
+		listreport_reserve_party = "All available party characters";
+		text_available_slots = "Number of available slots reserved for your characters in this game";
+		text_party_header = "List of active characters that will be loaded when the game starts";
+		text_inn_header = "List of available party characters that are not in the active roster";
+	}
+}
+
+[staging_area_map_settings]
+{
+	[tips]
+	{
+		staging_button_accept_map = "Accept these settings";
+		staging_button_cancel_map = "Cancel these settings";
+		map_world_background = "Select the difficulty";
+		tab_world_bookmarks = "View bookmarks available for currently active map";
+		tab_world_saves = "View save files available for currently active map";
+		button_change_map = "Change current active map";
+		combo_map_world = "Select difficulty if available";
+		map_world_text = "Select difficulty if available";
+		listbox_map_bookmarks = "Select bookmark to load when the game starts";
+		listbox_map_saves = "Select saved game to load when the game starts";
+		text_box_bookmark_description = "Detailed description of a selected bookmark";
+		active_map_name_text = "Name of the active map that will be loaded when the game starts";
+	}
+}
+
+[staging_area_map_select]
+{
+	[tips]
+	{
+		button_select = "Set selected map as active";
+		staging_map_list = "List of available maps";
+		map_description_text = "Detailed description of a selected map";
+
+	}
+}
+
+[staging_area_change_password]
+{
+	[tips]
+	{
+	button_ok = "Change password";
+	button_cancel = "Cancel changes";
+	}
+}
+
+[staging_area_game_settings]
+{
+	[tips]
+	{
+		checkbox_gold_sharing = "When enabled, grouped parties will evenly split gold they pick up";
+		gold_sharing_text_desc = "When enabled, grouped parties will evenly split gold they pick up";
+		window_gold_sharing = "When enabled, grouped parties will evenly split gold they pick up";
+
+		combo_difficulty = "Select the difficulty level of the game";
+		difficulty_text = "Select the difficulty level of the game";
+
+		checkbox_allow_player_pausing = "Allow all players to be able to pause the game";
+		player_pausing_text_desc = "Allow all players to be able to pause the game";
+		window_allow_player_pausing = "Allow all players to be able to pause the game";
+
+		checkbox_restrict_players_to_new_characters = "If enabled, players can only use brand new characters in this game";
+		new_characters_only_text_desc = "If enabled, players can only use brand new characters in this game";
+
+		staging_button_accept_game = "Accept these settings";
+		staging_button_cancel_game = "Cancel without saving changes";
+
+		staging_button_change_password = "Click to edit or remove the password for this game";
+
+		player_game_mode_label = "Current active game mode";
+		text_game_mode = "Current active game mode";
+
+		text_max_party_output = "Maximum number of characters in a single party";
+		text_party_size_desc = "Maximum number of characters in a single party";
+
+		player_limit_text = "Maximum number of players that can join this game";
+		text_player_limit = "Maximum number of players that can join this game";
+
+		text_max_char_output = "Total maximum number of characters in this game";
+		text_characters_desc = "Total maximum number of characters in this game";
+	}
+}
+
+[profile_party_select]
+{
+	[tips]
+	{
+		button_cancel = "Discard changes and close this interface";
+		button_ok = "Set selected party as active and close interface";
+		button_copy_party = "Copy selected party";
+		button_create_new_party = "Create a new party";
+		button_delete_party = "Delete selected party";
+		button_download_party = "Download selected party to local computer";
+		button_import_party = "Import single player party to Multiplayer";
+		button_refresh_party_list = "Refresh list of available parties stored on remote server";
+		button_convert_party = "Convert Dungeon Siege 2 party";
+		button_next_party = "View next party";
+		button_prev_party = "View previous party";
+		checkbox_party_preview = "Turn 3D preview of selected party on and off";
+		text_preview = "Turn 3D preview of selected party on and off";
+		party_members_header = "List of party members";
+		text_character_count_header = "Number of characters in a party";
+		text_party_level_header = "Uber lever of the hero character";
+		text_time_played_header = "Amount of time played with this party";
+		text_party_counter = "Number of available parties";
+	}
+}
+
+[profile_party_import]
+{
+	[tips]
+	{
+		button_cancel = "Close this interface";
+		button_import_party = "Import selected party to Multiplayer";
+	}
+}
+
+[profile_party_create]
+{
+	[tips]
+	{
+		button_back = "Discard changes and close this interface";
+		button_race_next = "Cycle to the next character type";
+		button_next_face = "Cycle to the next appearance type";
+		button_prev_face = "Cycle to the previous appearance type";
+		button_next_hair = "Cycle to the next hair color";
+		button_prev_hair = "Cycle to the previous hair color";
+		button_next_gender = "Cycle to the next gender type";
+		button_prev_gender = "Cycle to the previous gender type";
+		button_next_head = "Cycle to the next hair type";
+		button_prev_head = "Cycle to the previous hair type";
+		button_race_back = "Cycle to the previous character type";
+		button_next = "Accept changes and create new party";
+		button_character_zoom_out = "Zoom out to view full character";
+		button_character_zoom_in = "Zoom in to view characters face";
+		//object_view_hero = "Left click on any part of the character to zoom in the camera.\nHold the left button down and move the mouse to rotate the character.\nUse the mouse wheel to zoom the camera in and out";
+	}
+}
+
+[enchanter_store]
+{
+	[tips]
+	{
+		window_item_slot = "DRAG items with 'enchantable' in the title here to enchant in the item slot";
+		window_reagent_grid = "DRAG reagents here after placing an item to enchant";
+		window_enchantments = "List of enchantments the item will receive when enchanted";
+		text_cost_to_enchant = "Cost to enchant item with the chosen reagents";
+	}
+}
+
+} // end tooltips

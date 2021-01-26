@@ -1,15 +1,112 @@
 #pragma once
 
-template <typename T, typename X>
-T Reinterpret(X x) {
-	union U {
-		X x;
-		T t;
-	};
-	U u;
-	u.x = x;
-	return u.t;
+#include "Assembly.h"
+#include "SafeWrite.h"
+
+#define GetVtbl(obj) (*(void***)(obj))
+#define SetVtbl(obj, vtbl) ((*(void**)(obj)) = vtbl)
+
+#define GetVfTbl(ptr) (*(uintptr_t*)(ptr))
+#define GetVfTblFn(vftbl, offset) (((uintptr_t*)(vftbl))[offset])
+#define SetVfTblFn(vftbl, offset, fn) (((uintptr_t*)(vftbl))[offset] = (uintptr_t)fn)
+
+#define CallMember(ptr, fn) ((ptr)->*(fn))
+
+#pragma pack(push, 1)
+
+typedef ushort OpCode16;
+typedef byte OpCode8;
+
+typedef uint Imm32;
+typedef ushort Imm16;
+typedef byte Imm8;
+
+struct MovImmReg8 {
+	byte op;
+	Imm8 imm;
+
+	MovImmReg8(Reg8 reg, Imm8 imm) :
+		op(0xb0 | (byte)reg), imm(imm) {
+	}
+};
+
+STATIC_ASSERT(sizeof(MovImmReg8) == 0x2);
+
+struct MovImmReg16 {
+	ushort op;
+	Imm16 imm;
+	MovImmReg16(Reg16 reg, Imm16 imm) :
+		op(0x66B0 | (ushort)reg), imm(imm) {
+	}
+};
+
+STATIC_ASSERT(sizeof(MovImmReg16) == 0x4);
+
+struct MovImmReg32 {
+	byte op;
+	Imm32 imm;
+	MovImmReg32(Reg32 reg, Imm32 imm) :
+		op(0xb8 | (byte)reg), imm(imm) {
+	}
+};
+
+STATIC_ASSERT(sizeof(MovImmReg32) == 0x5);
+
+template <typename OpCodeT, OpCodeT OpCode, typename ImmT>
+struct OpCodeImm {
+	OpCodeT op;
+	ImmT imm;
+	OpCodeImm(OpCodeT reg, ImmT imm) :
+		op(OpCode | (OpCodeT)reg), imm(imm) {
+	}
+};
+
+typedef OpCodeImm<ushort, 0x83f0, Imm8> CmpReg32Imm8;
+
+template <typename ImmT>
+struct JmpRel {
+	byte op = 0xff;
+	ImmT imm;
+
+	JmpRel(ImmT imm) :
+		imm(imm - (1 + sizeof(ImmT))) {
+	}
+};
+
+class VirtualFunctionTable {
+public:
+	constexpr VirtualFunctionTable(uintptr_t vftbl);
+	explicit VirtualFunctionTable(void* ptr);
+	VirtualFunctionTable(const VirtualFunctionTable&) = default;
+
+	uintptr_t GetFunctionPtr(uint offset) const;
+	template <typename T>
+	T GetFunction(uint offset) const {
+		return (T)GetFunctionPtr(offset);
+	}
+
+	operator uint() const;
+
+	VirtualFunctionTable& operator=(const VirtualFunctionTable&) = default;
+	VirtualFunctionTable& operator=(uintptr_t otherVftbl);
+
+	bool operator==(const VirtualFunctionTable& other) const;
+	bool operator!=(const VirtualFunctionTable& other) const;
+
+private:
+	uintptr_t vftbl;
+};
+
+template <uintptr_t ADDR, typename FDECL>
+FDECL CallVirtualFunctionBase;
+template <uintptr_t ADDR, typename FDECL>
+void HookVirtualFunction(FDECL function) {
+	CallVirtualFunctionBase<ADDR, FDECL> = (FDECL)*(uintptr_t*)ADDR;
+	SafeWrite32(ADDR, (uint)function);
 }
+
+//template <uintptr_t PTR, typename R, typename VA...>
+//R(__thiscall*)(VA...) CallVirtualFunctionBase;
 
 /*
 #include <utility>
@@ -210,7 +307,7 @@ class IntPtr {
 		Mov_ECX_DwordPtrImm = 0x8e8b,
 	};
 	enum OpCode24 : UInt32 {
-		Movzx_BytePtrImm = 0x0db60f,
+		Movzx_BytePtrImm = 0x000db60f,
 	};
 
 	void __stdcall WriteRedirectionHook(IntPtr targetOfHook, IntPtr sourceBegin, IntPtr sourceEnd, UInt32 asmSegSize);
@@ -233,3 +330,5 @@ struct std::hash<MemUtil::IntPtr> {
 
 STATIC_ASSERT(sizeof(MemUtil::IntPtr) == sizeof(UInt64));
 */
+
+#pragma pack(pop)

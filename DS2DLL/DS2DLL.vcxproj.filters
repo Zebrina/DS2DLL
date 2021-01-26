@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Go.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="UIPartyManager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIComboBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIGameConsole.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIInventoryManager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIListbox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIListReport.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIMenuManager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIObjectView.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GoBits.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="GoCloneReq.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="GoComponent.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="GoCreateReq.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="GoDb.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="GoDbImpl.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="GoFlick.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="GoFlickFX.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="UITextureManager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIPetManager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UISkillManager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIWindow.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIBuddyList.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UICamera.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UICharacterSelectMultiplayer.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UICharacterSelectSingleplayer.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIChat.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UICommands.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDialogueHandler.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIEndGame.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIFrontend.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIGame.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIGamespy.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIGridbox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIHostGame.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIItemEnchanterStore.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UILobbyCreateChar.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIMiniGame.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIMultiplayer.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UINews.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIOptions.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIPartyReserveStore.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIPetStore.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIRadioButton.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIShell.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UISkillTrainerStore.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UISkritSupport.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UISlider.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIStagingArea.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIStagingAreaGameSettings.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIStagingAreaMapSettings.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIStagingAreaPartySupport.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIStoreManager.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UITeleport.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIUtility.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIEditBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UITextBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIItem.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIMessage.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UICursor.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIText.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIButton.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIChatBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UICheckbox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIInfoSlot.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIItemSlot.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIPopupMenu.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UITab.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIWindowVec.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UINormalizedRect.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UILine.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GoMath.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="GoDataComponent.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="GoDataTemplate.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldJournal.h">
+      <Filter>Quests/Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestManager.h">
+      <Filter>Quests/Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestData.h">
+      <Filter>Quests/Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskData.h">
+      <Filter>Quests/Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="ActData.h">
+      <Filter>Quests/Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalJournal.h">
+      <Filter>Quests/Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="DllMain.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="StringTool.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginAPI.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemTypeExtension.h">
+      <Filter>Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillTabs.h">
+      <Filter>Extensions\Skills</Filter>
+    </ClInclude>
+    <ClInclude Include="UINativeFonts.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GoidScid.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="GPGSound.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="GridItem.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="DS2DLL.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugLog.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDialogBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIListener.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIStatusBar.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDockBar.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="VirtualFunctionTables.h">
+      <Filter>Disassembly</Filter>
+    </ClInclude>
+    <ClInclude Include="LoaderSettings.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="UIInterface.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GPMath.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="AIAction.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="AIQuery.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalysisResults.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimReq.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="AuditorDb.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="BoneTranslator.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraAgent.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterStats.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="ContentDb.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="CrossOverUtil.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomEffect.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="DecalId.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Enchantment.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Flick.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="FrustumId.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="GameAuditor.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="GameProfile.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSave.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Gamespy.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericId.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="GPConsole.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="GPVersion.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Guid.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIInterface.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="IntColl.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Job.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="JobAttributeBits.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="JobReq.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="JobResult.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="LightId.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="MCP.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Membership.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageDispatch.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Messenger.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Mood.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="MoodSetting.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Nema.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="New.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="PContentDb.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="QtColl.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="RegionId.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Report.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="ReportSys.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="ResHandle.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="ResHandleFields.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Rules.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Services.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="SiegeId.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="SiegePos.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="SiegeRail.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="SiegeRot.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Sim.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticMethods.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Team.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="TeleportInfo.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeColl.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeMgr.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeOfDay.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="TownPortalManager.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="TTMessages.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Victory.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Weather.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldLocation.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldMap.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldMessage.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldOptions.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldPathFinder.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldState.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldTerrain.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldTime.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="ZoneManager.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Formation.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="CRC.h">
+      <Filter>Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="NISManager.h">
+      <Filter>NIS %28Non-Interactive Sequence%29</Filter>
+    </ClInclude>
+    <ClInclude Include="AppModule.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="MohawkGame.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="RapiAppModule.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="NetFuBiReceive.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerNISInfo.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="NetFuBiSend.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="NetPipe.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="GPString.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="SiegeEngine.h">
+      <Filter>Siege</Filter>
+    </ClInclude>
+    <ClInclude Include="SiegeCamera.h">
+      <Filter>Siege</Filter>
+    </ClInclude>
+    <ClInclude Include="Siege.h">
+      <Filter>Siege</Filter>
+    </ClInclude>
+    <ClInclude Include="SiegeConsole.h">
+      <Filter>Siege</Filter>
+    </ClInclude>
+    <ClInclude Include="Skrit.h">
+      <Filter>FuBi/Skrit</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldEvent.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="PClass.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="DS2Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="RapiOwner.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandler.h">
+      <Filter>Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="AppModuleExtension.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOptions.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="AppConsole.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SkritObject.h">
+      <Filter>FuBi/Skrit</Filter>
+    </ClInclude>
+    <ClInclude Include="SkritMachine.h">
+      <Filter>FuBi/Skrit</Filter>
+    </ClInclude>
+    <ClInclude Include="SiegeEffectsManager.h">
+      <Filter>Siege</Filter>
+    </ClInclude>
+    <ClInclude Include="SkritHookWrapper.h">
+      <Filter>FuBi/Skrit</Filter>
+    </ClInclude>
+    <ClInclude Include="Alteration.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldEffectsManager.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsControl.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="IJournal.h">
+      <Filter>Quests/Journal</Filter>
+    </ClInclude>
+    <ClInclude Include="GoCoach.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoCommon.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoActor.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoAspect.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoAttack.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoBody.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoCorpse.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoConversation.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GPFastVector.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="GoDefend.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoFader.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoSkritComponent.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoMind.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoMagic.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoInventory.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoPet.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoPhysics.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoPlacement.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoPotion.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoProxy.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoStash.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoStore.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoZone.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoParty.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoHire.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoGold.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GoFollower.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillColl.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillManager.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Skill.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Reagent.h">
+      <Filter>Unsorted</Filter>
+    </ClInclude>
+    <ClInclude Include="FuBi.h">
+      <Filter>FuBi/Skrit</Filter>
+    </ClInclude>
+    <ClInclude Include="FuBiEvent.h">
+      <Filter>FuBi/Skrit</Filter>
+    </ClInclude>
+    <ClInclude Include="FuBiFunctionTable.h">
+      <Filter>FuBi/Skrit</Filter>
+    </ClInclude>
+    <ClInclude Include="GoCreateLoader.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="GoCreateMain.h">
+      <Filter>Go</Filter>
+    </ClInclude>
+    <ClInclude Include="FuelSys.h">
+      <Filter>Fuel</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuel.h">
+      <Filter>Fuel</Filter>
+    </ClInclude>
+    <ClInclude Include="FuelBlock.h">
+      <Filter>Fuel</Filter>
+    </ClInclude>
+    <ClInclude Include="FuelDb.h">
+      <Filter>Fuel</Filter>
+    </ClInclude>
+    <ClInclude Include="GoGui.h">
+      <Filter>Go\Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="UI">
+      <UniqueIdentifier>{5ff5ac19-454e-4786-8d6f-31b5144368c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Go">
+      <UniqueIdentifier>{4b1e2331-742b-40b9-bb67-d2aa063d82f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quests/Journal">
+      <UniqueIdentifier>{00ec20d2-fa19-424e-8362-df83a30ed359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Loader">
+      <UniqueIdentifier>{393372d1-125b-4042-948e-b372b08b7207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{fc60a2af-4e2d-40d9-b01a-00ccadf2b780}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API">
+      <UniqueIdentifier>{6c889926-4ebd-4d6d-b0e8-0ea6d0ab1de4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions">
+      <UniqueIdentifier>{964c4c7c-dc44-4a49-9664-3ecf27a948af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extensions\Skills">
+      <UniqueIdentifier>{ebf4d7c7-d70a-4b1c-9b0e-60ace0df3d0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Unsorted">
+      <UniqueIdentifier>{9cf9ed20-dd51-4f2f-a9ea-0368eefa44c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NIS %28Non-Interactive Sequence%29">
+      <UniqueIdentifier>{76631dae-6f6d-4322-b761-80f1bb689ae5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Disassembly">
+      <UniqueIdentifier>{ac1877bb-7ea0-4b33-96ca-dfe3ad35adfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{b7106618-3465-4e1d-88dc-e0a0196c97d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Siege">
+      <UniqueIdentifier>{3f2a8dff-116b-42ca-9856-7757b257d53c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{c6a740a0-7dfd-4763-8c22-10f81877052d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Go\Components">
+      <UniqueIdentifier>{38341ccf-9d88-4f6f-802b-aca0e015ae0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuBi/Skrit">
+      <UniqueIdentifier>{ada7d2a9-a1a4-4636-a1d8-5a95b0313bac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fuel">
+      <UniqueIdentifier>{781db24b-2895-4621-96d4-f361021a10e4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DllMain.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="StandingOrders.cpp">
+      <Filter>Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="EquipSlot.cpp">
+      <Filter>Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugLog.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="ExportTable.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="ContentDb.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="Enums.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="GPConsole.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="PContentDb.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="Formation.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="AppModule.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomEffect.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="UIPartyManager.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIGame.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="PClass.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="Rules.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginAPI.cpp">
+      <Filter>API</Filter>
+    </ClCompile>
+    <ClCompile Include="EventHandler.cpp">
+      <Filter>Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="VersionText.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="AppModuleExtension.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="AppConsole.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="UIWindow.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Alteration.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="SkritObject.cpp">
+      <Filter>FuBi/Skrit</Filter>
+    </ClCompile>
+    <ClCompile Include="Go.cpp">
+      <Filter>Go</Filter>
+    </ClCompile>
+    <ClCompile Include="GoCommon.cpp">
+      <Filter>Go\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GoMagic.cpp">
+      <Filter>Go\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GoAttack.cpp">
+      <Filter>Go\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Skill.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillManager.cpp">
+      <Filter>Unsorted</Filter>
+    </ClCompile>
+    <ClCompile Include="UIShell.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GoGui.cpp">
+      <Filter>Go\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GoAspect.cpp">
+      <Filter>Go\Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DS2DLL.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ConsoleOverlay.dds" />
+  </ItemGroup>
+</Project>

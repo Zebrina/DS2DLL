@@ -57,6 +57,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <ForcedIncludeFiles>Common.h</ForcedIncludeFiles>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -73,6 +74,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <ForcedIncludeFiles>Common.h</ForcedIncludeFiles>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -82,25 +84,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Assembly.h" />
+    <ClInclude Include="AssemblyWriter.h" />
     <ClInclude Include="ClassMacros.h" />
+    <ClInclude Include="CommandLineUtil.h" />
     <ClInclude Include="DebugMacros.h" />
+    <ClInclude Include="Events.h" />
     <ClInclude Include="Output.h" />
     <ClInclude Include="MemUtil.h" />
     <ClInclude Include="SafeWrite.h" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="StringUtil.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="Utility.h" />
     <ClInclude Include="Version.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CommandLineUtil.cpp" />
     <ClCompile Include="Output.cpp" />
     <ClCompile Include="MemUtil.cpp" />
     <ClCompile Include="SafeWrite.cpp" />
+    <ClCompile Include="StringUtil.cpp" />
     <ClCompile Include="Utility.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cpp.hint" />
-    <None Include="Utility.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

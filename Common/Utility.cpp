@@ -1,5 +1,7 @@
 #include "Utility.h"
 
+constexpr const size_t MESSAGEBOX_BUFFER_SIZE = 100;
+
 int PrintLine(const char* format, va_list args, bool includeLastError) {
 	int n = vprintf(format, args);
 	if (n > 0) {
@@ -36,29 +38,27 @@ int PrintSystemError(const char* format, ...) {
 	return n;
 }
 
-void SystemPause() {
-	system("pause");
+void AlertError(LPCWSTR formatw, ...) {
+	wchar_t buffer[MESSAGEBOX_BUFFER_SIZE];
+	va_list args;
+	va_start(args, formatw);
+	vswprintf_s(buffer, MESSAGEBOX_BUFFER_SIZE, formatw, args);
+	va_end(args);
+	MessageBoxW(NULL, buffer, L"Error! \u00af\\_(\u30c4)_/\u00af", MB_OK);
+}
+void AlertWarning(LPCWSTR formatw, ...) {
+	wchar_t buffer[MESSAGEBOX_BUFFER_SIZE];
+	va_list args;
+	va_start(args, formatw);
+	vswprintf_s(buffer, MESSAGEBOX_BUFFER_SIZE, formatw, args);
+	va_end(args);
+	MessageBoxW(NULL, buffer, L"Warning! \u0669(\u204e\u275b\u1d17\u275b\u204e)\u06f6", MB_OK);
 }
 
-size_t StrCopy(char* destBuffer, size_t destSize, const char* src) {
-	--destSize;
-	size_t i = 0;
-	for (; i < destSize && src[i] != '\0'; ++i) {
-		destBuffer[i] = src[i];
-	}
-	destBuffer[i] = '\0';
-	return i;
+void SystemPause() {
+    system("pause");
 }
-size_t StrConcat(char* destBuffer, size_t destSize, const char* srcArray[], size_t srcCount, const char* separator) {
-	size_t n = 0;
-	if (destSize > 0) {
-		destBuffer[0] = '\0';
-		for (size_t i = 0; i < srcCount; ++i) {
-			if (i > 0) {
-				n += StrCopy(destBuffer + n, destSize - n, separator);
-			}
-			n += StrCopy(destBuffer + n, destSize - n, srcArray[i]);
-		}
-	}
-	return n;
+
+bool StringNullOrEmpty(const char* str) {
+	return str == nullptr || *str == '\0';
 }

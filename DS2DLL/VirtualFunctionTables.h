@@ -1,0 +1,35 @@
+#pragma once
+
+constexpr const uint32_t VFTBL_UICHATBOX		= 0x00bb78c8;
+constexpr const uint32_t VFTBL_UILISTREPORT		= 0x00bb7a00;
+constexpr const uint32_t VFTBL_UITEXTBOX		= 0x00bb7a90;
+constexpr const uint32_t VFTBL_UITEXT			= 0x00bb7c20;
+constexpr const uint32_t VFTBL_UIEDITBOX		= 0x00bb7ce8;
+constexpr const uint32_t VFTBL_BB7EA8			= 0x00bb7ea8;
+constexpr const uint32_t VFTBL_BB7F38			= 0x00bb7f38;
+constexpr const uint32_t VFTBL_BB7FE0			= 0x00bb7fe0;
+constexpr const uint32_t VFTBL_BB8078			= 0x00bb8078;
+constexpr const uint32_t VFTBL_BB8110			= 0x00bb8110;
+constexpr const uint32_t VFTBL_BB81A8			= 0x00bb81a8;
+constexpr const uint32_t VFTBL_UIOBJECTVIEW		= 0x00bb8800;
+constexpr const uint32_t VFTBL_UILISTBOX		= 0x00bb8a08;
+constexpr const uint32_t VFTBL_UIINTERFACE		= 0x00bb8d60;
+constexpr const uint32_t VFTBL_UIBUTTON			= 0x00bb8dd8;
+constexpr const uint32_t VFTBL_UISLIDER			= 0x00bb8f28;
+constexpr const uint32_t VFTBL_UITAB			= 0x00bb9070;
+constexpr const uint32_t VFTBL_UICOMBOBOX		= 0x00bb9108;
+constexpr const uint32_t VFTBL_UICURSOR			= 0x00bb9308;
+constexpr const uint32_t VFTBL_UICHECKBOX		= 0x00bb94d0;
+constexpr const uint32_t VFTBL_UISTATUSBAR		= 0x00bb9568;
+constexpr const uint32_t VFTBL_UIGRIDBOX		= 0x00bb96f0;
+constexpr const uint32_t VFTBL_UIITEM			= 0x00bb97a0;
+constexpr const uint32_t VFTBL_UIINFOSLOT		= 0x00bb9838;
+constexpr const uint32_t VFTBL_UIITEMSLOT		= 0x00bb9928;
+constexpr const uint32_t VFTBL_UILISTENER		= 0x00bb99a0;
+constexpr const uint32_t VFTBL_UIRADIOBUTTON	= 0x00bb9a70;
+constexpr const uint32_t VFTBL_UIDOCKBAR		= 0x00bb9bb8;
+constexpr const uint32_t VFTBL_UILINE			= 0x00bb9ea8;
+constexpr const uint32_t VFTBL_BB9F30			= 0x00bb9f30;
+constexpr const uint32_t VFTBL_UIPOPUPMENU		= 0x00bba0c0;
+constexpr const uint32_t VFTBL_UIDIALOGBOX		= 0x00bba178;
+constexpr const uint32_t VFTBL_BBA1F0			= 0x00bba1f0;

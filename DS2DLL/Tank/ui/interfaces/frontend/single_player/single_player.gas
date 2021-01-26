@@ -1,0 +1,446 @@
+[t:interface,n:single_player]
+{
+	skrit = [[
+
+		owner = GUInterface;
+		// Menu button press handling
+		ShowPreviousParty$()
+		{
+			UIFrontend.PlayFrontendSound( "frontend_cycle_button" );
+			UIFrontend.ShowPreviousParty();
+		}
+		ShowNextParty$()
+		{
+			UIFrontend.PlayFrontendSound( "frontend_cycle_button" );
+			UIFrontend.ShowNextParty();
+		}
+		SelectLoadGame$()
+		{
+			UIFrontend.PlayFrontendSound( "frontend_next_button" );
+			bool import_party$ = UIUtility.IsWindowVisible( "button_import", "single_player" );
+			if ( import_party$ )
+			{
+				UIFrontend.TransitionFromSP();
+				UIFrontend.TransitionToMapSelect();
+			}
+			else
+			{
+				if ( UIFrontend.TransitionFromPartyImport( false ) )
+				{
+					UIFrontend.TransitionToSP( true );
+				}
+			}
+		}
+		SelectMainMenu$()
+		{
+			UIFrontend.PlayFrontendSound( "frontend_back_button" );
+			bool import_party$ = UIUtility.IsWindowVisible( "button_import", "single_player" );
+			if ( import_party$ )
+			{
+				UIFrontend.TransitionFromSP();
+				UIFrontend.TransitionToMain();
+			}
+			else
+			{
+				if ( UIFrontend.TransitionFromPartyImport( true ) )
+				{
+					UIFrontend.TransitionToSP( true );
+				}
+			}
+		}
+		SelectImportHero$()
+		{
+			UIFrontend.PlayFrontendSound( "frontend_main_menu_button" );
+			UIFrontend.TransitionToPartyImport();
+		}
+		SelectCreateParty$()
+		{
+			UIFrontend.PlayFrontendSound( "frontend_main_menu_button" );
+			UIFrontend.TransitionFromSP();
+			UIFrontend.TransitionToCreateParty();
+		}
+		SelectDeleteParty$()
+		{
+			UIFrontend.PlayFrontendSound( "frontend_main_menu_button" );
+			UIFrontend.DeleteActiveParty();
+		}
+        SelectEditParty$()
+        {
+            UIFrontend.PlayFrontendSound( "frontend_main_menu_button" );
+            //UIFrontend.TransitionFromSP();
+			//UIFrontend.TransitionToEditParty();
+        }
+
+        trigger OnInterfaceHandleMessage$(MSG_ONSHOW)
+		{
+            UIUtility.SetWindowEnabled("button_edit", "single_player", false);
+		}
+
+	]];
+	[t:button,n:button_back]
+	{
+	  i draw_order = 26;
+		help_text = "Back to the Main Menu";
+		rect = 13,696,176,760;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		texture = b_gui_fe_mn_back-up;
+		uvcoords = 0.359375,0.000000,1.000000,1.000000;
+		group = select_party;
+		[messages]
+		{
+			onbuttonpress = call(SelectMainMenu$());
+			onlbuttondown = loadtexture(b_gui_fe_mn_back-down);
+			onlbuttonup = loadtexture(b_gui_fe_mn_back-up);
+			onrolloff = loadtexture(b_gui_fe_mn_back-up);
+			onrollover = loadtexture(b_gui_fe_mn_back-over);
+		}
+		[t:text,n:text_back]
+		{
+		  b allow_parent_centering = false;
+		  i draw_order = 30;
+			font_type = b_gui_fnt_22p_ringbearer-gold;
+			justify = center;
+		  i parent_offset = 16;
+			rect = 32,707,133,750;
+			text = "Back";
+			uvcoords = 0.000000,0.000000,0.074774,1.000000;
+		}
+	}
+
+	[t:button,n:button_back_import]
+	{
+	  i draw_order = 26;
+		rect = 13,696,176,760;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		texture = b_gui_fe_mn_back-up;
+		uvcoords = 0.359375,0.000000,1.000000,1.000000;
+		group = import_party;
+		[messages]
+		{
+			onbuttonpress = call(SelectMainMenu$());
+			onlbuttondown = loadtexture(b_gui_fe_mn_back-down);
+			onlbuttonup = loadtexture(b_gui_fe_mn_back-up);
+			onrolloff = loadtexture(b_gui_fe_mn_back-up);
+			onrollover = loadtexture(b_gui_fe_mn_back-over);
+		}
+		[t:text,n:text_back]
+		{
+		  b allow_parent_centering = false;
+		  i draw_order = 30;
+			font_type = b_gui_fnt_22p_ringbearer-gold;
+			justify = center;
+		  i parent_offset = 16;
+			rect = 32,707,133,750;
+			text = "Back";
+			uvcoords = 0.000000,0.000000,0.074774,1.000000;
+		}
+	}
+
+	[t:button,n:button_convert]
+	{
+	  i draw_order = 27;
+		group = import_party;
+		rect = 849,696,1011,760;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		texture = b_gui_fe_mn_next-up;
+		uvcoords = 0.000000,0.000000,0.632813,1.000000;
+		[messages]
+		{
+			onbuttonpress = call(SelectLoadGame$());
+			onlbuttondown = loadtexture(b_gui_fe_mn_next-down);
+			onlbuttonup = loadtexture(b_gui_fe_mn_next-up);
+			onrolloff = loadtexture(b_gui_fe_mn_next-up);
+			onrollover = loadtexture(b_gui_fe_mn_next-over);
+		}
+		[t:text,n:text_next]
+		{
+		  b allow_parent_centering = false;
+		  i draw_order = 31;
+			font_type = b_gui_fnt_22p_ringbearer-gold;
+			justify = center;
+		  i parent_offset = 16;
+			rect = 900,707,1001,750;
+			text = "Convert";
+		}
+	}
+	[t:button,n:button_create_new]
+	{
+	  b common_control = true;
+		common_template = button_frontend_menubar;
+	  i draw_order = 430;
+		group = select_party;
+		help_text = "Create a new character";
+		rect = 300,597,513,642;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		uvcoords = 0.093750,0.078125,0.914063,0.843750;
+		[messages]
+		{
+			onbuttonpress = call(SelectCreateParty$());
+		}
+		[t:text,n:text_create_new]
+		{
+		  i draw_order = 431;
+			font_type = b_gui_fnt_22p_ringbearer-gold;
+			justify = center;
+		  i parent_offset = 16;
+			rect = 333,609,513,642;
+			text = "Create New Hero";
+		}
+	}
+	[t:button,n:button_delete]
+	{
+	  b common_control = true;
+		common_template = button_frontend_menubar;
+	  i draw_order = 432;
+		group = select_party;
+		help_text = "Delete this character";
+		rect = 530,598,743,643;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		uvcoords = 0.093750,0.125000,0.925781,0.828125;
+		[messages]
+		{
+			onbuttonpress = call(SelectDeleteParty$());
+		}
+		[t:text,n:text_delete]
+		{
+		  i draw_order = 433;
+			font_type = b_gui_fnt_22p_ringbearer-gold;
+			justify = center;
+		  i parent_offset = 16;
+			rect = 584,610,743,643;
+			text = "Delete Hero";
+			uvcoords = 0.000000,0.729232,1.000000,1.000000;
+		}
+	}
+	[t:button,n:button_import]
+	{
+		b common_control = true;
+		common_template = button_frontend_menubar;
+	  i draw_order = 434;
+		group = select_party;
+		rect = 530,641,743,686;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		texture = b_gui_fe_mn_menubar-up;
+		uvcoords = 0.093750,0.125000,0.925781,0.828125;
+		[messages]
+		{
+			onbuttonpress = call(SelectImportHero$);
+		}
+		[t:text,n:text_import]
+		{
+		  i draw_order = 435;
+			font_type = b_gui_fnt_22p_ringbearer-gold;
+			justify = center;
+		  i parent_offset = 16;
+			rect = 584,653,743,686;
+			text = "Convert Hero";
+			uvcoords = 0.000000,0.729232,1.000000,1.000000;
+		}
+	}
+	[t:button,n:button_edit]
+	{
+	  b common_control = true;
+		common_template = button_frontend_menubar;
+	  i draw_order = 432;
+		group = select_party;
+		help_text = "Edit this character";
+		rect = 300,641,513,686;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		uvcoords = 0.093750,0.078125,0.914063,0.843750;
+		[messages]
+		{
+			onbuttonpress = call(SelectEditParty$());
+		}
+		[t:text,n:text_edit]
+		{
+		  i draw_order = 431;
+			font_type = b_gui_fnt_22p_ringbearer-gold;
+			justify = center;
+		  i parent_offset = 16;
+			rect = 333,653,513,686;
+			text = "Edit Hero";
+		}
+	}
+	[t:button,n:button_next]
+	{
+	  i draw_order = 27;
+		group = select_party;
+		help_text = "Continue with this character";
+		rect = 849,696,1011,760;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		texture = b_gui_fe_mn_next-up;
+		uvcoords = 0.000000,0.000000,0.632813,1.000000;
+		[t:text,n:button_next_text_next]
+		{
+		  b allow_parent_centering = false;
+		  i draw_order = 31;
+			font_type = b_gui_fnt_22p_ringbearer-gold;
+			justify = center;
+		  i parent_offset = 16;
+			rect = 900,707,1001,750;
+			text = "Next";
+		}
+		[messages]
+		{
+			onbuttonpress = call(SelectLoadGame$());
+			onlbuttondown = loadtexture(b_gui_fe_mn_next-down);
+			onlbuttonup = loadtexture(b_gui_fe_mn_next-up);
+			onrolloff = loadtexture(b_gui_fe_mn_next-up);
+			onrollover = loadtexture(b_gui_fe_mn_next-over);
+		}
+	}
+	[t:button,n:button_party_left]
+	{
+	  i draw_order = 17;
+		help_text = "Previous character";
+		rect = 360,535,392,567;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		texture = b_gui_fe_mn_smlarrow-lt-up;
+		[messages]
+		{
+			disable = loadtexture(b_gui_fe_mn_smlarrow-lt-dis);
+			enable = loadtexture(b_gui_fe_mn_smlarrow-lt-up);
+			onbuttonpress = call(ShowPreviousParty$());
+			onlbuttondown = loadtexture(b_gui_fe_mn_smlarrow-lt-down);
+			onlbuttonup = loadtexture(b_gui_fe_mn_smlarrow-lt-up);
+			onrolloff = loadtexture(b_gui_fe_mn_smlarrow-lt-up);
+			onrollover = loadtexture(b_gui_fe_mn_smlarrow-lt-over);
+		}
+	}
+	[t:button,n:button_party_right]
+	{
+	  i draw_order = 18;
+		help_text = "Next character";
+		rect = 642,535,674,567;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		texture = b_gui_fe_mn_smlarrow-rt-up;
+		[messages]
+		{
+			disable = loadtexture(b_gui_fe_mn_smlarrow-rt-dis);
+			enable = loadtexture(b_gui_fe_mn_smlarrow-rt-up);
+			onbuttonpress = call(ShowNextParty$());
+			onlbuttondown = loadtexture(b_gui_fe_mn_smlarrow-rt-down);
+			onlbuttonup = loadtexture(b_gui_fe_mn_smlarrow-rt-up);
+			onrolloff = loadtexture(b_gui_fe_mn_smlarrow-rt-up);
+			onrollover = loadtexture(b_gui_fe_mn_smlarrow-rt-over);
+		}
+	}
+	[t:object_view,n:object_view_party]
+	{
+	  b cam_auto_center = true;
+	  b cam_auto_reset = true;
+	  f cam_pos_init_y = 0.600000;
+	  f cam_pos_init_z = 5.400000;
+	  f cam_pos_max_z = 5.400000;
+	  f cam_pos_step_z = 0.300000;
+	  f cam_pos_y = 0.600000;
+	  f cam_pos_z = 5.400000;
+	  f cam_pos_zoom_in_z = 1.000000;
+	  f cam_pos_zoom_out_y = 0.600000;
+	  f cam_pos_zoom_out_z = 5.400000;
+	  b cam_right_button_rotate = false;
+	  b cam_user_rotate = true;
+	  b cam_user_target_bones = true;
+	  i draw_order = 2;
+	  b obj_feet_plant_with_scale = true;
+	  f obj_rot_step_y = 0.100000;
+	  b obj_update_center = false;
+		rect = 124,56,924,656;
+	  b use_zoom_in_target = true;
+	  b use_zoom_out_target = true;
+		uvcoords = 0.000000,-4.359375,1.000000,1.000000;
+	}
+	[t:text,n:text_class]
+	{
+	  i draw_order = 408;
+		font_type = b_gui_fnt_16p_ringbearer-gold;
+		justify = center;
+		rect = 394,546,642,566;
+		text = "Class";
+		uvcoords = 0.000000,0.000000,1.000000,0.714286;
+	}
+	[t:text,n:text_hero_name]
+	{
+	  i draw_order = 407;
+		font_type = b_gui_fnt_16p_ringbearer-gold;
+		justify = center;
+		rect = 420,506,619,526;
+		text = "Hero Name Goes Here";
+		uvcoords = 0.000000,0.000000,1.000000,0.714286;
+	}
+	[t:text,n:text_import_player]
+	{
+	  i draw_order = 423;
+		font_type = b_gui_fnt_32p_ringbearer-gold;
+		group = import_party;
+		justify = center;
+		rect = 345,30,692,61;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		text = "Convert Hero Character";
+		uvcoords = 0.248227,0.000000,0.863475,0.775000;
+	}
+	[t:text,n:text_level]
+	{
+	  i draw_order = 419;
+		font_type = b_gui_fnt_12p_ringbearer-gold;
+		justify = center;
+		rect = 436,526,535,544;
+		text = "Level: 0";
+	}
+	[t:text,n:text_party_index]
+	{
+	  i draw_order = 421;
+		font_type = b_gui_fnt_12p_ringbearer-gold;
+		justify = center;
+		rect = 559,525,593,543;
+		text = "0/0";
+	}
+	[t:text,n:text_single_player]
+	{
+	  i draw_order = 6;
+		font_type = b_gui_fnt_32p_ringbearer-gold;
+		group = select_party;
+		justify = center;
+		rect = 345,30,692,61;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		text = "Choose Hero Character";
+		uvcoords = 0.248227,0.000000,0.863475,0.775000;
+	}
+	[t:window,n:window_0]
+	{
+	  i draw_order = 429;
+		gi_background = ui_c_dialog_frontend_bg;
+		rect = 265,572,771,708;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+	}
+	[t:window,n:window_hero_plate]
+	{
+	  i draw_order = 13;
+		rect = 263,455,775,586;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+		texture = b_gui_fe_mn_scrn-02;
+		uvcoords = 0.000000,0.488281,1.000000,1.000000;
+	}
+	[t:window,n:window_title]
+	{
+	  i draw_order = 5;
+		gi_background = ui_c_gui_el_tapestry_titlebar;
+		rect = 263,-10,775,118;
+	  f rotate_point_x = 0.500000;
+	  f rotate_point_y = 0.500000;
+	}
+}

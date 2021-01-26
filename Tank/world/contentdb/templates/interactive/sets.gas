@@ -5360,8 +5360,9 @@
 			}
             [*]
 			{
-				alteration			= alter_max_mana_percent;
-				value				= 250;
+				alteration			= alter_max_mana;
+				value				= 10;
+                multiply_value      = true;
 				description			= "+<value>% Mana";
 				duration			= #infinite;
 				is_permanent		= true;
