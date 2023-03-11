@@ -25,8 +25,6 @@ public:
 	$Method(0x00903bca, RCSendPackedPositionUpdateToFollowers, void, const_mem_ptr unk1);
 	$Method(0x00907534, RCSendPackedUpdateToFollowers, void, const_mem_ptr unk1);
 
-	// 0x00
-	$Padding(0x00, 0x14);
 	// 0x14
 	MCP::eOrientMode currentOrientMode;
 	// 0x18

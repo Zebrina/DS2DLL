@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DS2DLL", "DS2DLL\DS2DLL.vcxproj", "{16B0316F-2201-435E-A26E-E85700D3901D}"
 EndProject
@@ -34,7 +34,6 @@ Global
 		{3889384A-4FCE-4407-A826-FC5B4C05C241}.Release|x86.ActiveCfg = Release|Win32
 		{3889384A-4FCE-4407-A826-FC5B4C05C241}.Release|x86.Build.0 = Release|Win32
 		{0B788AC5-1127-48AD-8135-7DCF1DDA355E}.Debug|x86.ActiveCfg = Debug|Win32
-		{0B788AC5-1127-48AD-8135-7DCF1DDA355E}.Debug|x86.Build.0 = Debug|Win32
 		{0B788AC5-1127-48AD-8135-7DCF1DDA355E}.Release|x86.ActiveCfg = Release|Win32
 		{0B788AC5-1127-48AD-8135-7DCF1DDA355E}.Release|x86.Build.0 = Release|Win32
 		{37D11234-4D3C-4333-B8CC-2545A5A92F8B}.Debug|x86.ActiveCfg = Debug|Win32
@@ -44,11 +43,9 @@ Global
 		{5AA7D45D-ED74-47F3-8B91-6DAADBDD685B}.Debug|x86.ActiveCfg = Debug|Win32
 		{5AA7D45D-ED74-47F3-8B91-6DAADBDD685B}.Release|x86.ActiveCfg = Release|Win32
 		{A20536EB-F400-469F-93D0-932D9611EF2B}.Debug|x86.ActiveCfg = Debug|Win32
-		{A20536EB-F400-469F-93D0-932D9611EF2B}.Debug|x86.Build.0 = Debug|Win32
 		{A20536EB-F400-469F-93D0-932D9611EF2B}.Release|x86.ActiveCfg = Release|Win32
 		{A20536EB-F400-469F-93D0-932D9611EF2B}.Release|x86.Build.0 = Release|Win32
 		{ED93B551-49D1-45A9-976A-5235FA2C32BA}.Debug|x86.ActiveCfg = Debug|Win32
-		{ED93B551-49D1-45A9-976A-5235FA2C32BA}.Debug|x86.Build.0 = Debug|Win32
 		{ED93B551-49D1-45A9-976A-5235FA2C32BA}.Release|x86.ActiveCfg = Release|Win32
 		{ED93B551-49D1-45A9-976A-5235FA2C32BA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection

@@ -51,7 +51,7 @@ public:
 	// 0x18
 	GPWString description;
 	// 0x1c
-    GPWString wstr1C; // ??
+    GPWString wstr1C; // baseScreenName??
 	// 0x20
 	GPWString customName;
 	// 0x24

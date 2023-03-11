@@ -151,6 +151,12 @@ struct Vector3Coll {
 };
 
 struct GRect {
+	GRect() = default;
+	GRect(const GRect&) = default;
+	~GRect() = default;
+
+	GRect& operator=(const GRect&) = default;
+
 	int left;
 	int top;
 	int right;
@@ -161,7 +167,10 @@ STATIC_ASSERT(sizeof(GRect) == 0x10);
 
 struct Quat {
 	Quat() = default;
+	Quat(const Quat&) = default;
 	~Quat() = default;
+
+	Quat& operator=(const Quat&) = default;
 
 	$ConstMethod(0x00503412, GetIsValid, bool);
 	$ConstMethod(0x0050247b, GetX, float);

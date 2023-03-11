@@ -116,8 +116,8 @@ void AppModuleExtension::WriteHooks() {
     SafeWrite4(0x00427aae + 2, -size);
 
     // Hook the function which controls if the application is active or not. 
-    SafeWriteHook(0x00614224, &AppModuleExtension::SetInactive);
-    SafeWriteHook(0x0061426a, &AppModuleExtension::SetInactive);
+    //SafeWriteHook(0x00614224, &AppModuleExtension::SetInactive);
+    //SafeWriteHook(0x0061426a, &AppModuleExtension::SetInactive);
 
     struct WinApiHooks {
         static LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
@@ -178,35 +178,37 @@ void AppModuleExtension::WriteHooks() {
             gAppModuleEx->Initialize();
             gAppModuleEx->UpdateWindowStyle(dwStyle);
             gAppModuleEx->UpdateWindowExStyle(dwExStyle);
-            x = gAppModuleEx->GetWindowX();
-            y = gAppModuleEx->GetWindowX();
-            nWidth = gAppModuleEx->GetWindowWidth();
-            nHeight = gAppModuleEx->GetWindowHeight();
+            //x = gAppModuleEx->GetWindowX();
+            //y = gAppModuleEx->GetWindowX();
+            //nWidth = gAppModuleEx->GetWindowWidth();
+            //nHeight = gAppModuleEx->GetWindowHeight();
             return ::CreateWindowExA(dwExStyle, lpClassName, lpWindowName, dwStyle, x, y, nWidth, nHeight, hWndParent, hMenu, hInstance, lpParam);
         }
 
         static LONG WINAPI SetWindowLongA(HWND hWnd, int nIndex, LONG dwNewLong) {
+            /*
             if (nIndex == GWL_STYLE) {
                 gAppModuleEx->UpdateWindowStyle((DWORD&)dwNewLong);
             } else if (nIndex == GWL_EXSTYLE) {
                 gAppModuleEx->UpdateWindowExStyle((DWORD&)dwNewLong);
             }
+            */
             return ::SetWindowLongA(hWnd, nIndex, dwNewLong);
         }
 
         static BOOL WINAPI MoveWindow(HWND hWnd, int x, int y, int nWidth, int nHeight, BOOL bRepaint) {
-            x = gAppModuleEx->GetWindowX();
-            y = gAppModuleEx->GetWindowX();
-            nWidth = gAppModuleEx->GetWindowWidth();
-            nHeight = gAppModuleEx->GetWindowHeight();
+            //x = gAppModuleEx->GetWindowX();
+            //y = gAppModuleEx->GetWindowX();
+            //nWidth = gAppModuleEx->GetWindowWidth();
+            //nHeight = gAppModuleEx->GetWindowHeight();
             return ::MoveWindow(hWnd, x, y, nWidth, nHeight, bRepaint);
         }
 
         static BOOL WINAPI SetWindowPos(HWND hWnd, HWND hWndInsertAfter, int x, int y, int cx, int cy, UINT uFlags) {
-            x = gAppModuleEx->GetWindowX();
-            y = gAppModuleEx->GetWindowX();
-            cx = gAppModuleEx->GetWindowWidth();
-            cy = gAppModuleEx->GetWindowHeight();
+            //x = gAppModuleEx->GetWindowX();
+            //y = gAppModuleEx->GetWindowX();
+            //cx = gAppModuleEx->GetWindowWidth();
+            //cy = gAppModuleEx->GetWindowHeight();
             return ::SetWindowPos(hWnd, hWndInsertAfter, x, y, cx, cy, uFlags);
         }
     };
@@ -246,6 +248,8 @@ void AppModuleExtension::WriteHooks() {
     SafeWriteHook(0x0068254e, WinApiHooks::SetWindowPos);
     SafeWriteHook(0x00682e6c, WinApiHooks::SetWindowPos);
 
+    // Kind of experimental...
+#if 0
     struct UIShellConfigHooks {
         static void __fastcall InitializeScreenSize(UIShell* shell, void*, int width, int height) {
             shell->InternalInitializeScreenSize(gAppModuleEx->GetWindowWidth(), gAppModuleEx->GetWindowHeight());
@@ -272,6 +276,7 @@ void AppModuleExtension::WriteHooks() {
     SafeWriteHook(0x00610E16, UIShellConfigHooks::GetWidthSetting);
     // This function is called to look up the "height" setting.
     SafeWriteHook(0x00610E43, UIShellConfigHooks::GetHeightSetting);
+#endif
 }
 
 $OnDllInjection() {

@@ -2,17 +2,13 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
-    <DungeonSiege2Dir>C:\Games\Dungeon Siege II\</DungeonSiege2Dir>
-    <DungeonSiege2PluginsDir>C:\Games\Dungeon Siege II\Plugins\</DungeonSiege2PluginsDir>
+    <DungeonSiege2Path>D:\Games\Dungeon Siege 2 Broken World\</DungeonSiege2Path>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />
   <ItemGroup>
-    <BuildMacro Include="DungeonSiege2Dir">
-      <Value>$(DungeonSiege2Dir)</Value>
-    </BuildMacro>
-    <BuildMacro Include="DungeonSiege2PluginsDir">
-      <Value>$(DungeonSiege2PluginsDir)</Value>
+    <BuildMacro Include="DungeonSiege2Path">
+      <Value>$(DungeonSiege2Path)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>

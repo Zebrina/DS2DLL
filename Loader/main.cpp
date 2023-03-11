@@ -127,7 +127,7 @@ int main(int argc, const char* argv[]) {
 	DWORD lastError;
 	if (result != RES_OK) {
 		AlertError(AppResultToString(result));
-	} else if (lastError = GetLastError() != 0) {
+	} else if ((lastError = GetLastError()) != 0) {
 		AlertError(L"Last error returned '0x%.8x'.", lastError);
 	}
 

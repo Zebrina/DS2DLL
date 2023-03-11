@@ -23,7 +23,7 @@ protected:
 	short indentLevel;
 	std::vector<std::string> sections;
 
-	constexpr OutputBase();
+	OutputBase();
 	OutputBase(FILE* fd, short tabSize, short indentLevel = 0);
 	OutputBase(const OutputBase&) = default;
 	OutputBase(OutputBase&&) = default;

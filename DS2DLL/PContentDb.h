@@ -12,6 +12,15 @@ class PContentDb {
 public:
 	$Singleton(PContentDb, 0x0040a437);
 
+	FEX float GetHighestMagicFindChance() const;
+	void SetHighestMagicFindChance(float newValue); // 0x008f7470
+	FEX float GetHighestGoldBonusPercent() const;
+	void SetHighestGoldBonusPercent(float newValue); // 0x00408e83
+	bool GetForceBestDrops() const; // 0x00408e7f
+	void SetForceBestDrops(bool flag); // 0x00408e72
+	int GetTotalCharacterCount() const; // 0x00408e94
+	void SetTotalCharacterCount(int newValue); // 0x008f747d
+
 	$Method(0x0040a406, IsFighterType, bool, eItemSkillType itemSkillType);
 	$Method(0x0040a415, IsRangerType, bool, eItemSkillType itemSkillType);
 	$Method(0x0040a425, IsMageType, bool, eItemSkillType itemSkillType);
@@ -22,16 +31,11 @@ public:
 	$Method(0x008f8795, GetRandomCharacterFromParty, const Goid*, const Goid* unk1);
 	$Method(0x008f92f6, GetAvgPartySkillLevel, int, const Goid* unk1, const GPBString& unk2);
 	$Method(0x008f9376, GetHighestPartySkillLevel, int, const Goid* unk1, const GPBString& unk2);
-	FEX float GetHighestGoldBonusPercent() const;
-	$Method(0x00408e83, SetHighestGoldBonusPercent, void, float newValue);
-	$ConstMethod(0x00408e7f, GetForceBestDrops, bool);
-	$Method(0x00408e72, SetForceBestDrops, void, bool flag);
-	$Method(0x00408e94, GetTotalCharacterCount, int);
 	$Method(0x008fe734, RCSyncOnMachine, FuBiCookie*, const_mem_ptr unk1, uint unk2);
 	$Method(0x008f7644, RCSetCharacterToAnalyze, void, const Goid* unk1);
-	$Method(0x008f7812, RCSetHighestGoldBonusPercent, void, float unk1);
-	$Method(0x008f7729, RCSetHighestMagicFindChance, void, float unk1);
-	$Method(0x008f79aa, RCSetTotalCharacterCount, void, int unk1);
+	$Method(0x008f7812, RCSetHighestGoldBonusPercent, void, float newValue);
+	$Method(0x008f7729, RCSetHighestMagicFindChance, void, float newValue);
+	$Method(0x008f79aa, RCSetTotalCharacterCount, void, int newValue);
 	$Method(0x008f8a73, RSSetCharacterToAnalyze, void, const Goid* unk1);
 	$Method(0x008f93e5, SCalcTotalCharacterCount, void);
 	$Method(0x008f8be0, SSetHighestGoldBonusPercent, void, float newValue);
@@ -47,7 +51,7 @@ public:
     // 0x4c
     Goid* goid4C = Goid::Invalid;
     // 0x50
-    $Padding(0x50, 0x54);
+	float highestMagicFindChance;
 	// 0x54
 	float highestGoldBonusPercent;
 	// 0x58

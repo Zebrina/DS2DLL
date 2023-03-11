@@ -7,7 +7,7 @@ int UIWindow::GetPositionY() const {
     return rect.top;
 }
 void UIWindow::SetPosition(int x, int y) {
-    SetRect(x, y, x + GetWidth(), y + GetHeight(), false);
+    SetRect(x, x + GetWidth(), y, y + GetHeight(), false);
 }
 int UIWindow::GetWidth() const {
     return rect.right - rect.left;

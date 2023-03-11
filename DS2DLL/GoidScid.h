@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Enums.h"
+#include "GPFastVector.h"
 
 // Game Object
 class Go;
@@ -105,23 +106,19 @@ $Function(0x00502cb9, GoidClassToString, const char*, const Goid_* goid);
 $Function(0x007eea43, GoidToDebugString, const char*, const Goid_* goid);
 
 // Collection of Game Object IDs
-struct GoidColl {
-	$ConstMethod(0x005035e7, Empty, bool);
-	$ConstMethod(0x005035de, Size, int);
-	$ConstMethod(0x007ed660, Has, bool, const Goid_* goid);
-	$ConstMethod(0x005035f2, Get, const Goid_*, int index);
-	$ConstMethod(0x00503613, Front, const Goid_*);
-	$ConstMethod(0x00503618, Back, const Goid_*);
+struct GoidColl : public GPFastVector<Goid_> {
+	//$ConstMethod(0x005035e7, Empty, bool);
+	//$ConstMethod(0x005035de, Size, int);
+	//$ConstMethod(0x007ed660, Has, bool, const Goid_* goid);
+	//$ConstMethod(0x005035f2, Get, const Goid_*, int index);
+	//$ConstMethod(0x00503613, Front, const Goid_*);
+	//$ConstMethod(0x00503618, Back, const Goid_*);
 	$Method(0x00503c6b, Add, void, const Goid_* goid);
 	$Method(0x00503601, Set, void, int index, const Goid_* goid);
 	$Method(0x007ed636, Remove, bool, const Goid_* goid);
 	$Method(0x0050361f, PopBack, void);
 	$Method(0x007ed682, Clean, void);
 	$Method(0x005038f9, Clear, void);
-
-private:
-	Goid_* head;
-	Goid_* tail;
 };
 
 // Static Content ID

@@ -755,6 +755,9 @@
     <ClInclude Include="GoGui.h">
       <Filter>Go\Components</Filter>
     </ClInclude>
+    <ClInclude Include="DS2DLLVersion.h">
+      <Filter>API</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="UI">

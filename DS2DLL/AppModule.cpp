@@ -22,7 +22,6 @@ FEX float AppModule::GetFrameRate() const {
 }
 
 FEX bool AppModule::GetAlwaysActive() const {
-    int i = sizeof(SYSTEMTIME);
 	return ((AppModuleExtension*)this)->GetAlwaysActive();
 }
 FEX void AppModule::SetAlwaysActive(bool value) {

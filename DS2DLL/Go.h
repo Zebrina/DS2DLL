@@ -44,39 +44,19 @@ class GoZone;
 class Player;
 
 // Collection of Game Objects
-struct GopColl {
-    $ConstMethod(0x005035a1, Empty, bool);
-    $ConstMethod(0x00503598, Size, int);
-    $ConstMethod(0x007ed5f4, Has, bool, Go* go);
-    $ConstMethod(0x005035ac, Get, Go*, int index);
-    $ConstMethod(0x005035cd, Front, Go*);
-    $ConstMethod(0x005035d2, Back, Go*);
+struct GopColl : public GPFastVector<Go*> {
+    //$ConstMethod(0x005035a1, Empty, bool);
+    //$ConstMethod(0x00503598, Size, int);
+    //$ConstMethod(0x007ed5f4, Has, bool, Go* go);
+    //$ConstMethod(0x005035ac, Get, Go*, int index);
+    //$ConstMethod(0x005035cd, Front, Go*);
+    //$ConstMethod(0x005035d2, Back, Go*);
     $Method(0x00503c5b, Add, void, Go* go);
     $Method(0x005035bb, Set, void, int index, Go* go);
     $Method(0x007ed5ca, Remove, bool, Go* go);
     $Method(0x005035d9, PopBack, void);
     $Method(0x007ed616, Clean, void);
     $Method(0x005038f3, Clear, void);
-
-    template <class Action>
-    void ForEach(Action action) {
-        Go** element = head;
-        while (element < tail) {
-            action(*element);
-            ++element;
-        }
-    }
-    template <class Action>
-    void ForEach(Action* action) {
-        Go** element = head;
-        while (element < tail) {
-            (*action)(*element);
-            ++element;
-        }
-    }
-
-    Go** head;
-    Go** tail;
 };
 
 // Game Object
@@ -98,7 +78,7 @@ public:
 	$ConstMethod(0x007b2b6d, IsArmor, bool);
 	$ConstMethod(0x00502f55, IsAutoExpirationEnabled, bool);
 	$ConstMethod(0x007b1b2d, IsBreakable, bool);
-	$ConstMethod(0x007b4eb7, IsChad, bool);
+	//$ConstMethod(0x007b4eb7, IsChad, bool); // GetTemplateName() == "chad"
 	$ConstMethod(0x007b4ed3, IsCommand, bool);
 	$ConstMethod(0x007b1b44, IsContainer, bool);
 	$ConstMethod(0x00502ed3, IsDelayedMpDeletion, bool);
@@ -407,7 +387,9 @@ public:
 	// 0x8c
 	Go* parent;
 	// 0x90
-	$Padding(0x90, 0x98);
+	Go* nextUpdate; // DS1 LEAK
+	// 0x94
+	Go* prevUpdate; // DS1 LEAK
 	// 0x98
 	void* ptr98;
 	// 0x9c

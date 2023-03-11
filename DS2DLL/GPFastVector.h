@@ -52,12 +52,15 @@ public:
         return tail[-1];
     }
 
+    // Can't use these!
+    /*
     void Set(int index, T value) {
         head[index] = value;
     }
     void PopBack() {
         --tail;
     }
+    */
 
     template <class Action>
     void ForEach(Action action) {

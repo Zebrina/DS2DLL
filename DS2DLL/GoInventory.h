@@ -42,14 +42,9 @@ public:
 	$ConstMethod(0x00408b74, IsSlotEquipped, bool, eEquipSlot equipSlot);
 	$ConstMethod(0x0082961c, IsSpellInProgress, bool, const GPBString& unk1);
 	$ConstMethod(0x00826894, IsSpellSelected, bool);
-	$ConstMethod(0x0082b625, ListItems, bool, eInventoryLocation inventoryLocation, GopColl& unk2, bool unk3, bool unk4);
-	$ConstMethod(0x00408c1d, ListItems, bool, eInventoryLocation inventoryLocation, GopColl& unk2, bool unk3);
-	$ConstMethod(0x0040a3be, ListItems, bool, eInventoryLocation inventoryLocation, GopColl& unk2);
-	$ConstMethod(0x0082be6d, ListItems, bool, eQueryTrait unk1, eInventoryLocation inventoryLocation, GopColl& unk3, bool unk4, bool unk5);
-	$ConstMethod(0x00408c34, ListItems, bool, eQueryTrait unk1, eInventoryLocation inventoryLocation, GopColl& unk3, bool unk4);
-	$ConstMethod(0x0040a3d4, ListItems, bool, eQueryTrait unk1, eInventoryLocation inventoryLocation, GopColl& unk3);
-	$ConstMethod(0x0082b646, ListItems, bool, QtColl& unk1, eInventoryLocation inventoryLocation, GopColl& unk3, bool unk4, bool unk5);
-	$ConstMethod(0x00408c4e, ListItems, bool, QtColl& unk1, eInventoryLocation inventoryLocation, GopColl& unk3, bool unk4);
+	$ConstMethod(0x0082b625, ListItems, bool, eInventoryLocation inventoryLocation, GopColl& unk2, bool unk3 = true, bool unk4 = true);
+	$ConstMethod(0x0082be6d, ListItems, bool, eQueryTrait unk1, eInventoryLocation inventoryLocation, GopColl& unk3, bool unk4 = true, bool unk5 = true);
+	$ConstMethod(0x0082b646, ListItems, bool, QtColl& unk1, eInventoryLocation inventoryLocation, GopColl& unk3, bool unk4, bool unk5 = true);
 	$ConstMethod(0x0040a3ed, ListItems, bool, QtColl& unk1, eInventoryLocation inventoryLocation, GopColl& unk3);
 	$ConstMethod(0x00829cb9, ListVisibleItems, bool, GopColl& unk1);
 	$Method(0x0082ccdd, LocationContainsTemplate, bool, eInventoryLocation inventoryLocation, const GPBString& path);
@@ -60,8 +55,7 @@ public:
 	$Method(0x00832a9a, SEndGive, bool, const Goid* unk1, const Goid* unk2, eActionOrigin actionOrigin);
 	$ConstMethod(0x00833af0, TestEquip, bool, const Goid* targetGoid, eEquipSlot equipSlot);
 	$ConstMethod(0x00832fe2, TestEquipPassive, bool, const Goid* targetGoid);
-	$ConstMethod(0x008330ef, TestGet, bool, const Goid* targetGoid, bool unk2);
-	$ConstMethod(0x00408cd1, TestGet, bool, const Goid* targetGoid);
+	$ConstMethod(0x008330ef, TestGet, bool, const Goid* targetGoid, bool unk2 = false);
 	$ConstMethod(0x0082968b, GetActiveMeleeWeapon, Go*);
 	$ConstMethod(0x008296d8, GetActiveRangedWeapon, Go*);
 	$ConstMethod(0x00408d9f, GetActiveSpellBook, Go*);
@@ -115,8 +109,7 @@ public:
 	$Method(0x0082ba1e, SSyncRevivedPartyGold, void);
 
 	$Method(0x00831fbb, RSAdd, FuBiCookie*, Go* targetGo, eInventoryLocation inventoryLocation, eActionOrigin actionOrigin, bool unk4);
-	$Method(0x008374df, RSAutoEquip, FuBiCookie*, eEquipSlot equipSlot, const Goid* targetGoid, eActionOrigin actionOrigin, bool unk4);
-	$Method(0x00408c9f, RSAutoEquip, FuBiCookie*, eEquipSlot equipSlot, const Goid* targetGoid, eActionOrigin actionOrigin);
+	$Method(0x008374df, RSAutoEquip, FuBiCookie*, eEquipSlot equipSlot, const Goid* targetGoid, eActionOrigin actionOrigin, bool unk4 = false);
 	$Method(0x008316b5, RSCreateAddItem, FuBiCookie*, eInventoryLocation inventoryLocation, const GPBString& unk2);
 	$Method(0x00837361, RSEquip, FuBiCookie*, eEquipSlot equipSlot, const Goid* targetGoid, eActionOrigin actionOrigin);
 	$Method(0x0082ea69, RSRemove, FuBiCookie*, Go* unk1, bool unk2, Go* unk3);
@@ -176,7 +169,6 @@ public:
 	$Padding(0x1c, 0x48);
     // 0x48
     union {
-        // 0x48
         Go* equipped[NUM_EQUIP_SLOTS];
         struct {
             // 0x48
@@ -196,19 +188,21 @@ public:
             // 0x64
             Go* equippedSpellbook;
             // 0x68
-            Go* equippedRing0;
-            // 0x6c
             Go* equippedRing1;
-            // 0x70
+            // 0x6c
             Go* equippedRing2;
-            // 0x74
+            // 0x70
             Go* equippedRing3;
+            // 0x74
+            Go* equippedRing4;
         };
     };
 	// 0x78
-	$Padding(0x78, 0x94);
+	$Padding(0x78, 0x90);
+	// 0x90
+	eInventoryLocation selectedLocation;
 	// 0x94
-	int activeSpells;
+	int numActiveSpells;
 	// 0x98
 	int gold;
 	// 0x9c
@@ -216,17 +210,29 @@ public:
 	// 0xac
 	bool bForceGet;
 	// 0xb0
-	$Padding(0xb0, 0xd0);
+	$Padding(0xb0, 0xc0);
+	// 0xc0
+	bool bCanManipulate;
+	bool b_c1;
+	bool b_c2;
+	bool b_c3;
+	// 0xc4
+	Go* selectedItem;
+	// 0xc8
+	eActionOrigin selectedItemActionOrigin; // DS1 LEAK
+	// 0xcc
+	eAnimStance animStance;
 	// 0xd0
 	UIGridbox* uiGridBox;
 	// 0xd4
-	$Padding(0xd4, 0xd8);
+	byte b_d4; // 0082768A                 cmp     byte ptr [esi+0D4h], 0      bool??
 	// 0xd8
 	Go* activeSpellbook;
 };
 
 STATIC_ASSERT_OFFSETOF(GoInventory, gridWidth, 0x14);
 STATIC_ASSERT_OFFSETOF(GoInventory, equippedShield, 0x48);
-STATIC_ASSERT_OFFSETOF(GoInventory, activeSpells, 0x94);
+STATIC_ASSERT_OFFSETOF(GoInventory, numActiveSpells, 0x94);
+STATIC_ASSERT_OFFSETOF(GoInventory, selectedItem, 0xc4);
 STATIC_ASSERT_OFFSETOF(GoInventory, uiGridBox, 0xd0);
 STATIC_ASSERT_OFFSETOF(GoInventory, activeSpellbook, 0xd8);

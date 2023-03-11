@@ -83,9 +83,9 @@ public:
 	// 0x24
 	virtual bool VF10_Get();
 	// 0x28
-	virtual void VF11_Set(bool);
+	virtual void VF11_Set(bool flag);
 	// 0x2c
-	virtual void SetScrolling(bool);
+	virtual void SetScrolling(bool flag);
 	// 0x30
 	virtual bool GetScrolling() const;
 	// 0x34
@@ -95,7 +95,7 @@ public:
 	// 0x3c
 	virtual void VF16();
 	// 0x40
-	virtual void SetRect(int left, int top, int right, int bottom, bool);
+	virtual void SetRect(int left, int right, int top, int bottom, bool);
 	// 0x44
 	virtual void VF18();
 	// 0x48

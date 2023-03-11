@@ -64,7 +64,7 @@ public:
 	$Method(0x00749bc0, PlaceInterfaceOnBottom, bool, GUInterface* unk1);
 	$Method(0x00502a16, PlaceInterfaceOnTop, bool, const char* unk1);
 	$Method(0x00749b60, PlaceInterfaceOnTop, bool, GUInterface* unk1);
-	$Method(0x00742b60, SendUIMessage, bool, eUIMessage unk1, const char* windowName, const char* groupName);
+	$Method(0x00742b60, SendUIMessage, bool, eUIMessage unk1, const char* windowName, const char* interfaceName);
 	$Method(0x005029fb, SendUIMessage, bool, eUIMessage unk1, const char* windowName);
 	$Method(0x00740340, SendUIMessageToInterface, bool, eUIMessage unk1, const char* unk2);
 	$Method(0x00748300, SetInterfaceDrawOrder, bool, GUInterface* unk1, int unk2);
@@ -72,9 +72,9 @@ public:
 	$Method(0x00748d40, UpdateWindowDrawOrder, bool, const GPBString& unk1, const GPBString& unk2, int unk3);
 	$Method(0x004281c5, GetActiveCursor, UICursor*);
 	$Method(0x00742ef0, LoadUICursor, UICursor*, const GPBString& unk1, const GPBString& unk2);
-	$Method(0x0074cf20, CreateUIWindow, UIWindow*, const char* unk1, const char* unk2, const char* unk3);
-	$Method(0x00742200, FindUIWindow, UIWindow*, const char* windowName, const char* groupName, eUIWindowExistanceState unk3);
-	$Method(0x0041041c, FindUIWindow, UIWindow*, const char* windowName, const char* groupName);
+	$Method(0x0074cf20, CreateUIWindow, UIWindow*, const char* interfaceName, const char* windowTemplate, const char* windowName);
+	$Method(0x00742200, FindUIWindow, UIWindow*, const char* windowName, const char* interfaceName, eUIWindowExistanceState unk3);
+	$Method(0x0041041c, FindUIWindow, UIWindow*, const char* windowName, const char* interfaceName);
 	$Method(0x0044a2d7, FindUIWindow, UIWindow*, const char* windowName, eUIWindowExistanceState unk2);
 	$Method(0x00485dbb, FindUIWindow, UIWindow*, const char* windowName);
 	$Method(0x004a45b5, GetRolloverName, const GPBString&);

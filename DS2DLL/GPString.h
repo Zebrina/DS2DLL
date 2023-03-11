@@ -65,6 +65,7 @@ typedef gpbstring<wchar_t> GPWString;
 STATIC_ASSERT(sizeof(GPBString) == 4);
 STATIC_ASSERT(sizeof(GPWString) == 4);
 
+/*
 template <>
 GPBString& GPBString::operator=(const char* value) {
     StringAssignInternal(value, value + StrMemSize(value));
@@ -89,7 +90,9 @@ GPWString& GPWString::operator=(const wchar_t* value) {
     StringAssignInternal(value, value + StrMemSize(value));
     return *this;
 }
+*/
 
+/*
 template <>
 GPBString& GPBString::ConvertToBasic() {
     return *this;
@@ -112,3 +115,4 @@ template <>
 GPWString& GPWString::ConvertToWide() {
     return *this;
 }
+*/

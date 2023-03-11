@@ -1,3 +1,4 @@
+#include "DS2DLLVersion.h"
 #include "EventHandler.h"
 #include "UIShell.h"
 #include "UIText.h"
@@ -5,14 +6,24 @@
 static void __cdecl SetVersionText(UIText* gameVersionText) {
     UIShell* shell = UIShell::GetSingleton();
 
-    UIText* loaderVersionText = (UIText*)shell->CreateUIWindow("main_menu", "ui:interfaces:frontend:ds2dll_frontend:text_ds2dll_version_template", "text_ds2dll_version");
+    UIText* loaderVersionText = (UIText*)shell->FindUIWindow("text_ds2dll_version", "main_menu", WES_UNKNOWN_1);
+
+    if (!loaderVersionText) {
+        loaderVersionText = (UIText*)shell->CreateUIWindow("main_menu", "ui:interfaces:frontend:main_menu:main_menu:text_version", "text_ds2dll_version");
+        if (loaderVersionText) {
+            int screenWidth = shell->GetScreenWidth();
+            loaderVersionText->SetRect(screenWidth - gameVersionText->rect.right,
+                                       screenWidth - gameVersionText->rect.left,
+                                       gameVersionText->rect.top,
+                                       gameVersionText->rect.bottom,
+                                       false);
+            loaderVersionText->SetJustification(JUSTIFY_RIGHT);
+            loaderVersionText->SetText("DS2Dll Version - " DS2DLL_VERSION);
+            loaderVersionText->SetEnabled(true);
+        }
+    }
 
     if (loaderVersionText) {
-        int x = shell->GetScreenWidth() - (gameVersionText->GetPositionX() + loaderVersionText->GetWidth());
-        int y = gameVersionText->GetPositionY();
-        loaderVersionText->SetPosition(x, y);
-        loaderVersionText->SetText("DS2Dll Version - 0.1.0");
-        loaderVersionText->SetEnabled(true);
         loaderVersionText->SetVisible(true);
     }
 

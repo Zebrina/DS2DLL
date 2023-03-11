@@ -1,6 +1,6 @@
 #include "Output.h"
 
-constexpr OutputBase::OutputBase() :
+OutputBase::OutputBase() :
 	fd(nullptr),
 	tabSize(DEFAULT_TAB_SIZE),
 	indentLevel(0) {

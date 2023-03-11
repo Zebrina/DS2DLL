@@ -382,7 +382,7 @@ public:
 	// 0x408
 	UIText* characterMainTabTextMaxDmgMod;
 	// 0x40c
-	UIText* characterMainTabTextArmoralue;
+	UIText* characterMainTabTextArmorValue;
 	// 0x410
 	UIText* characterMainTabTextArmorMod;
 	// 0x414

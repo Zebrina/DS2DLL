@@ -249,7 +249,7 @@ public:
 	// 0x03c
     NemaAspect* currentAspect = nullptr; // ??
 	// 0x040
-	NemaAspect* aspectPtr;
+	NemaAspect* currentAspectPtr;
     // 0x044
     NemaAspect* nativeAspect = nullptr; // ??
 	// 0x048

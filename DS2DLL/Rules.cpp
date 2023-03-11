@@ -9,6 +9,7 @@ FEX void Rules::SetMaxResistanceValue(float value) {
     maxResistanceValue = Limit(value, 0.0f, 100.0f);
 }
 
+/*
 $Function(0x0084162e, SkritOnPartyMemberMadeMonsterAngry, void, SkritObject* skrit, const char* functionName, Go* partyMember, Go* angryEnemy, eAggroType angryReason);
 $Function(0x0084169a, SkritOnWorldLocation, void, SkritObject* skrit, const char* functionName, const Goid* partyMember, int locationId, bool bFocusHero, bool bLocalHero);
 $Function(0x008418b9, SkritSetPackMemberStats, void, SkritObject* skrit, const char* functionName, const Goid* partyMember, bool bResetLifeAndMana);
@@ -41,28 +42,25 @@ $Function(0x00842a7c, SkritDamageGoPower, bool, SkritObject* skrit, const char* 
 $Function(0x00841e44, SkritDamageGoMagicObject, void, SkritObject* skrit, const char* functionName, const Goid* attacker, const Goid* object, const Goid* victim);
 $Function(0x00842aeb, SkritOnClientEnterWorld, bool, SkritObject* skrit, const char* functionName, const PlayerId* playerId, const Goid* hero);
 $Function(0x00842b5a, SkritOnClientExitWorld, bool, SkritObject* skrit, const char* functionName, const PlayerId* playerId);
+*/
 
+/*
 FEX void Rules::HookOnPartyMemberMadeMonsterAngry(SkritObject* skrit, const char* functionName) {
 }
 FEX void Rules::HookOnWorldLocation(SkritObject* skrit, const char* functionName) {
 }
 FEX void Rules::HookSetPackMemberStats(SkritObject* skrit, const char* functionName) {
 }
-/*
 FEX void Rules::HookOnDropItemFor(SkritObject* skrit, const char* functionName) {
 }
-*/
 FEX void Rules::HookOnPartyMemberAdded(SkritObject* skrit, const char* functionName) {
 }
-/*
 FEX void Rules::HookCalculateExperience(SkritObject* skrit, const char* functionName) {
 }
-*/
 FEX void Rules::HookAwardExperience(SkritObject* skrit, const char* functionName) {
 }
 FEX void Rules::HookOnLevelUp(SkritObject* skrit, const char* functionName) {
 }
-/*
 FEX void Rules::HookCalcCanHit(SkritObject* skrit, const char* functionName) {
 }
 FEX void Rules::HookCalculateDefenceHelper(SkritObject* skrit, const char* functionName) {
@@ -75,12 +73,10 @@ FEX void Rules::HookCalculateMaxLife(SkritObject* skrit, const char* functionNam
 }
 FEX void Rules::HookCalculateMaxMana(SkritObject* skrit, const char* functionName) {
 }
-*/
 FEX void Rules::HookRegenerateLife(SkritObject* skrit, const char* functionName) {
 }
 FEX void Rules::HookRegenerateMana(SkritObject* skrit, const char* functionName) {
 }
-/*
 FEX void Rules::HookDamageGo(SkritObject* skrit, const char* functionName) {
 }
 FEX void Rules::HookGetDamageRangeHelper(SkritObject* skrit, const char* functionName) {
@@ -91,7 +87,6 @@ FEX void Rules::HookCalculateDamage(SkritObject* skrit, const char* functionName
 }
 FEX void Rules::HookDamageGoVolume(SkritObject* skrit, const char* functionName) {
 }
-*/
 FEX void Rules::HookDamageGoMeleeMultiplier(SkritObject* skrit, const char* functionName) {
 }
 FEX void Rules::HookDamageGoMelee(SkritObject* skrit, const char* functionName) {
@@ -102,17 +97,14 @@ FEX void Rules::HookDamageGoRanged(SkritObject* skrit, const char* functionName)
 }
 FEX void Rules::HookDamageGoMagic(SkritObject* skrit, const char* functionName) {
 }
-/*
 FEX void Rules::HookOnProjectileCollision(SkritObject* skrit, const char* functionName) {
 }
 FEX void Rules::HookDamageGoMagicPower(SkritObject* skrit, const char* functionName) {
 }
 FEX void Rules::HookDamageGoPower(SkritObject* skrit, const char* functionName) {
 }
-*/
 FEX void Rules::HookDamageGoMagicObject(SkritObject* skrit, const char* functionName) {
 }
-/*
 FEX void Rules::HookOnClientEnterWorld(SkritObject* skrit, const char* functionName) {
 }
 FEX void Rules::HookOnClientExitWorld(SkritObject* skrit, const char* functionName) {
